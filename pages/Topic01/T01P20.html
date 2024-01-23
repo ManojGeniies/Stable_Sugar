@@ -1,0 +1,2854 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P20/img_02_small.png',
+                id: '1'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img02.png',
+                id: '2'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img_01_small.png',
+                id: '3'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img01.png',
+                id: '4'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/EV01_11.png',
+                id: '5'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/EV01_12.png',
+                id: '6'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/EV01_13.png',
+                id: '7'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img_11_small.png',
+                id: '8'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img11.png',
+                id: '9'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img_12_small.png',
+                id: '10'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img12.png',
+                id: '11'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img_13_small.png',
+                id: '4'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P20/img13.png',
+                id: '4'
+            },
+
+        ];
+    </script>
+
+    <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        @-webkit-keyframes reducetime {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+        
+        @-webkit-keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes zoomin {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /*End of Zoom in Keyframes */
+        /* Zoom out Keyframes */
+        
+        @-webkit-keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.67);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes zoomout {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.67);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /*End of Zoom out Keyframes */
+        
+        .ClsTab {
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            z-index: 999;
+        }
+        
+        .clsAllTabs {
+            width: 100%;
+            height: 82px;
+        }
+        
+        .ClsTabItem {
+            position: relative;
+            cursor: pointer;
+            width: 272px;
+            height: 60px;
+            text-align: center;
+            line-height: 55px;
+            font-size: 18px;
+            font-family: OpenSansRegular;
+            border-radius: 5px;
+            background: #fcfcfc;
+            margin-left: 88px;
+            float: left;
+            top: 10px;
+            left: 0px;
+            cursor: pointer;
+            -webkit-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+            -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+            box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+            border-radius: 5px;
+            -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+            border: 1px solid #707070;
+        }
+        
+        .opacity-5 {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .modal {
+            z-index: 999;
+            width: 100%;
+        }
+        
+        .custom-modal {
+            width: 650px !important;
+            height: 369px !important;
+            top: 34px !important;
+        }
+        
+        .ClsTabItem:hover {
+            background: #707070;
+            color: #FFFFFF;
+        }
+        
+        #TabItem0 {
+            margin-left: 0;
+        }
+        /* #TabItem0,#TabItem1,#TabItem2{
+
+		display :none;
+
+	} */
+        
+        .boxInst {
+            position: absolute;
+            top: 504px;
+            left: 900px;
+        }
+        
+        .ClsImage0 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* top: 100px; */
+        }
+        
+        .mainImage {
+            position: absolute;
+            background: url('pages/images/Topic01/T01P20/img1.png') no-repeat;
+            background-size: 100% 100%;
+            width: 681px;
+            height: 261px;
+            left: 145px;
+            top: 265px;
+            display: none;
+        }
+        
+        .subImage {
+            position: absolute;
+            background-size: 100% 100%;
+            top: 95px;
+            display: none;
+        }
+        
+        #sub0 {
+            background: url('pages/images/Topic01/T01P20/EV01_02.png') no-repeat;
+            left: 28px;
+            height: 198px;
+        }
+        
+        #sub1 {
+            background: url('pages/images/Topic01/T01P20/EV01_01.png') no-repeat;
+            left: 324px;
+            height: 354px;
+            top: 100px;
+        }
+        
+        #sub2 {
+            background: url('pages/images/Topic01/T01P20/EV01_03.png') no-repeat;
+            left: 767px;
+            height: 291px;
+            top: 104px;
+        }
+        
+        .ClsImage1 {
+            position: absolute;
+            width: 100%;
+            height: 85%;
+            top: 100px;
+            display: none;
+        }
+        
+        .clsSubImage {
+            position: relative;
+            width: 300px;
+            height: 350px;
+            background: #FFFFFF;
+            border-radius: 5px;
+            float: left;
+            margin-right: 150px;
+            top: 5px;
+            left: 113px;
+        }
+        
+        #clsSubImage0,
+        #clsSubImage1 {
+            display: none;
+        }
+        
+        .subFirstImage {
+            position: absolute;
+            width: 225px;
+            height: 320px;
+            left: 35px;
+            top: 15px;
+        }
+        
+        .subSecImage {
+            position: absolute;
+            width: 225px;
+            height: 320px;
+            left: 53px;
+            top: 15px;
+        }
+        
+        #clsSub0 {
+            background: url('pages/images/Topic01/T01P20/img_02_small.png') no-repeat;
+        }
+        /* #clsImg0{
+
+			background: url('pages/images/Topic01/T01P20/img_02_small.png') no-repeat;
+
+	    top: 185px;
+
+		} */
+        
+        #clsSub1 {
+            background: url('pages/images/Topic01/T01P20/img_01_small.png') no-repeat;
+        }
+        /* #clsImg1{
+
+			background: url('pages/images/Topic01/T01P20/img_03_small.png') no-repeat;
+
+	    top: 185px;
+
+		} */
+        /* .mapImg{
+
+			background: url('pages/images/Topic01/T01P20/small_graph.png') no-repeat;
+
+			width: 100%;
+
+		    height: 128px;
+
+		    position: relative;
+
+		    top: 14px;
+
+		} */
+        
+        .expandMap {
+            position: relative;
+            top: 8px;
+        }
+        
+        .expandMap .clickToEnlarge {
+            top: 2px;
+            left: 123px;
+        }
+        
+        .expandMap .small_expand {
+            right: 37px;
+            margin-top: 2px;
+        }
+        
+        .open_map_close {
+            top: 301px;
+            right: -38px !important;
+        }
+        
+        .closepopup,
+        .open_map_close {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url('pages/images/Topic01/T01P20/close_expand.png') no-repeat;
+            bottom: 0px;
+            right: -47px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        .closepopup:hover {
+            background: url('pages/images/Topic01/T01P20/close_expand_hover.png') no-repeat;
+        }
+        
+        .closebutton {
+            position: absolute;
+            width: 92px;
+            height: 47px;
+            background: url('pages/images/Topic01/T01P20/close_expand.png') no-repeat;
+            top: 5px;
+            right: -91.5px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        .closebutton:hover {
+            background: url('pages/images/Topic01/T01P20/close_expand_hover.png') no-repeat;
+        }
+        
+        #case_study_popup1>.caseStudyContent>.closebutton {
+            position: absolute;
+            width: 55px;
+            height: 56px;
+            background: url('pages/images/Topic01/T01P20/videClose.png') no-repeat;
+            top: 9px;
+            right: -50.5px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        #case_study_popup1>.caseStudyContent>.closebutton:hover {
+            background: url('pages/images/Topic01/T01P20/videClose_hover.png') no-repeat;
+        }
+        /* #closeId0{
+
+		  left: 455px;
+
+		}
+
+		#closeClass0{
+
+		  left: 490px;
+
+		  background: url('pages/images/Topic01/T01P20/enlarge_text_inverted.png') no-repeat;
+
+		} */
+        
+        .clickToClose {
+            width: 160px;
+            height: 46px;
+            top: 333px;
+            left: 450px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 45px;
+            text-align: center;
+            font-size: 14px;
+            color: #4D667B;
+            background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
+            font-family: OpenSansRegular;
+        }
+        
+        .clickToClose>i {
+            position: absolute;
+            left: 10px;
+        }
+        
+        .videoToClose {
+            width: 156px;
+            height: 46px;
+            top: 10px;
+            left: 495px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 38px;
+            text-align: center;
+            line-height: 43px;
+            text-align: center;
+            font-size: 14px;
+            color: #4D667B;
+            font-style: italic;
+            background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
+            font-family: OpenSansRegular;
+        }
+        
+        .small_expand,
+        .open_map {
+            background: url('pages/images/Topic01/T01P20/small_expand.png');
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            right: 5px;
+            display: none;
+            top: 315px;
+            float: inherit;
+            text-decoration: none;
+            /* border-radius: inherit; */
+            margin-left: 0px;
+            background-color: inherit;
+            padding: 0px;
+            cursor: pointer;
+        }
+        
+        .small_expand:hover {
+            background: url('pages/images/Topic01/T01P20/small_expand_hover.png');
+        }
+        
+        section {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .Clsback {
+            position: relative;
+            width: 274px;
+            height: 335px;
+            top: 90px;
+            left: 0px;
+            margin-right: 89px;
+            float: left;
+            background: #FFFFFF;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        #ClsbackImg2 {
+            margin-right: 0px;
+        }
+        
+        ._link {
+            position: absolute;
+            top: 440px;
+            height: 17px;
+            left: 0px;
+            font-size: 12px;
+            font-family: OpenSansRegular;
+            width: 456px;
+            display: none;
+            color: #4D667B;
+            font-weight: 700;
+            cursor: pointer;
+            border-bottom: 1px solid #4D667B;
+            font-style: initial;
+        }
+        
+        .watchvideocnt {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            top: 437px;
+        }
+        
+        .videolink {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: auto;
+            font-size: 14px;
+            font-family: OpenSansSemiBold !important;
+            color: #000000;
+            text-decoration: none;
+            font-weight: normal;
+            cursor: pointer;
+            font-style: italic;
+            display: none;
+            float: left;
+            margin-right: 60px;
+        }
+        
+        .videolink:before {
+            content: '';
+            background: #000;
+            height: 1px;
+            width: 77%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        
+        #_clickImg0pdf {
+            color: #707070;
+            font-size: 14px;
+            width: auto;
+            border-bottom: 0px solid;
+            height: 31px;
+            top: 476px;
+            font-weight: normal;
+        }
+        
+        #_clickImg0pdf span {
+            border-bottom: 1px solid #707070;
+            position: relative;
+            top: -2px;
+        }
+        
+        .videolink .video_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+        }
+        
+        #_clickImg0pdf .pdf_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+            width: 25px;
+        }
+        /* .subSeImage{
+
+			position: absolute;
+
+	    width: 161px;
+
+	    height: 161px;
+
+	    top: 20px;
+
+	    left: 38px;
+
+		} */
+        
+        #subImg0 {
+            background: url('pages/images/Topic01/T01P20/EV01_11.png') no-repeat;
+        }
+        
+        #subImg1 {
+            background: url('pages/images/Topic01/T01P20/EV01_12.png') no-repeat;
+        }
+        
+        #subImg2 {
+            background: url('pages/images/Topic01/T01P20/EV01_13.png') no-repeat;
+        }
+        
+        .subText {
+            position: absolute;
+            width: 240px;
+            height: 125px;
+            top: 200px;
+            left: 15px;
+            font-family: OpenSansRegular;
+            font-size: 14px;
+            font-style: initial;
+        }
+        
+        .ClsTextTab {
+            position: relative;
+            width: 240px;
+            top: 100px;
+            left: 0px;
+            margin-right: 20px;
+            float: left;
+            background: #FFFFFF;
+            border-radius: 5px;
+            height: auto;
+        }
+        
+        .listcnt {
+            position: relative;
+            top: 24px;
+            padding-right: 20px;
+            margin-bottom: 7px;
+            padding-bottom: 6px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            width: 190px;
+            left: 15px;
+            display: none;
+        }
+        
+        .arrowHolder {
+            position: absolute;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: #5B5B5B;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -khtml-border-radius: 50%;
+        }
+        
+        .OptionCLSS {
+            position: relative;
+            left: 15px;
+            font-style: initial;
+            top: 1px;
+        }
+        
+        .OptionCLSS>span {
+            font-size: 14px;
+            font-family: OpenSansRegular;
+        }
+        /* #one,#two,#three{
+
+	    transform: scale(0);
+
+		} */
+        /* .ClsTextTab > ul{
+
+		  list-style: none;
+
+	    line-height: 25px;
+
+		}
+
+
+
+		.ClsTextTab > ul >li{
+
+      padding-bottom: 10px;
+
+			list-style-image: url('pages/images/Topic01/T01P20/bullet_point.png');
+
+	    width: 195px;
+
+		} */
+        
+        #textTab0 {
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        
+        #textTab0 {
+            height: 330px;
+        }
+        
+        #textTab1 {
+            width: 740px;
+            background: none;
+            margin-right: 0;
+        }
+        
+        .subTirImage {
+            position: relative;
+            top: 0px;
+            left: 17px;
+            width: 225px;
+            height: 225px;
+            margin-right: 22px;
+            float: left;
+            background: #FFFFFF;
+            border-radius: 5px;
+        }
+        
+        #clsTir0 {
+            background: url('pages/images/Topic01/T01P20/img_11_small.png') no-repeat;
+        }
+        
+        #clsTir0>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+        
+        #clsTir1 {
+            background: url('pages/images/Topic01/T01P20/img_12_small.png') no-repeat;
+        }
+        
+        #clsTir1>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+        
+        #clsTir2 {
+            background: url('pages/images/Topic01/T01P20/img_13_small.png') no-repeat;
+            margin-right: 0;
+        }
+        
+        #clsTir2>.small_expand {
+            top: 190px;
+            right: 5px;
+        }
+        
+        .clsSubPatch {
+            position: absolute;
+            width: 720px;
+            height: 90px;
+            top: 240px;
+            left: 17px;
+            background: #FFFFFF;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        
+        .clsSubText {
+            font-family: OpenSansRegular;
+            font-size: 14px;
+            font-style: initial;
+            width: 90%;
+            position: absolute;
+            padding: 23px 35px;
+        }
+        
+        .clsActive {
+            background: #707070;
+            color: #FFFFFF;
+            pointer-events: none;
+        }
+        
+        .CaseStudy {
+            position: absolute;
+            left: 0px;
+            top: 5px;
+            width: 100%;
+            height: 106%;
+            background: rgba(255, 255, 255, 255);
+            /* //IE: ;
+
+	    //background: rgba(255,255,255,0.98); */
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            disable: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -mz-border-radius: 5px;
+            display: none;
+        }
+        
+        .caseStudyContent {
+            position: relative;
+            left: 0px;
+            top: 36px;
+            width: 650px;
+            height: 385px;
+            /* background: rgba(91,91,91, 1); */
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            disable: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -mz-border-radius: 5px;
+            margin: 0px auto;
+            /* border: 1px solid rgba(91,91,91, 1); */
+        }
+        
+        #popup_1 {
+            width: 391px;
+            height: 470px;
+            top: 0px;
+        }
+        
+        #popup_2 {
+            width: 391px;
+            height: 470px;
+            top: 0px;
+        }
+        
+        #popup_1 #imgPopup0 {
+            left: 0px;
+        }
+        
+        #popup_2 #imgPopup1 {
+            left: 0px;
+        }
+        
+        #popup_1 .closepopup,
+        #popup_2 .closepopup {
+            right: -11px;
+        }
+        
+        #popup_1 .clickToClose,
+        #popup_2 .clickToClose {
+            left: auto;
+            bottom: 6px;
+            top: auto;
+            right: 83px;
+        }
+        
+        .ModalTextBottom {
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+            width: 98%;
+            font-size: 14px;
+            height: 40px;
+            color: #ffffff;
+            font-family: OpenSansBold;
+            background: #5B5B5B;
+            text-align: center;
+            line-height: 42px;
+        }
+        
+        .ModalTxtImg {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            font-size: 14px;
+            height: 385px;
+            background-size: contain;
+            z-index: 100;
+            border-radius: 5px;
+        }
+        
+        #imgPopup0 {
+            background: url('pages/images/Topic01/T01P20/img02.png') no-repeat;
+            background-size: cover;
+            width: 391px;
+            left: 170px;
+            height: 470px;
+        }
+        
+        #imgPopup1 {
+            background: url('pages/images/Topic01/T01P20/img01.png') no-repeat;
+            background-size: cover;
+            width: 391px;
+            left: 170px;
+            height: 470px;
+        }
+        
+        #imgPopup2 {
+            background: url('pages/images/Topic01/T01P20/img02.png') no-repeat;
+        }
+        
+        #popUpImg0 {
+            background: url('pages/images/Topic01/T01P20/img11.png') no-repeat;
+        }
+        
+        #popUpImg1 {
+            background: url('pages/images/Topic01/T01P20/img12.png') no-repeat;
+        }
+        
+        #popUpImg2 {
+            background: url('pages/images/Topic01/T01P20/img13.png') no-repeat;
+        }
+        /* .arrImage{
+
+			display: none;
+
+		}
+
+		#arrow0{
+
+			position: absolute;
+
+			height: 163px;
+
+			top: 235px;
+
+			left: 110px;
+
+	    background: url('pages/images/Topic01/T01P20/marker1.png') no-repeat;
+
+		}
+
+		#arrow1{
+
+			position: absolute;
+
+			height: 192px;
+
+		  top: 235px;
+
+		  left: 315px;
+
+	    background: url('pages/images/Topic01/T01P20/marker2.png') no-repeat;
+
+		}
+
+		#arrow2{
+
+			position: absolute;
+
+			height: 153px;
+
+			top: 225px;
+
+			left: 750px;
+
+	    background: url('pages/images/Topic01/T01P20/marker3.png') no-repeat;
+
+		} */
+        
+        #myVideo {
+            position: absolute;
+            border-radius: 5px;
+            height: 100%;
+            outline: none;
+        }
+        
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 99%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* opacity: 0.5; */
+        }
+        
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+        
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+        /* #pageid_RefCloseBtn:hover {
+
+			background: url('media/images/player/common/close.png');
+
+			background-position: 0px 0px;
+
+		} */
+        
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+        
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+        
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+        
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+        
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        /* #references ul li a{
+
+				outline: none;
+
+				color: #0000ff;
+
+				font-family: OpenSansRegular;
+
+				text-decoration: underline;
+
+				font-size: 18px;
+
+		}
+
+		#references ul li a:hover{
+
+			color: #009cff;
+
+		}
+
+		#references ul li a:active {
+
+			outline: none; */
+        /* } */
+        
+        #pagereferences ul li {
+            border: 0 none;
+            margin-left: -4px;
+            margin-right: 5px;
+            vertical-align: bottom;
+            width: 4%;
+        }
+        
+        #closeMainDiv .glossaryclosetip {
+            margin-left: 70%;
+            color: #FFFFFF;
+            font-family: OpenSansRegular;
+            font-size: 79.2%;
+        }
+        
+        .bullet {
+            position: relative;
+            background-image: url("media/images/player/common/bullet.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            height: 13px;
+            width: 13px;
+            margin-top: 7.9px;
+            list-style-type: none;
+            border-radius: 10px;
+        }
+        
+        .text {
+            color: #172430;
+            list-style-type: none;
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        .clsSectionName {
+            margin-top: 17px !important;
+            font-family: SegoeUIBold;
+            color: #1a1f71;
+        }
+        
+        .clsResouceLink {
+            margin-left: 1% !important;
+        }
+        
+        ._clickLink {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+        }
+        
+        ._clickLink:hover {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+            color: blue;
+            cursor: pointer;
+        }
+        
+        ._viewed {
+            color: blue;
+        }
+        
+        video::-internal-media-controls-download-button {
+            display: none;
+        }
+        
+        video::-webkit-media-controls-enclosure {
+            overflow: hidden;
+        }
+        
+        video::-webkit-media-controls-panel {
+            width: calc(100% + 30px);
+            /* Adjust as needed */
+        }
+        
+        .videoClose1,
+        .videoClose2 {
+            bottom: 330px !important;
+            right: 12px !important;
+        }
+    </style>
+
+
+
+    <!-- <link href="pages/Topic01/css/T01P20.css" rel="stylesheet" type="text/css"> -->
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P20/where_to_insert_an_iv";
+
+        var gItemAudioPath = ["pages/audio/Topic01/T01P20/where_to_insert_an_iv",
+
+            "pages/audio/Topic01/T01P20/iv_catheter_size",
+
+            "pages/audio/Topic01/T01P20/precautions_after_insertion",
+
+        ];
+
+        var __transcriptPageTxt = 'A 24-gauge IV catheter is the standard size used with neonatal patients. If this size or type of catheter is not available, a 23-or 25-gauge butterfly needle may be used. A transilluminator or bright penlight may help make the veins more visible. Dim the room lights for the transilluminator to work best. Be sure the light does not heat up when turned on since that will burn the baby. Two IV insertion videos are also available by clicking on the "Watch video" link. Click the PDF link to read pointers from intensive care nursery nurses on starting IVs and to learn more about how to secure IVs. Click the button that says "Precautions after insertion" to continue.';
+
+
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+        var popupContentArray0 = [];
+
+
+
+        // var updateContentArray = [
+
+        // 	{time:"0", carry:"", event:"", show:"", hide:"", transcript:"Now let’s take a look at how to insert an IV. The best peripheral IV insertion sites are in the hand, foot, or scalp veins. However, avoid the scalp site if possible. Parents seem to be more distressed when they see an IV in this location."},
+
+        // 	{time:"2", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#TabItem0",duration:"0.5",activity:{'display':'block',"-webkit-animation":"zoomin 0.5s ease-in","animation":"zoomin 0.5s ease-in"}}]},
+
+        // 	{time:"6", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#TabItem1",duration:"0.5",activity:{'display':'block',"-webkit-animation":"zoomin 0.5s ease-in","animation":"zoomin 0.5s ease-in"}}]},
+
+        // 	{time:"8", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#TabItem2",duration:"0.5",activity:{'display':'block',"-webkit-animation":"zoomin 0.5s ease-in","animation":"zoomin 0.5s ease-in"}}]},
+
+        // ];
+
+        var updateContentArray = [
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "Now let’s take a look at how to insert an IV. The best peripheral IV insertion sites are in the scalp, hand, and foot veins. However, avoid the scalp site if possible. Parents seem to be more distressed when they see an IV in this location. Click on the button that says “IV catheter size” to continue."
+            },
+
+            {
+                time: "2",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".mainImage",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "5.7",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#sub0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "width": "263px"
+                    }
+                }]
+            },
+
+            {
+                time: "6.2",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#sub1",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "width": "250px"
+                    }
+                }]
+            },
+
+            {
+                time: "7.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#sub2",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "width": "172px"
+                    }
+                }]
+            },
+
+            // { time: "13.5", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: ".ClsImage0", duration: "1.5", activity: { 'display': 'none' } }] },
+
+            // { time: "14.8", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: ".ClsImage1", duration: "1.5", activity: { "display": "block" } }] },
+
+            // { time: "15.0", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: "#clsSubImage0", duration: "0.5", activity: { 'display': 'block', "-webkit-animation": "zoomin 0.5s ease-in", "animation": "zoomin 0.5s ease-in" } }] },
+
+            // { time: "16.0", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: "#clsSubImage1", duration: "0.5", activity: { 'display': 'block', "-webkit-animation": "zoomin 0.5s ease-in", "animation": "zoomin 0.5s ease-in" } }] }
+
+        ];
+
+        var popupSectionArray0 = [
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "Now let’s take a look at how to insert an IV. The best peripheral IV insertion sites are in the scalp, hand, and foot veins. However, avoid the scalp site if possible. Parents seem to be more distressed when they see an IV in this location. Click on the button that says “IV catheter size” to continue."
+            },
+
+            {
+                time: "2",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".mainImage",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "5.7",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#sub0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "width": "263px"
+                    }
+                }]
+            },
+
+            {
+                time: "6.2",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#sub1",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "width": "250px"
+                    }
+                }]
+            },
+
+            {
+                time: "7.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#sub2",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "width": "172px"
+                    }
+                }]
+            },
+
+            // { time: "13.5", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: ".ClsImage0", duration: "1.5", activity: { 'display': 'none' } }] },
+
+            // { time: "14.8", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: ".ClsImage1", duration: "1.5", activity: { "display": "block" } }] },
+
+            // { time: "15.0", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: "#clsSubImage0", duration: "0.5", activity: { 'display': 'block', "-webkit-animation": "zoomin 0.5s ease-in", "animation": "zoomin 0.5s ease-in" } }] },
+
+            // { time: "16.0", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: "#clsSubImage1", duration: "0.5", activity: { 'display': 'block', "-webkit-animation": "zoomin 0.5s ease-in", "animation": "zoomin 0.5s ease-in" } }] }
+
+        ];
+
+        var popupSectionArray1 = [
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: 'A 24 gauge IV catheter is the standard size used with neonatal patients. If this size or type of catheter is not available, a 23 or 25 gauge butterfly needle may be used. A transilluminator or bright penlight may help make the veins more visible. Dim the room lights for the transilluminator to work best. Be sure the light does not heat up when turned on, since that can burn the baby. Two IV insertion videos are also available by clicking on the Watch video link. Click on the link to read more about peripheral IV insertion and how to secure the IV. Click on the button that says “Precautions after insertion” to continue.'
+            },
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#ClsbackImg0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "8.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#ClsbackImg1",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "15",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#ClsbackImg2",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "29",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".videolink",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "35",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "._link",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+        ];
+
+        var popupSectionArray2 = [
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "Once an IV is inserted, inspect the IV site at least hourly so that you can detect an infiltration or irritation as soon as possible. If you’re concerned about the function of the IV, then most likely it should be removed. Follow your hospital's protocol for regularly recording the fluid that is infusing, as well as the amount of fluid infused. If the IV dislodges or infiltrates, some IV fluids and medications can cause tissue damage; therefore, it’s important to examine the IV site frequently."
+            },
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#textTab0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#showList_0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "18.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#showList_1",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "29.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#showList_2",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            /*{time:"10", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#textTab1",duration:"0.5",activity:{'display':'block'}}]},
+	
+			{time:"13.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir0",duration:"0.5",activity:{'display':'block'}}]},
+	
+			{time:"16.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir1",duration:"0.5",activity:{'display':'block'}}]},
+	
+			{time:"18.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir2",duration:"0.5",activity:{'display':'block'}}]},
+	
+			{time:"20.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsSubPatch",duration:"0.5",activity:{'display':'block'}}]},*/
+
+        ];
+
+
+
+        var videoTranscript = [
+
+            {
+                trans: "Okay when you are looking, you are going to view your veins, and the biggest thing you’re looking for is refill.  Like what does your refill look like? Does it empty and then come right back real quick? That’s one of the biggest things you are looking for when starting these. That rapid refill is going to get you a good flash. So, holding the hand like this will give you a good base, fingers down, and babies hands are very flexible. See how she’s starting back just a little bit so you can get through the skin and you don’t go right through the vessel.  Watch for that refill and remember you have to forward it just a little bit more. Slide it in. Okay, we’re going to secure the IV. Most of the time when you have trouble with your IV, it’s because you can’t see your insertion site and your catheter has come out just a little and has kinked. So notice she’s staying away from that insertion site, doing a chevron."
+
+            }, {
+                trans: "Okay, we’re going to put a tourniquet on. I use the gauze because it’s gentler on their skin. He’s got a little bit of a bruise right there. And I start back, and that way I have room to get through the skin. Go forward just a little bit more.  Pull your tourniquet. Put some gauze right here, protect their skin. Don’t tape over the insertion site."
+
+            }
+
+
+        ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function fnAudioFinishItemComp() {
+
+            console.log("end")
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+            //fnUpdatePageCompletionCounter(7);
+
+        }
+
+        var __dataXml;
+
+        var __clickCount = 0;
+
+        var __aIndex = 0;
+
+        var vid;
+
+        var __player;
+
+        var referencesURL;
+
+        var referenceArr = []
+
+
+
+        $(document).ready(function() {
+
+            disableNextBtn();
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+            $("section").hide();
+
+            $("#section0").show();
+
+            $('.boxInst').hide();
+
+            fnClick();
+
+
+
+            // fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), parseReferencesXml(data), errRefFunc);
+
+            $.ajax({
+
+                type: "GET",
+
+                url: './pages/Topic01/xml/T01P20.xml',
+
+                dataType: ($.browser.msie) ? "text" : "xml",
+
+                success: function(data) {
+
+                    parseReferencesXml(data);
+
+                }
+
+            });
+
+
+
+            // function fnXMLLoadError(){
+
+            // 	alert("Error loading XML file.");
+
+            // }
+
+
+
+
+
+            function parseReferencesXml(data) {
+
+                var xml;
+
+                if (typeof data == "string") {
+
+                    xml = new ActiveXObject("Microsoft.XMLDOM");
+
+                    xml.async = false;
+
+                    xml.loadXML(data);
+
+                } else {
+
+                    xml = data;
+
+                }
+
+                referencesXmlObject = $(xml);
+
+                $('#pagereferences').html('')
+
+                var referencesTitle = referencesXmlObject.find('resourceTitle').text();
+
+                var closeTitle = referencesXmlObject.find('closeTitle').text();
+
+                var referencesList = $('<ul class="clsResouceLink"></ul>');
+
+                $("#pageid_RefTitleBar").hide();
+
+                referencesXmlObject.find('Resources').find('Resource').each(function(index, el) {
+
+                    var str = "";
+
+                    referencesURL = $(this).attr('URL');
+
+                    console.log(referencesURL);
+
+                    referenceArr.push(referencesURL)
+
+                    var isSectionTitle = $(this).attr('isSectionTitle');
+
+                    var isPageID = $(this).attr('isPageID');
+
+                    //console.log(referencesURL);
+
+                    //var resourceRtype=$(this).attr('Rtype');
+
+                    var referencesIcon = $(this).attr('Icon');
+
+                    var referencesLabel = $(this).text();
+
+                    //var li=$('<li><a target="_blank" href="'+referencesURL+'"><img src="'+referencesIcon+'"/>'+referencesLabel+'</a></li>');
+
+                    if (isSectionTitle == "true") {
+
+                        //below code for Section title
+
+                        str += '<ul class="clsSectionName">' + referencesLabel + '</ul>';
+
+                    } else if (isPageID == "true") {
+
+                        //below code for call page by ID
+
+                        str += '<li class="bullet"></li><li class="text"><a target="_self" href="#" onclick="fnJumpToPage(' + '\'' + referencesURL + '\'' + ')">' + referencesLabel + '</a></li></ul>';
+
+                    } else {
+
+                        //below code for normal link
+
+                        str += '<li class="bullet"></li><li class="text"><div class="_clickLink" id="_clickLink' + index + '">' + referencesLabel + '</div></li></ul>';
+
+                    }
+
+
+
+
+
+                    //str+='<hr>';
+
+
+
+
+
+                    referencesList.append(str);
+
+                });
+
+
+
+
+
+                $('#pagereferences').append(referencesList);
+
+                //$(".clsSectionName").addClass("clsSectionName");
+
+            }
+
+            $("#pageid_RefCloseBtn").click(function() {
+
+                $("#pageClsResourcesPopup").hide();
+
+            });
+
+            var n = isInArray("M1L0T1P20", gCompPageArr);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                // fnGlowNextBtn();;
+
+                fnDesiableNext(false);
+
+            }
+
+            $(document).on("click", '._clickLink', function() {
+
+                var num = $(this).attr('id').slice(10)
+
+                //console.log(referenceArr);
+
+                $(this).addClass("_viewed");
+
+                //$('.pdflink').attr('src', referenceArr[num])
+
+                $("#pageid_RefTitleBar").hide();
+
+                $("#pageRefTitleBar_id").show();
+
+            });
+
+
+
+            $("#id_glosCloseBtn").click(function() {
+                enabledAllButtons();
+                //$("#pageClsResourcesPopup").hide();
+                $("#pageClsResourcesPopup").hide();
+
+                //$("#pageid_RefTitleBar").show()
+
+            });
+
+
+
+            // $("#RefTitleBar_id").click(function(){
+
+            // 	$("#pageid_RefTitleBar").hide();
+
+            // });
+
+
+
+        });
+
+
+
+        $('#pageClsResourcesPopup').hide();
+
+        // });
+
+        //function for call page by ID
+
+        function fnJumpToPage(url) {
+
+            disableHelpPopup();
+
+            fnJumpToPageByID(url);
+
+        }
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+
+            indexAudio = (gCurrentIndex);
+
+            audioId = "audio_" + gCurrentIndex;
+
+            fnHideShowAudioPlayer(false);
+
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        }
+
+
+
+
+
+        function fnClick() {
+
+            $(".ClsTabItem").off("click").on("click", function() {
+                $(".ClsTabItem").removeClass("clsActive");
+
+                __aIndex = $(this).attr('id').slice(7);
+
+                console.log(__aIndex);
+
+                $(this).addClass("clsActive");
+
+                $(this).addClass("viewed");
+
+                $("section").hide();
+                $(".small_expand").hide();
+
+                if (__aIndex == 0) {
+
+                    console.log("where IV");
+
+                    $("#section" + __aIndex).show();
+
+                    setTimeout(function() {
+
+                        $(".Clsback").hide();
+
+                        $("._link").hide();
+
+                        $(".videolink").hide();
+
+                        $(".ClsImage" + __aIndex).show();
+
+                        $(".ClsTextTab").hide();
+
+                        $(".listcnt").hide();
+
+                        $(".subTirImage").hide();
+
+                        $(".clsSubPatch").hide();
+
+                    }, 0);
+
+                    audioReset();
+
+                    fnPlaySectionAudio(__aIndex);
+
+                } else if (__aIndex == 1) {
+
+                    console.log("size");
+
+                    $("#section" + __aIndex).show();
+
+                    setTimeout(function() {
+
+                        // $(".arrImage").hide();
+
+                        $(".mainImage").hide();
+
+                        $(".subImage").hide();
+
+                        $(".clsSubImage").hide();
+
+                        $(".ClsTextTab").hide();
+
+                        $(".listcnt").hide();
+
+                        //$(".subTirImage").hide();
+
+                        //$(".clsSubPatch").hide();
+
+                    }, 0);
+
+                    audioReset();
+
+                    fnPlaySectionAudio(__aIndex);
+
+                } else {
+
+                    console.log("precautions");
+
+                    $(".ClsTextTab").show();
+
+                    $("#section" + __aIndex).show();
+
+                    $(".subTirImage").show();
+
+                    $(".clsSubPatch").show();
+
+                    setTimeout(function() {
+
+                        // $(".arrImage").hide();
+
+                        $(".mainImage").hide();
+
+                        $(".subImage").hide();
+
+                        $(".clsSubImage").hide();
+
+                        $(".Clsback").hide();
+
+                        $("._link").hide();
+
+                        $(".videolink").hide();
+
+                    }, 0);
+
+                    audioReset();
+
+                    fnPlaySectionAudio(__aIndex);
+
+                }
+
+                if ($(".viewed").length == $(".ClsTabItem").length) {
+
+                    enableNextBtn();
+                    fnDesiableNext(false);
+                    gCompPageArr.push("M1L0T1P20");
+                }
+            });
+
+        }
+
+
+
+        $(".small_expand").on("click", function() {
+
+            /* if(!fnPauseAudio()){
+
+            	console.log(true);
+
+            	fnPauseAudio()
+
+            }else {
+
+            	playPauseAudio();
+
+            	console.log(false);
+
+            } */
+
+            $(".modalTxtImg").hide();
+
+
+            $(".modalContent").attr("id", "popup_" + $(this).attr("ccid"));
+            if (__aIndex == 0) {
+
+                var i = $(this).attr("id").slice(8);
+
+                $("#case_study_popup" + __aIndex).show();
+
+                $("#imgPopup" + i).show();
+
+            } else {
+
+                var j = $(this).attr("id").slice(9);
+
+                $("#case_study_popup" + __aIndex).show();
+
+                $("#popUpImg" + j).show();
+
+            }
+
+            $("#section" + __aIndex + " .sectionTop").addClass("blur");
+
+            $("#section" + __aIndex + " .sectionContent").addClass("blur");
+            $(".mainContainer").addClass("blur");
+
+        });
+
+
+
+
+
+        // $("#myVideo" ).click(function() {
+
+        // 	__videoPlayingCustom = true;
+
+        // 	//console.log($("#myvideo").get(0));
+
+        // 	audioReset();
+
+        // 	vid = document.getElementById("myVideo");
+
+        // 	$('#myVideo').attr('controls',false);
+
+        // 	//console.log(vid.get(0).pause());
+
+        // 	// 	vid.load();
+
+        // 	// 	vid.play();
+
+        // 	// 	vid.addEventListener('ended', function(e){
+
+        // 	// 		videoPlaying = false;
+
+        // 	// 		videoEnd = true;
+
+        // 	// 		fnAudioFinishPageComp();
+
+        // 	// 	});
+
+        // 	// 	vid.addEventListener("timeupdate",seektimeupdate,false);
+
+        // 	// 	__player = document.querySelector("video");
+
+        // 	// 	__progressBar = document.querySelector("#slider");
+
+        // 	// 	__progressBar.addEventListener("click", seek);
+
+        // 	// 	$('#clsPlayPauseBtn').removeClass("clsPlayDisable").addClass("clsPause");
+
+        // 	// 	$("#clsPlayPauseBtn").click(function() {
+
+        // 	// 	if(__videoPlayingCustom==true){
+
+        // 	// 		if($(this).hasClass("clsPlay")){
+
+        // 	// 			console.log("pause");
+
+        // 	// 			vid.play();
+
+        // 	// 			$('#clsPlayPauseBtn').removeClass("clsPlay").addClass("clsPause").attr("title","Pause");
+
+        // 	// 		}else{
+
+        // 	// 			$('#clsPlayPauseBtn').removeClass("clsPause").addClass("clsPlay").attr("title","Play");;
+
+        // 	// 			console.log("play");
+
+        // 	// 			vid.pause();
+
+        // 	// 		}
+
+        // 	// 	}
+
+        // 	// });
+
+        // 	playPauseAudio();
+
+        //
+
+        // });
+
+
+
+        $(".videolink").on("click", function() {
+
+            if (!fnPauseAudio()) {
+
+                fnPauseAudio()
+
+            } else {
+
+                playPauseAudio();
+
+            }
+            //console.log();
+            if ($(this).attr("id") == "clickImg3") {
+                $("#myVideo source").attr("src", "pages/video/hand_iv_insertion_video.mp4");
+
+                // console.log(videoTranscript[0].trans +"-----------------------------------------")
+                $("#transcripttext").html(videoTranscript[0].trans);
+                $(".popover").addClass("videoClose1");
+            } else if ($(this).attr("id") == "clickImg4") {
+                $("#transcripttext").html(videoTranscript[1].trans);
+
+
+                $("#myVideo source").attr("src", "pages/video/foot_iv.mp4");
+                $(".popover").addClass("videoClose2");
+            }
+
+            vid = document.getElementById("myVideo");
+            vid.load()
+            vid.play()
+
+            // __player = document.querySelector("video");
+
+            $(".modalTxtImg").hide();
+
+            if (__aIndex == 0) {
+
+                console.log(true);
+
+                var i = $(this).attr("id").slice(8);
+
+                console.log(i);
+
+                $("#case_study_popup" + __aIndex).show();
+
+                $("#imgPopup" + i).show();
+
+            } else {
+
+                console.log(false);
+
+                var j = $(this).attr("id").slice(9);
+
+                console.log(j);
+
+                $("#case_study_popup" + __aIndex).show();
+
+                $("#popUpImg" + j).show();
+
+                $('#id_sliderContainer').hide()
+
+                // $('#clsAudioOffBtn').hide()
+
+                $('#clsAudioOnBtn').hide()
+
+                $("#clsPlayPauseBtn").hide()
+
+            }
+
+            $("#section" + __aIndex + " .sectionTop").addClass("blur");
+
+            $("#section" + __aIndex + " .sectionContent").addClass("blur");
+
+
+
+            // vid.load();
+
+            // __player.currentTime = 0;
+
+            //  $("#transcripttext").html("");
+
+        });
+
+
+
+        $("#_clickImg0pdf").on("click", function() {
+
+            disabledAllButtons();
+
+            fnPauseAudio();
+
+            $("#pageClsResourcesPopup").show();
+
+        });
+        $("#id_glosCloseBtn").click(function() {
+            console.log("clicked close");
+
+            fnPlayAudio()
+            enabledAllButtons();
+            //$("#pageClsResourcesPopup").hide();
+            // $("#pageClsResourcesPopup").hide();
+            $("#pageid_RefTitleBar").show()
+        });
+
+
+        $(".closepopup").on("click", function() {
+
+            // audioReset();
+
+            /* if(!fnPauseAudio()){
+
+            	console.log(true);
+
+            	playPauseAudio();
+
+            } */
+
+
+
+            $(".modal").removeAttr("style");
+            $(".mainContainer").removeClass("blur");
+
+        });
+
+        $(".closebutton").on("click", function() {
+
+            vid.pause();
+
+            vid.load();
+            $(".popover").removeClass("videoClose1");
+            $(".popover").removeClass("videoClose2");
+
+            if (!fnPauseAudio()) {
+
+                console.log(true);
+
+                playPauseAudio();
+
+            }
+
+            $("#transcripttext").html(__transcriptPageTxt);
+
+            $("#section" + __aIndex + " .modal").removeAttr("style");
+
+            $("#section" + __aIndex + " .sectionTop").removeClass("blur");
+
+            $("#section" + __aIndex + " .sectionContent").removeClass("blur");
+
+            $('#id_sliderContainer').show()
+
+            // $('#clsAudioOffBtn').show()
+
+            $('#clsAudioOnBtn').show()
+
+            $("#clsPlayPauseBtn").show()
+
+        });
+
+
+
+
+
+        function fnCompletion() {
+
+            console.log($(".viewed").length + ":::" + $(".ClsTabItem").length);
+
+            // if ($(".viewed").length == $(".ClsTabItem").length) {
+
+            $('.boxInst').show();
+
+            enableNextBtn();
+
+            fnAudioFinishItemComp();
+
+            gCompPageArr.push("M1L0T1P20");
+
+            // }
+
+        }
+
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+                audioStop();
+                console.log("start audio");
+                console.log($("a.tabSection").hasClass("active"));
+                $(".small_expand").show();
+                //fnCompletion();
+            } else {
+
+                //console.log("start end");
+
+                //console.log($(".viewed").length+":::"+$(".ClsTabItem").length);
+                audioStop();
+                fnCompletion();
+                console.log("end");
+                //$("#clsTir0 > .small_expand").show();
+                $(".subTirImage > .small_expand").show();
+                $("#idTick0" + selectedIndex).css({
+                    "opacity": "1"
+                });
+
+                $("#clsTabTxt" + selectedIndex).css({
+                    'color': '#80848b'
+                });
+
+                $(".ClsTab").removeClass("clsDisable");
+
+                $("#TabImage" + selectedIndex).addClass("clsDisable");
+                $(".small_expand").show();
+
+                //fnCompletion();
+
+                //if($(".clsVisited").length === 2){
+
+                //$('.boxInst').css('opacity','1');
+
+                //}
+
+            }
+
+        }
+
+        // function endModule(){
+
+        // 	var _getCount = clickTabCount;
+
+        // 	if(_getCount>=4){
+
+        // 		$('.boxInst').show();
+
+        // 		audioReset();
+
+        // 		fnPlayItemAudio(7);
+
+        // 	}
+
+        // }
+
+
+
+
+
+        function seek(e) {
+
+            var percent = e.offsetX / this.offsetWidth;
+
+            __player.currentTime = percent * __player.duration;
+
+            __progressBar.value = percent / 100;
+
+        }
+
+
+
+
+
+        function seektimeupdate() {
+
+
+
+            cursecs = Math.floor(vid.currentTime)
+
+            try {
+
+                UpdateTheVideoTime(vid.currentTime)
+
+                //added for slider progress
+
+                var value = (100 / vid.duration) * vid.currentTime;
+
+                $("#slider, #slider .ui-slider-handle ui-state-default").slider("value", value);
+
+            } catch (e) {}
+
+        }
+
+
+
+        $(".clickToPrev").on("click", function() {
+
+            endModule();
+
+            audioReset();
+
+            vid.load();
+
+            vid.pause();
+
+            __player.currentTime = 0;
+
+        });
+    </script>
+
+</head>
+
+
+
+<body>
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <!--<div class="ClsInsDiv">
+
+				<div class="ClsInsImg"></div>
+
+				<div class="ClsInsText clsReg">Click to open case information</div>
+
+			</div>
+
+			 <div class="clsPatch" id="idPatchMain">
+
+				<div class="clsText" id="idText1">When an infant is sick, there are good reasons to withhold breast, bottle,
+
+				or tube feedings. These include increased risk of aspiration, risk of developing an intestinal ileus, hypoxia and impaired blood flow to the bowel, and bowel obstruction.</div>
+
+				<div class="clsText" id="idText2"><strong>Click on a tab below to learn more.</strong></div>
+
+			</div> -->
+
+            <div class="clsAllTabs">
+
+                <div class="ClsTab">
+
+                    <div class="ClsTabItem clsActive viewed" id="TabItem0">Where to insert an IV</div>
+
+                    <div class="ClsTabItem" id="TabItem1">IV catheter size</div>
+
+                    <div class="ClsTabItem" id="TabItem2">Precautions after insertion</div>
+
+                </div>
+
+
+
+                <section class="ClsSecItem section" id="section0">
+
+                    <div class="ClsImage0">
+
+                        <div class="mainImage"></div>
+
+                        <!-- <div class="arrImage" id="arrow0"></div> -->
+
+                        <div class="subImage" id="sub0"></div>
+
+                        <!-- <div class="arrImage" id="arrow1"></div> -->
+
+                        <div class="subImage" id="sub1"></div>
+
+                        <!-- <div class="arrImage" id="arrow2"></div> -->
+
+                        <div class="subImage" id="sub2"></div>
+
+                    </div>
+
+                    <div class="ClsImage1">
+
+                        <div class="clsSubImage" id="clsSubImage0">
+
+                            <div class="subFirstImage" id="clsSub0"></div>
+
+                            <!-- <div class="subFirstImage" id="clsImg0"></div> -->
+
+                            <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
+
+                            <a href="javascript:void(0);" title="Click to enlarge image" ccid="1" class="small_expand zoom_btn" id="clickImg0">&nbsp;</a>
+
+                        </div>
+
+                        <div class="clsSubImage" id="clsSubImage1">
+
+                            <div class="subFirstImage" id="clsSub1"></div>
+
+                            <!-- <div class="subFirstImage" id="clsImg1"></div> -->
+
+                            <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
+
+                            <a href="javascript:void(0);" title="Click to enlarge image" ccid="2" class="small_expand zoom_btn" id="clickImg1">&nbsp;</a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="CaseStudy" id="case_study_popup0">
+
+						<div class="caseStudyContent" unselectable="on">
+
+							<!- <div class="ModalTextBottom" unselectable="on"></div> -
+
+							<div class="ModalTxtImg" unselectable="on" id="imgPopup0"></div>
+
+							<div class="ModalTxtImg" unselectable="on" id="imgPopup1"></div>
+
+							<a class="closepopup" id="closeId0" href="javascript:void(0)" title="Click to close"></a>
+
+							<div class="clickToContinue expandImgTxtRight clickToClose" id="closeClass0"><i>Click to
+									close image.<i></div>
+
+						</div>
+
+					</div> -->
+                    <div class="modal height_100" id="case_study_popup0">
+                        <div class="modalContent medium custom-modal" unselectable="on">
+                            <div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
+                            <div class="modalTxtImg" unselectable="on" id="imgPopup1"></div>
+                            <a class="closepopup zoom_close_btn" id="closeId0" href="javascript:void(0)" title="Click to close"></a>
+                            <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to close</div> -->
+                            <div class="popover left-arrow btm-adj">
+                                <div class="arrow" style="top: 50%;"></div>
+                                <div class="popover-content">Click to close image.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+                <section class="ClsSecItem section" id="section1">
+
+                    <div class="Clsback" id="ClsbackImg0">
+
+                        <div class="subSecImage" id="subImg0"></div>
+
+                        <div class="subText" id="subTxt1">A 24-gauge IV catheter is the standard size used with neonatal patients.
+                        </div>
+
+                    </div>
+
+                    <div class="Clsback" id="ClsbackImg1">
+
+                        <div class="subSecImage" id="subImg1"></div>
+
+                        <div class="subText" id="subTxt2"> If a 24-gauge IV catheter is not available, a 23-or 25-gauge butterfly needle may be used.</div>
+
+                        <!-- <div class="subText" id="subTxt2">23 or 25 gauge butterfly needle may be used.</div> -->
+
+                    </div>
+
+                    <div class="Clsback" id="ClsbackImg2">
+
+                        <div class="subSecImage" id="subImg2"></div>
+
+                        <div class="subText" id="subTxt3">A transilluminator or bright penlight may help make the veins more visible. Make sure the light does not heat up when turned on.</div>
+
+                    </div>
+
+                    <div class="watchvideocnt">
+
+                        <a class="videolink" href="javascript:void(0);" id="clickImg3" title="Hand IV insertion">​<img class="video_icon"
+                                src="pages/images/Topic01/T01P20/video_icon.png"
+                                alt="Watch video in hand IV insertion" />Hand IV insertion</a>
+                        <a class="videolink" href="javascript:void(0);" id="clickImg4" title="Foot IV insertion">​<img class="video_icon"
+                                src="pages/images/Topic01/T01P20/video_icon.png"
+                                alt="Watch video on foot insertion" />Foot IV insertion</a>
+                    </div>
+
+                    <div class="_link" id="_clickImg0pdf"><img class="pdf_icon" src="pages/images/Topic01/T01P20/pdf_icon.png" alt="Starting IVs and how to secure IVs" /><span>Starting IVs and how to secure IVs</span></div>
+
+                    <!-- <div class="CaseStudy" id="case_study_popup1">
+
+						<div class="caseStudyContent" unselectable="on">
+
+							<!-<div class="ModalTextBottom" unselectable="on"></div> -
+
+							<video oncontextmenu="return false;" id="myVideo" poster="pages/images/Topic01/T01P20/video.png" disablepictureinpicture
+								controls controlsList="nodownload noremoteplayback">
+
+								<source src="" type="video/mp4">
+
+							</video>
+
+							<a class="closebutton" href="javascript:void(0)" title="Click to close"></a>
+
+							<div class="clickToContinue expandImgTxtRight videoToClose"><i>Click to close video.<i>
+							</div>
+
+						</div>
+
+					</div> -->
+
+                    <div class="modal height_100 opacity-5" id="case_study_popup1">
+                        <div class="modalContent medium custom-modal" unselectable="on">
+                            <video oncontextmenu="return false;" id="myVideo" poster="pages/images/Topic01/T01P20/video.png" disablepictureinpicture controls controlsList="nodownload noremoteplayback">
+                                <source src="" type="video/mp4">
+                            </video>
+                            <a class="closebutton" href="javascript:void(0)" title="Click to close"></a>
+                            <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to close</div> -->
+                            <div class="popover left-arrow btm-adj">
+                                <div class="arrow" style="top: 50%;"></div>
+                                <div class="popover-content">Click to close video.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+                <section class="ClsSecItem section" id="section2">
+
+                    <div class="ClsTextTab" id="textTab0">
+
+                        <div class="listcnt" id="showList_0">
+
+                            <div id="arrow_0" class="arrowHolder"></div>
+
+                            <div id="option_0" curid="1" class="OptionCLSS">
+
+                                <span id="opt_0" class="OptionTxtCLSS">Once an IV is inserted, inspect the IV site at
+                                    least hourly.</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="listcnt" id="showList_1">
+
+                            <div id="arrow_1" class="arrowHolder"></div>
+
+                            <div id="option_1" curid="1" class="OptionCLSS">
+
+                                <span id="opt_1" class="OptionTxtCLSS">Record what is infusing as well as the
+                                    amount infused.</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="listcnt" id="showList_2">
+
+                            <div id="arrow_2" class="arrowHolder"></div>
+
+                            <div id="option_2" curid="1" class="OptionCLSS">
+
+                                <span id="opt_2" class="OptionTxtCLSS">Examine the IV site frequently in case the IV
+                                    dislodges or infiltrates.</span>
+
+                            </div>
+
+                        </div>
+
+                        <!-- <ul>
+
+							<li class="_list" id="one">Once an IV is inserted, inspect the IV site at least hourly</li>
+
+							<li class="_list" id="two">Record what is infusing as well as the amount infused</li>
+
+							<li class="_list" id="three">Record what is infusing as well as the amount infused</li>
+
+						</ul> -->
+
+                    </div>
+
+                    <div class="ClsTextTab" id="textTab1">
+
+                        <div class="clsTirImage" id="imgSub0">
+
+                            <div class="subTirImage" id="clsTir0">
+
+                                <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
+
+                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="3" class="small_expand zoom_btn" id="clkSecImg0">&nbsp;</a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="clsTirImage" id="imgSub1">
+
+                            <div class="subTirImage" id="clsTir1">
+
+                                <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
+
+                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="4" class="small_expand zoom_btn" id="clkSecImg1">&nbsp;</a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="clsTirImage" id="imgSub2">
+
+                            <div class="subTirImage" id="clsTir2">
+
+                                <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
+
+                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="5" class="small_expand zoom_btn" id="clkSecImg2">&nbsp;</a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="clsSubPatch">
+
+                            <div class="clsSubText">The two images on the left show the extravasation of IV fluid. The image on the right shows a skin injury following an IV infiltration.</div>
+
+                        </div>
+
+                    </div>
+                    <!-- 
+					<div class="CaseStudy" id="case_study_popup2">
+
+						<div class="caseStudyContent" unselectable="on">
+
+							<!- <div class="ModalTextBottom" unselectable="on"></div> -
+
+							<div class="ModalTxtImg" unselectable="on" id="popUpImg0"></div>
+
+							<div class="ModalTxtImg" unselectable="on" id="popUpImg1"></div>
+
+							<div class="ModalTxtImg" unselectable="on" id="popUpImg2"></div>
+
+							<a class="closepopup" href="javascript:void(0)" title="Click to close"></a>
+
+							<div class="clickToContinue expandImgTxtRight clickToClose"><i>Click to close image.</i>
+							</div>
+
+						</div>
+
+					</div> -->
+
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="modal height_100" id="case_study_popup2">
+            <div class="modalContent medium custom-modal" unselectable="on">
+                <div class="modalTxtImg" unselectable="on" id="popUpImg0"></div>
+                <div class="modalTxtImg" unselectable="on" id="popUpImg1"></div>
+                <div class="modalTxtImg" unselectable="on" id="popUpImg2"></div>
+                <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to close"></a>
+                <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to close</div> -->
+                <div class="popover left-arrow btm-adj">
+                    <div class="arrow" style="top: 50%;"></div>
+                    <div class="popover-content">Click to close image</div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--- Main Container--->
+
+    <div class="boxInst">
+
+        <div class="instNextClick"></div>
+
+        <div class="next_click"><em> Click Next to continue.</em></div>
+
+    </div>
+
+
+
+
+
+    <div id="pageClsResourcesPopup">
+
+        <div id="pageid_ReferencesBG">
+
+            <div id="pageRefTitleBar_id">
+
+                <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+
+                    <div id="pageReftitleText_id" unselectable="on">Starting IVs and how to secure IVs</div>
+
+                    <div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to close</span></div>
+
+                    <div id="id_glosCloseBtn" title="Close" unselectable="on"></div>
+                    <div class="close_txt" unselectable="on"><span id="clsText">Close</span></div>
+
+                    <embed class="pdflink" alt="pdf" src="pages/Topic01/pdf/pointers_from_intensive_care_nursery_nurses_on_starting_IVs_and_how_to_secure_IVs.pdf" internalinstanceid="70">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1323 @@
+
+input, textarea {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+
+  }
+
+
+#id_transcriptBox {
+    position: absolute;
+    height: 61px;
+    width: 566px;
+    left: 253px;
+    top: 596px;
+    font-family: OpenSansRegular;
+    background-color: #FFFFFF;
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);	*/
+    z-index: 99999;
+    overflow: hidden;
+    display: block !important;
+}
+
+#transcriptHelp {
+    position: absolute;
+    height: 61px;
+    width: 566px;
+    left: 253px;
+    top: 596px;
+    font-family: OpenSansRegular;
+    background-color: #FFFFFF;
+    z-index: 1000000;
+    overflow: hidden;
+    display: none;
+}
+
+#transcriptbar {
+    background-color: #005B8A;
+    left: 6%;
+    overflow: auto;
+    width: 35%;
+    z-index: 9999;
+    position: relative;
+    height: 55.5%;
+}
+
+#transcripttext {
+    position: absolute;
+    width: 97.9%;
+    top: 0px;
+    left: 4PX;
+    height: 91%;
+    right: 0px;
+    text-align: left;
+    font-size: 12px;
+    overflow-y: scroll;
+    line-height: 17px;
+    padding-right: 8px;
+}
+#transcripttextHelp {
+    position: absolute;
+    width: 97.9%;
+    top: 0px;
+    left: 4PX;
+    height: 91%;
+    right: 0px;
+    text-align: left;
+    font-size: 12px;
+    overflow-y: scroll;
+    line-height: 17px;
+    padding-right: 8px;
+}
+
+
+/* width */
+   
+ #transcripttext::-webkit-scrollbar, #transcripttextHelp::-webkit-scrollbar {
+    width: 8px;
+}
+
+#transcripttext::-ms-scrollbar, #transcripttextHelp::-ms-scrollbar {
+    width: 8px;
+}
+
+#transcripttext::-moz-scrollbar, #transcripttextHelp::-moz-scrollbar {
+    width: 8px;
+}
+/* Track */
+
+#transcripttext::-webkit-scrollbar-track, #transcripttextHelp::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 5px;
+}
+
+#transcripttext::-ms-scrollbar-track, #transcripttextHelp::-ms-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 5px;
+}
+
+#transcripttext::-moz-scrollbar-track, #transcripttextHelp::-moz-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 5px;
+}
+/* Handle */
+
+#transcripttext::-webkit-scrollbar-thumb, #transcripttextHelp::-webkit-scrollbar-thumb {
+    background: #545454;
+    border-radius: 5px;
+}
+
+#transcripttext::-ms-scrollbar-thumb, #transcripttextHelp::-ms-scrollbar-thumb {
+    background: #545454;
+    border-radius: 5px;
+}
+
+#transcripttext::-moz-scrollbar-thumb, #transcripttextHelp::-moz-scrollbar-thumb {
+    background: #545454;
+    border-radius: 5px;
+}
+/* Handle on hover */
+
+#transcripttext::-webkit-scrollbar-thumb:hover, #transcripttextHelp::-webkit-scrollbar-thumb:hover {
+    background: #545454;
+}
+
+#transcripttext::-ms-scrollbar-thumb:hover, #transcripttextHelp::-ms-scrollbar-thumb:hover {
+    background: #545454;
+}
+
+span.tooltip {
+    font-size: 12px;
+    color: #4D667B;
+    display: block;
+    position: absolute;
+    top: 39px;
+    text-align: center;
+    width: 100%;
+    left: 0px;
+}
+
+.ClsToolbtn {
+    width: 70px;
+    height: 63px;
+    left: 12px;
+    top: 2px;
+    position: absolute;
+}
+
+.ClsToolbtn span.ClsToolbtnIcon {
+    position: absolute;
+    height: 31px;
+    width: 31px;
+    top: 10px;
+    left: 20px;
+    background: url("../media/images/player/common/pinImg.png") no-repeat;
+    background-position: 0px 0;
+    transition: all 0.2s;
+    border-radius: 50%;
+    z-index: 1;
+    display: block;
+    background-size: cover;
+}
+
+.no-touch .ClsToolbtn:hover:not(.clsToolDisabled) span.ClsToolbtnIcon {
+    background: url("../media/images/player/common/pinImg.png") no-repeat;
+    background-position: -31px 0px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.ClsToolbtnSelected span.ClsToolbtnIcon {
+    background: url("../media/images/player/common/pinImg.png") no-repeat !important;
+    background-position: -31px 0px !important;
+    background-size: cover !important;
+}
+
+.ClsToolbtnSelected {
+    background: #ffffff;
+    top: -17px;
+    z-index: 999;
+    height: 81px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+}
+
+.ClsToolbtnSelected span.ClsToolbtnIcon {
+    top: 25px;
+}
+
+.ClsToolbtnSelected span.tooltip {
+    top: 54px;
+}
+
+.whitepatch {
+    background: #ffffff;
+    height: 20px;
+    position: absolute;
+    bottom: 62px;
+    width: 70px;
+    z-index: 100000000000000000000;
+    display: none;
+    left: 12px;
+}
+
+#clsHelpBtn {
+    position: absolute;
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+    top: 5px;
+    z-index: 100000;
+    right: 110px;
+    border-radius: 50%;
+    background: url("../media/images/new/help.png") no-repeat;
+    background-position: 0px 0px;
+    transition: all 0.2s;
+    background-size: cover;
+}
+
+.no-touch #clsHelpBtn:hover:not(.clsHelpBtnDis),
+.no-touch #clsHelpBtn:hover:not(.active),
+.no-touch #clsHelpBtn.active {
+    background: url("../media/images/new/help.png") no-repeat;
+    background-position: -31px 0px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+#clsHelpBtn span.tooltip {
+    top: 27px;
+    left: -16px;
+    color: #ffffff;
+}
+.clsHelpBtnDis {
+    opacity: 0.5 !important;
+    cursor: default !important;
+}
+
+.headClass {
+    clear: both;
+    float: left;
+    display: block;
+    width: 1085px;
+    height: 52px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(../media/images/player/common/top_bar_sugar.png) no-repeat;
+    z-index: 11100;
+}
+
+#clsPlayPauseBtn {
+    position: absolute;
+    left: 85px;
+    width: 68px;
+    height: 51px;
+    top: 2px;
+    z-index: 999;
+    transition: all 0.2s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+span.clsPlayPauseBtnIcon {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 9px;
+    left: 20px;
+    z-index: 999;
+    transition: all 0.2s;
+    border-radius: 50%;
+    background: url("../media/images/player/common/play_sprite.png") no-repeat;
+    background-position: -33px 0;
+    display: block;
+    background-size: cover;
+}
+
+.clsPlayDisable span.clsPlayPauseBtnIcon {
+    background: url("../media/images/player/common/pause_sprite.png") no-repeat;
+    background-position: 0px 0;
+    cursor: default;
+    /* opacity:0.5; */
+    background-size: cover;
+}
+
+.no-touch .clsPlay:hover span.clsPlayPauseBtnIcon {
+    background: url("../media/images/player/common/play_sprite.png") no-repeat;
+    background-position: -33px 0;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.clsPause span.clsPlayPauseBtnIcon {
+    background: url("../media/images/player/common/pause_sprite.png") no-repeat;
+    cursor: pointer;
+    background-position: 0px 0;
+    background-size: cover;
+}
+
+.clsPauseDisable span.clsPlayPauseBtnIcon {
+    background: url("../media/images/player/common/pause_sprite.png") no-repeat;
+    opacity: 0.5;
+    background-position: 0px 0;
+}
+
+.no-touch .clsPause:hover span.clsPlayPauseBtnIcon {
+    background: url("../media/images/player/common/pause_sprite.png") no-repeat;
+    cursor: pointer;
+    background-position: -33px 0;
+    background-size: cover;
+}
+
+#clsReplay {
+    width: 70px;
+    height: 63px;
+    top: 2px;
+    left: 153px;
+    position: absolute;
+}
+
+#clsReplay span.clsReplayIcon {
+    background: url("../media/images/player/common/replay_sprite.png") no-repeat;
+    position: absolute;
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+    left: 20px;
+    top: 9px;
+    background-position: 0px 0;
+    transition: all 0.2s;
+    border-radius: 50%;
+    display: block;
+    background-size: cover;
+}
+
+.no-touch #clsReplay:hover:not(.clsReplayDis) span.clsReplayIcon {
+    background: url("../media/images/player/common/replay_sprite.png") no-repeat;
+    background-position: -32px 0;
+    cursor: pointer;
+    background-size: cover;
+}
+
+#clsAudioOnBtn,
+#clsAudioOffBtn {
+    position: absolute;
+    width: 62px;
+    height: 63px;
+    top: 3px;
+    right: 178px;
+}
+
+.clsAudioDis {
+    cursor: default !important;
+    opacity: 0.5;
+}
+
+@media all and (max-device-width: 768px) {
+    #clsAudioOnBtn,
+    #clsAudioOffBtn {
+        display: none;
+        /*visibility: hidden;*/
+    }
+}
+
+#clsAudioOnBtn span.clsAudioOnBtnIcon {
+    position: absolute;
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+    top: 10px;
+    left: 16px;
+    border-radius: 50%;
+    background: url("../media/images/player/common/audio_on_sprite.png") no-repeat;
+    background-position: 0px 0;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: block;
+    background-size: cover;
+}
+
+.no-touch #clsAudioOnBtn:hover:not(.clsAudioDis) span.clsAudioOnBtnIcon {
+    background: url("../media/images/player/common/audio_on_sprite.png") no-repeat;
+    cursor: pointer;
+    background-position: -31px 0;
+    background-size: cover;
+}
+
+#clsAudioOffBtn span.clsAudioOffBtnIcon {
+    position: absolute;
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+    left: 16px;
+    top:10px;
+    background: url("../media/images/player/common/audio_off_sprite.png") no-repeat;
+    background-position: 0px 0;
+    transition: all 0.2s;
+    border-radius: 50%;
+    display: block;
+    background-size: cover;
+}
+
+.no-touch #clsAudioOffBtn:hover:not(.clsAudioDis) span.clsAudioOffBtnIcon {
+    background: url("../media/images/player/common/audio_off_sprite.png") no-repeat;
+    background-position: -31px 0;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+/* #clsAudioOffBt .activcls{
+	background: url("../media/images/player/common/audio_off_sprite.png") no-repeat !important;
+  background-position:-30px 0 !important;
+	cursor: pointer;
+} */
+
+.clsAudiobtndiable {
+    /*background: url("../media/images/player/common/Audio_Off_Disabled.png") no-repeat !important;*/
+    background-size: 100% 100%;
+    opacity: 0.5 !important;
+    cursor: default;
+}
+
+#btmFrame {
+    background: #dfe1e4;
+    background-size: 100% 100%;
+    width: 1085px;
+    display: block;
+    position: absolute;
+    height: 65px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 9999;
+}
+
+#clsBackBtn {
+    position: absolute;
+    top: 2px;
+    right: 109px;
+    width: 50px;
+    height: 63px;
+}
+
+.clsDisBackBtn span.clsBackBtnIcon {
+    background: url("../media/images/player/common/back_sprite.png") no-repeat;
+    opacity: 0.5;
+    cursor: default;
+    background-position: 0px 0;
+    width: 31px;
+    height: 31px;
+    transition: all 0.2s;
+    z-index: 5;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    display: block;
+    background-size: cover;
+}
+
+.clsEnaBackBtn span.clsBackBtnIcon {
+    cursor: pointer;
+    background: url("../media/images/player/common/back_sprite.png") no-repeat;
+    background-position: 0px 0;
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s;
+    z-index: 5;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    display: block;
+    background-size: cover;
+}
+
+.no-touch .clsEnaBackBtn:hover span.clsBackBtnIcon {
+    background: url("../media/images/player/common/back_sprite.png") no-repeat;
+    cursor: pointer;
+    background-position: -31px 0;
+    display: block;
+    background-size: cover;
+}
+
+
+/* Next Button */
+
+
+/***********************************/
+
+#clsNxtBtn {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    width: 50px;
+    height: 63px;
+}
+
+.clsEnaNxtBtn span.clsNxtBtnIcon {
+    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    background-position: 0px 0;
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+    transition: all 0.2s;
+    z-index: 5;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    display: block;
+    background-size: cover;
+}
+
+.clsDisNxtBtn span.clsNxtBtnIcon {
+    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    opacity: 0.5;
+    cursor: default;
+    background-position: 0px 0;
+    width: 31px;
+    height: 31px;
+    transition: all 0.2s;
+    border-radius: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    display: block;
+    background-size: cover;
+}
+
+.no-touch .clsEnaNxtBtn:hover span.clsNxtBtnIcon {
+    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    background-position: -31px 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    width: 31px;
+    height: 31px;
+    transition: all 0.2s;
+    border-radius: 50%;
+    display: block;
+    background-size: cover;
+}
+
+
+/* .clsDisNxtBtn {
+	background: url("../media/images/player/common/next_sprite.png") no-repeat;
+	background-position:0px 0;
+	opacity: 0.5;
+	cursor: default;
+} */
+
+.clsGlowNxtBtn span.clsNxtBtnIcon {
+    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    width: 31px;
+    height: 31px;
+    transition: all 0.2s;
+    background-size: cover;
+}
+
+.no-touch .clsGlowNxtBtn:hover span.clsNxtBtnIcon {
+    /* background: url("../media/images/player/common/Next_GIF.gif") no-repeat; */
+    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    cursor: pointer;
+    z-index: 502;
+    background-position: -31px 0;
+    transition: all 0.2s;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.clsBlinkNxtBtn span.clsNxtBtnIcon {
+    /*background: url("../media/images/player/common/next_btn_blink.gif") no-repeat;
+	background-size:100% 100%;
+	background: url("../media/images/player/common/next_btn_down.png") no-repeat;
+	background-size:100% 100%;*/
+    position: absolute;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    right: 0.1%;
+    top: 48.4%;
+    width: 31px;
+    height: 31px;
+    transition: all 0.2s;
+}
+
+#clsPageNumber {
+    position: absolute;
+    width: 50px;
+    height: 36px;
+    right: 62px;
+    top: 8px;
+}
+
+#id_sliderContainer {
+    position: absolute;
+    width: 1085px;
+    left: 0PX;
+    top: -6px;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #cccdd1;
+}
+
+#slider {
+    position: absolute;
+    width: 1078px;
+    height: 7px;
+    top: 0px;
+    left: 0px;
+    background-color: #cccdd1;
+}
+
+.ui-widget-content {
+    border: none;
+}
+
+.ui-widget-header {
+    background-color: #E4BA4E;
+}
+
+.ui-slider-range {
+    border-radius: 10px;
+}
+
+#id_sliderContainer a {
+    outline: 0 !important;
+    background-color: #E4BA4E;
+    height: 11px;
+    width: 11px;
+    top: -6px;
+    LEFT: 8PX;
+    border: 2px solid #4d667b;
+    border-radius: 15px;
+}
+
+#clsMnuBtn {
+    position: absolute;
+    width: 62px;
+    height: 51px;
+    left: 0px;
+    top: 1px;
+    background: url("../media/images/new/menubtn.png") no-repeat;
+    background-position: 0px 0px;
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+.no-touch #clsMnuBtn:hover:not(.clsMnuBtnDis) {
+    background: url("../media/images/new/menubtn.png") no-repeat;
+    background-position: -62px 0px;
+    cursor: pointer;
+}
+
+.no-touch #clsMnuBtn:hover:not(.clsMnuBtnDis) span {
+    color: #ffffff;
+}
+
+.activMenu {
+    background: url("../media/images/new/menubtn.png") no-repeat !important;
+    background-position: -62px 0px !important;
+    /* border-bottom: 4px solid #0090dd;*/
+}
+
+.deactivMenu {
+    /*border-bottom: 0px solid #0090dd;*/
+}
+
+#clsMnuBtn span {
+    font-size: 12px;
+    color: #4D667B;
+    display: block;
+    position: absolute;
+    top: 29px;
+    text-align: center;
+    width: 100%;
+    left: 0px;
+}
+
+.activMenu span {
+    color: #ffffff !important;
+}
+
+.ClsToolPop {
+    position: absolute;
+    height: 63px;
+    bottom: 66px;
+    width: 238px;
+    left: 12px;
+    font-family: ArialRegular;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+    top: 530px;
+    z-index: 1000;
+    webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+}
+
+#clsVideoRefBtn {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top:8px;
+    left: 135px;
+    background: url(../media/images/player/common/Video_Resources_Normal.png) no-repeat;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 0.2s;
+    background-position: center center;
+    background-size: contain;
+}
+
+.no-touch #clsVideoRefBtn:hover:not(.clsRefDis) {
+    background: url("../media/images/player/common/Video_Resources_Over.png") no-repeat;
+    cursor: pointer;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    background-position: center center;
+    background-size: contain;
+}
+
+#clsActivityRefBtn {
+    position: absolute;
+    width: 43px;
+    height: 35px;
+    top: 6px;
+    left: 190px;
+    background: url(../media/images/new/activityicon.png) no-repeat;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 0.2s;
+    background-position: center center;
+    background-size: contain;
+}
+
+.no-touch #clsActivityRefBtn:hover:not(.clsRefDis) {
+    background: url("../media/images/new/activityicon.png") no-repeat;
+    cursor: pointer;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    background-position: center center;
+    background-size: contain;
+}
+
+.clsRefDis {
+    cursor: default !important;
+    opacity: 0.5;
+}
+
+#clsRefBtn {
+    position: absolute;
+    width: 33px;
+    height: 30px;
+    top:8px;
+    left:76px;
+    background: url(../media/images/player/common/Resources_Normal.png) no-repeat;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 0.2s;
+    background-position: center center;
+    background-size: contain;
+}
+
+.no-touch #clsRefBtn:hover:not(.clsRefDis) {
+    background: url("../media/images/player/common/Resources_Over.png") no-repeat;
+    cursor: pointer;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    background-position: center center;
+    background-size: contain;
+}
+
+.clsRefDis {
+    cursor: default !important;
+    opacity: 0.5;
+}
+
+#clsGlosBtn {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top:6px;
+    left: 17px;
+    background: url(../media/images/player/common/Glossary_normal.png) no-repeat;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 0.2s;
+    background-position: center center;
+    background-size: contain;
+}
+#clsGlosBtn span,
+#clsRefBtn span,
+#clsVideoRefBtn span,
+#clsActivityRefBtn span {
+    top: 35px;
+    height: 20px;
+    overflow: hidden;
+    left: -12px;
+    width: 57px;
+}
+span.cIcons {
+    display: block !important;
+}
+.no-touch #clsGlosBtn:hover:not(.clsGlosDisabled) {
+    background: url("../media/images/player/common/Glossary_normal.png") no-repeat;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    background-position: center center;
+    background-size: contain;
+}
+
+.no-touch #idVideoBtn:hover:not(.clsVideoDisabled) {
+    background: url("../media/images/player/common/pdfHover.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+.home-btn {
+    background: url(../media/images/player/common/homebtn.png) no-repeat;
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    top: 4px;
+    right: 105px;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+    background-size: cover;
+}
+
+.home-btn:hover {
+    background: url(../media/images/player/common/homebtn.png);
+    background-position: -31.5px 0px;
+    transition: all 0.2s;
+    width: 31px;
+    height: 31px;
+    background-size: cover;
+}
+
+.home-btn span {
+    font-size: 12px;
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    top: 28px;
+    text-align: center;
+    width: 101px;
+    left: -36px;
+}
+
+.back-btn {
+    width: 39px;
+    height: 38px;
+    position: absolute;
+    top: 14px;
+    right: 141px;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+    background: url(../media/images/player/common/back_btn.png) no-repeat;
+}
+
+.back-btn:hover {
+    background: url(../media/images/player/common/back_btn.png) no-repeat;
+    background-position: -38px 0px;
+    transition: all 0.2s;
+}
+
+#clsExitBtn {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+    top: 4px;
+    right: 24px;
+    background: url(../media/images/new/exit.png) no-repeat;
+    background-position: 0px 0px;
+    transition: all 0.2s;
+    z-index: 1;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#clsExitBtn span {
+    font-size: 12px;
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    top: 28px;
+    text-align: center;
+    width: 101px;
+    left: -36px;
+}
+
+#spnTopicTitleTxt {
+    width: 90%;
+    position: absolute;
+    top: 17px;
+    left: 210px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: OpenSansSemiBold;
+}
+
+#id_glosCloseBtn {
+    position: absolute;
+    width: 26px;
+    height: 25px;
+    top: 5px;
+    right: 17px;
+    cursor: pointer;
+    background: url(../media/images/new/closebtn.png);
+    /* background-position: -49px 0px; */
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background-size: cover;
+}
+
+.no-touch #id_glosCloseBtn:hover {
+    background: url(../media/images/new/closebtn.png);
+    background-position: -25px 0px;
+    /* width: 26px; */
+    /* height: 25px; */
+    background-size: cover;
+}
+
+span.cIcons {
+    display: block !important;
+}
+
+.clsPreloader {
+    position: absolute;
+    /* top: 0%; */
+    top: 0px;
+    left: 0%;
+    /* background:rgba(255,255,255,0.2); */
+    background: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    display: block;
+}
+
+#helptopbar {
+    position: absolute;
+    background-color: #707070;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: OpenSansRegular;
+    font-size: 36px;
+    left: -1px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    display: table;
+}
+
+#id_glosTitleText {
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    left: 9px;
+    display: table-cell;
+    top: 0px;
+    width: 89%;
+    TEXT-ALIGN: left;
+    line-height: 17px;
+    vertical-align: middle;
+    font-weight: bold;
+    /* text-transform: capitalize; */
+}
+.titleCase{
+    text-transform: capitalize;
+}
+.close_txt {
+    position: absolute;
+    width: 30px;
+    height: 23px;
+    top: 29px;
+    right: 14px !important;
+}
+
+#clsText {
+    position: absolute;
+    width: auto !important;
+    height: 100% !important;
+    top: 1px !important;
+    left: -2px !important;
+    font-size: 12px !important;
+    color: #fff !important;
+    display: block !important;
+}
+
+.popupglossasryCnt {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    margin: 0px auto;
+    top: 170px;
+    background-repeat: no-repeat;
+    left: 10px;
+    overflow: hidden;
+}
+
+.glossaryCntTxt {
+    background: #fff;
+    height: auto;
+    position: relative;
+    top: 51px;
+    width: 479px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+    font-family: OpenSansRegular;
+    font-size: 16px;
+}
+
+/* .glossaryCntTxt::first-letter,
+#id_glosTitleText::first-letter {
+    text-transform: capitalize;
+} */
+
+.glossarytag {
+    color: #e4bb4d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+sub {
+    font-size: 12px;
+}
+
+span.instructions {
+    font-style: italic;
+    color: #4D667B;
+    font-family: OpenSansRegular !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.bluecolor {
+    color: #4D667B;
+}
+
+.instructions {
+    font-style: italic;
+    color: #4D667B;
+    font-family: OpenSansRegular !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.secondSectionIntro {
+    font-size: 16px !important;
+    font-family: OpenSansRegular !important;
+}
+
+.assementDesc span {
+    font-size: 16px !important;
+    font-family: OpenSansRegular;
+}
+
+.clickview_text {
+    color: #4D667B;
+    font-size: 12px;
+    font-style: italic;
+    font-family: OpenSansRegular;
+    background: url(../pages/images/Topic01/T01P02/enlarge_text.png);
+    height: 58px;
+    width: 194px;
+    height: 42px;
+    background-size: cover;
+    line-height: 44px;
+    /* text-align: center; */
+    background-position: -2px -2px;
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    padding-left: 11px;
+}
+
+.clickview_icon {
+    background: url(../media/images/new/clickview_more.png);
+    background-position: 0px 0px;
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    right: 13px;
+    background-size: cover;
+    top: 2px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.clickview_icon:hover {
+    background-position: -48px 0px;
+}
+
+.instructionText {
+    color: #4D667B !important;
+    font-weight: normal;
+}
+
+.clickview_caseinfo {
+    position: relative;
+    top: -36px;
+    width: 100%;
+    height: 50px;
+}
+
+.yellowclr {
+    color: #E4BA4E;
+    font-weight: bold !important;
+}
+
+.g-case-info {
+    top: -53px;
+}
+
+.feedbackBoxCnt {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    display: none;
+}
+
+.first {
+    right: 67px;
+}
+
+.feedback_icon {
+    background: url("../pages/images/Topic01/T01P56/feedback_icon.png") no-repeat;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -24px;
+    left: initial;
+    display: none;
+    /* top: 0; */
+    cursor: pointer;
+}
+
+.feedbackTxt {
+    display: block !important;
+}
+
+.smallArrowFeedback {
+    background: url("../media/images/new/clicktoconsole2.png") no-repeat;
+    position: absolute;
+    width: 159px;
+    height: 73px;
+    left: 0px;
+    display: block;
+    top: 0;
+    cursor: pointer;
+    color: #4D667B;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.arrowFeedback {
+    background: url("../media/images/new/clicktoconsole.png") no-repeat;
+    position: absolute;
+    width: 196px;
+    height: 38px;
+    left: 0px;
+    display: block;
+    top: 0;
+    cursor: pointer;
+    color: #4D667B;
+    font-size: 16px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.helpblur {
+    /* -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -0-backface-visibility: hidden;
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -ms-filter: blur(12px);
+    -o-filter: blur(12px);
+    filter: blur(12px); */
+    opacity: 0.1;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    /* IE 5-7 */
+    filter: alpha(opacity=10);
+    /* Netscape */
+    -moz-opacity: 0.1;
+    /* Safari 1.x */
+    -khtml-opacity: 0.1;
+    /* Good browsers */
+    opacity: 0.1;
+}
+
+.pdflink {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 413px;
+    /* z-index: 999; */
+    border-radius: 0 0 10px 10px;
+}
+
+#pageRefTitleBar_id {
+    font-size: 36px;
+    background-color: #4d667b;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    left: 0px;
+    top: 0px;
+    font-family: OpenSansRegular;
+    /* font-weight: bold; */
+    width: 942px;
+    height: 50px;
+    position: absolute;
+}
+
+.disabled [type="checkbox"]:not(:checked)+label,
+.disabled [type="checkbox"]:checked+label {
+    cursor: default;
+}
+
+.pdfIconCnt {
+    position: absolute;
+    color: #707070;
+    font-size: 14px;
+    width: 100%;
+    height: 31px;
+    z-index: 10000000;
+    cursor: pointer;
+}
+
+.pdfIconCnt .pdf_icon {
+    position: relative;
+    top: 6px;
+    padding-right: 10px;
+    margin: 0px;
+}
+
+.pdfIconCnt span {
+    border-bottom: 1px solid #707070;
+    position: relative;
+    top: -2px;
+}
+
+.option.cborder {
+    border: 1px solid #E4BA4E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.modeuleCompletion {
+    position: absolute;
+    cursor: pointer;
+    width: 120px;
+    height: 23px;
+    top: 14px;
+    margin: 0px;
+    border: none;
+    z-index: 100000;
+    right: 164px;
+    border-radius: 5px;
+    background-position: 0px 0px;
+    background: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    display: none;
+}
+
+#transcripttext::-webkit-scrollbar {
+    width: 8px;
+}
+
+#transcripttext::-ms-scrollbar {
+    width: 8px;
+}
+
+#transcripttext::-moz-scrollbar {
+    width: 8px;
+}

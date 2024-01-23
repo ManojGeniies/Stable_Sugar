@@ -1,0 +1,752 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P21/womb.png',
+            id: '1'
+        }, ];
+    </script>
+
+    <style type="text/css">
+        select._options:disabled {
+            color: #000;
+        }
+        
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 12px;
+            opacity: 1;
+        }
+        
+        .clsPatch {
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            background: #ffffff;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            /* padding: 0px 17px; */
+        }
+        
+        .clsText {
+            position: absolute;
+            width: 90%;
+            left: 15px;
+            top: 18px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+        }
+        
+        .clsCircle {
+            position: absolute;
+            /* -ms-transform: matrix(0, 0, 0, 0, 0, 0);
+
+		-wbkit-transform: matrix(0, 0, 0, 0, 0, 0);
+
+		transform: matrix(0, 0, 0, 0, 0, 0); */
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 504px;
+            left: 900px;
+        }
+        
+        .Clsback {
+            position: relative;
+            width: 330px;
+            height: 250px;
+            top: 165px;
+            left: 0px;
+            margin-right: 35px;
+            float: left;
+            background: #FFFFFF;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            /* display :none; */
+        }
+        
+        .subText {
+            position: absolute;
+            left: 30px;
+            top: 20px;
+            width: 80%;
+            font-size: 16px;
+            color: #000000;
+            font-family: OpenSansRegular;
+        }
+        
+        select {
+            position: absolute;
+            width: 307px;
+            height: 35px;
+            border-radius: 5px;
+            top: 200px;
+            left: 13px;
+            background: url('pages/images/Topic01/T01P21/downarrow.png') no-repeat right center;
+            -webkit-appearance: none;
+            background-position-x: 282px;
+            font-size: 16px;
+            padding: 3.59px 10px 7px 30px;
+            margin: 0;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            display: inline-block;
+            line-height: 1.5em;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            font-family: OpenSansRegular;
+        }
+        
+        select option {
+            font-size: 16px;
+            font-family: OpenSansRegular;
+        }
+        
+        select.down {
+            position: absolute;
+            width: 307px;
+            height: 35px;
+            border-radius: 5px;
+            top: 200px;
+            left: 13px;
+            background: url('pages/images/Topic01/T01P09/uparrow.png') no-repeat right center;
+            -webkit-appearance: none;
+            background-position-x: 282px;
+            font-size: 16px;
+            padding: 3.59px 10px 7px 30px;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            display: inline-block;
+            line-height: 1.5em;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        /* select > option {
+
+		background: #E0E0E0;
+
+    border-radius: 10px;
+
+	} */
+        
+        #subTxt2 {
+            top: 10px;
+        }
+        
+        #subTxt3 {
+            top: 13px;
+        }
+        
+        .ClsImage {
+            position: absolute;
+            background: url("pages/images/Topic01/T01P09/womb.png") no-repeat;
+            width: 270px;
+            height: 445px;
+            right: 0;
+            top: 82px;
+            background-size: 100% 100%;
+        }
+        
+        span {
+            position: absolute;
+            width: 235px;
+            height: 25px;
+            top: 430px;
+            left: 395px;
+            font-size: 14px;
+            color: #4D667B;
+            font-family: OpenSansRegular;
+            display: none;
+        }
+        /* .wrong {
+
+			position: absolute;
+
+			background: url("pages/images/Topic01/T01P09/wrong.png");
+
+			width: 28px;
+
+			height: 26px;
+
+			top: 369px;
+
+			left: 382px;
+
+			display: none;
+
+		} */
+        
+        #pgTitleFrame span {
+            display: block;
+        }
+    </style>
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P21/T01P21";
+
+        var gItemAudioPath = ["pages/audio/Topic01/T01P21/question_2",
+
+            "pages/audio/Topic01/T01P21/feedback"
+
+        ];
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+        var popupContentArray0 = [];
+
+        var __aIndex = []
+
+        var __selectedDropdown = 0;
+
+
+
+        var updateContentArray = [
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "In utero, the fetus relies almost exclusively on the placental transfer of glucose and nutrients to meet growth and energy demands. Fetal glucose values change throughout gestation for a variety of reasons, but in general, their glucose value is approximately 70 to 80 percent of the maternal value. If the mother’s glucose is 100 milligrams per deciliter, what would the approximate fetal glucose value be? (<i>Select an option from the dropdown menu</i>.)"
+            },
+
+            {
+                time: "2",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#TabItem0",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "6",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#TabItem1",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+            {
+                time: "8",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#TabItem2",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block',
+                        "-webkit-animation": "zoomin 0.5s ease-in",
+                        "animation": "zoomin 0.5s ease-in"
+                    }
+                }]
+            },
+
+        ];
+
+        /* var popupSectionArray0 = [
+	
+			{time:"0", carry:"", event:"", show:"", hide:"", transcript:"In utero, the fetus relies almost exclusively on placental transfer of glucose and nutrients to meet their growth and energy demands. Fetal glucose values change throughout gestation for a variety of reasons, but in general, their glucose value is approximately 70 to 80 percent of the maternal value. If the mother’s glucose is 200 mg/dL or 11 mmol/L, the fetal glucose value will be approximately (Click on the dropdown to select the appropriate value).",animation:[{target:"#subTxt3",duration:"0.5",activity:{'display':'none'}}]},
+	
+		];*/
+
+        var popupSectionArray0 = [
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "That is correct. Click Next to continue.",
+                animation: [{
+                    target: "#subTxt3",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+        ];
+
+        /* var popupSectionArray1 = [
+	
+			{time:"0", carry:"", event:"", show:"", hide:"", transcript:"The fetus regulates blood glucose levels by secreting insulin. This will become an important point when we discuss maternal diabetes and the effect of maternal hyperglycemia on fetal glucose values and insulin production and secretion."},
+	
+	
+	
+		]; */
+
+        var popupSectionArray1 = [
+
+            {
+                time: "0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "That is correct. Click Next to continue."
+            },
+
+
+
+        ];
+
+        function fnAudioFinishItemComp() {
+
+            console.log("end")
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+            //fnUpdatePageCompletionCounter(7);
+
+        }
+
+        var __dataXml;
+
+        var __clickCount = 0;
+
+
+
+        $(document).ready(function() {
+
+            disableNextBtn();
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+            // $("select._options").css("pointer-events", "none")
+            // $("select._options").attr("disabled", "disabled");
+            fnClick()
+
+            $("#ClsbackImg2").hide()
+
+            $("#subTxt3").hide();
+
+            // $("#subTxt2").hide();
+
+            // $("#opt1").hide();
+
+            // $("#subTxt2").hide();
+            var n = isInArray("M1L0T1P21", gCompPageArr);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                // fnGlowNextBtn();
+
+                fnDesiableNext(false);
+
+            }
+            $(document).click(function(event) {
+                //console.log($(event.target));
+                if (!$(event.target).closest('select#opt1').length) {
+                    if ($("select._options").hasClass("down")) {
+                        //$('ul.afterlogin').hide()
+                        $("select._options").removeClass("down");
+                    }
+                }
+            });
+
+        });
+
+
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+
+            /* indexAudio = (gCurrentIndex);
+	
+			audioId = "audio_"+gCurrentIndex;
+	
+			fnHideShowAudioPlayer( false );
+	
+			updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
+	
+			console.log(updateContentArray);
+	
+			initAudioPlayer(gItemAudioPath[gCurrentIndex])
+	
+			console.log(gItemAudioPath[gCurrentIndex]); */
+
+
+            //console.log(gItemAudioPath);
+            audioindex = (gCurrentIndex);
+            gAudioId = "audio_" + gCurrentIndex;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+            //console.log(gItemAudioPath[gCurrentIndex])
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+                //initAudioPlayer(gItemAudioPath[gCurrentIndex]);
+        }
+
+
+
+        function fnClick() {
+
+            // enableNextBtn();
+            // $("select._options").css("pointer-events", "")
+            $("select._options").removeAttr("disabled", "disabled");
+
+            $("select._options").on("click", function() {
+                if ($(this).hasClass("down")) {
+                    //console.log("change to up");
+                    $(this).removeClass("down");
+                } else {
+                    //console.log("change to down");
+                    $(this).addClass("down");
+                }
+                /* console.log($(this).is(":focus"))
+                console.log($("select._options")[0].focus());
+                if($(this).is(':focus')){
+                	console.log("focus");
+                }else{
+                	console.log("not focus");
+                } */
+            });
+
+            $("select._options").change(function() {
+
+                //audioReset();
+
+                fnCompletion()
+                $(this).parent().addClass("selected");
+
+                $(this).blur();
+
+                var selectedOption = $(this).children("option:selected").val();
+
+                $(".select").hide();
+
+                if (selectedOption == "correct") {
+
+                    tinCanWrapper.sendStatementData("answered", "preparation-for-extrauterine-Life:fetal-glucose-value-activity", "Fetal Glucose Value - In utero, the fetus relies almost exclusively on the placental transfer of glucose and nutrients to meet growth and energy demands.");
+                    __selectedDropdown = 1
+
+                    enableNextBtn();
+
+                    // fnAudioFinishItemComp();
+
+                    gCompPageArr.push("M1L0T1P21");
+                    fnDesiableNext(false);
+
+
+
+                    // $("select").css("pointer-events", "none")
+                    // $("select").attr("disabled", "disabled")
+
+                    if ($(".selected").length == $(".subContainer").length) {
+
+                        console.log(true);
+
+                        $("span").hide();
+
+                        $(".wrong").hide();
+
+                        $("#opt2").hide();
+
+                        $("#subTxt2").hide();
+
+                        $("#subTxt3").show();
+
+                        audioReset();
+
+                        fnPlaySectionAudio(1);
+
+                    } else {
+
+                        console.log(false);
+
+                        $("#ClsbackImg1").hide();
+
+                        $("#ClsbackImg2").show();
+
+                        $("span").hide();
+
+                        $(".wrong").hide();
+
+                        $("#subTxt3").show();
+
+                        audioReset();
+                        fnPlaySectionAudio(1);
+                        // enableNextBtn();
+                        // fnGlowNextBtn();
+
+                        // $("#subTxt3").show();
+
+                    }
+
+                } else {
+
+                    $("span").show();
+
+                    $(".wrong").show();
+                    //__selectedDropdown++;
+
+                }
+
+
+                $("#spnTopicTitleTxt").removeAttr("style");
+
+            });
+
+
+
+        }
+
+
+
+        function fnCompletion() {
+
+            console.log("end" + __selectedDropdown);
+
+            $("select").css("pointer-events", "")
+
+            if (__selectedDropdown == 1) {
+                //if($(".clsVisited").length==gTotalPopups){
+
+                $(".boxInst").show();
+                enableNextBtn();
+
+                fnAudioFinishItemComp();
+
+                gCompPageArr.push("M1L0T1P21");
+
+            }
+
+        }
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                console.log("start audio");
+                audioStop();
+                fnClick();
+
+                //fnAudioFinishItemComp();
+
+            } else {
+                audioStop();
+                fnCompletion();
+
+
+
+            }
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="clsPatch" id="idPatchMain">
+
+                <div class="clsText" id="idText1">In utero, the fetus relies almost exclusively on the placental transfer of glucose and nutrients to meet growth and energy demands.</div>
+
+            </div>
+
+
+
+            <div class="ClsSecItem section custmSelect" id="section1">
+
+                <div class="Clsback" id="ClsbackImg0">
+
+                    <div class="subText" id="subTxt1">Fetal glucose values change throughout gestation for a variety of reasons, but in general, glucose value is approximately 70% to 80% of the maternal value.
+                    </div>
+
+                </div>
+
+                <div class="Clsback subContainer" id="ClsbackImg1">
+
+                    <div class="subText" id="subTxt1">If the mother's glucose is 100 mg/dL, or 5.6 mmol/L, what would the approximate fetal glucose value be? (<i>Select an option from the drop-down menu</i>)</div>
+
+                    <select name="answer" class="_options" id="opt1">
+
+                        <option class="select">Select the correct option</option>
+
+                        <option value="incorrect">50&ndash;60 mg/dL (2.8&ndash;3.3 mmol/L)</option>
+
+                        <option value="correct">70&ndash;80 mg/dL (3.9&ndash;4.4 mmol/L) </option>
+
+                        <option value="incorrect">90&ndash;100 mg/dL (5&ndash;5.5 mmol/L)</option>
+
+                    </select>
+
+                </div>
+
+                <div class="Clsback subContainer" id="ClsbackImg2">
+
+                    <!-- <div class="subText" id="subTxt2"><strong>That is correct. Let's try another
+							activity.</strong><br /> If the mother's glucose is 200 mg/dL, or 11 mmol/L, what would the approximate fetal glucose value be? (<i>Select an option from the dropdown menu</i>)</div> -->
+
+                    <div class="subText" id="subTxt3"><strong>That is correct.</strong><br /> The fetus regulates blood glucose levels by secreting insulin. This will become an important point when we discuss maternal diabetes and the effect of maternal hyperglycemia on fetal glucose
+                        values and insulin production and secretion.</div>
+
+                    <!-- <select name="answer" class="_options" id="opt2">
+
+						<option class="select">Select the correct option</option>
+
+						<option value="incorrect">120&#8211;130 mg/dL (6.7&#8211;7.2 mmol/L)</option>
+
+						<option value="correct">140&#8211;160 mg/dL (7.8&#8211;8.9 mmol/L)</option>
+
+						<option value="incorrect">170&#8211;190 mg/dL (9.4&#8211;10.5 mmol/L)</option>
+
+					</select> -->
+
+                </div>
+
+                <div class="wrong"></div>
+
+                <span class="text-style"><i>Please try again.</i></span>
+
+                <div class="ClsImage"></div>
+
+            </div>
+
+
+
+        </div>
+        <!--- Main Container--->
+
+        <div class="boxInst">
+
+            <div class="instNextClick"></div>
+
+            <div class="next_click"><em> Click Next to continue.</em></div>
+
+        </div>
+
+
+
+
+
+        <!--<div id="clsResourcesPopup">
+
+			<div id="id_ReferencesBG">
+
+				<div id="id_RefTitleBar">
+
+					<div id="id_ReftitleText">PDF Resources</div>
+
+					<div id="id_RefCloseBtn" title="Close"></div>
+
+					<div id="references">
+
+						<ul class="clsResouceLink">
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div id="RefTitleBar_id">
+
+					<div id="ReftitleText_id">PDF</div>
+
+					<div class="close_txt"><span id="clsText">Click to Close</span></div>
+
+					<div id="RefCloseBtn_id" title="Close"></div>
+
+					<embed class="_link" alt="pdf">
+
+				</div>
+
+			</div>
+
+		</div>-->
+
+    </div>
+
+</body>
+
+</html>

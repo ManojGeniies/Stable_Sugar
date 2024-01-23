@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<resourceTitle><![CDATA[References]]></resourceTitle>
+	<closeTitle><![CDATA[Close]]></closeTitle>
+	<Resources>
+		 <!-- Section 01 -->
+		 <!-- <Resource URL="" isSectionTitle="true" isPageID="false"><![CDATA[Getting Started]]></Resource> -->
+
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/bowel_obstruction.pdf"><![CDATA[Bowel obstruction]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/how_fast_should_i_withdraw_blood_from_a_high-positioned_UAC_and_how_fast_should_i_return_blood_and_flush.pdf"><![CDATA[How fast should I withdraw blood from a high-positioned UAC and how fast should I return blood and flush?]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Neonatal_PE_Worksheet.pdf"><![CDATA[Physical exam of the newborn]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Page26.pdf"><![CDATA[Recommended target blood sugar for infants who require neonatal intensive care]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/pointers_from_intensive_care_nursery_nurses_on_starting_IVs_and_how_to_secure_IVs.pdf"><![CDATA[Starting IVs and how to secure IVs]]></Resource>
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/Page17.pdf"><![CDATA[Symmetric and asymmetric patterns of growth, SGA and IUGR infants]]></Resource>	
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/uvc_uac_insertion.pdf"><![CDATA[Umbilical catheter insertion]]></Resource>		  
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/umbilical_vein_catheter_uvc_and_umbilical_artery_catheters.pdf"><![CDATA[Umbilical Vein Catheter (UVC) and Umbilical Artery Catheters (UAC)]]></Resource>		  
+		<Resource isSectionTitle="false" isPageID="false" URL="pages/Topic01/pdf/uvc_uac.pdf"><![CDATA[What complications should I watch for when a UAC is in place?]]></Resource>
+				
+		  
+
+	</Resources>
+</Root>

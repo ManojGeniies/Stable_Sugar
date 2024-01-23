@@ -1,0 +1,204 @@
+<Contents id="T04_P6">
+
+  <totalAttempts><![CDATA[2]]></totalAttempts>
+
+  <question>
+
+    <OptionHeader>
+
+      <QuestionPanel1><![CDATA[Maternal history]]></QuestionPanel1>
+
+      <QuestionPanel2><![CDATA[Labor / Delivery history]]></QuestionPanel2>
+
+    </OptionHeader>
+
+    <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+
+    <Options>
+
+      <Option id="1"><![CDATA[31 years old]]></Option>
+
+      <Option id="2"><![CDATA[Gravida 5, 1 full-term, 1 preterm (34 weeks), 2 spontaneous abortions, and two live births]]></Option>
+
+      <Option id="3"><![CDATA[Obese]]></Option>
+
+      <Option id="4"><![CDATA[Type 2 diabetes &ndash; controlled with oral diabetes medication and diet]]></Option>
+
+      <Option id="5"><![CDATA[Good prenatal care]]></Option>
+
+      <Option id="6"><![CDATA[Presented in labor]]></Option>
+
+      <Option id="7"><![CDATA[Group B streptococcus (GBS) negative]]></Option>
+
+      <Option id="8"><![CDATA[Spontaneous Rupture of Membranes (SROM) at delivery &ndash; fluid clear]]></Option>
+
+      <Option id="9"><![CDATA[Vacuum assist with 2 pop-offs]]></Option>
+
+      <Option id="10"><![CDATA[Apgar scores: 5 (at 1 minute), 6 (at 5 minutes), 8 (at 10 minutes)]]></Option>
+
+      <Option id="11"><![CDATA[Required CPAP for several minutes in the delivery room]]></Option>
+
+    </Options>
+
+    <correctAnswers>
+
+      <correctAns><![CDATA[2]]></correctAns>
+
+      <correctAns><![CDATA[3]]></correctAns>
+
+	  <correctAns><![CDATA[4]]></correctAns>
+
+      <correctAns><![CDATA[9]]></correctAns>
+
+      <correctAns><![CDATA[10]]></correctAns>
+
+      <correctAns><![CDATA[11]]></correctAns>
+
+    </correctAnswers>
+
+  </question>
+
+  <question>
+
+    <OptionHeader>
+
+      <QuestionPanel1><![CDATA[Conrad- Postnatal course]]></QuestionPanel1>
+
+      <QuestionPanel2><![CDATA[Conrad’s vital signs are:]]></QuestionPanel2>
+
+    </OptionHeader>
+
+    <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+
+    <Options>
+
+      <Option id="1"><![CDATA[Normal]]></Option>
+
+      <Option id="2"><![CDATA[Abnormal]]></Option>
+
+    </Options>
+
+    <correctAnswers>
+
+      <correctAns><![CDATA[1]]></correctAns>
+
+    </correctAnswers>
+
+  </question>
+
+  <question>
+
+  <OptionHeader>
+
+    <QuestionPanel1><![CDATA[Maternal history]]></QuestionPanel1>
+
+	<QuestionDesc><![CDATA[Which of the following would you consider risk factors that could negatively impact her fetus?<br/>Select all that apply and click the submit button.]]>
+
+	</QuestionDesc>
+
+  </OptionHeader>
+
+  <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+
+  <Options>
+
+		<Option id="1"><![CDATA[20 years old]]></Option>
+
+		<Option id="2"><![CDATA[Temperature at time of admission 99.3°F (37.4°C)]]></Option>		
+
+		<Option id="3"><![CDATA[Gravida 1, para 0 (first pregnancy)]]></Option>
+
+		<Option id="4"><![CDATA[Good prenatal care]]></Option>
+
+		<Option id="5"><![CDATA[At 34-weeks gestation, develops right upper quadrant abdominal pain, headache, and visual changes]]></Option>		
+
+		<Option id="6"><![CDATA[Blood pressure 185/110]]></Option>  		
+
+		<Option id="7"><![CDATA[Protein is measured in her urine]]></Option>
+
+		<Option id="8"><![CDATA[Admitted to  labor/delivery unit with a diagnosis of preeclampsia with severe features]]></Option>
+
+		<Option id="9"><![CDATA[Assessment of fetal heart tones and fetal movement reassuring]]></Option>
+
+		<Option id="10" rationIcon="10"><![CDATA[Infusion of magnesium sulfate started]]></Option>
+
+		<Option id="11"><![CDATA[Fetal ultrasound shows intrauterine growth restriction (estimated fetal weight < 10th percentile)]]></Option>
+
+  </Options>
+
+  <correctAnswers>
+
+    <correctAns><![CDATA[5]]></correctAns>
+
+    <correctAns><![CDATA[6]]></correctAns>
+
+    <correctAns><![CDATA[7]]></correctAns>
+
+	<correctAns><![CDATA[8]]></correctAns>
+
+    <!-- <correctAns><![CDATA[9]]></correctAns> -->
+
+    <correctAns><![CDATA[10]]></correctAns>
+
+	<correctAns><![CDATA[11]]></correctAns>
+
+  </correctAnswers>
+
+</question>
+
+<question>
+
+  <OptionHeader>
+
+    <QuestionPanel1><![CDATA[Labor/Delivery history]]></QuestionPanel1>
+
+	<QuestionDesc><![CDATA[Which of the following would you consider risk factors that could negatively impact her fetus?<br/>Select all that apply and click the submit button.]]>
+
+	</QuestionDesc>
+
+  </OptionHeader>
+
+  <instruction><![CDATA[Select the correct answer and click <b>Submit</b>.]]></instruction>
+
+  <Options>
+
+    <Option id="1"><![CDATA[Two days after admission, maternal symptoms worsen and the mother is diagnosed with HELLP (hemolysis, elevated liver enzymes, and low platelets)]]></Option>
+
+    <Option id="2"><![CDATA[Antenatal corticosteroid dosing completed before delivery]]></Option>
+
+    <Option id="3"><![CDATA[Group B streptococcus screening negative]]></Option>
+
+    <Option id="4"><![CDATA[Cesarean section accomplished for maternal indications]]></Option>
+
+    <Option id="5"><![CDATA[Artificial rupture of membranes (AROM) at delivery &ndash; fluid clear]]></Option>
+
+    <Option id="6"><![CDATA[Apgar scores: 3 (at 1 minute), 8 (at 5 minutes)]]></Option>
+
+    <Option id="7"><![CDATA[Resuscitation: Dried, stimulated, poor respiratory effort so given positive pressure ventilation (PPV) for several minutes in the delivery room, then transitioned to CPAP]]></Option>
+
+    <Option id="8"><![CDATA[On room air with no CPAP required by 10 minutes of age]]></Option>
+
+    <Option id="9"><![CDATA[Held skin-to-skin briefly by the mother]]></Option>
+
+    <Option id="10"><![CDATA[Transferred to the Special Care Nursery at 15 minutes of age]]></Option>
+
+  </Options>
+
+  <correctAnswers>
+
+    <correctAns><![CDATA[1]]></correctAns>
+
+	 <correctAns><![CDATA[4]]></correctAns>
+
+	 <correctAns><![CDATA[6]]></correctAns>
+
+  <correctAns><![CDATA[7]]></correctAns>
+
+	<!-- <correctAns><![CDATA[9]]></correctAns> -->
+
+  </correctAnswers>
+
+</question>
+
+</Contents>
+

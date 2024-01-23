@@ -1,0 +1,1006 @@
+<!DOCTYPE HTML>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+    <title></title>
+
+
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P47/T01P90_01.png',
+                id: '1'
+            }
+
+
+        ];
+    </script>
+
+
+
+
+    <style type="text/css">
+        #clsReplay {
+            display: none!important;
+        }
+        
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        .ReferenceContent {
+            position: absolute;
+            font-size: 16px;
+            width: 1055px;
+            height: 458px;
+            left: -21px;
+            top: 29px;
+            opacity: 1;
+            background-color: white;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+        
+        a.ui-slider-handle {
+            display: none;
+        }
+        
+        #id_sliderContainer {
+            display: none;
+        }
+        
+        li {
+            padding-right: .6em;
+            margin: 1em 0;
+        }
+        
+        .clsCircles {
+            position: absolute;
+            -ms-transform: matrix(0, 0, 0, 0, 0, 0);
+            -wbkit-transform: matrix(0, 0, 0, 0, 0, 0);
+            transform: matrix(0, 0, 0, 0, 0, 0);
+        }
+        
+        #idCircle98 {
+            left: 40px;
+            top: 90px;
+            width: 288px;
+            height: 288px;
+            background: url("pages/images/Topic01/T01P47/T01P90_01.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idCircle97 {
+            left: 400px;
+            top: 195px;
+            width: 30px;
+            height: 30px;
+            background: url("pages/images/Topic01/T01P82/T01P82_02.svg") no-repeat;
+            background-size: contain;
+            position: absolute;
+            display: none;
+        }
+        
+        .clsPatch {
+            position: absolute;
+            width: 0px;
+            height: 236px;
+        }
+        
+        #idPatch1 {
+            top: 165px;
+            left: 220px;
+            background-position: left;
+            height: 155px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            display: none;
+            color: #000000;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        
+        .clsText {
+            position: absolute;
+            font-size: 21px;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 29px;
+            left: 20px;
+            width: auto;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        
+        .clsBold {
+            /* font-weight: bold; */
+            font-family: OpenSansSemiBold;
+            color: #f7c42a;
+        }
+        
+        .clsIcon {
+            position: absolute;
+            background: url("pages/images/Topic01/T01P82/Icon01.png");
+            width: 35px;
+            height: 34px;
+            left: 53px;
+            top: 55px;
+            background-size: contain;
+            display: none;
+        }
+        
+        .clsNextText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            width: 375px;
+            top: 50px;
+            left: 100px;
+            display: none;
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 480px;
+            left: 860px;
+            width: 175px;
+            height: 30px;
+            display: none;
+        }
+        
+        .next_click {
+            position: absolute;
+            font-size: 14px;
+            color: #4D667B;
+            font-family: OpenSansRegular;
+            line-height: 14px;
+            width: 92%;
+            left: 0px;
+            text-align: center;
+        }
+        
+        .instNextClick {
+            position: absolute;
+            top: -16px;
+            left: -15px;
+            background: url(pages/images/common/instNext.png) no-repeat;
+            width: 194px;
+            height: 51px;
+        }
+        
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 99%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* opacity: 0.5; */
+        }
+        
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+        
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+        /* #pageid_RefCloseBtn:hover {
+
+
+         background: url('media/images/player/common/close.png');
+
+
+         background-position: 0px 0px;
+
+
+         } */
+        
+        #pageRefTitleBar_id {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+        
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+        
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+        
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+        
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        /* #references ul li a{
+
+
+         outline: none;
+
+
+         color: #0000ff;
+
+
+         font-family: OpenSansRegular;
+
+
+         text-decoration: underline;
+
+
+         font-size: 18px;
+
+
+         }
+
+
+         #references ul li a:hover{
+
+
+         color: #009cff;
+
+
+         }
+
+
+         #references ul li a:active {
+
+
+         outline: none; */
+        /* } */
+        
+        #pagereferences ul li {
+            border: 0 none;
+            margin-left: -4px;
+            margin-right: 5px;
+            vertical-align: bottom;
+            width: 4%;
+        }
+        
+        .ReferenceContent::-webkit-scrollbar {
+            width: 4px;
+        }
+        /* Track */
+        
+        .ReferenceContent::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        /* Handle */
+        
+        .ReferenceContent::-webkit-scrollbar-thumb {
+            background: #707070;
+        }
+        /* Handle on hover */
+        
+        .ReferenceContent::-webkit-scrollbar-thumb:hover {
+            background: #707070;
+        }
+        
+        #id_transcriptBox {
+            background: #dfe1e4;
+        }
+    </style>
+
+
+
+
+
+
+
+    <script>
+        //var audioPath = "pages/audio/Topic01/T01P47/T01P47";
+
+
+
+
+
+        $("#id_sliderContainer").hide();
+
+        var currCue = 0;
+
+
+
+        var idd = 0;
+
+
+
+        // var audplayer = document.getElementById('audioplayer'); 
+
+
+
+        // 		var updateContentArray = [
+
+
+
+        // 	{time:"0.0", carry:"", event:"", show:"", hide:"", transcript:"Thank you for completing this module. You can access additional information by clicking on the thumbtack icon in the bottom left corner, or you can return to the main screen and select another module by clicking on the button below.",animation:[{target:"#idCircle98",duration:"1.5",activity:{'transform':'matrix(1,0,0,1,0,0)'}}]},
+
+
+
+        // 	{time:"1.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idPatch1",duration:"0.8",activity:{'width':'735px','display':'block'}}]},
+
+
+        // 	{time:"1.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idCircle97",duration:"0.5",activity:{'display':'block' }}]},
+
+
+
+        // 	{time:"1.5", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#idText1",duration:"0.5",activity:{'opacity':'1'}}]},
+        // { time: "17.0", carry: "", event: "", show: "#_clickImg0pdf", hide: "", transcript: "", animation: [{ target: "#_clickImg0pdf", duration: "0.5", activity: { 'opacity': '1','display': 'block' } }] },{ time: "17.0", carry: "", event: "", show: "#_clickImg0pdf1", hide: "", transcript: "", animation: [{ target: "#_clickImg0pdf1", duration: "0.5", activity: { 'opacity': '1','display': 'block' } }] },{ time: "17.0", carry: "", event: "", show: ".pdfIcon0", hide: "", transcript: "", animation: [{ target: ".pdfIcon0", duration: "0.5", activity: { 'opacity': '1','display': 'block' } }] },{ time: "17.0", carry: "", event: "", show: ".pdfIcon1", hide: "", transcript: "", animation: [{ target: ".pdfIcon1", duration: "0.5", activity: { 'opacity': '1','display': 'block' } }] }
+
+
+
+        // ];
+
+
+
+        function fnAudioFinishItemComp() {
+
+
+            fnAudioFinishPageComp();
+
+
+            fnUpdatePageCompletionCounter(0);
+
+
+            //fnUpdatePageCompletionCounter(7);
+
+
+        }
+
+
+        var __dataXml;
+
+
+        var __clickCount = 0;
+
+
+        $("#clsAudioOnBtn, #clsAudioOffBtn, #clsPlayPauseBtn").hide();
+
+        $(document).ready(function() {
+
+
+            $('#clsMnuBtn, #clsReplay, #clsBackBtn, #ToolBtn').css({
+                "pointer-events": "all"
+            });
+
+            disableNextBtn();
+
+            fnAudioFinishItemComp();
+            fnCompletion()
+
+            gCompPageArr.push("M1L0T1P90");
+
+
+            var ele = document.getElementsByTagName('div');
+
+
+            for (var i = 0; i < ele.length; i++) {
+
+
+                ele[i].setAttribute("unselectable", "on");
+
+
+            }
+
+
+
+
+
+        });
+
+
+
+
+
+        function isInArray(value, array) {
+
+
+            return array.indexOf(value) > -1;
+
+
+        }
+
+
+
+
+        function audioReset() {
+
+
+            gAudioId = "";
+
+
+            onTimelineEnd();
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        function fnCompletion() {
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function fnOnAudioComplete() {
+
+
+
+            if (gAudioId == "startAudio") {
+
+
+                enableNextBtn();
+
+
+                fnAudioFinishItemComp();
+
+
+                $('.boxInst').show();
+
+
+                gCompPageArr.push("M1L0T1P90");
+
+
+                audplayer.pause();
+
+
+                audplayer.currentTime = 0;
+
+
+            } else {
+
+                fnAudioFinishItemComp()
+
+                fnCompletion();
+
+
+
+
+
+            }
+
+
+        }
+    </script>
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+
+
+        <div class="mainContainer">
+
+
+
+            <div class="clsPatch" id="idPatch1">
+
+
+
+                <div class="clsText" id="idText1">Referrence page content</div>
+
+
+
+
+
+            </div>
+
+
+            <div class="ReferenceContent">
+                <ol>
+
+                    <li>Srinivasan C, Sachdeva R, Morrow WR, et al. Standardized management improves outcomes after the Norwood procedure. Congenit Heart Dis 2009;4:329-37.</li>
+
+                    <li> Spector JM, Villanueva HS, Brito ME, Sosa PG. Improving outcomes of transported newborns in Panama: impact of a nationwide neonatal provider education program. J Perinatol 2009;29:512-6.
+                    </li>
+
+                    <li> Verónica R, Gallo L, Medina D, et al. Safe neonatal transport in the state of Jalisco: Impact of the S.T.A.B.L.E. program on morbidity and mortality. Bol Med Hosp Infant Mex 2011;68:31-5.
+                    </li>
+
+                    <li> Rojas MA, Shirley K, Rush MG. Perinatal Transport and Levels of Care. In: Gardner SL, Carter BS, Enzman-Hines M, Hernandez JA, eds. Merenstein & Gardner’s Handbook of Neonatal Intensive Care 7ed. St. Louis: Mosby Elsevier; 2011:39-51.</li>
+
+                    <li> Lockwood CJ, Lemons JA, eds. American Academy of Pediatrics and The American College of Obstetricians and Gynecologists Guidelines for Perinatal Care. 6th ed. Elk Grove Village: American Academy of Pediatrics; 2007.</li>
+
+                    <li> Bellezza F. Mnemonic Devices: Classification, Characteristics, and Criteria. Review of educational research 1981;51:247-75.</li>
+
+                    <li> Kleinman ME, Chameides L, Schexnayder SM, et al. Part 14: Pediatric Advanced Life Support: 2010 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Resuscitation 2010;122:S876-S908.</li>
+
+                    <li> Kattwinkel J. Preface. In: Kattwinkel J, McGowan JE, Zaichkin J, eds. Textbook of Neonatal Resuscitation. 6th ed. Elk Grove Village: American Academy of Pediatrics; 2011:vii-x.</li>
+
+                    <li> Weiner GM, Zaichkin, J. eds; Textbook of Neonatal Resuscitation. 7th ed. Elk Grove Village, IL: American Academy of Pediatrics; 2016.</li>
+
+                    <li>Clark SL, Miller DD, Belfort MA, Dildy GA, Frye DK, Meyers JA. Neonatal and maternal outcomes associated with elective term delivery. American Journal of Obstetrics and Gynecology 2009;200:156 e1-4.</li>
+
+                    <li>Karlsen KA, Trautman M, Price-Douglas W, Smith S. National survey of neonatal transport teams in the United States. Pediatrics 2011;128:685-91.</li>
+
+                    <li>Schwartz RM, Kellogg R, Muri JH. Specialty newborn care: trends and issues. J Perinatol 2000;20:520-9.
+                    </li>
+
+                    <li>Tita AT, Lai Y, Landon MB, et al. Timing of elective repeat cesarean delivery at term and maternal perioperative outcomes. Obstet Gynecol 2011;117:280-6.</li>
+
+                    <li>Wax JR, Pinette MG, Cartin A, Blackstone J. Maternal and newborn morbidity by birth facility among selected United States 2006 low-risk births. American Journal of Obstetrics and Gynecology 2010;202:152 e1-5.</li>
+
+                    <li>Perlman JM, Wyllie J, Kattwinkel J, et al. Neonatal resuscitation: 2010 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science with Treatment Recommendations. Pediatrics 2010;126:e1319-44.</li>
+
+                    <li>Taylor RM, Price-Douglas W. The S.T.A.B.L.E. Program: postresuscitation/pretransport stabilization care of sick infants. J Perinat Neonatal Nurs 2008;22:159-65.</li>
+
+                    <li>Gould JB, Medoff-Cooper BS, Donovan EF, Stark AR. Applying Quality Improvement Principles in Caring for the High-risk Infant. In: Berns SD, Kott A, eds. Toward Improving the Outcome of Pregnancy III: Enhancing Perinatal Health Through
+                        Quality, Safety and Performance Initiatives. White Plains, NY: March of Dimes Foundation; 2010:76-86.
+                    </li>
+
+                    <li>Bradley P. The history of simulation in medical education and possible future directions. Med Educ 2006;40:254-62.</li>
+
+                    <li>Bush MC, Jankouskas TS, Sinz EH, Rudy S, Henry J, Murray WB. A method for designing symmetrical simulation scenarios for evaluation of behavioral skills. Simul Healthc 2007;2:102-9.</li>
+
+                    <li>Ohlinger J, Kantak A, Lavin JP, Jr., et al. Evaluation and development of potentially better practices for perinatal and neonatal communication and collaboration. Pediatrics 2006;118 Suppl 2:S147-52.
+                    </li>
+
+                    <li>Dos Santos Mezzacappa MA, Collares EF. Gastric emptying in premature newborns with acute respiratory distress. J Pediatr Gastroenterol Nutr 2005;40:339-44.</li>
+
+                    <li>Koenig JS, Davies AM, Thach BT. Coordination of breathing, sucking, and swallowing during bottle feedings in human infants. J Appl Physiol 1990;69:1623-9.</li>
+
+                    <li>Pickler RH. A Model of Feeding Readiness for Preterm Infants. Neonatal Intensive Care 2004;17:31-6.
+                    </li>
+
+                    <li>Ferrieri P, Wallen LD. Neonatal Bacterial Sepsis. In: Gleason CA, Devaskar SU, eds. Avery’s Diseases of the Newborn. 9th ed. Philadelphia: Elsevier Saunders; 2012:538-50.</li>
+
+                    <li>Puopolo K. Bacterial and Fungal Infections. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of neonatal care. 7th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2012:624-55.</li>
+
+                    <li>Clark DA, Munshi UK. Development of the Gastrointestinal Circulation in the Fetus and Newborn. In: Polin RA, Fox WW, Abman SH, eds. Fetal and Neonatal Physiology. 4th ed. Philadelphia: Elsevier Saunders; 2011:773-7.</li>
+
+                    <li>Phillipps AF. Oxygen Consumption and General Carbohydrate Metabolism of the Fetus. In: Polin RA, Fox WW, Abman SH, eds. Fetal and Neonatal Physiology. 4th ed. Philadelphia: Elsevier Saunders; 2011:535-49.
+                    </li>
+
+                    <li>Song C, Upperman JS, Niklas V. Structural Anomalies of the Gastrointestinal Tract. In: Gleason CA, Devaskar SU, eds. Avery’s Diseases of the Newborn. 9th ed. Philadelphia: Elsevier Saunders; 2012:979-93.
+                    </li>
+
+                    <li>Hackam DJ, Grikscheit TC, Wang KS, Newman KD, Ford HR. Pediatric Surgery. In: Brunicardi FC, Andersen DK, Billiar TR, et al., eds. Schwartz’s Principles of Surgery. 9th ed. New York: McGraw Hill Medical; 2010:1409-57.</li>
+
+                    <li>Frost MS, Fashaw L, Hernandez JA, Jones MD. Neonatal Nephrology. In: Gardner SL, Carter BS, Enzman-Hines M, Hernandez JA, eds. Merenstein & Gardner’s Handbook of Neonatal Intensive Care. 7th ed. St. Louis: Mosby Elsevier; 2011:717-47.</li>
+
+                    <li>Bates CM, Schwaderer AL. Clinical Evaluation of Renal and Urinary Tract Disease. In: Gleason CA, Devaskar SU, eds. Avery’s Diseases of the Newborn. 9th ed. Philadelphia: Elsevier Saunders; 2012:1176-81.
+                    </li>
+
+                    <li>Blackburn ST. Carbohydrate, Fat, and Protein Metabolism. In: Blackburn ST, ed. Maternal, fetal, and neonatal physiology: A clinical perspective. St. Louis: Saunders Elsevier; 2007:598-625.
+                    </li>
+
+                    <li>Hall JE. Cerebral Blood Flow, Cerebrospinal Fluid, and Brain Metabolism. In: Hall JE, ed. Guyton and Hall textbook of medical physiology 12th ed. Philadelphia: Saunders Elsevier; 2011:743-50.
+                    </li>
+
+                    <li>Hall JE. Insulin, Glucagon, and Diabetes Mellitus. In: Hall JE, ed. Guyton and Hall textbook of medical physiology. 12th ed. Philadelphia: Saunders Elsevier; 2011:939-54.</li>
+
+                    <li>Sherwood L. Principals of Endocrinology: The Central Endocrine Glands. In: Sherwood L, ed. Human physiology: From cells to systems 5th ed. Belmont: Brooks/Cole–Thomson Learning; 2004:667-99.
+                    </li>
+
+                    <li>Kattwinkel J. Medications. In: Kattwinkel J, McGowan JE, Zaichkin J, eds. Textbook of Neonatal Resuscitation. 6th ed. Elk Grove Village: American Academy of Pediatrics; 2011:211-36.</li>
+
+                    <li>Chameides L. Resources for Management of Circulatory Emergencies. In: Chameides L, Samson RA, Schexnayder SM, Hazinski MF, eds. Pediatric Advanced Life Support Provider Manual. Dallas,: American Heart Association; 2011:109-11.</li>
+
+                    <li>Sax H, Allegranzi B, Uckay I, Larson E, Boyce J, Pittet D. ‘My five moments for hand hygiene’: a user-centred design approach to understand, train, monitor and report hand hygiene. J Hosp Infect 2007;67:9-21.</li>
+
+                    <li>Deshpande S, Ward Platt M. The investigation and management of neonatal hypoglycaemia. Seminars in fetal & neonatal medicine 2005;10:351-61.</li>
+
+                    <li>Jain V, Chen M, Menon RK. Disorders of Carbohydrate Metabolism. In: Gleason CA, Devaskar SU, eds. Avery’s Diseases of the Newborn. 9th ed. Philadelphia: Elsevier Saunders; 2012:1320-9.</li>
+
+                    <li>Angel JL, O’Brien WF, Knuppel RA, Morales WJ, Sims CJ. Carbohydrate intolerance in patients receiving oral tocolytics. American Journal of Obstetrics and Gynecology 1988;159:762-6.</li>
+
+                    <li>Bergman B, Bokstrom H, Borga O, Enk L, Hedner T, Wangberg B. Transfer of terbutaline across the human placenta in late pregnancy. Eur J Respir Dis Suppl 1984;134:81-6.</li>
+
+                    <li>Main EK, Main DM, Gabbe SG. Chronic oral terbutaline tocolytic therapy is associated with maternal glucose intolerance. American Journal of Obstetrics and Gynecology 1987;157:644-7.</li>
+
+                    <li>Buchanan TA, Kitzmiller JL. Metabolic interactions of diabetes and pregnancy. Annu Rev Med 1994;45:245-60.
+                    </li>
+
+                    <li>Cheung NW. The management of gestational diabetes. Vasc Health Risk Manag 2009;5:153-64.</li>
+
+                    <li>Elliott BD, Schenker S, Langer O, Johnson R, Prihoda T. Comparative placental transport of oral hypoglycemic agents in humans: a model of human placental drug transfer. American Journal of Obstetrics and Gynecology 1994;171:653-60.</li>
+
+                    <li>Langer O, Conway DL, Berkus MD, Xenakis EM, Gonzales O. A comparison of glyburide and insulin in women with gestational diabetes mellitus. The New England journal of medicine 2000;343:1134-8.
+                    </li>
+
+                    <li>Philipps AF, Dubin JW, Raye JR. Response of the fetal and newborn lamb to glucose and tolbutamide infusions. Pediatr Res 1979;13:1375-8.</li>
+
+                    <li>Warburton D, Parton L, Buckley S, Cosico L, Saluna T. Effects of beta-2 agonist on hepatic glycogen metabolism in the fetal lamb. Pediatr Res 1988;24:330-2.</li>
+
+                    <li>Wilker RE. Hypoglycemia and Hyperglycemia. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of neonatal care. 7th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins.; 2012:284-96.</li>
+
+                    <li>Collins R, Yusuf S, Peto R. Overview of randomised trials of diuretics in pregnancy. Br Med J (Clin Res Ed) 1985;290:17-23.</li>
+
+                    <li>Andersohn F, Schade R, Suissa S, Garbe E. Long-term use of antidepressants for depressive disorders and the risk of diabetes mellitus. Am J Psychiatry 2009;166:591-8.</li>
+
+                    <li>Kallen B. Neonate characteristics after maternal use of antidepressants in late pregnancy. Arch Pediatr Adolesc Med 2004;158:312-6.</li>
+
+                    <li>Shrivastava VK, Garite TJ, Jenkins SM, et al. A randomized, double-blinded, controlled trial comparing parenteral normal saline with and without dextrose on the course of labor in nulliparas. American Journal of Obstetrics and Gynecology
+                        2009;200:379 e1-6.</li>
+
+                    <li>Luna B, Feinglos MN. Drug-induced hyperglycemia. Jama 2001;286:1945-8.</li>
+
+                    <li>McGowan JE, Rozance PJ, Price-Douglas W, Hay WW. Glucose Homeostasis. In: Gardner SL, Carter BS, Enzman-Hines M, Hernandez JA, eds. Merenstein & Gardner’s Handbook of Neonatal Intensive Care. 7th ed. St. Louis: Mosby Elsevier; 2011:353-77.</li>
+
+                    <li>Ward Platt M, Deshpande S. Metabolic adaptation at birth. Seminars in fetal & neonatal medicine 2005;10:341-50.
+                    </li>
+
+                    <li>Stanley C, Hardy O. Pathophysiology of Hypoglycemia. In: Polin RA, Fox WW, Abman SH, eds. Fetal and Neonatal Physiology. 4th ed. Philadelphia: Elsevier Saunders; 2011:568-75.</li>
+
+                    <li>Kliegman RM. Problems in Metabolic Adaptation: Glucose, Calcium, and Magnesium. In: Klaus MH, Fanaroff AA, eds. Care of the highrisk neonate. 5th ed. Philadelphia: Saunders; 2001:301-23.
+                    </li>
+
+                    <li>Engle WA. Infants born late preterm: definition, physiologic and metabolic immaturity, and outcomes. NeoReviews 2009;10:e280-e6.</li>
+
+                    <li>Shapiro-Mendoza CK. Infants born late preterm: Epidemiology, trends, and morbidity risk. NeoReviews 2009;10:e287-e94.</li>
+
+                    <li>Hibbard JU, Wilkins I, Sun L, et al. Respiratory morbidity in late preterm births. Jama 2010;304:419-25.
+                    </li>
+
+                    <li>Loftin RW, Habli M, Snyder CC, Cormier CM, Lewis DF, Defranco EA. Late preterm birth. Rev Obstet Gynecol 2010;3:10-9.</li>
+
+                    <li>Radtke JV. The paradox of breastfeeding-associated morbidity among late preterm infants. J Obstet Gynecol Neonatal Nurs 2011;40:9-24.</li>
+
+                    <li>Yoder BA, Gordon MC, Barth WH, Jr. Late-preterm birth: does the changing obstetric paradigm alter the epidemiology of respiratory complications? Obstet Gynecol 2008;111:814-22.</li>
+
+                    <li>Lubow JM, How HY, Habli M, Maxwell R, Sibai BM. Indications for delivery and short-term neonatal outcomes in late preterm as compared with term births. American Journal of Obstetrics and Gynecology 2009;200:e30-3.</li>
+
+                    <li>McGowan JE, Alderdice FA, Holmes VA, Johnston L. Early childhood development of late-preterm infants: a systematic review. Pediatrics 2011;127:1111-24.</li>
+
+                    <li>Morse SB, Zheng H, Tang Y, Roth J. Early school-age outcomes of late preterm infants. Pediatrics 2009;123:e622-9.
+                    </li>
+
+                    <li>Simmons R. Abnormalities of Fetal Growth. In: Gleason CA, Devaskar SU, eds. Avery’s Diseases of the Newborn. 9th ed. Philadelphia: Elsevier Saunders; 2012:51-9.</li>
+
+                    <li>Styne DM. Endocrine Factors Affecting Neonatal Growth. In: Polin RA, Fox WW, Abman SH, eds. Fetal and Neonatal Physiology. 4th ed. Philadelphia: Elsevier Saunders; 2011:310-23.</li>
+
+                    <li>Kliegman RM. Intrauterine Growth Restriction. In: Martin RJ, Fanaroff AA, Walsh MC, eds. Fanaroff and Martin’s NeonatalPerinatal Medicine: Diseases of the Fetus and Infant. 9th ed. St. Louis: Elsevier Mosby; 2011:245-75.</li>
+
+                    <li>Bhat MA, Kumar P, Bhansali A, Majumdar S, Narang A. Hypoglycemia in small for gestational age babies. Indian J Pediatr 2000;67:423-7.</li>
+
+                    <li>Mejri A, Dorval VG, Nuyt AM, Carceller A. Hypoglycemia in term newborns with a birth weight below the 10th percentile. Paediatr Child Health 2010;15:271-5.</li>
+
+                    <li>Smith VC. The High-Risk Newborn: Anticipation, Evaluation, Management, and Outcome. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of neonatal care. 7th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins;
+                        2012:74-90.
+                    </li>
+
+                    <li>Subhani M. Intrauterine Growth Restriction. In: Spitzer AR, ed. Intensive care of the fetus & neonate. 2nd ed. Philadelphia: Elsevier Mosby; 2005:135-48.</li>
+
+                    <li>Das UG, Sysyn GD. Abnormal fetal growth: intrauterine growth retardation, small for gestational age, large for gestational age. Pediatric Clinics of North America 2004;51:639-54, viii.</li>
+
+                    <li>De Santis M, Carducci B, Cavaliere AF, De Santis L, Straface G, Caruso A. Drug-induced congenital defects: strategies to reduce the incidence. Drug Saf 2001;24:889-901.</li>
+
+                    <li>Lubchenco LO, Bard H. Incidence of hypoglycemia in newborn infants classified by birth weight and gestational age. Pediatrics 1971;47:831-8.</li>
+
+                    <li>Townsend SF. The Large-for-Gestational-Age and the Small-forGestational-Age Infant. In: Thureen PJ, Deacon J, Hernandez JA, Hall DM, eds. Assessment and care of the well newborn. 2nd ed. St. Louis: Elsevier; 2005:267-78.</li>
+
+                    <li>Trotter CW. Gestational Age Assessment. In: Tappero EP, Honeyfield ME, eds. Physical assessment of the newborn: A comprehensive approach to the art of physical examination. 4th ed. Santa Rosa: NICU Ink; 2009:21-39.</li>
+
+                    <li>Olsen IE, Groveman SA, Lawson ML, Clark RH, Zemel BS. New intrauterine growth curves based on United States data. Pediatrics 2010;125:e214-24.</li>
+
+                    <li>Persson B. Neonatal glucose metabolism in offspring of mothers with varying degrees of hyperglycemia during pregnancy. Seminars in fetal & neonatal medicine 2009;14:106-10.</li>
+
+                    <li>Katz LL, Stanley CA. Disorders of glucose and other sugars. In: Spitzer AR, ed. Intensive care of the fetus & neonate. Philadelphia: Elsevier Mosby; 2005:1167-78.</li>
+
+                    <li>Lee-Parritz A, Cloherty JP. Diabetes Mellitus. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of neonatal care. 7th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2012:11-23.</li>
+
+                    <li>Nodine PM, Arruda J, Hastings-Tolsma M. Prenatal Environment: Effect on Neonatal Outcome. In: Gardner SL, Carter BS, Enzman-Hines M, Hernandez JA, eds. Merenstein & Gardner’s Handbook of Neonatal Intensive Care. 7th ed. St. Louis:
+                        Mosby Elsevier; 2011:13-38.</li>
+
+                    <li>Vora N, Bianchi DW. Genetic considerations in the prenatal diagnosis of overgrowth syndromes. Prenat Diagn 2009;29:923-9.</li>
+
+                    <li>Metzger BE, Lowe LP, Dyer AR, et al. Hyperglycemia and Adverse Pregnancy Outcome (HAPO) Study: associations with neonatal anthropometrics. Diabetes 2009;58:453-9.</li>
+
+                    <li>ADA. Diagnosis and classification of diabetes mellitus. Diabetes Care 2010;33 Suppl 1:S62-9.
+                    </li>
+
+                    <li>Gabbe SG, Landon MB, Warren-Boulton E, Fradkin J. Promoting health after gestational diabetes: a national diabetes education program call to action. Obstet Gynecol 2012;119:171-6.</li>
+
+                    <li>ADA. Standards of medical care in diabetes--2011. Diabetes Care 2011;34 Suppl 1:S11-61.</li>
+
+                    <li>Heideman WH, Middelkoop BJ, Nierkens V, et al. Changing the odds. What do we learn from prevention studies targeted at people with a positive family history of type 2 diabetes? Prim Care Diabetes 2011;5:215-21.</li>
+
+                    <li>Bellamy L, Casas JP, Hingorani AD, Williams D. Type 2 diabetes mellitus after gestational diabetes: a systematic review and metaanalysis. Lancet 2009;373:1773-9.</li>
+
+                    <li>ACOG. Committee opinion no. 504: screening and diagnosis of gestational diabetes mellitus. Obstet Gynecol 2011;118:751-3.</li>
+
+                    <li>Catalano PM. Management of obesity in pregnancy. Obstet Gynecol 2007;109:419-33.</li>
+
+                    <li>Yogev Y, Metzger BE, Hod M. Establishing diagnosis of gestational diabetes mellitus: Impact of the hyperglycemia and adverse pregnancy outcome study. Seminars in Fetal & Neonatal Medicine 2009;14:94-100.
+                    </li>
+
+                    <li>Catalano PM, Ehrenberg HM. The short-and long-term implications of maternal obesity on the mother and her offspring. Bjog 2006;113:1126-33.</li>
+
+                    <li>Cowett RM, Farrag HM. Selected principles of perinatal-neonatal glucose metabolism. Semin Neonatol 2004;9:37-47.</li>
+
+                    <li>Hall JE. Red Blood Cells, Anemia, and Polycythemia. In: Hall JE, ed. Guyton and Hall textbook of medical physiology 12th ed. Philadelphia: Saunders Elsevier; 2011:413-22.</li>
+
+                    <li>Kahn R, Fonseca V. Translating the A1C Assay. Diabetes Care 2008;31:1704-7.</li>
+
+                    <li>Metzger BE, Gabbe SG, Persson B, et al. International association of diabetes and pregnancy study groups recommendations on the diagnosis and classification of hyperglycemia in pregnancy. Diabetes Care 2010;33:676-82.</li>
+
+                    <li>Weindling AM. Offspring of diabetic pregnancy: Short-term outcomes. Seminars in Fetal & Neonatal Medicine 2009;14:111-8.</li>
+
+                    <li>Eriksson UJ. Congenital anomalies in diabetic pregnancy. Seminars in fetal & neonatal medicine 2009;14:85-93.
+                    </li>
+
+                    <li>Yang J, Cummings EA, O’Connell C, Jangaard K. Fetal and neonatal outcomes of diabetic pregnancies. Obstet Gynecol 2006;108:644-50.</li>
+
+                    <li>Landon MB, Spong CY, Thom E, et al. A multicenter, randomized trial of treatment for mild gestational diabetes. The New England journal of medicine 2009;361:1339-48.</li>
+
+                    <li>Hall JE. Metabolism of Carbohydrates, and Formation of Adenosine Triphosphate. In: Hall JE, ed. Guyton and Hall textbook of medical physiology. 12th ed. Philadelphia: Saunders Elsevier; 2011:809-18.
+                    </li>
+
+                    <li>Sherwood L. Cellular Physiology. In: Sherwood L, ed. Human physiology: From cells to systems. 5th ed. Belmont: Brooks/ColeThomson Learning.; 2004:23-55.</li>
+
+                    <li>Rozance PJ, Hay WW. Hypoglycemia in newborn infants: Features associated with adverse outcomes. Biol Neonate 2006;90:74-86.</li>
+
+                    <li>Hay Jr WW, Raju TNK, Higgins RD, Kalhan SC, Devaskar SU. Knowledge Gaps and Research Needs for Understanding and Treating Neonatal Hypoglycemia: Workshop Report from Eunice Kennedy Shriver National Institute of Child Health and Human
+                        Development. J Pediatr 2009;155:612-7.</li>
+
+                    <li>Rozance PJ, Hay WW, Jr. Describing hypoglycemia—definition or operational threshold? Early Human Development 2010;86:275-80.</li>
+
+                    <li>Williams AF. Neonatal hypoglycaemia: clinical and legal aspects. Seminars in fetal & neonatal medicine 2005;10:363-8.</li>
+
+                    <li>Koh TH, Eyre JA, Aynsley-Green A. Neonatal hypoglycaemia--the controversy regarding definition. Arch Dis Child 1988;63:1386-8.</li>
+
+                    <li>Hawdon JM, Ward Platt MP, Aynsley-Green A. Patterns of metabolic adaptation for preterm and term infants in the first neonatal week. Arch Dis Child 1992;67:357-65.</li>
+
+                    <li>Hall JE. Lipid Metabolism. In: Hall JE, ed. Guyton and Hall Textbook of medical physiology. 12th ed. Philadelphia: Saunders Elsevier; 2011:819-30.</li>
+
+                    <li>Doherty EG. Fluid and Electrolyte Management. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of neonatal care. 7th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2012:269-83.</li>
+
+                    <li>Lilien LD, Pildes RS, Srinivasan G, Voora S, Yeh TF. Treatment of neonatal hypoglycemia with minibolus and intravenous glucose infusion. J Pediatr 1980;97:295-8.</li>
+
+                    <li>Ellard DM, D.M. A. Nutrition. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of Neonatal Care. 7th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2012:230-68.
+                    </li>
+
+                    <li>ElHassan NO, Kaiser JR. Parenteral nutrition in the neonatal intensive care unit. NeoReviews 2011;12:e130-e40.
+                    </li>
+
+                    <li>Wortham BM, Rais-Bahrami K. Umbilical Vein Catheterization. In: MacDonald M, G., Ramasethu J, eds. Atlas of Procedures in Neonatology. 4th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2007:177-85.</li>
+
+                    <li>Sigman LJ. Procedures. In: Tschudy MM, Arcara KM, eds. The Harriet Lane Handbook. 19th ed. Philadelphia: Elsevier Mosby; 2012:57-88.</li>
+
+                    <li>Gomella TL. Venous Access: Umbilical Vein Catheterization. In: Gomella TL, Cunningham MD, Eyal FG, Tuttle D, eds. Neonatology: Management, Procedures,On-call Problems, Diseases, and Drugs. New York: McGraw Hill Medical; 2009:243-6.</li>
+
+                    <li>Ringer SA, Gray JE. Common Neonatal Procedures. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of neonatal care. 7th ed. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2012:851-69.</li>
+
+                    <li>Wortham BM, Gaitatzes CG, Rais-Bahrami K. Umbilical Artery Catheterization. In: MacDonald M, G., Ramasethu J, eds. Atlas of Procedures in Neonatology. 4th ed. Philadelphia: Lippincott Williams & Wilkins; 2007:157-76.</li>
+
+                    <li>Revenis ME. Intraosseous Infusions. In: Macdonald M, G., Ramasethu J, eds. Atlas of Procedures in Neonatology. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2007:362-5.</li>
+
+                    <li>Gomella TL. Arterial Access: Umbilical Artery Catheterization. In: Gomella TL, Cunningham MD, Eyal FG, Tuttle D, eds. Neonatology: Management, Procedures,On-call Problems, Diseases, and Drugs. 6th ed. New York: McGraw Hill Medical;
+                        2009:203-7.
+                    </li>
+
+                    <li>Durand DJ, Mickas NA. Blood Gases: Technical Aspects and Interpretation. In: Goldsmith JP, Karotkin EH, eds. Assisted Ventilation of the Newborn. 5th ed. St. Louis: Elsevier Saunders; 2011:292-305.
+                    </li>
+
+                    <li>Smith L, Dills R. Survey of medication administration through umbilical arterial and venous catheters. Am J Health Syst Pharm 2003;60:1569-72.</li>
+
+                    <li>Barrington KJ. Umbilical artery catheters in the newborn: effects of heparin. Cochrane Database Syst Rev 2000:CD000507.</li>
+
+                    <li>Young TE, Mangum B. In: Neofax 2010. 23rd ed. Montvale: Thomson Reuters; 2010.</li>
+
+                    <li>Massaro AN, Rais-Bahrami K, Eichelberger MR. Peripheral Arterial Cannulation. In: MacDonald M, G., Ramasethu J, eds. Atlas of Procedures in Neonatology. Philadelphia: Wolters Kluwer / Lippincott Williams & Wilkins; 2007:186-98.</li>
+
+                    <li>Barrington KJ. Umbilical artery catheters in the newborn: effects of position of the catheter tip. Cochrane Database Syst Rev 2000:CD000505.</li>
+
+                    <li>Jackson JK, Biondo DJ, Jones JM, et al. Can an alternative umbilical arterial catheter solution and flush regimen decrease iatrogenic hemolysis while enhancing nutrition? A double-blind, randomized, clinical trial comparing an isotonic
+                        amino acid with a hypotonic salt infusion. Pediatrics 2004;114:377-83.</li>
+
+                    <li>Brown MS, Phibbs RH. Spinal cord injury in newborns from use of umbilical artery catheters: report of two cases and a review of the literature. J Perinatol 1988;8:105-10.</li>
+
+                    <li>Zenk KE, Noerr B, Ward R. Severe sequelae from umbilical arterial catheter administration of dopamine. Neonatal network : NN 1994;13:89-91.</li>
+
+                    <li>Bradshaw WT, Tanaka DT. Physiologic Monitoring. In: Gardner SL, Carter BS, Enzman-Hines M, Hernandez JA, eds. Merenstein & Gardner’s Handbook of Neonatal Intensive Care. 7th ed. St. Louis: Mosby Elsevier; 2011:134-52.</li>
+
+                    <li>Schlesinger AE, Braverman RM, DiPietro MA. Pictorial essay. Neonates and umbilical venous catheters: normal appearance, anomalous positions, complications, and potential aid to diagnosis. AJR Am J Roentgenol 2003;180:1147-53.</li>
+
+                    <li>Nash P. Umbilical catheters, placement, and complication management. J Infus Nurs 2006;29:346-52.
+                    </li>
+
+                    <li>Bradshaw WT, Furdon SA. A nurse’s guide to early detection of umbilical venous catheter complications in infants. Advances in neonatal care : official journal of the National Association of Neonatal Nurses 2006;6:127-38; quiz 39-41.</li>
+
+                    <li>Furdon SA, Horgan MJ, Bradshaw WT, Clark DA. Nurses’ guide to early detection of umbilical arterial catheter complications in infants. Advances in neonatal care : official journal of the National Association of Neonatal Nurses 2006;6:242-56;
+                        quiz 57-60.</li>
+
+                    <li>Gomella TL. Neonatal Radiology. In: Gomella TL, Cunningham MD, Eyal FG, Tuttle D, eds. Neonatology: Management, Procedures,On-call Problems, Diseases, and Drugs. 6th ed. New York: McGraw Hill Medical; 2009:108-30.</li>
+
+                    <li>Davies MW, Mehr S, Morley CJ. The effect of draw-up volume on the accuracy of electrolyte measurements from neonatal arterial lines. Journal of paediatrics and child health 2000;36:122-4.
+                    </li>
+
+                    <li>Schulz G, Keller E, Haensse D, Arlettaz R, Bucher HU, Fauchere JC. Slow blood sampling from an umbilical artery catheter prevents a decrease in cerebral oxygenation in the preterm newborn. Pediatrics 2003;111:e73-6.</li>
+
+                    <li>Butt WW, Gow R, Whyte H, Smallhorn J, Koren G. Complications resulting from use of arterial catheters: retrograde flow and rapid elevation in blood pressure. Pediatrics 1985;76:250-4.</li>
+
+                    <li>Gordon M, Bartruff L, Gordon S, Lofgren M, Widness JA. How fast is too fast? a practice change in umbilical arterial catheter blood sampling using the Iowa Model for Evidence-Based Practice. Advances in neonatal care : official journal
+                        of the National Association of Neonatal Nurses 2008;8:198-207.</li>
+
+                    <li>Roll C, Huning B, Kaunicke M, Krug J, Horsch S. Umbilical artery catheter blood sampling volume and velocity: impact on cerebral blood volume and oxygenation in very-low-birthweight infants. Acta Paediatr 2006;95:68-73.</li>
+
+                    <li>Ringer SA, Hansen AR. Surgical Emergencies in the Newborn. In: Cloherty JP, Eichenwald EC, Hansen AR, Stark AR, eds. Manual of Neonatal Care. 7th ed. Philadelphia: Lippincott, Williams & Wilkins; 2012:808-30.</li>
+
+                    <li>Lovvorn HN, Glenn JB, Pacetti AS, Carter BS. Neonatal Surgery. In: Gardner SL, Carter BS, Enzman-Hines M, Hernandez JA, eds. Merenstein & Gardner’s Handbook of Neonatal Intensive Care. 7th ed. St. Louis: Mosby Elsevier; 2011:812-47.</li>
+
+                    <li>Barksdale EM, Chwals WJ, Magnuson DK, Parry RL. Selected Gastrointestinal Anomalies. In: Martin RJ, Fanaroff AA, Walsh MC, eds. Fanaroff & Martin’s Neonatal-Perinatal Medicine: Diseases of the Fetus and Infant. 9th ed. St. Louis: Elsevier
+                        Mosby; 2011:1400-31.</li>
+
+                    <li>Wright IM, Owers M, Wagner M. The umbilical arterial catheter: a formula for improved positioning in the very low birth weight infant. Pediatr Crit Care Med 2008;9:498-501.</li>
+
+                    <li>Dunn PM. Localization of the umbilical catheter by post-mortem measurement. Arch Dis Child 1966;41:69-75.
+                    </li>
+
+
+
+                </ol>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

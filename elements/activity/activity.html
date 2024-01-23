@@ -1,0 +1,102 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link href="elements/activity/css/activity.css" type="text/css" rel="stylesheet" />
+    <script src="elements/activity/scripts/activity.js" type="text/javascript"></script>
+    <link rel="icon" href="elements/activity/media/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hospitalContainer">
+        <div class="gwrapper">
+            <div class="spinner" unselectable="on">
+                <div class="rect1" unselectable="on"></div>
+                <div class="rect2" unselectable="on"></div>
+                <div class="rect3" unselectable="on"></div>
+                <div class="rect4" unselectable="on"></div>
+                <div class="rect5" unselectable="on"></div>
+            </div>
+        </div>
+        <div id="helptopbar">
+            <div id="id_glosTitleText">Activities</div>
+            <div class="close_txt"><span id="clsText">Close</span></div>
+            <div class="id_glosCloseBtn" id="id_glosCloseBtn" title="Close"></div>
+        </div>
+        <div class="content">
+            <div class="tabContent">
+                <div class="tab active" id="tab5">Activity 1</div>
+                <div class="tab" id="tab1">Activity 2</div>
+                <div class="tab" id="tab2">Activity 3</div>
+                <div class="tab" id="tab3">Activity 4</div>
+                <div class="tab" id="tab4">Activity 5</div>
+            </div>
+            <div id="pageClsResourcesPopupActivity" unselectable="on">
+
+                <div id="pageid_ReferencesBG" unselectable="on">
+            
+                    <div id="pageRefTitleBar_id" unselectable="on">
+            
+                        <div id="pageRefTitleBar_id" unselectable="on">
+            
+                            <div id="pageReftitleText_id" unselectable="on">Physical exam of the newborn</div>
+            
+                            <div id="id_glosCloseBtn" class="closeAct" title="Close" unselectable="on"></div>
+            
+                            <embed class="pdflink" alt="pdf" src="elements/activity/physical_activity/story_content/external_files/Physical%20exam%20of%20the%20newborn.pdf" internalinstanceid="70">
+            
+                        </div>
+            
+                    </div>
+            
+
+
+                </div>
+            
+            </div>
+			<div id="babyPDFContainer">
+				<div id="_clickImg0pdfActivity" class="pdf_hover" unselectable="on">
+
+					<div class="pdfIcon0" unselectable="on"><!--<img class="pdf_icon" src="pages/images/common/pdficon.png" alt="">--></div>
+			
+					<div class="_linkActivity"  unselectable="on"><span><em>Physical exam of the newborn</em></span></div>
+					</div>
+			</div>
+           
+            <div class="tabLoadContent">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var __$cWrapper = $(".gwrapper");
+    setTimeout(function() {
+        __$cWrapper.hide();
+    }, 100);
+
+    function checkPDF(){  
+        if($('#preso .slide-object.slide-object-vectorshape.shown').length == 0){
+            setTimeout(function() {
+               $("#_clickImg0pdfActivity").show();
+            }, 3000);
+
+            clearInterval(myVar);
+        }else{
+            console.log("no");
+        }
+    }
+    $('.phyicalActivity').load(function() {
+        console.log("loading");
+    });
+    var myVar = setInterval(checkPDF, 500);
+
+    $(".id_glosCloseBtn").click(function() {
+        disableHelpPopup();
+    });
+</script>
+
+
+</html>

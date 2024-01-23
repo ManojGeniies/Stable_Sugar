@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P01/EV01_01.png',
+                id: '1'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/EV01_02.png',
+                id: '2'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/EV01_03.png',
+                id: '3'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/EV01_04.png',
+                id: '4'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P01/module_objective_banner.png',
+                id: '6'
+            }
+        ];
+    </script>
+
+
+
+    <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 100%;
+            height: 460px;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+        }
+        
+        #box1 {
+            position: absolute;
+            height: 135px;
+            width: 320px;
+            opacity: 0;
+            top: 20px;
+            left: 40px;
+        }
+        
+        #box2 {
+            position: absolute;
+            height: 135px;
+            width: 290px;
+            opacity: 0;
+            top: 20px;
+            left: 403px;
+        }
+        
+        #box3 {
+            position: absolute;
+            height: 135px;
+            width: 310px;
+            opacity: 0;
+            top: 20px;
+            right: 43px;
+        }
+        
+        #box4 {
+            position: absolute;
+            height: 140px;
+            width: 362px;
+            opacity: 0;
+            top: 175px;
+            left: 156px;
+        }
+        
+        #box5 {
+            position: absolute;
+            height: 125px;
+            width: 295px;
+            opacity: 0;
+            top: 175px;
+            right: 170px;
+        }
+        
+        .clsIcon {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .icon-container {
+            position: absolute;
+            width: 100%;
+            top: 190px;
+            left: 0px;
+            height: 350px;
+            background: #ffffff;
+        }
+        
+        #idIcon01 {
+            position: relative;
+            width: 56px;
+            height: 50px;
+            left: 0px;
+            top: 0px;
+            background: url(pages/images/Topic01/T01P01/EV01_01.png) no-repeat;
+            margin: 0px auto;
+            background-size: contain;
+        }
+        
+        #idIcon02 {
+            position: relative;
+            width: 50px;
+            height: 53px;
+            margin: 0px auto;
+            left: 0px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_02.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon03 {
+            position: relative;
+            width: 45px;
+            height: 57px;
+            margin: 0px auto;
+            left: 0px;
+            top: 0PX;
+            background: url("pages/images/Topic01/T01P01/EV01_03.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon04 {
+            position: relative;
+            width: 57px;
+            height: 59px;
+            margin: 0px auto;
+            top: 0px;
+            left: 0px;
+            background: url("pages/images/Topic01/T01P01/EV01_05.png") no-repeat;
+            background-size: contain;
+        }
+        
+        #idIcon05 {
+            position: relative;
+            width: 57px;
+            height: 59px;
+            margin: 0px auto;
+            top: 0px;
+            left: 0px;
+            background: url("pages/images/Topic01/T01P01/EV01_02.png") no-repeat;
+            background-size: contain;
+        }
+        
+        .clsText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            text-align: center;
+            color: #000000;
+            bottom: 86px;
+            /*106px*/
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText2 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText3 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText4 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        #idText5 {
+            top: 65PX;
+            left: 0px;
+            width: 97%;
+            height: 95px;
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 314px;
+            left: 901px;
+        }
+        
+        .banner-img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1085px;
+            height: 190px;
+            background: url('pages/images/Topic01/T01P01/module_objective_banner.png') no-repeat;
+            background-size: cover;
+            background-color: #ffffff;
+        }
+        
+        .headerTopRight {
+            position: absolute;
+            top: 12px;
+            left: 210px;
+            color: #FFFFFF;
+            font-size: 22px;
+            font-family: OpenSansSemiBold;
+        }
+        
+        .headerTopRight span {}
+        
+        .headerTopRight img.sugar_and_safe_care {}
+    </style>
+
+
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P01/T01P01";
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+
+
+        var updateContentArray = [
+
+            {
+                time: "0.1",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "By the end of this module, you will be able to explain why it's important to initially withhold feedings in infants who are sick and/or preterm, identify the infants who are at-risk of becoming hypoglycemic, explain how to monitor the blood sugar in at-risk infants, discuss the initial intravenous therapy for sick infants and the IV treatment of hypoglycemia, and identify the indications for placement of an umbilical catheter.",
+                animation: [{
+                    target: ".clsBG",
+                    duration: "3.0",
+                    activity: {
+                        'width': '1086px',
+                        'left': '0px'
+                    }
+                }]
+            },
+
+            {
+                time: "3.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon01",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+            {
+                time: "10",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box2",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon02",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText2",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+
+
+            {
+                time: "15",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box3",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon03",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText3",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+
+
+            {
+                time: "18.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box4",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon04",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText4",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+
+
+            {
+                time: "25",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#box5",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idIcon05",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }, {
+                    target: "#idText5",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            }
+
+        ];
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+        }
+
+
+
+        $(document).ready(function() {
+
+            disableNextBtn();
+
+            console.log(gCompPageArr);
+
+            //var checkVal = isInArray("M1L0T1P1",gCompPageArr);
+
+            //console.log(checkVal);			
+
+            var n = isInArray("M1L0T1P1", gCompPageArr);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                //fnGlowNextBtn();
+
+                fnDesiableNext(false);
+
+            }
+
+
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+            //setTimeout(function(){ fInitClickAndDisplay(); }, 300);
+
+        });
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                enableNextBtn();
+
+                $(".boxInst").show()
+                fnAudioFinishItemComp();
+                audioStop();
+
+            }
+
+        }
+
+
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="banner-img"></div>
+
+            <div class="clsCircle" id="idCircle01"></div>
+
+            <div class="icon-container">
+
+                <div id="box1">
+
+                    <div class="clsIcon" id="idIcon01"></div>
+
+                    <div class="clsText" id="idText1">Explain why it's important to initially withhold feedings in infants who are sick and/or preterm.</div>
+
+                </div>
+
+                <div id="box2">
+
+                    <div class="clsIcon" id="idIcon02"></div>
+
+                    <div class="clsText" id="idText2">Identify the infants who are at risk of becoming hypoglycemic.
+                    </div>
+
+                </div>
+
+
+
+                <div id="box3">
+
+                    <div class="clsIcon" id="idIcon03"></div>
+
+                    <div class="clsText" id="idText3">Explain how to monitor the blood sugar in at-risk infants.</div>
+
+                </div>
+
+                <div id="box4">
+
+                    <div class="clsIcon" id="idIcon04"></div>
+
+                    <div class="clsText" id="idText4">Discuss the initial intravenous therapy for sick infants and the IV treatment of hypoglycemia.</div>
+
+                </div>
+
+
+
+                <div id="box5">
+
+                    <div class="clsIcon" id="idIcon05"></div>
+
+                    <div class="clsText" id="idText5">Identify the indications for the placement of an umbilical catheter.
+                    </div>
+
+                </div>
+
+
+
+                <div class="boxInst">
+
+                    <div class="instNextClick"></div>
+
+                    <div class="next_click"><em> Click Next to continue.</em></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P19/p_1.png',
+                id: '1'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P19/p_2.png',
+                id: '2'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P19/p_3.png',
+                id: '3'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P19/p_4.png',
+                id: '4'
+            }
+
+        ];
+    </script>
+
+    <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        #idPatchMain {
+            top: 22px;
+            left: 2px;
+            background-position: left;
+            height: 40px;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 960px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 10px 20px;
+        }
+        
+        .clsText {
+            position: relative;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            line-height: 25px;
+            color: #000000;
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 6px;
+            left: 0px;
+            width: 100%;
+            text-align: left;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            opacity: 1;
+        }
+        
+        .clsAllTabs1 {
+            position: absolute;
+            height: 350px;
+            width: 235px;
+            top: 110px;
+            left: 1px;
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            background-color: white;
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            display: none;
+        }
+        
+        .clsAllTabs2 {
+            position: absolute;
+            height: 350px;
+            width: 235px;
+            top: 110px;
+            left: 256px;
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            background-color: white;
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            display: none;
+        }
+        
+        .clsAllTabs3 {
+            position: absolute;
+            height: 350px;
+            width: 235px;
+            top: 110px;
+            left: 509px;
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            background-color: white;
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            display: none;
+        }
+        
+        .clsAllTabs4 {
+            position: absolute;
+            height: 350px;
+            width: 235px;
+            top: 110px;
+            left: 764px;
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            background-color: white;
+            opacity: 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            display: none;
+        }
+        
+        .imageclass {
+            position: absolute;
+            left: 29px;
+            top: 24px;
+            background-repeat: no-repeat;
+        }
+        
+        .paragraph {
+            position: absolute;
+            left: 24px;
+            top: 188px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 504px;
+            left: 900px;
+        }
+    </style>
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P19/T01P19";
+
+        var currCue = 0;
+
+        var idd = 0;
+
+        var clickTabCount = 0;
+
+        var clickTabCount1 = 0;
+
+
+
+        var updateContentArray = [
+
+            {
+                time: "0.01",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "Now let's discuss our second guideline. As soon as it’s evident that the infant is sick, quickly establish IV access. This will allow infusion of glucose-containing solutions, help to normalize the blood sugar, provide a route for medications, and will ensure venous access is available if needed in an emergency.",
+                animation: [{
+                    duration: "",
+                    activity: {
+                        'opacity': '0'
+                    }
+                }]
+            },
+
+            /* {time:"0.01", carry:"", event:"", show:"", hide:".clsAllTabs2", animation:[{duration:"",activity:{'opacity':'0'}}]},
+
+            {time:"0.01", carry:"", event:"", show:"", hide:".clsAllTabs3", animation:[{duration:"",activity:{'opacity':'0'}}]},
+
+            {time:"0.01", carry:"", event:"", show:"", hide:".clsAllTabs4", animation:[{duration:"",activity:{'opacity':'0'}}]}, */
+
+
+
+            {
+                time: "9.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".clsAllTabs1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "12",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".clsAllTabs2",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "14",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".clsAllTabs3",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "17",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".clsAllTabs4",
+                    duration: "0.4",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+        ];
+
+
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+        }
+
+        var __dataXml;
+
+
+
+        $(document).ready(function() {
+
+            disableNextBtn();
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+
+
+            var n = isInArray("M1L0T1P19", gCompPageArr);
+
+            console.log(n);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                // fnGlowNextBtn();;
+
+                fnDesiableNext(false);
+
+            }
+
+
+
+        });
+
+
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+
+        function fnPlayItemAudio(gCurrentIndex) {
+
+            audioindex = (gCurrentIndex);
+
+            gAudioId = "audio_" + gCurrentIndex;
+
+            fnHideShowAudioPlayer(false);
+
+            updateContentArray = eval("popupContentArray" + (gCurrentIndex));
+
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        }
+
+
+
+        var succRefFunc = function fnInitPage(oXML) {
+
+            gPageXMLObj = oXML;
+
+        }
+
+        var errRefFunc = function fnXMLLoadError() {
+
+            alert("Error loading XML file.");
+
+        }
+
+
+
+        function fStartPage() {
+
+            fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), succRefFunc, errRefFunc);
+
+            gPageXMLObj.find("question").each(function(index, aQues) {
+
+                __questionArray.push(aQues);
+
+            });
+
+
+
+        }
+
+
+
+        $(".idBackbtn").on("click", function() {
+
+            endModule();
+
+            $("#TabPopup").removeAttr("style");
+
+        });
+
+
+
+
+
+        $(document).on("click", '._clickLink', function() {
+
+            $(this).addClass("_viewed");
+
+            $('._link').attr('src', "pages/Docs/Storybord.pdf");
+
+            $("#id_RefTitleBar").hide();
+
+            $("#RefTitleBar_id").show();
+
+        });
+
+
+
+
+
+        function fnCompletion() {
+
+            //if($(".clsVisited").length==gTotalPopups){
+
+            enableNextBtn();
+
+            fnAudioFinishItemComp();
+
+            $(".boxInst").show();
+
+            //}
+
+        }
+
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                //fnClick();
+                audioStop();
+                fnCompletion();
+
+                gCompPageArr.push("M1L0T1P19");
+
+                //enableNextBtn();
+
+                //fnAudioFinishItemComp();
+
+            } else {
+
+                $("#idTick0" + selectedIndex).css({
+                    "opacity": "1"
+                });
+
+                $("#clsTabTxt" + selectedIndex).css({
+                    'color': '#80848b'
+                });
+
+                $(".ClsTab").removeClass("clsDisable");
+
+                $("#TabImage" + selectedIndex).addClass("clsDisable");
+
+                fnCompletion();
+
+                if ($(".clsVisited").length === 2) {
+
+                }
+
+            }
+
+        }
+
+        function endModule() {
+
+            var _getCount = clickTabCount;
+
+            if (_getCount >= 4) {
+
+                $('.boxInst').show();
+
+                audioReset();
+
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="clsPatch" id="idPatchMain">
+
+                <div class="clsText" id="idText1">As soon as it's evident that the infant is sick, quickly establish intravenous (IV) access.</div>
+
+            </div>
+
+            <div id="idText">
+
+                <div class="clsAllTabs1">
+
+                    <img class="imageclass" src="pages/images/Topic01/T01P19/p_1.png" width="170" height="164"></img>
+
+                    <p class="paragraph">Allows infusion of <br> glucose-containing solutions
+                        <p>
+
+                </div>
+
+                <div class="clsAllTabs2">
+
+                    <img class="imageclass" src="pages/images/Topic01/T01P19/p_2.png" width="170" height="164"></img>
+
+                    <p class="paragraph">Helps normalize the blood sugar
+                        <p>
+
+                </div>
+
+                <div class="clsAllTabs3">
+
+                    <img class="imageclass" src="pages/images/Topic01/T01P19/p_3.png" width="170" height="164"></img>
+
+                    <p class="paragraph">Provides a route for medications needed in the treatment of sick infants
+                        <p>
+
+                </div>
+
+                <div class="clsAllTabs4">
+
+                    <img class="imageclass" src="pages/images/Topic01/T01P19/p_4.png" width="170" height="164"></img>
+
+                    <p class="paragraph">Ensures venous access is available if needed in an emergency
+                        <p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="boxInst">
+
+        <div class="instNextClick"></div>
+
+        <div class="next_click"><em> Click Next to continue.</em></div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>

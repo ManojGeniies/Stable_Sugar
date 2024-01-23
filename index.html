@@ -1,0 +1,850 @@
+<!DOCTYPE HTML>
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Sugar and Safe Care</title>
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+    <link href="css/layoutStyle_V2.css" rel="stylesheet" type="text/css">
+    <link href="css/globalStyle.css" rel="stylesheet" type="text/css">
+    <link href="css/exit.css" rel="stylesheet" type="text/css">
+    <link href="css/page.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
+    <link href="css/templates/component.css" rel="stylesheet" type="text/css">
+    <link href="css/templates/assessment-page.css" rel="stylesheet" type="text/css">
+    <link href="css/detect-Orientation.css" rel="stylesheet" type="text/css">
+
+    <!-- <script src="pages/Assessment/CommonAssessment.js"></script>  -->
+
+
+    <link href="css/newlayoutstyle.css" rel="stylesheet" type="text/css">
+    <!-- <script src="pages/Assessment/CommonAssessment.js"></script>  -->
+
+    <script src="jsfiles/libs/jquery-1.8.1.min.js"></script>
+
+    <script src="jsfiles/scripts/bgLoading.js"></script>
+    <script src="jsfiles/scripts/tabIndex.js"></script>
+    <script src="jsfiles/scripts/search.js"></script>
+    <script src="jsfiles/scripts/main.js"></script>
+    <script src="jsfiles/scripts/navigation.js"></script>
+    <script src="jsfiles/scripts/slider.js"></script>
+    <script src="jsfiles/scripts/detect-Orientation.js"></script>
+    <!-- <script src="pages/Assessment/CommonAssessment.js"></script>  -->
+
+    <script src="jsfiles/scripts/menu.js"></script>
+    <script src="jsfiles/libs/preloadjs-0.6.2.min.js"></script>
+    <script src="jsfiles/libs/jquery.ui.effect.js"></script>
+    <script src="jsfiles/libs/jquery.ui.effect-slide.js"></script>
+    <script src="jsfiles/libs/jquery.ui.core.js"></script>
+    <script src="jsfiles/libs/jquery.ui.widget.js"></script>
+    <script src="jsfiles/libs/jquery.ui.progressbar.js"></script>
+    <script src="jsfiles/libs/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="jsfiles/libs/jquery.ui.touch-punch.js"></script>
+    <script src="jsfiles/libs/jquery.touchwipe.js"></script>
+
+
+    <script src="scormjs/BVScorm.js"></script>
+    <!--	Below screipt added for MCQ / MRQ purpose 	-->
+    <script src="jsfiles/scripts/xmltoobj.js"></script>
+    <!-- <script src="jsfiles/scripts/assessment.js"></script> -->
+
+    <!-- Includes all of the following: TweenLite, TweenMax, TimelineLite, TimelineMax, EasePack, CSSPlugin, RoundPropsPlugin, BezierPlugin, AttrPlugin, DirectionalRotationPlugin -->
+    <script src="jsfiles/minified/TweenMax.min.js"></script>
+    <script src="jsfiles/minified/TweenLite.min.js"></script>
+    <script src="jsfiles/minified/TimelineMax.min.js"></script>
+    <script src="jsfiles/minified/easing/EasePack.min.js"></script>
+    <script src="jsfiles/minified/plugins/CSSPlugin.min.js"></script>
+    <script src="jsfiles/minified/plugins/TextPlugin.min.js"></script>
+    <!-- Used For The Animation purpose  -->
+    <script src="jsfiles/libs/modernizr-latest.js"></script>
+
+    <script src="jsfiles/scripts/menu.js"></script>
+
+    <!-- assessment page -->
+    <script src="jsfiles/scripts/assessment.js"></script>
+    <link href="css/assessment.css" rel="stylesheet" type="text/css">
+
+    <!-- xAPI -->
+    <script src="jsfiles/xapi/tincan-min.js"></script>
+    <script src="jsfiles/xapi/xapi.js"></script>
+    <!-- xAPI -->
+
+    <link href="css/popupStyle.css" rel="stylesheet" type="text/css">
+    <!-- assessment page -->
+
+    <!-- Player and page level .js files to include -->
+    <!--<script src="intro/runtime.js"></script>-->
+
+    <script language="javascript" type="text/javascript">
+        var oXML;
+        var manifest = new Array();
+        var loader;
+        var transcriptText;
+        var audioPath;
+        var isIE;
+        /*Prabhat Firefox showing launch issue with min size */
+        //self.innerWidth = 1006;
+        //self.innerHeight = 660;
+        /* Shweta K. modified the self.innerWidth and self.innerHeight for firefox*/
+        self.innerWidth = 1085;
+        self.innerHeight = 688;
+
+        var size = [window.width, window.height];
+        (function ($) {
+            /* Detect touch support*/
+            $.support.touch = 'ontouchend' in document;
+            /* Ignore browsers without touch support*/
+            if (!$.support.touch) {
+                return;
+            }
+            var mouseProto = $.ui.mouse.prototype,
+                _mouseInit = mouseProto._mouseInit,
+                touchHandled;
+
+            function simulateMouseEvent(event, simulatedType) { /*use this function to simulate mouse event*/
+                /* Ignore multi-touch events*/
+                if (event.originalEvent.touches.length > 1) {
+                    return;
+                }
+                event.preventDefault(); /*use this to prevent scrolling during ui use*/
+
+                var touch = event.originalEvent.changedTouches[0],
+                    simulatedEvent = document.createEvent('MouseEvents');
+                /* Initialize the simulated mouse event using the touch event's coordinates */
+                simulatedEvent.initMouseEvent(
+                    simulatedType, /* type*/
+                    true, /* bubbles                    */
+                    true, /* cancelable                 */
+                    window, /* view                       */
+                    1, /* detail                     */
+                    touch.screenX, /* screenX                    */
+                    touch.screenY, /* screenY                    */
+                    touch.clientX, /* clientX                    */
+                    touch.clientY, /* clientY                    */
+                    false, /* ctrlKey                    */
+                    false, /* altKey                     */
+                    false, /* shiftKey                   */
+                    false, /* metaKey                    */
+                    0, /* button                     */
+                    null /* relatedTarget              */
+                );
+
+                /* Dispatch the simulated event to the target element*/
+                event.target.dispatchEvent(simulatedEvent);
+            }
+            mouseProto._touchStart = function (event) {
+                var self = this;
+                /* Ignore the event if another widget is already being handled*/
+                if (touchHandled || !self._mouseCapture(event.originalEvent.changedTouches[0])) {
+                    return;
+                }
+                /* Set the flag to prevent other widgets from inheriting the touch event*/
+                touchHandled = true;
+                /* Track movement to determine if interaction was a click*/
+                self._touchMoved = false;
+                /* Simulate the mouseover event*/
+                simulateMouseEvent(event, 'mouseover');
+                /* Simulate the mousemove event*/
+                simulateMouseEvent(event, 'mousemove');
+                /* Simulate the mousedown event*/
+                simulateMouseEvent(event, 'mousedown');
+            };
+
+            mouseProto._touchMove = function (event) {
+                /* Ignore event if not handled*/
+                if (!touchHandled) {
+                    return;
+                }
+                /* Interaction was not a click*/
+                this._touchMoved = true;
+                /* Simulate the mousemove event*/
+                simulateMouseEvent(event, 'mousemove');
+            };
+            mouseProto._touchEnd = function (event) {
+                /* Ignore event if not handled*/
+                if (!touchHandled) {
+                    return;
+                }
+                /* Simulate the mouseup event*/
+                simulateMouseEvent(event, 'mouseup');
+                /* Simulate the mouseout event*/
+                simulateMouseEvent(event, 'mouseout');
+                /* If the touch interaction did not move, it should trigger a click*/
+                if (!this._touchMoved) {
+                    /* Simulate the click event*/
+                    simulateMouseEvent(event, 'click');
+                }
+                /* Unset the flag to allow other widgets to inherit the touch event*/
+                touchHandled = false;
+            };
+            mouseProto._mouseInit = function () {
+                var self = this;
+                /* Delegate the touch handlers to the widget's element*/
+                self.element
+                    .on('touchstart', $.proxy(self, '_touchStart'))
+                    .on('touchmove', $.proxy(self, '_touchMove'))
+                    .on('touchend', $.proxy(self, '_touchEnd'));
+
+                /* Call the original $.ui.mouse init method*/
+                _mouseInit.call(self);
+            };
+
+        })(jQuery);
+
+        $(document).ready(function () {
+            var isAndroid = (/android/i.test(navigator.userAgent.toLowerCase()));
+            //loader = new createjs.PreloadJS(false);
+            transcriptText = $('#id_transcriptBox #id_transcriptTextBG #transcripttext');
+            $('.gridContainer').css("visibility", "hidden");
+            if (IsScrom) {
+                BVScorm_adlOnload();
+            }
+            var screen_ht = $(window).height();
+            var screen_wd = $(window).width();
+
+            var preloader_ht = 32;
+            var preloader_wd = 32;
+            var padding_top = (screen_ht / 2) - preloader_ht;
+            var padding_left = (screen_wd / 2) - preloader_wd;
+            fnhideTranscript();
+            //fnperCacheSound(soundName);
+            isIE = ($.browser.msie) ? true : false;
+
+            $.ajax({
+                type: "GET",
+                url: 'mastercontent.xml',
+                dataType: ($.browser.msie) ? "text" : "xml",
+                success: function (data) {
+                    xmlParser(data);
+                    fnPageAnimation();
+                }
+            });
+
+            loader = new createjs.LoadQueue(true);
+            loader.on("complete", handleComplete);
+            loader.on("fileload", handlePlayerFileLoad);
+            loader.loadManifest(manifest, true);
+
+
+            var fontsize = 18;
+
+            $("body").css("font-size", 18);
+
+            ////Code to maintain ratio
+            //resizeFrame();
+            //jQuery.event.add(window, "load", resizeFrame);
+            //jQuery.event.add(window, "resize", resizeFrame);
+            ////End ratio.
+            //Added for slider functionality
+
+            /**for safari**/
+            if ((navigator.userAgent.indexOf('Mac OS X'))) {
+                var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+                if (is_safari) {
+                    //$('#clsAudioOnBtn,#clsAudioOffBtn,.clsTransOnBtn,.clsTransOffBtn, .clsTransBtnDisable,#clsReplay,.clsPlay,.clsPause,.clsPlayDisable').css('margin-top','0.2%');
+                }
+            }
+
+            if (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) == 11) {
+                $("#btmFrame").css("height", "5.4%")
+            }
+
+            /**for safari till here**/
+            fnProgressBar();
+
+            enableHotKeys();
+
+            $("#element").draggable({
+                containment: '#contentFrame',
+                scroll: false
+            }).mousemove(function () {
+                var coord = $(this).position();
+                var width = $(this).width();
+                var height = $(this).height();
+                $("p.position").html("Left: " + parseInt(coord.left) + '<br/>' + "Top: " + parseInt(coord.top));
+            }).mouseup(function () {
+                var coord = $(this).position();
+                var width = $(this).width();
+                var height = $(this).height();
+
+            });
+            //add Font css for android device only
+            if (isAndroid) {
+
+                //$('link[rel=stylesheet][href~="css/font.css"]').remove();
+                //$('head').append('<link rel="stylesheet" href="css/font_For_Android.css" type="text/css" />');
+            }
+
+
+
+        });
+
+        function handlePlayerFileLoad(event) {
+            var item = event.item; // A reference to the item that was passed in to the LoadQueue
+            //var type = item.type;
+            var percent
+            if (isNaN(event.id)) {
+                percent = 0;
+            } else {
+                percent = Math.round((Number(event.id) + 1) * 100 / manifest.length)
+            }
+            $(".loadingText").html("Loading Player " + percent + "%")
+        }
+        //function for show loading percentage
+        function ProgressEvent(loaded, total) {
+
+            if (!(isNaN(loaded))) {
+                if (!(loaded > 1)) {
+                    percent = Math.round((Number(loaded)) * 100)
+                    //console.log("percent"+percent)
+                    $(".loadingText").html("Loading " + percent + "%");
+                    /*if(percent==100){
+                    	$(".loadingText").html("")
+                    }*/
+                }
+
+            }
+            this.Event_constructor("progress");
+            this.loaded = loaded;
+            this.total = (total == null) ? 1 : total;
+            this.progress = (total == 0) ? 0 : this.loaded / this.total;
+        };
+
+        function xmlParser(data) {
+            var xml;
+            if (typeof data == "string") {
+                xml = new ActiveXObject("Microsoft.XMLDOM");
+                xml.async = false;
+                xml.loadXML(data);
+            } else {
+                xml = data;
+            }
+            oXML = $(xml);
+            readyflg = 4;
+            initActionToResize();
+            fnXMLLoaded();
+        }
+
+        function fnXMLLoaded() {
+            fnCreateXMLObjArr();
+            fnCreatePreCacheArr();
+            fnAddPlayerEvents();
+            gCurrPageNum = 1;
+            audioPath = "media/audio/dummy"
+            isIntroPage = (oXML.find("SHOWINTROSCREEN").text().toLowerCase() == "true")
+            initializeJplayer(audioPath)
+            //perCacheImagesAudio(); // Calling from IOS
+            //------------------------------------------------------
+            //Resolve for after bookmarking the page is not get load
+            //Commented below line of code & added it in below handleComplete()
+            //fnCheckForBookMark();
+            //------------------------------------------------------
+
+            doOnOrientationChange();
+        }
+
+        function perCacheImagesAudio() {
+
+            if (manifest.length > 0) {
+                loader.loadManifest(manifest);
+            } else {
+                //fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+            }
+        }
+
+        function handleComplete() {
+
+            //use to show/hide home/landing page using mastercontent variable
+            SHOWHOMESCREEN = oXML.find("SHOWHOMESCREEN").text().toLowerCase();
+
+            //------------------------------------------------------
+            //Resolve for after bookmarking the page is not get load
+            if (!isBookMarkPopupShown) { // Added to show Bookmarking popup only once on IE8
+                fnCheckForBookMark();
+            }
+            //fnCreateAssessmentXMLObjArr();
+            //------------------------------------------------------
+            //lesson_location = "m1"
+            if (lesson_location != undefined) {
+                fnShowCordinate();
+                if (lesson_location == "") {
+                    if (isIntroPage) {
+                        //$(".courseIntro").load('pages/intro/intro.html');
+
+                        $.get('pages/intro/intro.html', {}, function (data, status, xhr) {
+                            //onClickiPad();
+                            var a = window.location.href;
+                            var b = a.split("?")[0];
+                            var c = b.substr(0, b.lastIndexOf("/"))
+                            var updatedData = data.replace(/pages\/(images|css|js|assets)+/g, c + "/pages/$1");
+                            $(".courseIntro").html(updatedData);
+                            //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                            //perCachePageImagesAudio();
+                        });
+                        //fShowCourse()
+                        fnHidePreloader();
+                    } else {
+                        //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                        $('.gridContainer').css("visibility", "visible");
+                        if (lesson_location != undefined && lesson_location != "") {
+                            fnJumpToPageByID(lesson_location);
+                        } else {
+                            fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+                            //fnLoadHome();
+                        }
+                    }
+                } else {
+                    fnHideIntro()
+
+                    //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                    $('.gridContainer').css("visibility", "visible");
+                    if (lesson_location != undefined && lesson_location != "") {
+                        fnJumpToPageByID(lesson_location);
+                    } else {
+                        fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+                        //fnLoadHome();
+                    }
+                }
+                //$("body").css("background-color","#333333");
+            } else {
+                console.log("loading");
+
+
+                //$("body").css("background-color","#333333");
+                //fShowCourse()
+                //$(".courseIntro").load('pages/intro/intro.html');
+                fnShowCordinate();
+                if (isIntroPage) {
+                    //alert("2");
+
+
+                    $.get('pages/intro/intro.html', {}, function (data, status, xhr) {
+
+                        var a = window.location.href;
+                        var b = a.split("?")[0];
+                        var c = b.substr(0, b.lastIndexOf("/"))
+                        var updatedData = data.replace(/pages\/(images|css|js|assets)+/g, c + "/pages/$1");
+                        $(".courseIntro").html(updatedData);
+                        //								$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                        //perCachePageImagesAudio();
+                    });
+                    //$(".courseIntro").load('elements/homepage.html');
+                    fnHidePreloader()
+                } else {
+                    //$(".player-container").css("background","url('media/images/player/common/bgImg.png') no-repeat");
+                    fnHideIntro();
+                    $('.gridContainer').css("visibility", "visible");
+                    if (lesson_location != undefined && lesson_location != "") {
+                        fnJumpToPageByID(lesson_location);
+                    } else {
+                        fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+                        //fnLoadHome()
+                    }
+                }
+            }
+        }
+        //*---------------------------------
+        //function for show / hide cordinate box
+        function fnShowCordinate() {
+            SHOWXYCORDINATE = oXML.find("SHOWXYCORDINATE").text().toLowerCase();
+
+            if (SHOWXYCORDINATE == "true") {
+                $("#element").css({
+                    "display": "block"
+                });
+            } else {
+                $("#element").css({
+                    "display": "none"
+                });
+            }
+        }
+
+
+
+        // Added for Skip The Intro
+        function fShowCourse() {
+
+            fnShowCordinate();
+
+            fnLoadPage(gCurrMod, gCurrLess, gCurrTop, gCurrPage);
+
+        }
+
+        function fUnload() {
+            if (IsScrom) {
+                BVScorm_adlOnunload();
+            }
+        }
+    </script>
+    <!-- Scaling Logic as below -->
+    <script>
+        var $el
+        var elHeight
+        var elWidth
+        var $wrapper
+        var starterData
+        var scalePercent
+        var strAllowFullScreen;
+
+        function doResize(event, ui) {
+            var scale, origin;
+            scale = Math.min(
+                ui.size.width / elWidth,
+                ui.size.height / elHeight
+            );
+
+            if (oXML)
+                strAllowFullScreen = oXML.find("ALLOWFULLSCREEN").text().toLowerCase();
+            if (strAllowFullScreen != 'true' && scale > 1)
+                scale = 1;
+            $el.css({
+                transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+            });
+            scalePercent = scale;
+        }
+
+
+        $(document).ready(function () {
+            /*xAPI init */
+            tinCanWrapper.init();
+            /*xAPI init */
+            $(this).keyup(function (e) {
+                e.preventDefault();
+                var evtobj = window.event ? event : e
+                if (e.ctrlKey && e.altKey && e.keyCode == 68) {
+                    if ($(".modeuleCompletion").hasClass("enable")) {
+                        $(".modeuleCompletion").hide().removeClass("enable");
+                    } else {
+                        $(".modeuleCompletion").addClass("enable").show().focus();
+                    }
+                }
+            });
+            $(".modeuleCompletion").off("click").on("click", function () {
+                BVScorm_complete();
+                $(".modeuleCompletion").hide().removeClass("enable");
+                tinCanWrapper.sendStatementData("completed", "completed", "Module Completed using debug");
+            });
+            assessmentObj.init();
+            //var _getQuesval = assessmentObj.checkedAnswerFunc(0, ".listcnt");
+            //console.log(_getQuesval);
+        });
+
+        $('document').ready(function () {
+            $el = $(".player-container");
+            elHeight = $el.outerHeight();
+            elWidth = $el.outerWidth();
+            $wrapper = $("#scaleable-wrapper");
+            $wrapper.resizable({
+                resize: doResize
+            });
+            actionToResize();
+            fnLoadHomePage();
+        })
+
+        function fnPageAnimation() {
+
+            RemovePageAnimation = oXML.find("RemovePageAnimation").text().toLowerCase();
+
+
+
+            if (RemovePageAnimation == "true") {
+                nextBtnClik = false;
+            } else {
+                nextBtnClik = true;
+            }
+        }
+
+        function fnLoadHomePage() {
+
+            $("#clsHomeBtn").off("click");
+            $(".clsHomeBtn").on("click", function () {
+                if (!$(this).hasClass("clsDisHomeBtn")) {
+                    fnLoadHome();
+                }
+            });
+        }
+
+        $(window).resize(function () {
+            actionToResize();
+        })
+
+        function actionToResize() {
+            starterData = {
+                size: {
+                    width: $wrapper.width(),
+                    height: $wrapper.height()
+                }
+            }
+            doResize(null, starterData);
+        }
+
+        function initActionToResize() {
+            actionToResize();
+            $('.scaleable-wrapper').css('opacity', '1');
+        }
+
+        function fullScreen4TouchDevice() {
+            var elem = document.getElementById("scaleable-wrapper");
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            }
+        }
+    </script>
+    <style>
+        .clsMockup {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+            background: url("media/images/player/Final_GUI_withResource_details.png") no-repeat;
+            background-size: 100% 100%;
+            z-index: 1;
+            opacity: 0.5;
+        }
+
+        .scaleable-wrapper {
+            padding: 0px;
+            resize: both;
+            position: relative;
+            background: #666;
+            height: 100%;
+            width: 100%;
+            opacity: 0.01;
+            overflow: hidden;
+        }
+
+        .ui-resizable-handle,
+        .ui-resizable-handle {
+            display: none !important;
+            background-position: 0px 0px !important;
+            width: 12px !important;
+            height: 12px !important;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #element {
+            background: #666;
+            border: 1px #000 solid;
+            cursor: move;
+            height: 80px;
+            width: 80px;
+            z-index: 999;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .Mydraggable {
+            position: absolute;
+            width: 90px;
+            height: 80px;
+        }
+
+        .position {
+            font-size: 18px;
+            color: #FFF;
+        }
+
+        .HighlightHelp {
+            position: absolute;
+            height: 28.9531px;
+            width: 36.5px;
+            top: 12.42188px;
+            left: 899.578px;
+            border: 2px #e4267b solid;
+            display: none;
+            opacity: 0;
+        }
+
+        .clsHelp:hover+.HighlightHelp {
+            border: none;
+        }
+
+        #id_ReferencesBG #clsText {
+            display: block;
+        }
+    </style>
+</head>
+
+<body onunload="fUnload();">
+    <!-- <canvas width="500" height="400" id="my_canvas"> </canvas> -->
+    <div id="scaleable-wrapper" class="scaleable-wrapper">
+        <div class="player-container">
+            <div class="clsPreloader">
+                <!-- <div class="clsPagePreloader">
+
+					<img src="media/images/player/pre_loder_01.gif" class="clsPreloaderImg"/>
+				</div> -->
+                <div class="spinner">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+            </div>
+            <div class="courseIntro" style="width:100%; height:100%;position: absolute;z-index: 100000;">
+            </div>
+            <div class="gridContainer clearfix">
+                <!-- <div class="clsMockup"></div> -->
+                <header name="topFrame" id="topFrame" class="headClass topFrame">
+                    <!-- <div id="CourseTitleFrame" unselectable="on"></div> -->
+                    <!-- <div id="TopicTitleFrame" UNSELECTABLE="on"></div> -->
+                    <div id="pgTitleFrame"></div>
+                    <!-- <div id="TopicImg"></div> -->
+                    <!-- <div class="clsExitHighlight"></div> -->
+                    <!--<div class="mask"></div>-->
+                    <!--<div class="home-btn" title="Hospital Home"><span class="cIcons">Hospital</span></div>-->
+                    <a class="back-btn" onclick="backBtn();" title="Return to previous page"></a>
+                    <div class="closeContainer">
+                        <div id="clsExitBtn" title="Exit Module">
+                            <span class="cIcons">Exit module</span>
+                        </div>
+                        <!--<div class="clsExitBtnHover" id="clsBG"></div>
+                        <div class="clsExitBtnTxtHover" id="clsBGText">Click to close the module.</div>-->
+                    </div>
+                    <div id="clsMnuBtn" class="deactivMenu" title="Menu">
+                        <span class="cIcons">Menu</span>
+                    </div>
+
+                    <!-- <div id="clsHomeBtn" class="clsEnaHomeBtn" title="Home"></div>
+
+					<div id="clsInfo" title="Information/Assistance"></div>
+					 -->
+
+                    <!-- <div id="idMapBtn" class="clsMapBtnEnable" title="Course Map"></div> -->
+                    <div class="HighlightHelp"></div>
+
+                </header>
+                <div class="contentContainer" id="contentContainer">
+                    <!-- <div id="lockDrag"></div> -->
+                    <div id="contentFrame">
+
+                    </div>
+                    <div id="element" class="Mydraggable ui-widget-content">
+                        <p class="position"></p>
+                    </div>
+
+                </div>
+                <div id="id_transcriptBox" class="">
+                    <!--<div id="id_transcriptTitle"> Transcript</div>
+                        <div id="id_transcriptClose" title="Close"></div>-->
+                    <div id="transcripttext"></div>
+                </div>
+				<div id="transcriptHelp" class="">
+                    <!--<div id="id_transcriptTitle"> Transcript</div>
+                        <div id="id_transcriptClose" title="Close"></div>-->
+                    <div id="transcripttextHelp"></div>
+                </div>
+
+
+
+                <!-- <div id="id_transcriptBox" class="draggable ui-widget-content"> -->
+                <!-- <div id="id_sideBar" class=""></div> -->
+                <div id="clsHelpBtn" title="Navigation" class="clsHelp"><span class="tooltip cIcons">Navigation</span></div>
+
+                <button class="modeuleCompletion">Module Completion</button>
+                <footer name="btmFrame" id="btmFrame">
+                    <div id="audioDiv">
+                        <audio id="audioplayer" autoplay style="audioPlayer" oncanplay="onAudioCanPlay()"
+                            onplay="onAudioStart()">
+                        </audio>
+                    </div>
+
+
+                    <div id="footerbuttons">
+
+                        <div class="ClsToolbtn" id="ToolBtn" title="Resources"><span
+                                class="ClsToolbtnIcon cIcons"></span><span class="tooltip cIcons">Resources</span></div>
+                        <div id="clsPlayPauseBtn" class="clsPlay" title="Play/Pause">
+                            <span class="clsPlayPauseBtnIcon cIcons">&nbsp;</span>
+                            <span class="tooltip cIcons">PLAY</span>
+                        </div>
+                        <div id="transcriptBtn" class="clsTransOnBtn enableTranscript" title="Transcript On/Off">
+                            <div class="transcriptHover"></div>
+                        </div>
+                        <div id="clsAudioOffBtn" title="Audio On/Off">
+                            <span class="clsAudioOffBtnIcon cIcons"></span>
+                            <span class="tooltip cIcons">Mute</span>
+                        </div>
+                        <div id="clsAudioOnBtn" title="Audio On/Off">
+                            <span class="clsAudioOnBtnIcon cIcons"></span>
+                            <span class="tooltip cIcons">Mute</span>
+                        </div>
+                        <div id="clsBackBtn" class="clsDisBackBtn" title="Back">
+                            <span class="clsBackBtnIcon cIcons">&nbsp;</span>
+                            <span class="tooltip cIcons">Back</span>
+                        </div>
+                        <!-- <div id="clsNavPartitionBtn"></div> -->
+                        <!--<div class="linegrey">&nbsp;</div>-->
+                        <div id="clsPageNumber">
+                            <div id="clsPageNoDisplay"></div>
+                        </div>
+
+                        <div id="clsNxtBtn" class="clsDisNxtBtn" title="Next">
+                            <span class="clsNxtBtnIcon cIcons">&nbsp;</span>
+                            <span class="tooltip cIcons">Next</span>
+                        </div>
+
+
+                        <div id="clsReplay" title="Replay">
+                            <span class="clsReplayIcon cIcons"></span>
+                            <span class="tooltip cIcons">Replay</span>
+                        </div>
+                        <div id="id_sliderContainer" title="Slider">
+                            <div id="slider"></div>
+                        </div>
+
+                        <!--<div id="transcriptBtn" class="clsTransOnBtn enableTranscript" title="Transcript On/Off"><div class="transcriptHover"></div></div>		 -->
+                        <!-- <div id="searchBtn"></div>
+						<input  type="text" id="searchTextDiv" ></input > -->
+                    </div>
+                </footer>
+                <div class="ClsToolPop" id="ToolPop">
+                    <!-- <div class="Clsclosetxt" id="TooclsBtn">Close</div>	 -->
+                    <div class="clsToolWhitePath" id="">
+                        <div id="clsRefBtn" title="PDF Resources"><span class="tooltip cIcons">PDF Resources</span>
+                        </div>
+                        <div id="clsGlosBtn" title="Glossary"><span class="tooltip cIcons">Glossary</span></div>
+                        <div id="clsVideoRefBtn" title="Video Resources"><span class="tooltip cIcons">Video
+                                Resources</span></div>
+                        <div id="clsActivityRefBtn" title="Activity"><span class="tooltip cIcons">Activity</span></div>
+                    </div>
+                </div>
+                <!-- <div class="screen_lock"></div>	 -->
+
+                <!-- <div id="id_transcriptTextBG"> -->
+
+                <!-- </div> -->
+
+
+
+                <div id="dummyBtn1" style="">
+                    <div id="dummyBtnBk1"></div>
+                </div>
+                <div class="clsOrientationBox">
+                    <div class="mobileImg"></div>
+                    <div class="clsOrientationMsg">Please rotate your device.</div>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

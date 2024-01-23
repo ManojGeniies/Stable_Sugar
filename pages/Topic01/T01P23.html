@@ -1,0 +1,859 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P23/Preterm-animation.gif',
+            id: '1'
+        }, {
+            src: 'pages/images/Topic01/T01P23/Preterm-Static.png',
+            id: '2'
+        }, {
+            src: 'pages/images/Topic01/T01P23/Preterm-Static1.png.jpg',
+            id: '3'
+        }, {
+            src: 'pages/images/Topic01/T01P23/Term-Animation.gif',
+            id: '4'
+        }, {
+            src: 'pages/images/Topic01/T01P23/Term-Static.png',
+            id: '5'
+        }];
+    </script>
+
+
+    <style type="text/css">
+        /* .listcnt [type="checkbox"]:checked + label:before, 
+    .listcnt [type="checkbox"]:not(:checked) + label:before, 
+    .listcnt [type="radio"]:checked + label:before, 
+    .listcnt [type="radio"]:not(:checked) + label:before, 
+    .listcnt.correctAnswer [type="checkbox"]:checked + label:after, 
+    .listcnt.correctAnswer [type="checkbox"]:not(:checked) + label:after, 
+    .listcnt.correctAnswer [type="radio"]:checked + label:after, 
+    .listcnt.correctAnswer [type="radio"]:not(:checked) + label:after,
+    .listcnt.clicked [type="checkbox"]:checked + label:after, 
+    .listcnt.clicked [type="checkbox"]:not(:checked) + label:after, 
+    .listcnt.clicked [type="radio"]:checked + label:after, 
+    .listcnt.clicked [type="radio"]:not(:checked) + label:after 
+ {
+    top: 4px;
+} */
+        
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        .information {
+            top: 140px;
+            left: 45px;
+            background-position: left;
+            height: 32px;
+            width: 32px;
+            background: #FFFFFF;
+            background: url('pages/images/Topic01/T01P23/information.svg') no-repeat;
+            background-size: 32px 32px;
+            cursor: pointer;
+            position: absolute;
+        }
+        
+        .informationPopup {
+            height: 186px;
+            width: 399px;
+            background: #FFFFFF;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            position: absolute;
+            top: 134px;
+            left: 39px;
+            display: none;
+            /* opacity: 0.3; */
+        }
+        
+        .informationHeading {
+            height: 43px;
+            width: 100%;
+            background-color: #707070;
+            text-align: center;
+            line-height: 43px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px 5px 0px 0px;
+        }
+        
+        .informationOveryplay {
+            opacity: 0.8;
+            width: 100%;
+            height: 100%;
+            background: rgba(102, 102, 102, 0.18823529411764706);
+            display: none;
+            position: absolute;
+            top: 0px;
+        }
+        
+        .headingText {
+            width: 356px;
+            height: 43px;
+        }
+        
+        .informationContent {
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            padding-left: 40px;
+            padding-top: 24px;
+        }
+        
+        .headingIcon {
+            width: 43px;
+            height: 43px;
+            background: url('pages/images/Topic01/T01P23/information_2.svg') no-repeat;
+            background-size: 32px 32px;
+            background-position: center;
+            float: left;
+            cursor: pointer;
+        }
+        
+        .bottomTxt {
+            position: relative;
+            top: 472px;
+            left: 0px;
+            width: 60px;
+            margin: 0px auto;
+        }
+        
+        .cSubmitBtn {
+            background: #959594;
+            font-family: OpenSansRegular;
+            font-size: 18px;
+            padding: 5px 15px;
+            text-transform: lowercase;
+            color: #ffffff;
+            border-radius: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            text-transform: capitalize;
+            line-height: 21px;
+            border: 2px solid transparent;
+            width: 60px;
+        }
+        
+        .cSubmitBtn.enable:hover {
+            border: 2px solid #707070;
+            background: transparent;
+            color: #5B5B5B;
+        }
+        
+        .cSubmitBtn.active {
+            background: #5B5B5B;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        
+        .cSubmitBtn.active:hover {
+            border: 2px solid #707070;
+            background: #ffffff;
+            color: #000000;
+        }
+        
+        .activityArea {
+            position: absolute;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 800px;
+            height: 255px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            top: 185px;
+            left: 145px;
+        }
+        
+        .leftCircle {
+            width: 270px;
+            height: 270px;
+            position: absolute;
+            top: -7px;
+            left: -103px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background: #fff;
+            text-align: center;
+            background-size: 270px 270px;
+            background-position: center;
+        }
+        
+        .leftCircle img {
+            top: 50%;
+            transform: translateY(4%);
+        }
+        
+        .rightCircle {
+            width: 270px;
+            height: 270px;
+            position: absolute;
+            top: -7px;
+            left: 623px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background: #fff;
+            text-align: center;
+            background-size: 270px 270px;
+            background-position: center;
+        }
+        
+        .rightCircle img {
+            top: 50%;
+            transform: translateY(4%);
+        }
+        
+        .answerChoices {
+            position: absolute;
+            /* background: #0000ff24; */
+            width: 405px;
+            height: 180px;
+            top: 25px;
+            left: 200px;
+        }
+        
+        .inst {
+            font-family: OpenSansSemiBold;
+            position: absolute;
+            bottom: 10px;
+            right: 145px;
+            font-size: 16px;
+        }
+        
+        #idPatchMain23 {
+            top: 22px;
+            left: 2px;
+            background-position: left;
+            height: 64px;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 960px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 10px 20px;
+        }
+        
+        .clsText {
+            position: relative;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            line-height: 25px;
+            color: #000000;
+            opacity: 0;
+        }
+        
+        #idText24 {
+            top: 3px;
+            left: 0px;
+            width: 100%;
+            text-align: left;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            opacity: 1;
+        }
+        
+        #idText25 {
+            top: 12px;
+            left: 0px;
+            width: 100%;
+            opacity: 1;
+            font-style: italic;
+            font-family: OpenSansSemiBold;
+            color: #4D667B;
+        }
+        
+        .ClsTabInside {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            top: 9px;
+            border-radius: 50%;
+            background-size: contain;
+            opacity: 0;
+        }
+        
+        .clsAllTabs {
+            position: absolute;
+            height: 406px;
+            width: 997px;
+            top: 103px;
+            right: 20px;
+            left: 2px;
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            background-color: white;
+            background-position: left;
+            opacity: 0;
+            display: none;
+        }
+        
+        .clsAllTabsImage {
+            position: absolute;
+            left: 222px;
+            top: 48px;
+            height: 300px;
+        }
+        
+        .clickBlocker {
+            position: absolute;
+            height: 406px;
+            width: 997px;
+            top: 103px;
+            right: 20px;
+            left: 2px;
+        }
+        
+        .paraText {
+            position: absolute;
+            top: 300px;
+            width: 256px;
+            left: 186px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+        }
+        
+        .paraText2 {
+            position: absolute;
+            width: 305px;
+            top: 295px;
+            left: 519px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            display: none;
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 504px;
+            left: 900px;
+        }
+        
+        .clsPatch {
+            position: absolute;
+            width: 0px;
+            height: 236px;
+        }
+        
+        .listcnt,
+        .disableListcnt {
+            position: relative;
+            top: 0px;
+            padding-right: 20px;
+            margin-bottom: 7px;
+            padding-bottom: 6px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            width: 370px;
+            padding-right: 20px;
+            cursor: pointer;
+        }
+        
+        .listcnt.disabled .OptionTxtCLSS {
+            cursor: default;
+        }
+        
+        .answerChoices .listcnt:hover {
+            border: 1px solid #999999;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        
+        .answerChoices .listcnt.disabled:hover {
+            cursor: default;
+            border: 1px solid transparent;
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+        }
+        
+        .arrowHolder {
+            position: absolute;
+            top: 5px;
+            width: 13px;
+            height: 15px;
+            background: #5B5B5B;
+            -khtml-border-radius: 50%;
+            background: url('pages/images/Topic01/T01P23/bullet.png') no-repeat;
+        }
+        
+        .answerChoices .arrowHolder {
+            position: absolute;
+            top: 1px;
+            width: 26px;
+            height: 26px;
+            background: url('pages/images/Topic01/T01P23/checkbox_normal.png') no-repeat;
+            cursor: pointer;
+        }
+        
+        .answerChoices .listcnt.clicked .arrowHolder {
+            background: url('pages/images/Topic01/T01P23/checkbox_click.png') no-repeat;
+        }
+        
+        .answerChoices .listcnt.wrongAnswer .arrowHolder {
+            background: url('pages/images/Topic01/T01P23/checkbox_wrong.png') no-repeat;
+            cursor: default;
+        }
+        
+        .answerChoices .listcnt.correctAnswer .arrowHolder {
+            background: url('pages/images/Topic01/T01P23/checkbox_correct.png') no-repeat;
+            cursor: default;
+        }
+        
+        .answerChoices .listcnt.disabled .arrowHolder {
+            cursor: default;
+        }
+        
+        .OptionCLSS {
+            position: relative;
+            left: 31px;
+            top: 1px;
+        }
+        
+        .informationInstruction {
+            background: url('pages/images/Topic01/T01P23/enlarge_text.png') no-repeat;
+            position: absolute;
+            top: 137px;
+            left: 79px;
+            background-size: contain;
+            /* background-position: left center; */
+            width: 412px;
+            height: 37px;
+            line-height: 35px;
+            font-style: italic;
+            padding-left: 29px;
+            font-size: 14px;
+        }
+        
+        .blur {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -0-backface-visibility: hidden;
+            -webkit-filter: blur(3px);
+            -moz-filter: blur(3px);
+            -ms-filter: blur(3px);
+            -o-filter: blur(3px);
+            filter: blur(3px);
+        }
+        
+        .feedbackTxt {
+            position: absolute;
+            top: 446px;
+            left: 256px;
+            font-size: 16px;
+            color: #000;
+            font-family: OpenSansRegular;
+            font-style: italic;
+            width: 600px;
+            text-align: center;
+            display: none;
+        }
+        
+        .OptionTxtCLSS {
+            cursor: pointer;
+        }
+        
+        .term {
+            position: absolute;
+            top: 225px;
+            left: 114px;
+            font-size: 16px;
+            color: #fff;
+            display: none;
+        }
+        
+        .answerChoices .disabled {
+            pointer-events: none;
+        }
+        
+        .preterm {
+            position: absolute;
+            top: 225px;
+            left: 101px;
+            font-size: 16px;
+            color: #fff;
+            display: none;
+        }
+    </style>
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P23/T01P23";
+        var gItemAudioPath = ["pages/audio/Topic01/T01P23/T01P23_1", "pages/audio/Topic01/T01P23/T01P23_2", "pages/audio/Topic01/T01P23/T01P23_3"];
+        var qAttempts = 0,
+            isCorrect = false;
+        var currCue = 0;
+        var idd = 0;
+        var __curState = 0;
+        var updateContentArray = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Which of the following statements on glycogen storage is true? Select an option and click Submit."
+        }];
+
+        var popupSectionArray0 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Please try again."
+        }];
+        var popupSectionArray1 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Here is some feedback on your response. The majority of glycogen is stored during the latter part of the third trimester."
+        }];
+        var popupSectionArray2 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "That is correct. The majority of glycogen is stored during the latter part of the third trimester."
+        }];
+
+        function fnAudioFinishItemComp() {
+            fnAudioFinishPageComp();
+        }
+
+        $(document).ready(function() {
+            // $(".answerChoices .listcnt").addClass("disabled");
+            disableNextBtn();
+            // $('.feedbackTxt').hide();
+            $('.information').on("click", function() {
+                //fnPauseAudio();
+                fnPauseAudio();
+                $(".informationPopup").css("display", "block");
+                $('.mainContainer, .feedbackTxt').addClass('blur');
+                $('.activityArea').addClass('blur');
+                $('.informationInstruction').addClass('blur');
+                $('.cSubmitBtn').addClass('blur');
+                //debugger;
+                $(".informationOveryplay").fadeIn(300, function() {
+                    $(".informationPopup").fadeIn(200);
+                });
+
+
+            });
+            $(".informationOveryplay").on("click", function() {
+                //fnPlayAudio();
+                fnPlayAudio();
+                //  $(".informationOveryplay").css("display", "none");
+                // $(".informationPopup").css("display", "none");
+                $(".informationPopup").fadeOut(200);
+                $(".informationOveryplay").fadeOut(300, function() {
+                    $('.mainContainer, .feedbackTxt').removeClass('blur');
+                    $('.activityArea').removeClass('blur');
+                    $('.informationInstruction').removeClass('blur');
+                    $('.cSubmitBtn').removeClass('blur');
+                });
+            });
+            $(".headingIcon").on("click", function() {
+                fnPlayAudio();
+                $(".informationPopup").fadeOut(200);
+                $(".informationOveryplay").fadeOut(300, function() {
+                    $('.mainContainer, .feedbackTxt').removeClass('blur');
+                    $('.activityArea').removeClass('blur');
+                    $('.informationInstruction').removeClass('blur');
+                    $('.cSubmitBtn').removeClass('blur');
+                });
+
+            });
+            /*
+                $('.leftCircle').mouseout(function () {
+                    $('.leftCircle').html('<img src="pages/images/Topic01/T01P23/Preterm-Static.png" width="250" height="250" onmouseenter=leftCir()>')
+                })
+                $('.rightCircle').mouseout(function () {
+                    $('.rightCircle').html('<img src="pages/images/Topic01/T01P23/Term-Static.png" width="250" height="250" onmouseenter=rightCir()>')
+                })
+            */
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            var n = isInArray("M1L0T1P23", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false);
+            }
+
+        });
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+        }
+
+        var gTotalPopups = 2;
+        var temp = "";
+
+        function fnClick() {
+            $(".ClsTab").off("click").on("click", function() {
+                audioReset();
+                $(".boxInst").hide();
+                $("answerChoices .OptionCLSS").removeClass("correctAnswer").removeClass("wrongAnswer");
+
+                //}
+            });
+        }
+
+        function fnCompletion() {
+            enableNextBtn();
+            fnAudioFinishItemComp();
+            $(".boxInst").show();
+            //gCompPageArr.push("M1L0T1P23");
+            audioStop();
+        }
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+                $(".ClsTab").removeClass("clsDisable");
+                // we need to replace this
+                //enableNextBtn();
+                //fnAudioFinishItemComp();
+                // we need to replace this
+                fnClick();
+                $(".answerChoices .listcnt").removeClass("disabled");
+            } else {
+                if (qAttempts == 0) {
+                    $(".answerChoices .listcnt").removeClass("disabled");
+                }
+
+                if (qAttempts == 1 && isCorrect == false) {
+
+                    $(".answerChoices .listcnt").removeClass("disabled");
+                    $('.clicked').removeClass('wrongAnswer');
+                    $('.clicked').removeClass("clicked").removeAttr("clicked");
+
+
+                    //		$('.feedbackTxt').hide();
+                } else {
+                    $(".answerChoices .listcnt").addClass("disabled");
+
+                    if (qAttempts == 2 || isCorrect == true) {
+                        fnCompletion();
+                    }
+
+                }
+
+            }
+        }
+
+
+        function interSect(a, b) {
+            return $.grep(a, function(i) {
+                return $.inArray(i, b) > -1;
+            });
+        }
+
+
+
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+                console.log(false);
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                console.log(true);
+                playPauseAudio();
+            }
+        }
+
+        $(document).off("click").on("click", '.answerChoices .listcnt', function(event) {
+            if (!$(this).hasClass("disabled")) {
+                event.preventDefault();
+                //audioReset();
+                if ($(this).attr("clicked") == "true") {
+                    $(this).removeClass("clicked").removeAttr("clicked");
+                    $(".cSubmitBtn").removeClass("active");
+                    //disableSubmitBtn(".cSubmitBtn");
+                } else {
+                    $('.clicked').removeClass("clicked").removeAttr("clicked");
+                    $(this).addClass("clicked").attr("clicked", "true");
+                    $(".cSubmitBtn").removeClass("active").addClass("active");
+                    // enableSubmitBtn(".cSubmitBtn");
+                }
+            }
+        });
+
+        $(".cSubmitBtn").on("click", function() {
+            if ($(this).hasClass("active")) {
+                // fnCompletion()                
+
+                // fnGlowNextBtn();
+
+                qAttempts++;
+                // $(".answerChoices .listcnt").addClass("disabled");
+                fnPlaySectionAudio(2);
+                if ($('.clicked').attr('curid') == 2) {
+                    tinCanWrapper.sendStatementData("answered", "glycogen-stores-which-of-the-following-statements-on-glycogen-storage-is-true?", "Which of the following statements on glycogen storage is true?");
+                    $('.clicked').addClass('correctAnswer');
+                    // $('.feedbackTxt').html('That is correct! Majority of glycogen is stored during the latter part of the third trimester.');
+                    // $('.feedbackTxt').show();
+                    $(this).hide();
+                    //  fnCompletion();
+                    isCorrect = true;
+                    enableNextBtn();
+                    fnDesiableNext(false);
+                    gCompPageArr.push("M1L0T1P23");
+                    $(".answerChoices .listcnt").addClass("disabled");
+
+                } else {
+                    /* if (qAttempts == 1) {
+                        $('.clicked').addClass('wrongAnswer');
+                        $(".cSubmitBtn").removeClass("active");
+                        fnPlaySectionAudio(0);
+
+                    } else if (qAttempts == 2) { */
+                    tinCanWrapper.sendStatementData("answered", "glycogen-stores-which-of-the-following-statements-on-glycogen-storage-is-true?", "Which of the following statements on glycogen storage is true?");
+                    // $('.feedbackTxt').html('Here is some feedback on your response. Majority of glycogen is stored during the latter part of the third trimester.');
+                    // $('.feedbackTxt').show();
+                    $('.clicked').addClass('wrongAnswer');
+                    $('#showList_2').addClass('correctAnswer');
+                    //  fnCompletion();
+                    isCorrect = true;
+                    enableNextBtn();
+                    fnDesiableNext(false);
+                    gCompPageArr.push("M1L0T1P23");
+                    $(this).hide();
+                    fnPlaySectionAudio(1);
+                    $(".answerChoices .listcnt").addClass("disabled");
+                    // }
+
+
+
+                }
+
+            } else {
+
+            }
+        });
+        /*
+        function leftCir() {
+            $('.leftCircle').html('<img src="pages/images/Topic01/T01P23/Preterm-animation.gif" width="250" height="250">')
+        }
+
+        function rightCir() {
+            $('.rightCircle').html('<img src="pages/images/Topic01/T01P23/Term-Animation.gif" width="250" height="250">')
+        }
+
+        */
+    </script>
+
+</head>
+
+<body>
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div class="mainContainer">
+            <div class="clsPatch" id="idPatchMain23">
+                <div class="clsText" id="idText24">Which of the following statements on glycogen storage is true?</div>
+                <div class="clsText instructions" id="idText25">Select an option and click Submit.</div>
+            </div>
+        </div>
+
+
+        <div class="activityArea">
+            <div class="leftCircle">
+                <img src="pages/images/Topic01/T01P23/Preterm-animation.gif" width="250" height="250">
+                <div class="preterm">Preterm</div>
+            </div>
+            <div class="answerChoices">
+                <div class="listcnt rBtn vlm" curid="1" id="showList_1">
+                    <input type="radio" id="arrow_1">
+                    <label for="arrow_1">
+                        Majority of glycogen is stored during the earlier part of the third trimester.
+                    </label>
+                </div>
+                <div class="listcnt rBtn vlm" curid="2" id="showList_2">
+                    <input id="arrow_2" type="radio">
+                    <label for="arrow_2">Majority of glycogen is stored during the latter part of the third
+                        trimester.</label>
+                </div>
+                <div class="listcnt rBtn vlm" curid="3" id="showList_3">
+                    <input id="arrow_3" type="radio">
+                    <label for="arrow_3">The amount of glycogen stored during the earlier part and latter part of the
+                        third trimester is the same.</label>
+                </div>
+
+            </div>
+            <!--<div class="inst"><strong><em>Hover over the images for a hint.</em></strong></div>-->
+            <div class="rightCircle">
+                <img src="pages/images/Topic01/T01P23/Term-Animation.gif" width="250" height="250">
+                <div class="term">Term</div>
+            </div>
+        </div>
+        <div class="feedbackTxt"></div>
+        <div class="bottomTxt">
+
+            <div class="cSubmitBtn">Submit</div>
+        </div>
+        <div class="informationInstruction bluecolor">Click for more information on gestational ages.</div>
+
+        <div class="informationOveryplay"></div>
+        <div class="information"></div>
+        <div class="informationPopup">
+            <div class="informationHeading">
+                <div class="headingIcon"></div>
+                <div class="headingText">Gestational Ages</div>
+            </div>
+            <div class="informationContent"><strong>Preterm:</strong> &lt;37 weeks<br /><strong>Late preterm:</strong> 34-0/7 to 36-6/7 weeks<br /><strong>Term:</strong> 37-0/7 to 41-6/7 weeks
+                <br /><strong>Post-term:</strong> &gt;42 weeks
+            </div>
+        </div>
+    </div>
+    <!--- Main Container--->
+    <div class="boxInst">
+        <div class="instNextClick"></div>
+        <div class="next_click"><em> Click Next to continue.</em></div>
+    </div>
+    </div>
+
+</body>
+
+</html>

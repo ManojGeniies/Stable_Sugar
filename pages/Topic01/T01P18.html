@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+	<title></title>
+
+	<script>
+
+		manifest = [{ src: 'pages/images/Topic01/T01P18/EV01_01.png', id: '1' }
+
+		];
+
+	</script>
+
+	<style type="text/css">
+		.mainContainer {
+
+			position: absolute;
+
+			width: 1000px;
+
+			height: 460px;
+
+			left: 40px;
+
+			top: 20px;
+
+			opacity: 1;
+
+		}
+
+		#idPatchMain {
+
+			top: 22px;
+
+			left: 2px;
+
+			background-position: left;
+
+			height: 64px;
+
+			background: #FFFFFF;
+
+			border-radius: 6px;
+
+			width: 960px;
+
+			-webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+
+			-moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+
+			box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+
+			border-radius: 5px;
+
+			-moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+
+			padding: 10px 20px;
+
+		}
+
+		.clsText {
+
+			position: relative;
+
+			font-size: 16px;
+
+			font-family: OpenSansRegular;
+
+			line-height: 25px;
+
+			color: #000000;
+
+			opacity: 0;
+
+		}
+
+		#idText1 {
+
+			top: 16px;
+
+			left: 0px;
+
+			width: 100%;
+
+			text-align: left;
+
+			font-family: OpenSansRegular;
+
+			font-size: 16px;
+
+			opacity: 1;
+
+		}
+
+		.ClsTabInside {
+
+			position: absolute;
+
+			width: 110px;
+
+			height: 110px;
+
+			top: 9px;
+
+			border-radius: 50%;
+
+			background-size: contain;
+
+			opacity: 0;
+
+		}
+
+		.clsAllTabs {
+
+			position: absolute;
+
+			height: 406px;
+
+			width: 997px;
+
+			top: 103px;
+
+			right: 20px;
+
+			left: 2px;
+
+			box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+
+			border-radius: 5px;
+
+			background-color: white;
+
+			background-position: left;
+
+			opacity: 0;
+
+			display: none;
+
+		}
+
+		.clsAllTabsImage {
+
+			position: absolute;
+
+			left: 206px;
+
+			top: 10px;
+
+			height: 300px;
+
+		}
+
+		.paraText {
+
+			position: absolute;
+
+			top: 295px;
+
+			width: 258px;
+
+			left: 186px;
+
+			font-size: 16px;
+
+			font-family: OpenSansRegular;
+
+
+
+		}
+
+		.paraText2 {
+
+			position: absolute;
+
+			width: 305px;
+
+			top: 295px;
+
+			left: 519px;
+
+			font-size: 16px;
+
+			font-family: OpenSansRegular;
+
+			display: none;
+
+		}
+
+		.boxInst {
+
+			position: absolute;
+
+			top: 504px;
+
+			left: 900px;
+
+		}
+	</style>
+
+	<script>
+
+		glossaryFuncPageLevel();
+
+		var audioPath = "pages/audio/Topic01/T01P18/T01P18";
+
+		var currCue = 0;
+
+		var idd = 0;
+
+		var clickTabCount = 0;
+
+		var clickTabCount1 = 0;
+
+		var updateContentArray = [
+
+			{ time: "0", carry: "", event: "", show: "", hide: ".clsAllTabs", transcript: "Supporting the energy needs of sick infants with IV fluids containing glucose is an important component of stabilization. The brain requires a steady supply of glucose to function normally, and unlike the liver, kidneys, and skeletal and cardiac muscles, the brain cannot store adequate amounts of glucose in the form of glycogen.", animation: [{ target: ".clsAllTabs", duration: "", activity: { 'opacity': '0' } }] },
+
+			{ time: "3", carry: "", event: "", show: ".clsAllTabs", hide: ".paraText", animation: [{ target: ".clsAllTabs", duration: "0.5", activity: { 'opacity': '1', "display": "block" } }] },
+
+			{ time: "9", carry: "", event: "", show: ".paraText", hide: "", animation: [{ target: ".paraText", duration: "0.5", activity: { 'opacity': '1', "display": "block" } }] },
+
+			{ time: "14", carry: "", event: "", show: "", hide: "", animation: [{ target: ".paraText2", duration: "0.5", activity: { 'opacity': '1', "display": "block" } }] }
+
+		];
+
+		function fnAudioFinishItemComp() {
+
+			fnAudioFinishPageComp();
+
+			fnUpdatePageCompletionCounter(0);
+
+		}
+
+		var __dataXml;
+
+		$(document).ready(function () {
+
+			disableNextBtn();
+
+			var ele = document.getElementsByTagName('div');
+
+			for (var i = 0; i < ele.length; i++) {
+
+				ele[i].setAttribute("unselectable", "on");
+
+			}
+
+
+
+			var n = isInArray("M1L0T1P18", gCompPageArr);
+
+			console.log(n);
+
+			if (n == true) {
+
+				enableNextBtn();
+
+				// fnGlowNextBtn();
+
+				fnDesiableNext(false);
+
+			}
+
+		});
+
+
+
+		function isInArray(value, array) {
+
+			return array.indexOf(value) > -1;
+
+		}
+
+
+
+		function audioReset() {
+
+			gAudioId = "";
+
+			onTimelineEnd();
+
+		}
+
+		function fnPlayItemAudio(gCurrentIndex) {
+
+			audioindex = (gCurrentIndex);
+
+			gAudioId = "audio_" + gCurrentIndex;
+
+			fnHideShowAudioPlayer(false);
+
+			updateContentArray = eval("popupContentArray" + (gCurrentIndex));
+
+			initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+		}
+
+
+
+		var succRefFunc = function fnInitPage(oXML) {
+
+			gPageXMLObj = oXML;
+
+		}
+
+		var errRefFunc = function fnXMLLoadError() {
+
+			alert("Error loading XML file.");
+
+		}
+
+
+
+		function fnCompletion() {
+
+			console.log("sdfsdf");
+
+			enableNextBtn();
+
+			fnAudioFinishItemComp();
+
+			$(".boxInst").show();
+
+		}
+
+
+
+		function fnOnAudioComplete() {
+
+			if (gAudioId == "startAudio") {
+
+				fnCompletion();
+
+				gCompPageArr.push("M1L0T1P18");
+
+				//fnClick();
+
+				//enableNextBtn();
+
+				//fnAudioFinishItemComp();
+
+			} else {
+
+				$("#idTick0" + selectedIndex).css({ "opacity": "1" });
+
+				$("#clsTabTxt" + selectedIndex).css({ 'color': '#80848b' });
+
+				$(".ClsTab").removeClass("clsDisable");
+
+				$("#TabImage" + selectedIndex).addClass("clsDisable");
+
+				fnCompletion();
+
+				if ($(".clsVisited").length === 2) {
+
+				}
+
+			}
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<div class="pg-pageContent" UNSELECTABLE="on">
+
+		<div class="mainContainer">
+
+			<div class="clsPatch" id="idPatchMain">
+
+				<div class="clsText" id="idText1">Supporting the energy needs of sick infants with IV fluids containing
+					glucose is an important component of stabilization.</div>
+
+			</div>
+
+			<div class="clsAllTabs">
+
+				<img class="clsAllTabsImage" src="pages/images/Topic01/T01P18/EV01_01.png">
+
+				<p class="paraText">The brain requires a steady supply <br> of glucose to function normally.</p>
+
+				<p class="paraText2">Unlike the liver, kidneys, and skeletal and cardiac muscles, the brain cannot store
+					adequate amounts of glucose in the form of <a href="javascript:void(0)" class="glossarytag"
+						textDesc="A substance deposited in bodily tissues as a store of glucose. Glycogen is stored primarily in the liver and skeletal muscle, although small amounts may also be found in the heart and lungs.">glycogen</a>.
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="boxInst">
+
+		<div class="instNextClick"></div>
+
+		<div class="next_click"><em> Click Next to continue.</em></div>
+
+	</div>
+
+	</div>
+
+</body>
+
+</html>

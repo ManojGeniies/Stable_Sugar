@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P00/EV01_01.png',
+                id: '1'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P00/Icon01.png',
+                id: '2'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P00/instNext.png',
+                id: '3'
+            }
+        ];
+    </script>
+
+
+
+    <style type="text/css">
+        .yellowBorder:before {
+            content: "";
+            position: absolute;
+            width: 504px;
+            height: 55px;
+            border: 2px solid #E4BA4E;
+            border-radius: 5px;
+            left: -97px;
+            top: -5px;
+        }
+        
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        .clsCircle {
+            position: absolute;
+            -ms-transform: matrix(0, 0, 0, 0, 0, 0);
+            -wbkit-transform: matrix(0, 0, 0, 0, 0, 0);
+            transform: matrix(0, 0, 0, 0, 0, 0);
+        }
+        
+        #idCircle01 {
+            left: 40px;
+            top: 90px;
+            width: 288px;
+            height: 288px;
+            background: url("pages/images/Topic01/T01P00/EV01_01.png") no-repeat;
+            background-size: contain;
+        }
+        
+        .clsPatch {
+            position: absolute;
+            width: 0px;
+            height: 236px;
+        }
+        
+        #idPatch1 {
+            top: 165px;
+            left: 220px;
+            background-position: left;
+            height: 155px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            display: none;
+            color: #000000;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+        }
+        
+        .clsText {
+            position: absolute;
+            font-size: 21px;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 28px;
+            left: 155px;
+            width: 585px;
+            line-height: 1.5;
+        }
+        
+        .clsBold {
+            /* font-weight: bold; */
+            font-family: OpenSansSemiBold;
+            color: #f7c42a;
+        }
+        
+        .clsIcon {
+            position: absolute;
+            background: url("pages/images/Topic01/T01P00/Icon01.png");
+            width: 35px;
+            height: 34px;
+            left: 53px;
+            top: 55px;
+            background-size: contain;
+            display: none;
+        }
+        
+        .clsNextText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            width: 375px;
+            top: 50px;
+            left: 100px;
+            display: none;
+        }
+        
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            .custom-width {
+                width: 400px !important;
+            }
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 484px;
+            left: 860px;
+        }
+    </style>
+
+
+
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P00/T01P00";
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+
+
+        var updateContentArray = [
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "The “S” in S.T.A.B.L.E. stands for Sugar and Safe Care. Delivery of safe, quality patient care, including the elimination of preventable errors, is a top priority of The S.T.A.B.L.E. Program. Whenever possible, methods to provide safe care are emphasized. When applicable, we'll use this caution symbol to draw attention to safety concerns and in particular, where errors can and do occur, so that extra care may be taken. Click Next to continue.",
+                animation: [{
+                    target: "#idCircle01",
+                    duration: "1.5",
+                    activity: {
+                        'transform': 'matrix(1,0,0,1,0,0)'
+                    }
+                }]
+            },
+
+            {
+                time: "1.0",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idPatch1",
+                    duration: "0.8",
+                    activity: {
+                        'width': '725px',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "1.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: "#idText1",
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            },
+
+            {
+                time: "17.5",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [
+
+                    {
+                        target: ".clsIcon",
+                        duration: "0.5",
+                        activity: {
+                            'display': 'block',
+                            'opacity': '1'
+                        }
+                    },
+
+                    {
+                        target: ".clsNextText",
+                        duration: "0.5",
+                        activity: {
+                            'display': 'block',
+                            'opacity': '1'
+                        }
+                    }
+
+                ]
+            },
+
+            {
+                time: "28.9",
+                carry: "",
+                event: "",
+                show: "",
+                hide: "",
+                transcript: "",
+                animation: [{
+                    target: ".boxInst",
+                    duration: "0.5",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            }
+
+        ];
+
+        function fnAudioFinishItemComp() {
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+        }
+
+
+
+        $(document).ready(function() {
+            disableNextBtn();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+        });
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                audioStop();
+                enableNextBtn();
+                fnAudioFinishItemComp();
+            }
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="clsPatch" id="idPatch1">
+
+                <div class="clsText" id="idText1">The "<span class="clsBold">S</span>" in S.T.A.B.L.E. stands for <span class="clsBold">Sugar and Safe Care</span>.&nbsp;&nbsp;<span class="clsIcon"></span><span class="clsNextText yellowBorder custom-width"><b>This caution symbol draws attention to safety concerns and errors that can and do occur.</b></span></div>
+
+            </div>
+
+            <div class="clsCircle" id="idCircle01"></div>
+
+            <div class="boxInst">
+
+                <div class="instNextClick"></div>
+
+                <div class="next_click"><em> Click Next to continue.</em></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--
+
+		<div class="pg-pageContent" UNSELECTABLE = "on">
+
+			<div class="mainContainer">
+
+	      <div class="clsQuoteImg clsQuoteLeft" id="idQuoteLeft01"></div>
+
+	      <div class="clsQuoteImg clsQuoteRight" id="idQuoteRight01"></div>
+
+				<div class="clsCircle" id="idCircle01"></div>
+
+				<div class="clsText" id="idText1">The "<span class="clsBold">S</span>" in S.T.A.B.L.E. stands for <span class="clsBold">Sugar and Safe Care</span>. Delivery of safe, quality patient care, including the elimination of preventable errors is a top priority of the S.T.A.B.L.E. Program. Whenever possible, methods to provide safe care are emphasized. you'll need to watch for where I use caution bullets in the powerpoint and add a caution bullet to the screens. Whenever possible, methods to provide safe care are emphasized. When applicable, we'll use this caution symbol ! to draw attention to safety concerns and in particular where errors can and do occur so that extra care may be taken.  </div>
+
+			</div>
+
+		</div> -->
+
+</body>
+
+</html>

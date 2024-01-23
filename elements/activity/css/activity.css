@@ -1,0 +1,367 @@
+/*-----------------------Common CSS-----------------------*/
+
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    overflow: auto;
+}
+
+@font-face {
+    font-family: "HelveticaNeue-Bold";
+    font-style: normal;
+    font-weight: 400;
+    src: local('HelveticaNeue-Bold'), local('HelveticaNeue-Bold'), url('../fonts/HelveticaNeue-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: "HelveticaNeue-Light";
+    font-style: normal;
+    font-weight: 400;
+    src: local('HelveticaNeue-Light'), local('HelveticaNeue-Light'), url('../fonts/HelveticaNeue-Light.otf') format('truetype');
+}
+
+.mainContainer {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hospitalContainer {
+    position: relative;
+    width: 1065px;
+    height: 530px;
+    top: 59px;
+    background: none;
+    background-repeat: no-repeat;
+    left: 10px;
+    overflow: hidden;
+}
+
+
+.gwrapper {
+    position: absolute;
+    width: 1064px;
+    height: 478px;
+    z-index: 2000;
+    background-color: #ffffff;
+    top: 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    top: 51px;
+}
+
+.content {
+    position: absolute;
+    width: 1064px;
+    height: 478px;
+    top: 49px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.wordsList {
+    position: absolute;
+    width: 1065px;
+    height: 50px;
+    top: 44px;
+    left: 0px;
+    line-height: 16px;
+}
+
+table {
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    border-spacing: 19px;
+}
+
+td {
+    color: #5B5B5B;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.gloassaryContainer {
+    position: relative;
+    width: 1065px;
+    height: 605px;
+    top: 59px;
+    background: none;
+    background-repeat: no-repeat;
+    left: 10px;
+    overflow: hidden;
+}
+
+#helptopbar {
+    position: absolute;
+    background-color: #5B5B5B;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: OpenSansRegular;
+    font-size: 36px;
+    left: -1px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+}
+
+img,
+object,
+embed,
+video {
+    width: 100%;
+    height: 100%;
+}
+
+#id_glosTitleText {
+    position: absolute;
+    color: #fff;
+    font-size: 22px;
+    left: 10px;
+    top: 13px;
+    width: 94%;
+    TEXT-ALIGN: CENTER;
+}
+
+.close_txt {
+    position: absolute;
+    width: 30px;
+    height: 23px;
+    top: 29px;
+    right: 11px;
+}
+
+#clsText {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    font-family: OpenSansRegular;
+    font-size: 12px;
+    color: #fff;
+}
+
+#id_GlossaryContent {
+    position: absolute;
+    float: left;
+    height: 93%;
+    width: 100%;
+    top: 7.4%;
+}
+
+.tabContent {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    z-index: 100000;
+}
+
+.tabContent .tab {
+    position: relative;
+    cursor: pointer;
+    width: 170px;
+    height: 36px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 18px;
+    font-family: OpenSansRegular;
+    border-radius: 5px;
+    background: #fcfcfc;
+    margin-left: 25px;
+    float: left;
+    top: 20px;
+    left: 0px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    border-radius: 5px;
+    -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+    border: 1px solid #707070;
+    z-index: 9;
+}
+
+#phyicalActivity {
+    position: absolute;
+    top: -25px;
+    z-index: 1;
+    border: none;
+    left: 45px;
+	height:490px;
+}
+
+@media all and (-ms-high-contrast:none){
+	#phyicalActivity{
+		height:446px;
+		top:-20px;
+		
+	}
+}
+
+.tabContent .tab.active,
+.tabContent .tab:hover {
+    background: #3A5569;
+    color: #FFFFFF;
+}
+
+
+ .pdf_hover_activity{
+     display: none;
+ }
+ 
+ #_clickImg0pdfActivity {
+     color: #707070;
+     font-size: 14px;
+     border-bottom: 0px solid;
+     height: 20px;
+     bottom:16px;
+     left: 361px;
+     width: 251px;
+     position: absolute;
+     cursor: pointer;
+     font-weight: normal;
+     margin-top: 13px;
+     z-index: 1000;
+     background: transparent;
+     display: none;
+ }
+ #babyPDFContainer{
+     display: none;
+ }
+ #_clickImg0pdfActivity .pdfIcon0 {
+     position: absolute;
+     bottom: 3px;
+     left: 3px;
+     height: 24px;
+     width: 20px;
+     background: url(../../../pages/images/common/pdficon.png);
+     background-size: cover;
+     display: block;
+     top: inherit;
+ }
+ 
+ #_clickImg0pdfActivity ._linkActivity {
+     bottom: 0px;
+     left: 23px;
+     position: absolute;
+     font-style: normal;
+    font-size: 12px;
+     overflow: hidden;
+     padding-left: 10px;
+     background: transparent;
+ }
+ #_clickImg0pdfActivity span {
+     position: relative;
+     text-decoration: underline;
+     left: -3px;
+ }
+ #_clickImg0pdfActivity .pdf_icon {
+     position: relative;
+     top: 6px;
+     padding-right: 10px;
+     max-width: 100%;
+ }
+ 
+ 
+ #pageClsResourcesPopupActivity {
+     position: absolute;
+     z-index: 999999;
+     top: 0px;
+     height: 99%;
+     width: 100%;
+     background: rgba(255, 255, 255, 0.8) !important;
+     display: none;
+ }
+ 
+ #pageClsResourcesPopupActivity #pageid_ReferencesBG {
+     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34);
+     border-radius: 5px !important;
+     height: 521px!important;
+     position: absolute;
+     width: 1066px;
+     left: 0px;
+     right: 0px;
+     margin: auto;
+     top: -46px;
+     background-color: #FFFFFF;
+ }
+ #pageClsResourcesPopupActivity #pageRefTitleBar_id {
+     background-color: white !important;
+ }
+ #pageRefTitleBar_id {
+     font-size: 36px;
+     background-color: #4d667b;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+     left: 0px;
+     top: 0px;
+     font-family: OpenSansRegular;
+     /* font-weight: bold; */
+     width: 1066px;
+     height: 47px!important;
+     position: absolute;
+ }
+ #pageClsResourcesPopupActivity #pageReftitleText_id, #pageReftitleText_id_p49, .pageReftitleRef {
+     position: relative !important;
+     color: #E4BA4E  !important;
+     text-align: center !important;
+     top: 13px !important;
+     left: 0!important;
+     font-size: 18px;
+     width:96%;
+ }
+ #_clickImg0pdfActivity:hover {
+    color: #E4BA4E;
+}
+ #pageClsResourcesPopupActivity .pageclose_txt {
+     background: none;
+     position: absolute;
+     width: 135px;
+     height: 44px;
+     top: 48px;
+     left: 835px;
+ }
+ .pdflink {
+     position: absolute;
+     top: 55px;
+     width: 100%;
+     height: 420px;
+     border-radius: 0 0 10px 10px;
+     top:50px !important;
+ }
+ .pdflink_new, .pdflink {
+     height: 443px!important;
+ }
+ 
+ @media all and (-ms-high-contrast:none){
+     #phyicalActivity{
+         /* 
+         height:446px;
+         top:0px;
+         */
+         
+     }
+ }
+  
+ .tabLoadContent {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     top:50px;
+ }
+ 
+ #pdfshell_8 {
+     height: 89%;
+     width: 100%;
+     position: absolute;
+     top: 15px;
+ }

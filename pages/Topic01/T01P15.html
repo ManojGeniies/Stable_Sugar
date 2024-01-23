@@ -1,0 +1,1144 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <script>
+        manifest = [{
+                src: 'pages/images/Topic01/T01P15/picture1.png',
+                id: '1'
+            },
+
+            {
+                src: 'pages/images/Topic01/T01P15/picture2.png',
+                id: '2'
+            }
+
+        ];
+    </script>
+
+    <style type="text/css">
+        .mainContainer {
+            position: absolute;
+            width: 1000px;
+            height: 460px;
+            left: 40px;
+            top: 20px;
+            opacity: 1;
+        }
+        
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.1);
+            }
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                top: 150px;
+                left: 220px;
+                width: 0px;
+                height: 0px;
+                transform: scale(1);
+            }
+            50% {
+                left: 105px;
+                top: 10px;
+                width: 235px;
+                height: 235px;
+                transform: scale(1.1);
+            }
+            100% {
+                left: 105px;
+                top: 10px;
+                width: 228px;
+                height: 228px;
+                transform: scale(1);
+            }
+        }
+        
+        .pulse {
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+        }
+        
+        #idPatchMain {
+            top: 22px;
+            left: 2px;
+            background-position: left;
+            height: 100px;
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 960px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            padding: 10px 20px;
+        }
+        
+        .clsText {
+            position: relative;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            line-height: 25px;
+            color: #000000;
+            opacity: 0;
+        }
+        
+        #idText1 {
+            top: 6px;
+            left: 0px;
+            width: 100%;
+            text-align: left;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            opacity: 1;
+        }
+        
+        #idText2 {
+            top: 20px;
+            left: 0px;
+            width: 100%;
+        }
+        
+        .expText {
+            position: absolute;
+            font-size: 16px;
+            font-family: OpenSansSemiBold;
+            line-height: 25px;
+            font-style: italic;
+            color: #000;
+            top: 19px;
+            left: 22px;
+            width: 300px;
+            opacity: 1;
+        }
+        
+        .ClsTab {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            /* -webkit-animation-duration: 1s;
+
+	 	animation-duration: 1s;
+
+	 	-webkit-animation-fill-mode: both;
+
+	 	animation-fill-mode: both; */
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            cursor: pointer;
+        }
+        
+        @-webkit-keyframes pulse_tab {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1.1);
+            }
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse_tab {
+            0% {
+                top: 50px;
+                left: 210px;
+                width: 0px;
+                height: 0px;
+                transform: scale(1);
+            }
+            50% {
+                left: 140px;
+                top: 30px;
+                width: 140px;
+                height: 140px;
+                transform: scale(1.1);
+            }
+            100% {
+                left: 135px;
+                top: 40px;
+                width: 135px;
+                height: 135px;
+                transform: scale(1);
+            }
+        }
+        
+        .ClsTabInside {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            top: 9px;
+            border-radius: 50%;
+            background-size: contain;
+            opacity: 0;
+        }
+        
+        .ClsTabHover {
+            position: absolute;
+            top: -11px;
+            left: -11px;
+            width: 147px;
+            height: 147px;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+        
+        .clsTabTxt {
+            position: absolute;
+            width: 160px;
+            height: 25px;
+            top: 100px;
+            left: -6px;
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+        
+        .ClsTab {
+            background-position: 100% 100%;
+        }
+        
+        .ClsInsText {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 16px;
+            color: #536b80;
+            font-family: OpenSansRegular;
+            font-style: italic;
+        }
+        
+        .PopupText1 {
+            position: absolute;
+            top: 250px;
+            left: 30px;
+            width: 675px;
+            font-size: 14px;
+            height: 140px;
+            color: #000000;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+        
+        .PopupText2 {
+            position: absolute;
+            top: 250px;
+            left: 30px;
+            width: 675px;
+            font-size: 14px;
+            height: 140px;
+            color: #000000;
+            font-family: OpenSansRegular;
+            opacity: 0;
+        }
+        
+        .clsBold {
+            font-family: OpenSansSemiBold;
+        }
+        
+        .clsReg {
+            font-family: OpenSansSemiBold;
+        }
+        
+        .clsAllTabs {
+            position: absolute;
+            height: 200px;
+            width: 978px;
+            top: 12px;
+            left: 2px;
+            display: none;
+        }
+        
+        .clsAllTabsInside {
+            position: absolute;
+            height: 200px;
+            width: 978px;
+            top: 250px;
+            left: 2px;
+        }
+        
+        .clsAllTabs1 {
+            position: absolute;
+            height: 200px;
+            width: 826px;
+            top: 0px;
+            left: 175px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        
+        .clsAllTabs2 {
+            position: absolute;
+            height: 200px;
+            width: 826px;
+            top: 0px;
+            left: 10px;
+            border-radius: 5px;
+            background-color: white;
+            opacity: 0;
+        }
+        
+        .imageclass {
+            position: absolute;
+            left: -184px;
+            top: -20px;
+            background-repeat: no-repeat;
+        }
+        
+        .imageclassInside {
+            position: absolute;
+            float: left;
+            left: 750px;
+            top: -23px;
+            background-repeat: no-repeat;
+        }
+        
+        .heading {
+            position: absolute;
+            top: 6px;
+            left: 109px;
+        }
+        
+        .heading2 {
+            position: absolute;
+            top: 1px;
+            left: 81px;
+            display: none;
+        }
+        
+        .imageIconcls1 {
+            position: absolute;
+            left: 40px;
+            top: 66px;
+            background-repeat: no-repeat;
+        }
+        
+        .imageIconcls2 {
+            position: absolute;
+            left: 40px;
+            top: 130px;
+            background-repeat: no-repeat;
+        }
+        
+        .imageIconcls3 {
+            position: absolute;
+            left: 14px;
+            top: 62px;
+            background-repeat: no-repeat;
+        }
+        
+        .imageIconcls4 {
+            position: absolute;
+            left: 14px;
+            top: 126px;
+            background-repeat: no-repeat;
+        }
+        
+        .paragraph1 {
+            position: absolute;
+            left: 113px;
+            top: 68px;
+            left: 113px;
+            top: 68px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            color: #000000;
+            display: none;
+        }
+        
+        .paragraph2 {
+            position: absolute;
+            left: 113px;
+            top: 104px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            color: #000000;
+            display: none;
+        }
+        /* 
+.paragraph3{
+
+	position: absolute;
+
+    left: 83px;
+
+    top: 66px;
+
+	font-size: 16px;
+
+    font-family: OpenSansRegular;
+
+	color:#000000;
+
+	display:none;
+
+	background: url(pages/images/Topic01/T01P15/bullet.png) no-repeat;
+
+	padding-left: 20px;
+
+    background-position: 0px 5px;
+
+	list-style-type: none;
+
+}
+
+.paragraph4{
+
+	position: absolute;
+
+    left: 83px;
+
+    top: 104px;
+
+	font-size: 16px;
+
+    font-family: OpenSansRegular;
+
+	color:#000000;
+
+	display:none;
+
+	background: url(pages/images/Topic01/T01P15/bullet.png) no-repeat;
+
+	padding-left: 20px;
+
+    background-position: 0px 5px;
+
+	list-style-type: none;
+
+}
+ */
+        
+        ol li {
+            line-height: 1.5625;
+            margin-left: 1em;
+            font-family: OpenSansRegular;
+            font-style: bold;
+        }
+        
+        #clsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+        
+        .next_click {
+            position: absolute;
+            font-size: 14px;
+            color: #4D667B;
+            font-family: OpenSansRegular;
+            line-height: 14px;
+            width: 100%;
+            left: 0px;
+            text-align: center;
+        }
+        
+        .instNextClick {
+            position: absolute;
+            top: -16px;
+            left: -15px;
+            background: url(pages/images/Topic01/T01P00/instNext.png) no-repeat;
+            width: 194px;
+            height: 51px;
+        }
+        
+        ._clickLink {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+        }
+        
+        ._clickLink:hover {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+            color: blue;
+            cursor: pointer;
+        }
+        
+        ._link {
+            position: absolute;
+            top: 44px;
+            width: 100%;
+            height: 406px;
+        }
+        
+        ._viewed {
+            color: blue;
+        }
+        
+        .boxInst {
+            position: absolute;
+            top: 504px;
+            left: 900px;
+        }
+        
+        .next_click {
+            position: absolute;
+            font-size: 14px;
+            color: #4D667B;
+            font-family: OpenSansRegular;
+            line-height: 14px;
+            width: 100%;
+            left: 0px;
+            text-align: center;
+            top: 15px;
+        }
+        
+        .instNextClick {
+            position: absolute;
+            top: -16px;
+            left: -15px;
+            background: url(pages/images/Topic01/T01P00/instNext.png) no-repeat;
+            width: 194px;
+            height: 51px;
+        }
+    </style>
+
+    <script>
+        glossaryFuncPageLevel();
+
+        var audioPath = "pages/audio/Topic01/T01P15/T01P15";
+
+
+
+        var currCue = 0;
+
+        var idd = 0;
+
+
+
+        var clickTabCount = 0;
+
+        var clickTabCount1 = 0;
+
+
+
+        var updateContentArray = [
+
+
+
+            {
+                time: "0.0",
+                carry: "",
+                event: "",
+                show: "",
+                transcript: "Let's start by discussing two general guidelines. The first is why it's important to avoid enteral feedings when infants are sick, and the second is the rationale for quickly establishing intravenous access. We'll then explore factors that increase risk of hypoglycemia in infants and how to administer intravenous fluids when withholding enteral feedings.",
+                hide: ".heading2",
+                animation: [{
+                    duration: "",
+                    activity: {
+                        'opacity': '0'
+                    }
+                }]
+            },
+
+            {
+                time: "0.1",
+                animation: [{
+                    target: ".clsAllTabs",
+                    activity: {
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "4.5",
+                animation: [{
+                    target: ".paragraph1",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'list-item'
+                    }
+                }]
+            },
+
+            {
+                time: "9",
+                animation: [{
+                    target: ".paragraph2",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'list-item'
+                    }
+                }]
+            },
+
+            {
+                time: "13.0",
+                animation: [{
+                    target: ".clsAllTabs2",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block'
+                    }
+                }]
+            },
+
+            {
+                time: "13.0",
+                animation: [{
+                    target: ".paragraph3",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'none'
+                    }
+                }]
+            },
+
+            {
+                time: "13.0",
+                animation: [{
+                    target: ".paragraph4",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'none'
+                    }
+                }]
+            },
+
+
+
+            {
+                time: "13.5",
+                animation: [{
+                    target: ".heading2",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'block',
+                        'visibility': 'visible'
+                    }
+                }]
+            },
+
+            {
+                time: "15",
+                animation: [{
+                    target: ".paragraph3",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'list-item'
+                    }
+                }]
+            },
+
+            {
+                time: "18.9",
+                animation: [{
+                    target: ".paragraph4",
+                    activity: {
+                        'opacity': '1',
+                        'display': 'list-item'
+                    }
+                }]
+            },
+
+            // { time: "18.0", animation: [{ target: ".instNextClick", activity: { 'opacity': '1', 'display': 'block' } }] },
+
+            {
+                time: "22",
+                carry: "",
+                event: "",
+                show: ".instNextClick",
+                hide: "",
+                animation: [{
+                    duration: "0.5",
+                    activity: {
+                        'opacity': '1'
+                    }
+                }]
+            }
+
+
+
+        ];
+
+
+
+        function fnAudioFinishItemComp() {
+
+            console.log("end")
+
+            fnAudioFinishPageComp();
+
+            fnUpdatePageCompletionCounter(0);
+
+            $(".boxInst").show()
+
+        }
+
+        var __dataXml;
+
+
+
+        $(document).ready(function() {
+
+            disableNextBtn();
+
+            var ele = document.getElementsByTagName('div');
+
+            for (var i = 0; i < ele.length; i++) {
+
+                ele[i].setAttribute("unselectable", "on");
+
+            }
+
+            var n = isInArray("M1L0T1P15", gCompPageArr);
+
+            if (n == true) {
+
+                enableNextBtn();
+
+                // fnGlowNextBtn();
+
+                fnDesiableNext(false);
+
+            }
+
+        });
+
+        function isInArray(value, array) {
+
+            return array.indexOf(value) > -1;
+
+        }
+
+        function audioReset() {
+
+            gAudioId = "";
+
+            onTimelineEnd();
+
+        }
+
+
+
+        function fnPlayItemAudio(gCurrentIndex) {
+
+            audioindex = (gCurrentIndex);
+
+            gAudioId = "audio_" + gCurrentIndex;
+
+            fnHideShowAudioPlayer(false);
+
+            updateContentArray = eval("popupContentArray" + (gCurrentIndex));
+
+            console.log(gItemAudioPath[gCurrentIndex])
+
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        }
+
+
+
+        var gTotalPopups = 2;
+
+        var temp = "";
+
+        function fnClick() {
+
+            enableNextBtn();
+
+            $(".ClsTab").removeClass("clsDisable");
+
+            $(".ClsTab").off("click").on("click", function() {
+
+                selectedIndex = $(this).attr('id').replace(/^\D+/g, "");
+
+                //$(".startingCnt").hide();
+
+                console.log(selectedIndex);
+
+                if (selectedIndex == 5) {
+
+                    gCompPageArr.push("M1L0T1P2");
+
+                    fnJumpToPageByID("M1L0T1P3");
+
+
+
+                    //fnPlaySectionAudio(3);
+
+                    //$("#idPatch2 .OptionPanel").addClass("disabled");
+
+                } else if (selectedIndex == 1) {
+
+                    //gCompPageArr.push("M1L0T1P7");
+
+                    fnJumpToPageByID("M1L0T1P8");
+
+
+
+                    //fnPlaySectionAudio(6);
+
+                }
+
+            });
+
+        }
+
+
+
+        var succRefFunc = function fnInitPage(oXML) {
+
+            gPageXMLObj = oXML;
+
+        }
+
+        var errRefFunc = function fnXMLLoadError() {
+
+            alert("Error loading XML file.");
+
+        }
+
+
+
+        function fStartPage() {
+
+            fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), succRefFunc, errRefFunc);
+
+            gPageXMLObj.find("question").each(function(index, aQues) {
+
+                __questionArray.push(aQues);
+
+            });
+
+
+
+        }
+
+        function updateContentFromXml(aCurId) {
+
+            var i = 0;
+
+            var str = '';
+
+            $(__questionArray[aCurId]).find("Options").find("Option").each(function() {
+
+                i++;
+
+                str += '<div class="list-cnt">';
+
+                str += '<div id="arrow' + i + '" class="arrowHolder"></div>';
+
+                str += '<div id="option' + i + '" curId=' + i + ' class="OptionCLSS">';
+
+                str += '<span id="opt' + i + '" class="OptionTxtCLSS">' + $(this).text() + '</span>';
+
+                str += '</div>';
+
+                str += '</div>';
+
+                $(".OptionPanel").html(str);
+
+            });
+
+        }
+
+
+
+        $(document).on("click", ".OptionCLSS a.popupLink", function() {
+
+            $(".CaseStudy").show();
+
+            $("#idPatch3").addClass("blur");
+
+            $("#idPatch1").addClass("blur");
+
+            $("#idPatch2").addClass("blur");
+
+            $(".CaseStudy .ModalTxtImg").attr("id", "imgPopup" + $(this).attr("aid"));
+
+            $(".CaseStudy .ModalTextBottom").html($(this).attr("title"));
+
+        });
+
+
+
+        $(".closepopup").on("click", function() {
+
+            $(".CaseStudy").hide()
+
+            $("#idPatch3").removeClass("blur");
+
+            $("#idPatch1").removeClass("blur");
+
+            $("#idPatch2").removeClass("blur");
+
+            $(".CaseStudy .ModalTxtImg").removeAttr("id");
+
+        });
+
+
+
+        $(".idBackbtn").on("click", function() {
+
+            endModule();
+
+            $("#TabPopup").removeAttr("style");
+
+        });
+
+
+
+
+
+        $("#icon01").on("click", function() {
+
+            $("#icon01").css({
+                'opacity': '0'
+            });
+
+            $("#icon00").css({
+                'opacity': '0'
+            });
+
+            $("#idPatch2").css({
+                'opacity': '0'
+            });
+
+            $("#idPatch4").css({
+                'opacity': '0'
+            });
+
+            $(".clsImage").animate({
+
+                width: "1031px",
+
+            }, 500, function() {
+
+                $(".expandImgTxt").show();
+
+                $("#icon02").css({
+                    'opacity': '1'
+                });
+
+            });
+
+        });
+
+        $("#icon02").on("click", function() {
+
+            $(".expandImgTxt").hide();
+
+            $("#icon02").css({
+                'opacity': '0'
+            });
+
+            $(".clsImage").animate({
+
+                width: "270px",
+
+            }, 500, function() {
+
+                $("#icon01").css({
+                    'opacity': '1'
+                });
+
+                $("#icon00").css({
+                    'opacity': '1'
+                });
+
+                $("#idPatch2").css({
+                    'opacity': '1'
+                });
+
+                $("#idPatch4").css({
+                    'opacity': '1'
+                });
+
+            });
+
+
+
+        });
+
+
+
+
+
+        $(document).on("click", '._clickLink', function() {
+
+            $(this).addClass("_viewed");
+
+            $('._link').attr('src', "pages/Docs/Storybord.pdf");
+
+            $("#id_RefTitleBar").hide();
+
+            $("#RefTitleBar_id").show();
+
+        });
+
+
+
+
+
+        function fnCompletion() {
+
+            console.log("end");
+
+            enableNextBtn();
+
+            fnAudioFinishItemComp();
+
+            if ($(".clsVisited").length == gTotalPopups) {
+
+                enableNextBtn();
+
+                fnAudioFinishItemComp();
+
+            }
+
+        }
+
+
+
+        function fnOnAudioComplete() {
+
+            if (gAudioId == "startAudio") {
+
+                //fnClick();
+
+                enableNextBtn();
+
+                fnAudioFinishItemComp();
+
+            } else {
+
+                $("#idTick0" + selectedIndex).css({
+                    "opacity": "1"
+                });
+
+                $("#clsTabTxt" + selectedIndex).css({
+                    'color': '#80848b'
+                });
+
+                $(".ClsTab").removeClass("clsDisable");
+
+                $("#TabImage" + selectedIndex).addClass("clsDisable");
+
+                fnCompletion();
+
+                if ($(".clsVisited").length === 2) {
+
+                }
+
+            }
+
+        }
+
+        function endModule() {
+
+            var _getCount = clickTabCount;
+
+            if (_getCount >= 4) {
+
+                audioReset();
+
+            }
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+    <div class="pg-pageContent" UNSELECTABLE="on">
+
+        <div class="mainContainer">
+
+            <div class="clsAllTabs" id="idText">
+
+                <div class="clsAllTabs1">
+
+                    <img class="imageclass" src="pages/images/Topic01/T01P15/picture1.png" width="240" height="240"></img>
+
+                    <h3 class="heading">Two general guidelines:</h3>
+
+                    <ol>
+
+                        <li class="paragraph1">Why it's important to avoid enteral feedings when infants are sick</li>
+
+                        <li class="paragraph2">The rationale for quickly establishing intravenous access</li>
+                    </ol>
+
+                </div>
+
+            </div>
+
+            <div class="clsAllTabsInside" id="idText">
+
+                <div class="clsAllTabs2">
+
+                    <img class="imageclassInside" src="pages/images/Topic01/T01P15/picture2.png" width="240" height="240"></img>
+
+                    <h3 class="heading2">We'll later explore:</h3>
+
+                    <ul class="bullet atop">
+
+                        <li class="paragraph3">Factors that increase the risk of <a href="javascript:void(0)" class="glossarytag" textDesc="A condition caused by a low level of sugar (glucose) in the blood.">hypoglycemia</a> in infants
+
+                        </li>
+
+                        <li class="paragraph4">How to administer intravenous fluids when withholding enteral feedings
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="boxInst">
+
+            <div class="instNextClick">
+
+                <div class="next_click"><em> Click Next to continue.</em></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

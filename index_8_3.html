@@ -1,0 +1,496 @@
+<html data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Temperature</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="jsfiles/libs/detect-zoom.js"></script>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css">
+<link href="css/font.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body{ background-color: #353535; overflow: hidden;}
+.clsIndexWrapper
+{
+    position: absolute;
+	background: url('media/images/player/launch_page.jpg') no-repeat;
+    background-size: 100% 100%;
+    width: 724px;
+    height: 395px;
+    top: 50%;
+    left: 50%;
+    margin-left: -361px;
+    margin-top: -197.5px;
+}
+
+.clsCourseTitle
+{
+	margin-left: 4%;
+	margin-top: 10%;
+	font-size: 129%;
+	color: #000000;
+}
+#launch_btn{
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    font-size: 20px;
+    bottom: 35px;
+    right: 8px;
+    height: 80px;
+    outline: none;
+    border-radius: 100%;
+
+}
+.clsEnterBtn{
+	text-align:center;
+    cursor: pointer;
+	background: url('media/images/player/common/BTN_Back.png') no-repeat;
+}
+
+.clsEnterBtn div,#launch_btn div{
+	position: absolute;
+    top: 16px;
+    left: 15px;
+     width: 51px;
+     height: 49px;
+	text-align:center;
+    cursor: pointer;
+	margin: 0 auto;
+	background: url('media/images/player/common/BTN.png') no-repeat;
+	background-position: -51px 0;
+    border-radius: 100%;
+     transition: all 0.3s;
+}
+#launch_btn:hover div{
+    cursor: pointer;
+	background: url('media/images/player/common/BTN.png') no-repeat;
+	background-position:0 0;
+}
+.clsEnterBtn_disable{
+	text-align:center;
+	background: url('media/images/player/common/BTN_Back.png') no-repeat;
+	cursor: default;
+	opacity:0.5;
+    color: #8d8485;
+}
+.headphone{
+	padding-top: 0.0%;
+	margin-top: 2.5%;
+	width: 104%;
+	font-size: 11.5px;
+}
+
+.clsFootNote {
+	position: relative;
+	width: auto;
+	height: 9%;
+	left: 0%;
+	right: 0%;
+	margin: 0% auto;
+	top: 83%;
+	font-family: OpenSansRegular;
+	font-size: 88.4%;
+	cursor: default;
+	text-align: center;
+	color:#9c9c9c;
+}
+
+:root.clsFootNote  {
+
+}
+
+html[data-useragent*='MSIE 10.0'] .clsFootNote {
+
+}
+.clsText{
+	position: absolute;
+    top: 95%;
+    left: 4%;
+}
+.pgInsImage{
+    position: absolute;
+    background: url('media/images/player/Instruction_icon.png') no-repeat;
+    background-size: 100% 100%;
+    height: 4.97%;
+    width: 2.07%;
+    top: 75.7%;
+    left: 56%;
+}
+
+.pgInsText{
+    position: absolute;
+    width: auto;
+    top: 75%;
+    left: 57.1%;
+    color: #ca1821;
+    font-family: OpenSansRegular;
+    font-size: 106%;
+	cursor: default;
+}
+
+.jsAction {
+	cursor: pointer;
+	color: #0099FF;
+	text-decoration: underline;
+}
+/*
+@media screen and (max-height: 450px) and (orientation:portrait)
+{
+   .clsEnterBtn div, #launch_btn div
+   {
+		margin-top:9.4%;
+		font-size:120%;
+   }
+   #launch_btn{
+		height:11.4%
+	}
+}
+@media screen and (max-height: 450px) and (orientation:landscape)
+{
+   .clsEnterBtn div, #launch_btn div
+   {
+		margin-top:6.4%;
+		font-size:90%;
+   }
+}
+*/
+
+
+#errorMsgWrap {
+
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 9;
+    font-family: OpenSansRegular;
+    color: #333;
+    display: none;
+    z-index: 999;
+    /*overflow: auto;*/
+}
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.errorMsgSubwrap {
+    position: absolute;
+    width: 927px;
+    height: 482px;
+    top: 23%;
+    left: 23%;
+    overflow: hidden;
+    background-color: #f7ca18;
+}
+.errorMsgSubwrap  b{ color: #ff0000;}
+.errorMsgBox{ position: relative; overflow: hidden; height: 100%;}
+.errorMsgImg {
+    width: 927px;
+    height: 482px;
+    position: absolute;
+    right: 0%;
+    background-color: #ebc017;
+    /* background-image: url(media/images/player/temp0/errorMsgBg.png); */
+    background-size: 927px 482px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.errorMsgTxtWrap {
+    position: absolute;
+    width: 400px;
+    padding: 12px;
+    height: 151px;
+    left: 50px;
+    top: 172px;
+    background-color: #fff;
+}
+.errorMsgTxt {
+    /* background: gray; */
+    width: 98%;
+    margin: 0px auto;
+    margin-top: 0px;
+    /* line-height: 20px; */
+    margin-bottom: -4px;
+    /*border: 1px solid #fff;*/
+    padding: 5px 10px;
+    /* box-shadow: 0px 0px 6px 0px #fff; */
+}
+    /*.errorMsgTxt p{ margin: 11px 0px 0px 0px;}*/
+.errorMsgButton {
+    margin: 0px auto;
+    text-align: center;
+    width: 88px;
+    background: #0098d9;
+    padding: 5px 0px;
+    margin-top: 5px;
+    border-radius: 18px;
+    margin-left: 160px;
+    cursor: pointer;
+    color: #fff;
+}
+.errorMsgButton:hover{ background-color: #0084bd;}
+.Micon{
+    font-size: 134%;
+    position: relative;
+    top: 1px;
+}
+.zoomParaTxt{    margin-top: -5px;}
+.jsAction {
+	cursor: pointer;
+	color: #0099FF;
+	text-decoration: underline;
+}
+.clsStartText{
+	position: absolute;
+	top: 295px;
+	left: 613px;
+	color: #fff;
+	font-size: 24px;
+	font-family: OpenSansRegular;
+    opacity: 0;
+}
+
+</style>
+
+
+<script language="JavaScript">
+var nwin=null
+var bclr="#CCCCCC"
+var TheNewWin = null;
+
+var now = new Date();
+window.IsChildUnloaded = false;
+var nBrowserZoom;
+var isTouchDevice = (/ipad|iPhone|android/i.test(navigator.userAgent.toLowerCase()));
+function newWindow() {
+	//checkBrowserZoomLevel();
+
+	/*if(!isTouchDevice){
+		if(nBrowserZoom != 1){
+			return;
+		}
+	}*/
+	$("#launch_btn").unbind("click");
+	$("#launch_btn").removeClass("clsEnterBtn").addClass("clsEnterBtn_disable");
+	//$("#launch_btn").css({"opacity":"0.3","background-size":"100% 100%"});
+	$("#launch_btn").css({"opacity":"1","cursor":"default"});
+	var NewWinWidth=screen.width;
+	var NewWinHeight=screen.height;
+	var NewWinPutX=0;
+	var NewWinPutY=0;
+
+	var popWt = 1085; //$(document).width();
+	var popHt = 688; //$(document).height();
+	TheNewWin =window.open('player.html','TheNewpop'+now.getTime(),'fullscreen=no,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=hidden,resizable=yes,scroll=no,height='+popHt+'px,width='+popWt+'px,top=0,left=0');
+	//TheNewWin =window.open('player.html','TheNewpop'+now.getTime(),'fullscreen=no,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=hidden,resizable=yes,scroll=no,height=720px,width=1280px,top=0,left=0');
+
+	var timerChildWin = setInterval(onunloadChildWindow, 500);
+    function onunloadChildWindow() {
+		if(TheNewWin.closed){
+			$("#launch_btn").addClass("clsEnterBtn").removeClass("clsEnterBtn_disable");
+			$("#launch_btn").unbind("click");
+			$("#launch_btn").bind("click",newWindow);
+			$("#launch_btn").css({"opacity":"1","cursor":"pointer"});
+			 clearInterval(timerChildWin);
+        }
+    }
+}
+//*-*--------------------------------------------
+//This implementation is closing the course as well as launch window in Android tablet.
+function fWinOnBeforeUnload(){
+	var ua = navigator.userAgent.toLowerCase();
+	var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+	if(isAndroid){
+
+		if(TheNewWin!=null)	{
+			TheNewWin.close();
+		}
+	}
+}
+
+function fWinOnUnload()
+{
+	if(TheNewWin!=null)	{
+		TheNewWin.close();
+	}
+}
+
+function fOpenAdobePlayerSite(){
+	window.open("https://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash","_blank");
+}
+
+function alignPopup(){
+	var windowWidth = $(document).width();//window.innerWidth;
+	var windowHeight = $(document).height();//window.innerHeight;
+	var spaceV = windowHeight - $(".clsIndexWrapper").height();
+	var space = windowWidth - $(".clsIndexWrapper").width();
+	//$(".clsIndexWrapper").css("left", (space/2)+"px" );
+	//$(".clsIndexWrapper").css("top", (spaceV/2)+"px" );
+	//alert(windowWidth+' *-* '+windowHeight);
+}
+function enterMouseOver(){
+	if($("#launch_btn").hasClass("clsEnterBtn")){
+		/*$("#launch_btn").css({"background":"url(media/images/player/launch_button_hover.png) no-repeat","background-size":"100% 100%"});*/
+	}
+}
+function enterMouseOut(){
+	if($("#launch_btn").hasClass("clsEnterBtn")){
+		/*$("#launch_btn").css({"background":"url(media/images/player/launch_button_normal.png) no-repeat","background-size":"100% 100%"});*/
+	}
+}
+$(document).ready(function(){
+	/*var isIE9=(navigator.userAgent.indexOf("MSIE 9")!= -1)?true:false;	*/
+	var isIE = /*@cc_on!@*/false;
+	if(isIE){
+		//$("#launch_btn").css("width","100%");
+		document.onselectstart = function() { return false; }
+	}
+	$("#launch_btn").bind("click",newWindow);
+	/*Shweta K.*/
+	if(navigator.userAgent.toLowerCase().indexOf("ipad") > -1){
+		$(".clsFootNote").css({"top":"83%"});
+		$(".pgInsText").css({"left":"54%"});
+	}
+
+
+	window.addEventListener("orientationchange", function() {
+	// Announce the new orientation number
+
+	/*if(window.orientation == 90 || window.orientation == -90  && $(window).height() < 450)
+	{
+	$(".clsEnterBtn div, #launch_btn div").css({'margin-top':'6.4%','font-size':'90%'});
+	}else if(window.orientation == 0 || window.orientation == 180  && $(window).height() < 450){
+	$(".clsEnterBtn div, #launch_btn div").css({'margin-top':'9.4%','font-size':'120%'});
+	$("#launch_btn").css({'height':'11.4%'});
+	}*/
+	alignPopup();
+	}, false);
+
+	$('#launch_btn').keyup(function(p_evt){
+		if(p_evt.keyCode == 13 || p_evt.keyCode == 32)
+			$(this).click();
+	});
+	//checkBrowserZoomLevel();
+})
+	function browserNameDetect(){
+		 // Opera 8.0+
+		var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+		// Firefox 1.0+
+		var isFirefox = typeof InstallTrigger !== 'undefined';
+
+		// Safari 3.0+ "[object HTMLElementConstructor]"
+		var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+
+		// Internet Explorer 6-11
+		var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+		// Edge 20+
+		var isEdge = !isIE && !!window.StyleMedia;
+
+		// Chrome 1+
+		var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+		// Blink engine detection
+		var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+		if(isIE)
+		{
+			$("#errorMsgTxt").html("<p>Your browser is not at the recommended zoom setting.</p><p>Please select <b>100%</b> from Tools to change <br/>the setting.</p>");
+			$("#errorMsgImg").css("background-image","url(media/images/player/browserZoom/ie.png)");
+			$(".errorMsgButton").css("margin-top","5px");
+
+		}
+		else
+		{
+			$("#errorMsgTxt").html("<p>Your browser is not at the recommended zoom setting.</p><p class='zoomParaTxt'> Please press the <b class='Micon'>-</b> or <b>+</b> buttons from the browser settings to set zoom to <b>100%</b>.</p>");
+			$("#errorMsgImg").css("background-image","url(media/images/player/browserZoom/chrome.png)");
+		}
+	}
+	function checkBrowserZoomLevel(){
+		browserNameDetect();
+		$.support.touch = 'ontouchend' in document;
+		if ($.support.touch){
+			return;
+		}
+        if(window.devicePixelRatio == undefined){
+			try{
+				nBrowserZoom = detectZoom.zoom();
+				if(nBrowserZoom != 1){
+					//alert("Your browser zoom is "+Math.round(nBrowserZoom * 100) + '%. Please set as 100%.');
+					$("#errorMsgWrap, #cover").fadeIn();
+				}
+			}catch(p_err){
+				nBrowserZoom = screen.deviceXDPI / screen.logicalXDPI
+				if(nBrowserZoom != 1){
+					//alert(Math.round(nBrowserZoom * 100) + '%');
+					$("#errorMsgWrap, #cover").fadeIn();
+				}
+			}
+        }else{
+            nBrowserZoom = Math.round(window.devicePixelRatio * 100) / 100;
+
+            if(nBrowserZoom != 1){
+				//alert(Math.round(nDevicePixelRatio * 100) + '%');
+				$("#errorMsgWrap, #cover").fadeIn();
+			}
+        }
+		$("#errorMsgButton").click(function(){
+            $("#errorMsgWrap, #cover").hide();
+        });
+
+    }
+
+/*$(window).resize(function(){
+	if($(window).width() > 827 && $(window).width() < 1082){
+		$(".pgInsText").css({"font-size":"79%"});
+		$("#launch_btn").css({"font-size":"81%"});
+		$(".clsFootNote").css({"font-size":"65.4%","top":"81%"});
+	}else if($(window).width() < 827){
+		$(".pgInsText").css({"font-size":"69%"});
+		$("#launch_btn").css({"font-size":"70%"});
+		$(".clsFootNote").css({"font-size":"65.4%","top":"83%"});
+	}else{
+		$(".pgInsText").css({"font-size":"106%"});
+		$("#launch_btn").css({"font-size":"120%"});
+		$(".clsFootNote").css({"font-size":"88.4%","top":"81%"});
+	}
+	alignPopup();
+
+
+});	*/
+
+</script>
+
+</head>
+<body bgcolor="#b3b3b3" onload="alignPopup()" onbeforeunload="fWinOnBeforeUnload();" onunload="fWinOnUnload();">
+	<div class="clsIndexWrapper">
+		<div class="clsCourseTitle"></div>
+		<div class="launch_bgImg"></div>
+		<div class="clsEnterBtn" id="launch_btn" onmouseover="enterMouseOver();" onmouseout="enterMouseOut();" tabindex="1"><div></div></div>
+		<div class="clsStartText">Start</div>
+		<div class="clsFootNote" unselectable="on">This module is developed for 1085 x 688 screen resolution.</div>
+	</div>
+
+	<div id="cover"></div>
+	<div id="errorMsgWrap">
+        <div id="errorMsgSubwrap" class="errorMsgSubwrap">
+            <div id="errorMsgBox" class="errorMsgBox">
+                <div id="errorMsgImg" class="errorMsgImg"></div>
+                <div id="errorMsgTxtWrap" class="errorMsgTxtWrap">
+                    <div id="errorMsgTxt" class="errorMsgTxt">
+                        <!--popup text-->
+                    </div>
+                    <div id="errorMsgButton" class="errorMsgButton">OK</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

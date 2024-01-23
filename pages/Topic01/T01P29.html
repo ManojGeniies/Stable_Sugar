@@ -1,0 +1,1351 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        manifest = [{
+            src: 'pages/images/Topic01/T01P29/Mask_Group_11.png',
+            id: '1'
+        }, ];
+    </script>
+
+
+    <style type="text/css">
+    .mainContainer {
+            position: absolute;
+            width: 1044px;
+            height: 460px;
+            left: 20px;
+            top: 8px;
+            opacity: 1;
+        }
+        
+        .clsPatch {
+            position: absolute;
+            width: 1044px;
+            left: 0px;
+            top: 0px;
+            height: 68px;
+            background: #ffffff;
+            border-radius: 15px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            /* padding: 0px 17px; */
+            line-height: 18px;
+        }
+        
+        .pdflink33 {
+            position: absolute;
+            top: 50px;
+            width: 100%;
+            height: 413px;
+            /* z-index: 999; */
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .cls_Text {
+            position: absolute;
+            width: 99%;
+            left: 15px;
+        }
+        
+        #idTextc31,
+        #idTextc32 {
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            margin: 8px 5px;
+            /* line-height: 16px; */
+        }
+        
+        #idTextc31 {
+            margin-top: 5px;
+        }
+        
+        #idTextc32 {
+            position: relative;
+            top: -3px;
+            color: #4D667B;
+        }
+        
+        .clsCircle {
+            position: absolute;
+            /* -ms-transform: matrix(0, 0, 0, 0, 0, 0);
+-wbkit-transform: matrix(0, 0, 0, 0, 0, 0);
+transform: matrix(0, 0, 0, 0, 0, 0); */
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        
+        .Clsback {
+            position: relative;
+            width: 300px;
+            height: 250px;
+            top: 165px;
+            left: 0px;
+            margin-right: 55px;
+            float: left;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            /* display :none; */
+        }
+        /* .dropdown2 {
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+} */
+        
+        select {
+            /* position: absolute; */
+            width: 295px;
+            height: 35px;
+            border-radius: 5px;
+            top: 190px;
+            left: 25px;
+            background: url('pages/images/common/downarrow.png') no-repeat right;
+            -webkit-appearance: none;
+            background-position-x: 272px;
+            font-size: 16px;
+            padding: 3.59px 1.79em 0.5em 3em;
+            margin: 0;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            display: inline-block;
+            line-height: 1.5em;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            font-family: OpenSansRegular;
+        }
+        
+        select.down {
+            /* position: absolute; */
+            width: 295px;
+            height: 35px;
+            border-radius: 5px;
+            top: 190px;
+            left: 25px;
+            background: url('pages/images/common/uparrow.png') no-repeat right;
+            -webkit-appearance: none;
+            background-position-x: 272px;
+            font-size: 16px;
+            padding: 3.59px 1.79em 0.5em 3em;
+            margin: 0;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            display: inline-block;
+            line-height: 1.5em;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            font-family: OpenSansRegular;
+        }
+        
+        select option {
+            font-size: 16px;
+            font-family: OpenSansRegular;
+        }
+        
+        span.incorrect {
+            position: absolute;
+            width: 261px;
+            height: 25px;
+            font-size: 16px;
+            color: #000;
+            font-family: OpenSansRegular;
+            display: none;
+            top: 75px;
+            left: 171px;
+        }
+        
+        #pgTitleFrame span {
+            display: block;
+        }
+        
+        #sub_Txt0 {
+            position: absolute;
+            left: 30px;
+            top: 130px;
+            width: 250px;
+            height: 350px;
+        }
+        
+        #sub_Txt3 {
+            position: absolute;
+            left: 30px;
+            top: 130px;
+            width: 50px;
+            height: 35px;
+            left: 233px;
+            margin-top: 317px;
+        }
+        
+        #sub_Txt4 {
+            position: absolute;
+            left: 30px;
+            top: 130px;
+        }
+        
+        .bullet_Text {
+            position: absolute;
+            width: 717px;
+            height: 410px;
+            left: 301px;
+            background-color: white;
+            /* border: 1px solid grey; */
+            top: 73px;
+            border-radius: 2px;
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            padding: 10px 12px;
+            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 5px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            /* padding: 0px 17px; */
+            line-height: 17px;
+        }
+        
+        .bullet_Text p {
+            margin: 0px;
+        }
+        
+        #para3 {
+            position: absolute;
+            width: 720px;
+            padding: 10px;
+            top: 244px;
+            height: 236px;
+            background-color: #f2f2f2;
+            left: 292px;
+            margin-left: 10px;
+            display: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-bottom-left-radius: 5px;
+            -moz-border-bottom-right-radius: 5px;
+        }
+        
+        #idText2 {
+            font-size: 16px;
+            font-family: OpenSansRegular;
+            left: 10px;
+        }
+        /*  */
+        
+        #image1 {
+            background: url("pages/images/Topic01/T01P29/Mask_Group_11.png") no-repeat;
+            background-size: cover;
+        }
+        
+        #image2 {
+            background: url("pages/images/Topic01/T01P29/Mask_Group_12.png") no-repeat;
+            background-size: cover;
+            width: 208px;
+            height: 246px;
+            top: 9px;
+            left: 30px;
+        }
+        
+        #idPatch1 {
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            border-radius: 5px;
+            height: 430px;
+            width: 293px;
+            opacity: 1;
+        }
+        
+        .clsImage {
+            position: absolute;
+            top: 24px;
+            opacity: 1;
+            left: 0px;
+            width: 293px;
+            height: 426px;
+            background-size: 100% 100%;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        
+        .clsIconImgExpand {
+            position: absolute;
+            width: 178px;
+            height: 42px;
+            line-height: 43px;
+            font-style: italic;
+            font-size: 14px;
+            color: #4D667B;
+            line-height: 43px;
+            padding: 0px 10px;
+            text-align: center;
+        }
+        
+        #icon00 {
+            background: url("pages/images/common/enlarge_text.png") no-repeat;
+            bottom: -13px;
+            right: 54px;
+            opacity: 0;
+            display: none;
+        }
+        
+        #icon02 {
+            /*background: url("pages/images/common/enlarge_text.png") no-repeat;*/
+            bottom: 10px;
+            left: 11px;
+            opacity: 1;
+            width: 148px;
+        }
+        
+        .clsIconImg {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            /* top: 440px; */
+        }
+        
+        .popover.icon00 {
+            right: 65px;
+            bottom: -7px;
+        }
+        
+        #icon01 {
+            background: url("pages/images/common/small_expand.png") no-repeat;
+            top: 408px;
+            left: 245px;
+            z-index: 1000;
+            cursor: pointer;
+            opacity: 0;
+            display: none;
+        }
+        
+        #icon01:hover {
+            background: url("pages/images/common/small_expand_hover.png") no-repeat;
+        }
+        
+        #icon03 {
+            background: url("pages/images/common/small_expand.png") no-repeat;
+            bottom: 4px;
+            left: 205px;
+            opacity: 1;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        #icon03:hover {
+            background: url("pages/images/common/small_expand_hover.png") no-repeat;
+        }
+        
+        .CaseStudy {
+            position: absolute;
+            left: 0px;
+            top: 16px;
+            width: 1085px;
+            height: 490px;
+            background: rgba(255, 255, 255, 0.99);
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            /* disable: none; */
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -mz-border-radius: 5px;
+            display: none;
+        }
+        
+        #TabPopup .caseStudyContent {
+            height: 429px;
+            top: 31px;
+        }
+        
+        #TabPopup .caseStudyContent .expandImgTxtRight {
+            top: 378px;
+        }
+        
+        .caseStudyContent {
+            position: relative;
+            left: -45px;
+            top: 58px;
+            width: 833px;
+            height: 386px;
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1000;
+            /* disable: none; */
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -mz-border-radius: 10px;
+            margin: 0px auto;
+        }
+        
+        .ModalTxtImg {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            font-size: 16px;
+            height: 385px;
+            background-size: cover;
+            z-index: 100;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+        }
+        
+        #imgPopup3 {
+            width: 355px;
+        }
+        
+        .closepopup {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: url(pages/images/common/close_expand.png) no-repeat;
+            bottom: 12px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            text-decoration: none;
+            background-size: contain;
+        }
+        
+        .closepopup:hover {
+            background: url("pages/images/common/close_expand_hover.png") no-repeat;
+            background-size: contain;
+        }
+        
+        .clickToClose {
+            width: 136px;
+            top: 335px;
+            right: 85px;
+            position: absolute;
+            z-index: 10000;
+            line-height: 45px;
+            text-align: center;
+            display: block;
+        }
+        
+        .expandImgTxtLeft,
+        .expandImgTxtRight {
+            display: inline-block;
+            height: 42px;
+            margin-left: 0px;
+            margin-right: 0px;
+            line-height: 45px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: #ffffff;
+            color: #4D667B;
+            background: url("pages/images/common/arrow_left_right.png") no-repeat;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        #imgPopup1 {
+            background: url('pages/images/Topic01/T01P29/Group 1.png') no-repeat;
+            /* width: 100%; */
+            background-size: contain;
+            background-position: bottom;
+        }
+        
+        #imgPopup3 {
+            background: url('pages/images/Topic01/T01P29/Group 2.png') no-repeat;
+            /* width: 100%; */
+            background-size: contain;
+            background-position: bottom;
+        }
+        
+        .right {
+            position: absolute;
+            background: url("pages/images/common/checkbox_correct.png");
+            width: 28px;
+            height: 26px;
+            top: 10px;
+            left: 222px;
+            display: none;
+            transform: rotate(0deg);
+        }
+        
+        .feedbackText {
+            font-size: 15px;
+            display: none;
+            width: 458px;
+            float: left;
+            left: 272px;
+            position: absolute;
+            line-height: 20px;
+            padding: 5px 0;
+        }
+        
+        .note {
+            position: absolute;
+            top: 170px;
+            left: 392px;
+            font-size: 16px;
+            width: 195px;
+            display: none;
+        }
+        
+        .bullets {
+            display: none;
+        }
+        
+        .footnote {
+            position: absolute;
+            top: 487px;
+            left: 46px;
+            font-size: 16px;
+            display: none;
+            line-height: 30px;
+            padding-bottom: 8px;
+            height: 30px;
+        }
+        
+        .footnote a {
+            vertical-align: top;
+        }
+        
+        ._link {
+            position: absolute;
+            top: 440px;
+            height: 17px;
+            left: 0px;
+            font-size: 12px;
+            font-family: OpenSansRegular;
+            width: 456px;
+            display: none;
+            color: #4D667B;
+            font-weight: 700;
+            cursor: pointer;
+            border-bottom: 1px solid #4D667B;
+            font-style: initial;
+        }
+        
+        #_clickImg0pdf {
+            color: #000000 !important;
+            font-size: 13px;
+            width: auto;
+            border-bottom: 0px solid;
+            height: 31px;
+            top: 491px;
+            display: none;
+            /* font-weight:normal; */
+        }
+        
+        #_clickImg0pdf span {
+            border-bottom: 1px solid #707070;
+            position: relative;
+            top: 7px;
+        }
+        
+        .videolink .video_icon {
+            position: relative;
+            top: 6px;
+            padding-right: 10px;
+        }
+        
+        #_clickImg0pdf .pdf_icon {
+            position: relative;
+            top: 13px;
+            padding-right: 10px;
+            width: 20px;
+        }
+        
+        #pageClsResourcesPopup {
+            position: absolute;
+            z-index: 1070;
+            top: 0px;
+            height: 99%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* opacity: 0.5; */
+        }
+        
+        #pageid_ReferencesBG {
+            position: absolute;
+            height: 457px;
+            width: 940px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            top: 40px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+        
+        #pageid_RefTitleBar {
+            font-size: 36px;
+            background-color: #4d667b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0px;
+            top: 0px;
+            font-family: OpenSansRegular;
+            /* font-weight: bold; */
+            width: 942px;
+            height: 44px;
+            position: absolute;
+        }
+        
+        #pageid_ReftitleText {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        #pageid_RefCloseBtn {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            /* background-position: 0px 0px; */
+        }
+        /* #pageid_RefCloseBtn:hover {
+
+			background: url('media/images/player/common/close.png');
+
+			background-position: 0px 0px;
+
+		} */
+        
+        #pageReftitleText_id {
+            position: absolute;
+            color: #fff;
+            font-size: 18px;
+            left: 11px;
+            top: 10px;
+        }
+        
+        .pageclose_txt {
+            position: absolute;
+            width: 135px;
+            height: 44px;
+            top: 48px;
+            left: 800px;
+            background: url('media/images/player/common/pdf_close_inst.png');
+        }
+        
+        #pageClsText {
+            position: absolute;
+            width: 115px;
+            height: 29px;
+            top: 15px;
+            left: 16px;
+            font-family: OpenSansRegular;
+            font-size: 16px;
+            font-style: italic;
+            color: #172430;
+        }
+        
+        #pageRefCloseBtn_id {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 7px;
+            left: 900px;
+            cursor: pointer;
+            background: url('media/images/player/common/close.png');
+            /* background-position: -49px 0px; */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        #pageid_RefCloseBtn:hover #pageclose_txt {
+            background: url('media/images/player/common/pdf_close_inst.png');
+            /* background-position: 0px 0px; */
+        }
+        
+        #pagereferences {
+            margin-left: 0%;
+            margin-top: 45px;
+            color: #333;
+            width: 800px;
+            min-height: 412px;
+            overflow-y: auto;
+            position: absolute;
+            height: 412px;
+        }
+        
+        #pagereferences ul {
+            padding-top: 0%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        /* #references ul li a{
+
+				outline: none;
+
+				color: #0000ff;
+
+				font-family: OpenSansRegular;
+
+				text-decoration: underline;
+
+				font-size: 18px;
+
+		}
+
+		#references ul li a:hover{
+
+			color: #009cff;
+
+		}
+
+		#references ul li a:active {
+
+			outline: none; */
+    }
+    #pagereferences ul li {
+        border: 0 none;
+        margin-left: -4px;
+        margin-right: 5px;
+        vertical-align: bottom;
+        width: 4%;
+    }
+    .options .option {
+        width: 680px;
+        font-size: 16px;
+        font-weight: normal;
+        position: relative;
+        padding: 0px 0px 2px 30px;
+        border: 1px solid transparent;
+        margin-bottom: 3px;
+    }
+    .options .option:before {
+        content: '';
+        position: absolute;
+        height: 26px;
+        width: 28px;
+        background: url(pages/images/common/checkbox_normal.png) no-repeat;
+        top: 8px;
+        left: 0;
+    }
+    .options .option.correct:not(.clicked) {
+        border: 1px solid #E4BA4E;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+    .options .option.clicked:before {
+        content: '';
+        background: url('pages/images/common/checkbox_click.png') no-repeat;
+    }
+    .options .option.correct:before {
+        content: '';
+        background: url('pages/images/common/checkbox_correct.png') no-repeat;
+    }
+    .options .option.wrong:before {
+        content: '';
+        background: url('pages/images/common/checkbox_wrong.png') no-repeat;
+    }
+    #topImgCnt2 .clickToContinue.expandImgTxtRight.clickToEnlarge {
+        top: 161px;
+        left: 50px;
+        font-weight: normal;
+    }
+    .options .option.aactive:hover {
+        border: 1px solid #999999;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        cursor: pointer;
+    }
+    .options .option.disabled:hover {
+        cursor: default;
+        border: 1px solid transparent;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+    }
+    .bottomTxt {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+    .cSubmitBtn {
+        background: #ACACAC;
+        font-family: OpenSansRegular;
+        font-size: 18px;
+        padding: 5px 15px;
+        text-transform: lowercase;
+        color: #ffffff;
+        border-radius: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        text-transform: capitalize;
+        line-height: 21px;
+        border: 2px solid transparent;
+    }
+    .cSubmitBtn.enable:hover {
+        border: 2px solid #707070;
+        background: transparent;
+        color: #5B5B5B;
+    }
+    .cSubmitBtn.active {
+        background: #5B5B5B;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .cSubmitBtn.active:hover {
+        border: 2px solid #707070;
+        background: #ffffff;
+        color: #000000;
+    }
+    </style>
+    <script>
+        var audioPath = "pages/audio/Topic01/T01P29/T01P29";
+        var gItemAudioPath = ["pages/audio/Topic01/T01P29/T01P29_1", "pages/audio/Topic01/T01P29/T01P29_2"];
+
+        var currCue = 0;
+        var idd = 0;
+        var popupContentArray0 = [];
+        var __aIndex = []
+        var correctAnswer29 = 0;
+        var audiocompleted = 0;
+        var correctOptions = [0];
+        var updateContentArray = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Now, let’s discuss infants who are classified as small for gestational age (SGA). You may recall Mateo, who was born at 34 weeks and two days gestation. Infants with a birth weight of what percentile for their gestational age are usually defined as SGA infants? Select the correct option and click Submit."
+        }, {
+            time: "8",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Now, let’s discuss infants who are classified as small for gestational age (SGA). You may recall Mateo, who was born at 34 weeks and two days gestation. Infants with a birth weight of what percentile for their gestational age are usually defined as SGA infants? Select the correct option and click Submit."
+        }, {
+            time: "22",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: "._link",
+                duration: "0.5",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }];
+        var popupSectionArray0 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "Here is some feedback on your response. Please read more on symmetric and asymmetric patterns of growth, SGA and IUGR infants.",
+            animation: [{
+                target: ".feedbackText",
+                duration: "0.5",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "0",
+            carry: "",
+            event: "",
+            show: ".feedbackText",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".feedbackText",
+                duration: "0.5",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: "#_clickImg0pdf",
+                duration: "0.5",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }];
+        var popupSectionArray1 = [{
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "That is correct. Click Next to continue."
+        }, {
+            time: "0",
+            carry: "",
+            event: "",
+            show: ".feedbackText",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: ".feedbackText",
+                duration: "0.5",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }, {
+            time: "0",
+            carry: "",
+            event: "",
+            show: "",
+            hide: "",
+            transcript: "",
+            animation: [{
+                target: "#_clickImg0pdf",
+                duration: "0.5",
+                activity: {
+                    'display': 'block'
+                }
+            }]
+        }];
+
+        function fnAudioFinishItemComp() {
+            // console.log("end")
+            fnAudioFinishPageComp();
+            fnUpdatePageCompletionCounter(0);
+            //fnUpdatePageCompletionCounter(7);
+        }
+        var __dataXml;
+        var __clickCount = 0;
+
+        $(document).ready(function() {
+            clearAllTimeOut();
+            $(".boxInst").removeAttr("style");
+            audioReset();
+            disableNextBtn();
+            $('.option').addClass('aactive');
+            bindClickableHotspot();
+            var ele = document.getElementsByTagName('div');
+            for (var i = 0; i < ele.length; i++) {
+                ele[i].setAttribute("unselectable", "on");
+            }
+            $("select._options").css("pointer-events", "none");
+            $("#ClsbackImg2").hide()
+            $("#subTxt3").hide();
+            var n = isInArray("M1L0T1P29", gCompPageArr);
+            if (n == true) {
+                enableNextBtn();
+                // fnGlowNextBtn();
+                fnDesiableNext(false);
+            }
+            $(document).click(function(event) {
+                //console.log($(event.target));
+                if (!$(event.target).closest('select#opt1').length) {
+                    if ($("select._options").hasClass("down")) {
+                        //$('ul.afterlogin').hide()
+                        $("select._options").removeClass("down");
+                    }
+                }
+            });
+            $('#pageClsResourcesPopup').hide();
+            $(document).on("click", '._clickLink', function() {
+                var num = $(this).attr('id').slice(10)
+                    //console.log(referenceArr);
+                $(this).addClass("_viewed");
+                //$('.pdflink').attr('src', referenceArr[num])
+                $("#pageid_RefTitleBar").hide();
+                $("#pageRefTitleBar_id").show();
+            });
+            $("#id_glosCloseBtn").click(function() {
+                enabledAllButtons();
+                fnPlayAudio();
+                $("#pageClsResourcesPopup").hide();
+            });
+        });
+
+        function isInArray(value, array) {
+            return array.indexOf(value) > -1;
+        }
+
+        function audioReset() {
+            gAudioId = "";
+            onTimelineEnd();
+        }
+        $("#_clickImg0pdf").on("click", function() {
+            disabledAllButtons();
+            fnPauseAudio();
+            $("#pageClsResourcesPopup").show();
+        });
+
+        function fnPlaySectionAudio(gCurrentIndex) {
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_" + gCurrentIndex;
+            gAudioId = audioId;
+            fnHideShowAudioPlayer(false);
+            updateContentArray = eval("popupSectionArray" + (gCurrentIndex));
+            // console.log(updateContentArray);
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
+
+        }
+
+        function fnClick() {
+            // enableNextBtn();
+            $("select._options").css("pointer-events", "")
+
+            $("select._options").on("click", function() {
+                if ($(this).hasClass("down")) {
+                    //console.log("change to up");
+                    $(this).removeClass("down");
+                } else {
+                    //console.log("change to down");
+                    $(this).addClass("down");
+                }
+
+            });
+            $("select._options").change(function() {
+                $(this).parent().addClass("selected");
+
+                $(this).blur();
+                var selectedOption = $(this).children("option:selected").val();
+                //  $(".select").hide();
+                if (selectedOption == "correct") {
+                    $("select").css("pointer-events", "none")
+
+                    $("#ClsbackImg1").hide();
+                    $("#ClsbackImg2").show();
+                    $("span.incorrect").hide();
+                    $(".wrong").hide();
+                    $("#subTxt3").hide();
+                    audioReset();
+                    fnPlaySectionAudio(1);
+                    $(".right").show();
+                    $("#para3").show();
+                    $(".feedbackText").show();
+                    // $("#_clickImg0pdf").show();
+                    // enableNextBtn();
+                    // fnGlowNextBtn();
+                    fnDesiableNext(false);
+                    // $("#id_sliderContainer").hide();
+
+                    // $("#subTxt3").show();
+                    $('.footnote').fadeIn();
+
+                    correctAnswer29 = 1;
+
+                } else {
+                    $("span.incorrect").show();
+                    $(".wrong").show();
+                    fnPlaySectionAudio(0);
+                }
+
+                $("#spnTopicTitleTxt").removeAttr("style");
+            });
+
+        }
+
+        function fnCompletion() {
+            // console.log("end");
+            // $("select").css("pointer-events", "")
+            enableNextBtn();
+            $(".boxInst").show();
+            //fnGlowNextBtn();
+            gCompPageArr.push("M1L0T1P29");
+            fnAudioFinishItemComp();
+        }
+
+        function fnOnAudioComplete() {
+            if (gAudioId == "startAudio") {
+                // console.log("start audio");
+                //fnClick();
+                audioStop();
+                $('.icon00').css('display', 'block').css('opacity', '1');
+                $('#icon01').css('display', 'block').css('opacity', '1');
+                // bindClickableHotspot();
+                //    fnAudioFinishItemComp();
+            } else {
+                //if (correctAnswer29==1)
+                //{
+                audioStop();
+                $('.icon00').css('display', 'block').css('opacity', '1');
+                $('#icon01').css('display', 'block').css('opacity', '1');
+                fnCompletion();
+                //}
+
+            }
+        }
+
+
+        function bindClickableHotspot() {
+
+            // $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
+            $('.option').off().on('click', function() {
+                $('.option').removeClass('clicked');
+                $(this).addClass('clicked');
+                if ($('.option.clicked').length >= 1) {
+                    $('.cSubmitBtn').addClass('active');
+                    $('.cSubmitBtn.active').off().on('click', function() {
+                        submitClick();
+                    });
+                } else {
+                    $('.cSubmitBtn').removeClass('active');
+                }
+            });
+
+        }
+
+        function submitClick() {
+            // fnCompletion()
+            enableNextBtn();
+            // fnGlowNextBtn();
+            fnDesiableNext(false);
+            gCompPageArr.push("M1L0T1P29");
+            tinCanWrapper.sendStatementData("answered", "inadequate-glycogen-stores:small-for-gestational-age-(SGA)-Infants", "Now, let’s discuss infants who are classified as small for gestational age (SGA). You may recall Mateo, who was born at 34 and 2/7 weeks gestation. Infants with a birth weight of what percentile for their gestational age are usually defined as SGA infants?");
+            $('.cSubmitBtn.active').hide();
+            var incorrectCount = 0;
+            $('.option').each(function() {
+                if ($(this).hasClass('clicked') && ($.inArray($(this).index(), correctOptions) == -1)) {
+                    $(this).addClass('wrong');
+                    incorrectCount++;
+                }
+                //    $(this).off().removeClass('clicked');
+            });
+            $(correctOptions).each(function(i, val) {
+                $('.option').eq(val).addClass('correct');
+            });
+            //console.log(incorrectCount);
+            if (incorrectCount == 0) {
+
+                fnPlaySectionAudio(1);
+
+
+            } else {
+
+                fnPlaySectionAudio(0);
+            }
+            $('.downloadText').show();
+            $("#_clickImg0pdf").show();
+            $('.option').off().removeClass('aactive'); //.css({'cursor':'default'});
+            $('.cSubmitBtn').removeClass('active');
+            setTimeout(function() {
+                $("#para3").show();
+                $(".feedbackText").show();
+                // $("#_clickImg0pdf").show();
+                // $("#transcripttext").text("");
+
+                // enableNextBtn();
+                // fnGlowNextBtn();
+                // fnDesiableNext(false);
+            }, 100);
+
+
+
+
+        }
+
+        function audioStop() {
+            var audio = document.getElementById("audioplayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+
+
+        $(".clsIconImg").on("click", function() {
+            fnPauseAudio();
+            var str = $(this).attr('id');
+            //var aatr=$(this).attr('cattr');
+            var p = str.slice(5);
+            //debugger;
+            $(".mainContainer").addClass("blur");
+            //  $(".sectionContent").addClass("blur");
+
+            $(".modalContent .modalTxtImg").attr("id", "imgPopup" + p);
+            $(".modalContent").attr("id", "imgPopup" + p);
+            //        $(".caseStudyContent").attr("id","imgdd"+_getCurId);
+            $(".modal").show();
+        });
+
+        $(".closepopup").on("click", function() {
+            fnPlayAudio();
+            $(".modal").hide();
+            $(".modalContent .modalTxtImg").attr("id", "");
+            $(".mainContainer").removeClass("blur");
+            $(".modal .modalTxtImg").removeAttr("id");
+        });
+
+        function pauseAudio() {
+            if (!fnPauseAudio()) {
+                fnPauseAudio()
+            } else {
+                playPauseAudio();
+            }
+        }
+
+        function playAudio() {
+            if (!fnPauseAudio()) {
+                playPauseAudio();
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="pg-pageContent" UNSELECTABLE="on">
+        <div class="mainContainer">
+            <div class="clsPatch" id="idPatchMain29">
+                <div class="cls_Text">
+                    <p id="idTextc31">Now, let’s discuss infants who are classified as small for gestational age (SGA). You may recall Baby Mateo, who was born at 34 and 2/7 weeks gestation. Infants with a birth weight of what percentile for their gestational age are usually
+                        defined as SGA infants?</p>
+                    <p id="idTextc32"><i>Select the correct option and click Submit.</i></p>
+
+                </div>
+            </div>
+
+            <div id="idPatch1">
+                <div class="clsImage" id="image1"></div>
+
+                <div class="popover left-arrow icon00">
+                    <div class="arrow" style="top: 50%;"></div>
+                    <div class="popover-content">Click to enlarge image.</div>
+                </div>
+                <div class="clsIconImg zoom_btn" cattr="555" id="icon01"></div>
+            </div>
+
+
+            <div class="bullet_Text">
+
+
+                <div class="sectionContentArea">
+                    <section class="QuestionPanel1_2 clsPanel" id="Labor">
+                        <div class="leftCnt">
+
+                            <div class='option t-align ovlm'>
+                                <input type="radio" id="test1" name="radio-group">
+                                <label for="test1">Infants with a birth weight below the 10<sup>th</sup> percentile for
+                                    their gestational age are usually defined as SGA infants.</label>
+                            </div>
+                            <div class='option t-align ovlm'>
+                                <input type="radio" id="test2" name="radio-group">
+                                <label for="test2">Infants with a birth weight below the 25<sup>th</sup> percentile for
+                                    their gestational age are usually defined as SGA infants.</label>
+                            </div>
+                            <div class='option t-align ovlm'>
+                                <input type="radio" id="test3" name="radio-group">
+                                <label for="test3">Infants with a birth weight below the 50<sup>th</sup> percentile for
+                                    their gestational age are usually defined as SGA infants.</label>
+                            </div>
+                        </div>
+
+                    </section>
+                    <div class="bottomTxt">
+                        <div class="cSubmitBtn">Submit</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="para3">
+                <div id="idPatch2">
+                    <div class="clsImage" id="image2"></div>
+                    <div class="clsIconImgExpand" id="icon02">
+                        <!--<div class="expText">Click to enlarge image.</div>-->
+                    </div>
+                    <div class="clsIconImg zoom_btn" cattr="666" id="icon03"></div>
+                </div>
+                <div class="feedbackText">Other definitions of SGA include when a birth weight is more than 2 standard deviations below the mean for gestational age, or when the birth weight is below the 3rd or 5th percentile.
+                    <br /><br />Growth in utero is influenced by a variety of factors including genetics, the ability of the placenta to adequately deliver oxygen and nutrients to the fetus, and intrauterine growth factors and hormones. When compared
+                    with appropriately grown, AGA infants, SGA infants have higher complication rates, including death. Click on the link in the bottom left corner to read more about symmetric and asymmetric patterns of growth, SGA and IUGR infants.</div>
+            </div>
+
+
+
+
+
+            <div class="_link" id="_clickImg0pdf"><img class="pdf_icon" src="pages/images/Topic01/T01P20/pdf_icon.png" alt="" /><span>Symmetric and asymmetric patterns of growth, SGA and IUGR infants</span></div>
+        </div>
+
+        <div class="modal" id="case_study_popup">
+            <div class="modalContent medium" unselectable="on">
+                <div class="modalTxtImg" unselectable="on"></div>
+                <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
+                <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
+                <div class="popover left-arrow btm-adj">
+                    <div class="arrow" style="top: 50%;"></div>
+                    <div class="popover-content">Click to close image.</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="boxInst">
+            <div class="instNextClick"></div>
+            <div class="next_click"><em> Click Next to continue.</em></div>
+        </div>
+
+
+        <div id="pageClsResourcesPopup">
+
+            <div id="pageid_ReferencesBG">
+
+                <div id="pageRefTitleBar_id">
+
+                    <div id="pageRefTitleBar_id" unselectable="on" style="display: block;">
+
+                        <div id="pageReftitleText_id" unselectable="on">Symmetric and asymmetric patterns of growth, SGA and IUGR infants</div>
+
+                        <div class="pageclose_txt" unselectable="on"><span id="pageClsText">Click to Close image.</span>
+                        </div>
+
+                        <div id="id_glosCloseBtn" title="Close" unselectable="on"></div>
+                        <div class="close_txt" unselectable="on"><span id="clsText">Close</span></div>
+
+                        <embed class="pdflink33" alt="pdf" src="pages/Topic01/pdf/Page17.pdf" internalinstanceid="70">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+</body>
+
+</html>
