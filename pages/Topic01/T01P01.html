@@ -8,29 +8,29 @@
 
     <script>
         manifest = [{
-                src: 'pages/images/Topic01/T01P01/EV01_01.png',
-                id: '1'
-            },
+            src: 'pages/images/Topic01/T01P01/EV01_01.png',
+            id: '1'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P01/EV01_02.png',
-                id: '2'
-            },
+        {
+            src: 'pages/images/Topic01/T01P01/EV01_02.png',
+            id: '2'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P01/EV01_03.png',
-                id: '3'
-            },
+        {
+            src: 'pages/images/Topic01/T01P01/EV01_03.png',
+            id: '3'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P01/EV01_04.png',
-                id: '4'
-            },
+        {
+            src: 'pages/images/Topic01/T01P01/EV01_04.png',
+            id: '4'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P01/module_objective_banner.png',
-                id: '6'
-            }
+        {
+            src: 'pages/images/Topic01/T01P01/module_objective_banner.png',
+            id: '6'
+        }
         ];
     </script>
 
@@ -45,7 +45,7 @@
             top: 0px;
             opacity: 1;
         }
-        
+
         #box1 {
             position: absolute;
             height: 135px;
@@ -54,7 +54,7 @@
             top: 20px;
             left: 40px;
         }
-        
+
         #box2 {
             position: absolute;
             height: 135px;
@@ -63,7 +63,7 @@
             top: 20px;
             left: 403px;
         }
-        
+
         #box3 {
             position: absolute;
             height: 135px;
@@ -72,7 +72,7 @@
             top: 20px;
             right: 43px;
         }
-        
+
         #box4 {
             position: absolute;
             height: 140px;
@@ -81,7 +81,7 @@
             top: 175px;
             left: 156px;
         }
-        
+
         #box5 {
             position: absolute;
             height: 125px;
@@ -90,21 +90,22 @@
             top: 175px;
             right: 170px;
         }
-        
+
         .clsIcon {
             position: absolute;
             opacity: 0;
         }
-        
+
         .icon-container {
             position: absolute;
-            width: 100%;
-            top: 190px;
-            left: 0px;
-            height: 350px;
+            width: 99%;
+            top: 202px;
+            left: 5px;
+            height: 330px;
             background: #ffffff;
+            border-radius: 25px;
         }
-        
+
         #idIcon01 {
             position: relative;
             width: 56px;
@@ -115,7 +116,7 @@
             margin: 0px auto;
             background-size: contain;
         }
-        
+
         #idIcon02 {
             position: relative;
             width: 50px;
@@ -126,7 +127,7 @@
             background: url("pages/images/Topic01/T01P01/EV01_02.png") no-repeat;
             background-size: contain;
         }
-        
+
         #idIcon03 {
             position: relative;
             width: 45px;
@@ -137,7 +138,7 @@
             background: url("pages/images/Topic01/T01P01/EV01_03.png") no-repeat;
             background-size: contain;
         }
-        
+
         #idIcon04 {
             position: relative;
             width: 57px;
@@ -148,7 +149,7 @@
             background: url("pages/images/Topic01/T01P01/EV01_05.png") no-repeat;
             background-size: contain;
         }
-        
+
         #idIcon05 {
             position: relative;
             width: 57px;
@@ -159,7 +160,7 @@
             background: url("pages/images/Topic01/T01P01/EV01_02.png") no-repeat;
             background-size: contain;
         }
-        
+
         .clsText {
             position: absolute;
             font-size: 16px;
@@ -170,59 +171,60 @@
             /*106px*/
             opacity: 0;
         }
-        
+
         #idText1 {
             top: 65PX;
             left: 0px;
             width: 97%;
             height: 95px;
         }
-        
+
         #idText2 {
             top: 65PX;
             left: 0px;
             width: 97%;
             height: 95px;
         }
-        
+
         #idText3 {
             top: 65PX;
             left: 0px;
             width: 97%;
             height: 95px;
         }
-        
+
         #idText4 {
             top: 65PX;
             left: 0px;
             width: 97%;
             height: 95px;
         }
-        
+
         #idText5 {
             top: 65PX;
             left: 0px;
             width: 97%;
             height: 95px;
         }
-        
+
         .boxInst {
             position: absolute;
             top: 314px;
             left: 901px;
         }
-        
+
         .banner-img {
             position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 1085px;
+            top: 8px;
+            left: 5px;
+            width: 1075px;
             height: 190px;
             background: url('pages/images/Topic01/T01P01/module_objective_banner.png') no-repeat;
             background-size: cover;
             background-color: #ffffff;
+            border-radius: 25px;
         }
-        
+
         .headerTopRight {
             position: absolute;
             top: 12px;
@@ -231,9 +233,9 @@
             font-size: 22px;
             font-family: OpenSansSemiBold;
         }
-        
+
         .headerTopRight span {}
-        
+
         .headerTopRight img.sugar_and_safe_care {}
     </style>
 
@@ -427,7 +429,7 @@
 
 
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             disableNextBtn();
 
@@ -504,7 +506,8 @@
 
                     <div class="clsIcon" id="idIcon01"></div>
 
-                    <div class="clsText" id="idText1">Explain why it's important to initially withhold feedings in infants who are sick and/or preterm.</div>
+                    <div class="clsText" id="idText1">Explain why it's important to initially withhold feedings in
+                        infants who are sick and/or preterm.</div>
 
                 </div>
 
@@ -531,7 +534,8 @@
 
                     <div class="clsIcon" id="idIcon04"></div>
 
-                    <div class="clsText" id="idText4">Discuss the initial intravenous therapy for sick infants and the IV treatment of hypoglycemia.</div>
+                    <div class="clsText" id="idText4">Discuss the initial intravenous therapy for sick infants and the
+                        IV treatment of hypoglycemia.</div>
 
                 </div>
 
@@ -541,7 +545,8 @@
 
                     <div class="clsIcon" id="idIcon05"></div>
 
-                    <div class="clsText" id="idText5">Identify the indications for the placement of an umbilical catheter.
+                    <div class="clsText" id="idText5">Identify the indications for the placement of an umbilical
+                        catheter.
                     </div>
 
                 </div>
