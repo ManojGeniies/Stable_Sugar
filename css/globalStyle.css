@@ -442,6 +442,27 @@ background: url("../media/images/player/common/close_hover.png");
 	margin-right:1%;
 	margin-left:1.5%;
 }
+
+.titleText{
+    position: absolute !important;
+    font-size: 20px !important;
+    font-family: OpenSansSemiBold !important;
+    line-height: 25px !important;
+    color: black !important;
+    top: 27px !important;
+    left: 40px !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+.titleText img {
+    position: relative !important;
+    top: 4px !important;
+    left: -12px !important;
+    width: 36px !important;
+}
 .spinner {
   margin: 100px auto;
   width: 120px;
@@ -1735,9 +1756,9 @@ ul.alertText li:before {
 .modal{
     position: absolute;
     left: 0px;
-    top: 25px;
+    top: 37px;
     width: 1085px;
-    height: 480px;
+    height: 478px;
     background:rgba(255,255,255,0.3);
     /**IE**/
     /* background:rgba(255,255,255,0.98); */
@@ -1745,9 +1766,9 @@ ul.alertText li:before {
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
     z-index: 999999;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
+    /* -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
+    -ms-border-radius: 5px; */
     display: none;
 }
 
@@ -1761,7 +1782,7 @@ ul.alertText li:before {
 .modalContent{
     position: relative;
     left: 0px;
-    top: 36px;
+    top: 29px;
     width: 832px;
     height: 420px;
     /* background: rgba(91,91,91, 1); */
@@ -1769,10 +1790,10 @@ ul.alertText li:before {
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
     z-index: 1000;
     disable: none;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    /* -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
+    -ms-border-radius: 5px; */
     margin: 0px auto;
 }
 .modalContent.small{
@@ -1822,7 +1843,7 @@ ul.alertText li:before {
 	 -moz-border-top-right-radius: 5px;
 	 -ms-border-top-left-radius: 5px;
 	-ms-border-top-right-radius: 5px; */
-    border-radius: 25px;
+    /* border-radius: 25px; */
 
 }
 .modalTextBottom {
@@ -1878,11 +1899,11 @@ ul.alertText li:before {
     top: 140px;
     margin: 0 auto;
     background: #ffffff;
-    border-radius: 5px;
+    /* border-radius: 5px;
     border-radius: 5px;
     -webkit-box-shadow: 2px 2px 12px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 12px -1px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 8px -1px rgba(0,0,0,0.75); */
 }
 .feedbackText {
     /* position: absolute; */
