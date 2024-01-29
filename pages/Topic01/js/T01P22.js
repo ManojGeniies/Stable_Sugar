@@ -149,7 +149,7 @@ var popupSectionArray1 = [{
         event: "",
         show: "",
         hide: "",
-        transcript: "Here is some feedback on your response. At term gestation, glycogen accounts for approximately 5 to 8 percent of the liver and skeletal muscle weight and 4 percent of the cardiac muscle weight. A small amount of glycogen is also stored in the kidneys and lungs, but minimal amounts, if any, are stored in the brain. Click Next to continue.",
+        transcript: "Here is some feedback on your response. At term gestation, glycogen accounts for approximately 5 to 8 percent of the liver and skeletal muscle weight and 4 percent of the cardiac muscle weight. A small amount of glycogen is also stored in the kidneys and lungs, but minimal amounts, if any, are stored in the brain.",
         animation: [{
             target: "",
             duration: "",
