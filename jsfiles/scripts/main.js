@@ -718,7 +718,7 @@ function fnAddPlayerEvents() {
     });
 
     $("#clsExitBtn").hover(function() {
-        $("#clsExitBtn").css({ "background": "url('media/images/new/exit.png') no-repeat", "background-size": "cover", "background-position": "-32px 0" })
+        $("#clsExitBtn").css({ "background": "url('media/images/new/exithover.png') no-repeat", "background-size": "cover" })
             //$("#clsBGText").css("display","block")
             //$("#clsBG").css("background","url('media/images/player/common/close_hover.png')")
     }, function() {
