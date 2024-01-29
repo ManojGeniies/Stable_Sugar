@@ -23,6 +23,8 @@ input, textarea {
     z-index: 99999;
     overflow: hidden;
     display: block !important;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 #transcriptHelp {
@@ -143,63 +145,65 @@ span.tooltip {
 }
 
 .ClsToolbtn {
-    width: 70px;
-    height: 63px;
-    left: 12px;
-    top: 2px;
+    width: 68px;
+    height: 65px;
+    left: 0px;
+    top: 1px;
     position: absolute;
 }
 
 .ClsToolbtn span.ClsToolbtnIcon {
     position: absolute;
-    height: 31px;
-    width: 31px;
-    top: 10px;
-    left: 20px;
-    background: url("../media/images/player/common/pinImg.png") no-repeat;
+    width: 64px;
+    height: 64px;
+    top: 0px;
+    /* left: 20px; */
+    background: url("../media/images/player/common/speed.png") no-repeat;
     background-position: 0px 0;
     transition: all 0.2s;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     z-index: 1;
     display: block;
     background-size: cover;
 }
 
 .no-touch .ClsToolbtn:hover:not(.clsToolDisabled) span.ClsToolbtnIcon {
-    background: url("../media/images/player/common/pinImg.png") no-repeat;
-    background-position: -31px 0px;
+    background: url("../media/images/player/common/speedhover.png") no-repeat;
+    /* background-position: -32px 0px; */
     cursor: pointer;
     background-size: cover;
 }
 
 .ClsToolbtnSelected span.ClsToolbtnIcon {
-    background: url("../media/images/player/common/pinImg.png") no-repeat !important;
-    background-position: -31px 0px !important;
-    background-size: cover !important;
+    background: url("../media/images/player/common/speedvariation.png") no-repeat !important;
+    /* background-position: -32px 0px !important; */
+    background-size:cover !important;
 }
 
 .ClsToolbtnSelected {
     background: #ffffff;
-    top: -17px;
+    /* top: -17px; */
     z-index: 999;
-    height: 81px;
+    height: 80px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
-    webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    /* webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.75); */
 }
 
-.ClsToolbtnSelected span.ClsToolbtnIcon {
+/* .ClsToolbtnSelected span.ClsToolbtnIcon {
     top: 25px;
 }
 
 .ClsToolbtnSelected span.tooltip {
     top: 54px;
-}
+} */
+
+
 
 .whitepatch {
     background: #ffffff;
@@ -477,7 +481,7 @@ span.clsPlayPauseBtnIcon {
 }
 
 #btmFrame {
-    background: #dfe1e4;
+    background: #fff;
     background-size: 100% 100%;
     width: 1085px;
     display: block;
@@ -491,50 +495,60 @@ span.clsPlayPauseBtnIcon {
 #clsBackBtn {
     position: absolute;
     top: 2px;
-    right: 109px;
-    width: 50px;
-    height: 63px;
+    right: 110px;
+    width: 64px;
+    height: 64px;
 }
 
 .clsDisBackBtn span.clsBackBtnIcon {
-    background: url("../media/images/player/common/back_sprite.png") no-repeat;
+    background: url("../media/images/player/common/back.png") no-repeat;
     opacity: 0.5;
     cursor: default;
     background-position: 0px 0;
-    width: 31px;
-    height: 31px;
-    transition: all 0.2s;
+    width: 64px;
+    height: 64px;
+    /* transition: all 0.2s; */
     z-index: 5;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     position: absolute;
-    top: 10px;
-    left: 9px;
+    top: 0px;
+    left: 0px;
     display: block;
     background-size: cover;
 }
 
 .clsEnaBackBtn span.clsBackBtnIcon {
     cursor: pointer;
-    background: url("../media/images/player/common/back_sprite.png") no-repeat;
+    background: url("../media/images/player/common/back.png") no-repeat;
     background-position: 0px 0;
-    width: 30px;
-    height: 30px;
-    transition: all 0.2s;
+    width: 64px;
+    height: 64px;
+    /* transition: all 0.2s; */
     z-index: 5;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     position: absolute;
-    top: 10px;
-    left: 9px;
+    top: 0px;
+    
     display: block;
     background-size: cover;
 }
 
 .no-touch .clsEnaBackBtn:hover span.clsBackBtnIcon {
-    background: url("../media/images/player/common/back_sprite.png") no-repeat;
+    background: url("../media/images/player/common/backclick.png") no-repeat;
     cursor: pointer;
-    background-position: -31px 0;
+    /* background-position: -31px 0; */
     display: block;
     background-size: cover;
+    width: 64px;
+    height: 64px;
+    /* transition: all 0.2s; */
+    z-index: 5;
+    /* border-radius: 50%; */
+    position: absolute;
+    top: 0px;
+    
+    /* display: block; */
+    /* background-size: cover; */
 }
 
 
@@ -546,59 +560,58 @@ span.clsPlayPauseBtnIcon {
 #clsNxtBtn {
     position: absolute;
     top: 2px;
-    right: 15px;
-    width: 50px;
-    height: 63px;
+    right: 0px;
+    width: 64px;
+    height: 64px;
 }
 
 .clsEnaNxtBtn span.clsNxtBtnIcon {
-    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    background: url("../media/images/player/common/next.png") no-repeat;
     background-position: 0px 0;
     cursor: pointer;
-    width: 31px;
-    height: 31px;
-    transition: all 0.2s;
+    width: 64px;
+    height: 64px;
+    /* transition: all 0.2s; */
     z-index: 5;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     position: absolute;
-    top: 10px;
-    left: 9px;
+    top: 0px;
+    
     display: block;
     background-size: cover;
 }
 
 .clsDisNxtBtn span.clsNxtBtnIcon {
-    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    background: url("../media/images/player/common/next.png") no-repeat;
     opacity: 0.5;
     cursor: default;
     background-position: 0px 0;
-    width: 31px;
-    height: 31px;
+    width: 64px;
+    height: 64px;
     transition: all 0.2s;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     z-index: 5;
     position: absolute;
-    top: 10px;
-    left: 9px;
+    /* top: 10px;
+    left: 9px; */
     display: block;
     background-size: cover;
 }
 
 .no-touch .clsEnaNxtBtn:hover span.clsNxtBtnIcon {
-    background: url("../media/images/player/common/next_sprite.png") no-repeat;
-    background-position: -31px 0;
+    background: url("../media/images/player/common/nextclick.png") no-repeat;
+    /* background-position: -30px 0; */
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    left: 9px;
-    width: 31px;
-    height: 31px;
-    transition: all 0.2s;
-    border-radius: 50%;
+    top: 0px;
+    /* left: 9px; */
+    width: 64px;
+    height: 63px;
+    /* transition: all 0.2s; */
+    /* border-radius: 50%; */
     display: block;
     background-size: cover;
 }
-
 
 /* .clsDisNxtBtn {
 	background: url("../media/images/player/common/next_sprite.png") no-repeat;
@@ -651,7 +664,7 @@ span.clsPlayPauseBtnIcon {
     width: 50px;
     height: 36px;
     right: 62px;
-    top: 8px;
+    top: 10px;
 }
 
 #id_sliderContainer {
@@ -678,7 +691,7 @@ span.clsPlayPauseBtnIcon {
 }
 
 .ui-widget-header {
-    background-color: #E4BA4E;
+    background-color: #FFD990;
 }
 
 .ui-slider-range {
@@ -687,12 +700,12 @@ span.clsPlayPauseBtnIcon {
 
 #id_sliderContainer a {
     outline: 0 !important;
-    background-color: #E4BA4E;
+    background-color: #FFD990;
     height: 11px;
     width: 11px;
     top: -6px;
     LEFT: 8PX;
-    border: 2px solid #4d667b;
+    border: 2px solid #FFD990;
     border-radius: 15px;
 }
 
@@ -1394,4 +1407,55 @@ span.instructions {
 
 #transcripttext::-moz-scrollbar {
     width: 8px;
+}
+
+/* speed function */
+#speedVolumne {
+    border-bottom: 0px solid;
+    position: absolute;
+    width: 66px;
+    bottom: 70px;
+    border-radius: 0px;
+    background-color: #fff;
+    z-index: 9999999;
+    border: 1px solid #05222e;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.speedVolumne {
+    display: none;
+}
+
+#speedVolumne ul {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#speedVolumne ul li {
+    width: 100%;
+    margin-top: 0px;
+}
+
+#speedVolumne ul li a {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "OpenSansSemiBold";
+    line-height: 27px;
+}
+
+#speedVolumne ul li a span {
+    background: #05222e;
+    width: 80%;
+    display: block;
+    height: 1px;
+    margin: 0px 5px;
+}
+.speed-limit.active {
+    background-color: #05222e;
+    color: #fff;
 }

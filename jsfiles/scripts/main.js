@@ -643,6 +643,7 @@ function fnAddPlayerEvents() {
     });
 
     $("#ToolBtn").click(function() {
+        $("#ToolPop").show();
         if (isActive(this)) {
             fnTools();
         }
@@ -729,6 +730,7 @@ function fnAddPlayerEvents() {
 
     $("#clsExitBtn").click(function(e) {
 
+        $("#ToolPop").hide();
         if (isActive(this)) {
 
             var arrIOSVer = String(ver).split(',');
@@ -788,6 +790,7 @@ function fnAddPlayerEvents() {
     });
 
     $("#clsHelpBtn").click(function(e) {
+        $("#ToolPop").hide();
         closeHelpBtnFunc();
         if (isActive(this))
             fnLoadHelpPopup();
@@ -1412,7 +1415,7 @@ function closeHelpBtnFunc(){
     $('#id_transcriptBox').removeAttr("style");
     $('#transcriptHelp').attr("style", "display: none");
     $(".pg-pageContent").show();
-
+    
     $("#clsHelpBtn").removeClass("active");
     $("#clsMnuBtn").css({ "pointer-events": "all" })
     $("#clsHelpBtn").css({ "pointer-events": "all" })
@@ -2326,6 +2329,7 @@ function fnLoadPage(lModNum, lLessNum, lTopNum, lPageNum) {
 
     closeHelpBtnFunc();
     fnRemoveDuplicateValue();
+    setCurrentAudio();
     //
 
 
@@ -4948,12 +4952,12 @@ function fnTools() {
         /* $(".ClsToolPop").css({"transform":"translateY(0%)"});
         $(".ClsToolbtn ").addClass("ClsToolbtnSelected"); */
 
-        $(".ClsToolPop").css("top", "515px").css({ "transform": "translateY(0%)" });
-        $(".ClsToolbtn ").addClass("ClsToolbtnSelected");
+        $(".ClsToolPop").css("top", "62px").css("left", "747px").css({ "transform": "translateY(0%)" });
+        // $(".ClsToolbtn ").addClass("ClsToolbtnSelected");
         //$(".ClsToolPop,.ClsToolSubPop").css("display","none");
         isToolEnable = false;
     } else {
-        $(".ClsToolPop").css("top", "530px").css({ "transform": "translateY(100%)" });
+        $(".ClsToolPop").css("top", "-63px").css("left", "1100px").css({ "transform": "translateY(100%)" });
         $(".ClsToolbtn ").removeClass("ClsToolbtnSelected");
         //$(".ClsToolPop,.ClsToolSubPop").css("display","block");
         isToolEnable = true;
@@ -7184,3 +7188,74 @@ function gnGetPage17() {
     fnJumpToPageByID(lPageId);
 
 }
+// Speed Functionality
+
+$(document).ready(function () {
+    $('#clsSpeedBtn').on('click', function (e) {
+      e.stopPropagation()
+      var speedVolumne = $('.speedVolumne')
+      var displayProperty = speedVolumne.css('display')
+      speedVolumne.css('display', displayProperty === 'block' ? 'none' : 'block')
+    })
+})
+
+function audioabu(speedlimit) {
+    adjustAudioSpeed(speedlimit)
+    masterTimeline.timeScale(document.getElementById('audioplayer').playbackRate)
+}
+
+function adjustAudioSpeed(speedlimit) {
+    // console.log("starting speed - " + document.getElementById("audioplayer").playbackRate);
+    var audio = document.getElementById('audioplayer')
+    if (speedlimit === 1) {
+      audio.playbackRate = 1
+      localStorage.setItem('speed', 1)
+      $('#clsSpeedBtn')
+        .removeClass('clsSpeedBtn1')
+        .removeClass('clsSpeedBtn2')
+        .addClass('clsSpeedBtn')
+      $('.speedVolumne ul li .speed_1').addClass('active')
+      $('.speedVolumne ul li .speed_1_5').removeClass('active')
+      $('.speedVolumne ul li .speed_2').removeClass('active')
+    } else if (speedlimit === 1.5) {
+      audio.playbackRate = 1.5
+      localStorage.setItem('speed', 1.5)
+      $('#clsSpeedBtn')
+        .removeClass('clsSpeedBtn')
+        .removeClass('clsSpeedBtn2')
+        .addClass('clsSpeedBtn1')
+      $('.speedVolumne ul li .speed_1').removeClass('active')
+      $('.speedVolumne ul li .speed_1_5').addClass('active')
+      $('.speedVolumne ul li .speed_2').removeClass('active')
+    } else if (speedlimit === 2) {
+      audio.playbackRate = 2.0
+      localStorage.setItem('speed', 2.0)
+      $('#clsSpeedBtn')
+        .removeClass('clsSpeedBtn1')
+        .removeClass('clsSpeedBtn1')
+        .addClass('clsSpeedBtn2')
+      $('.speedVolumne ul li .speed_1').removeClass('active')
+      $('.speedVolumne ul li .speed_1_5').removeClass('active')
+      $('.speedVolumne ul li .speed_2').addClass('active')
+    } else {
+      audio.playbackRate = 1
+      localStorage.setItem('speed', 1)
+    }
+    $('.speedVolumne').css('display', 'none')
+    // console.log("current speed - " + document.getElementById("audioplayer").playbackRate);
+}
+
+function setCurrentAudio() {
+    if (!localStorage.getItem('speed')) {
+      document.getElementById('audioplayer').playbackRate = 1
+      // console.log("setCurrentAudio - if = " +document.getElementById("audioplayer").playbackRate);
+    } else {
+      setTimeout(function () {
+        document.getElementById(
+          'audioplayer',
+        ).playbackRate = localStorage.getItem('speed')
+        masterTimeline.timeScale(localStorage.getItem('speed'))
+        // console.log("setCurrentAudio - else = " + localStorage.getItem("speed") + " executed");
+      }, 100)
+    }
+  }
