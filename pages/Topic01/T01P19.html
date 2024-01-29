@@ -8,24 +8,24 @@
 
     <script>
         manifest = [{
-                src: 'pages/images/Topic01/T01P19/p_1.png',
-                id: '1'
-            },
+            src: 'pages/images/Topic01/T01P19/p_1.png',
+            id: '1'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P19/p_2.png',
-                id: '2'
-            },
+        {
+            src: 'pages/images/Topic01/T01P19/p_2.png',
+            id: '2'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P19/p_3.png',
-                id: '3'
-            },
+        {
+            src: 'pages/images/Topic01/T01P19/p_3.png',
+            id: '3'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P19/p_4.png',
-                id: '4'
-            }
+        {
+            src: 'pages/images/Topic01/T01P19/p_4.png',
+            id: '4'
+        }
 
         ];
     </script>
@@ -39,19 +39,19 @@
             top: 20px;
             opacity: 1;
         }
-        
+
         #idPatchMain {
+            position: absolute;
             top: 22px;
-            left: 2px;
+            left: 176px;
             background-position: left;
             height: 40px;
             background: #FFFFFF;
-            border-radius: 6px;
-            width: 960px;
+            width: 630px;
             border-radius: 25px !important;
             padding: 10px 20px;
         }
-        
+
         .clsText {
             position: relative;
             font-size: 16px;
@@ -60,7 +60,7 @@
             color: #000000;
             opacity: 0;
         }
-        
+
         #idText1 {
             top: 6px;
             left: 0px;
@@ -70,7 +70,7 @@
             font-size: 16px;
             opacity: 1;
         }
-        
+
         .clsAllTabs1 {
             position: absolute;
             height: 350px;
@@ -87,7 +87,7 @@
             transition: all 0.5s ease-in-out;
             display: none;
         }
-        
+
         .clsAllTabs2 {
             position: absolute;
             height: 350px;
@@ -104,7 +104,7 @@
             transition: all 0.5s ease-in-out;
             display: none;
         }
-        
+
         .clsAllTabs3 {
             position: absolute;
             height: 350px;
@@ -121,7 +121,7 @@
             transition: all 0.5s ease-in-out;
             display: none;
         }
-        
+
         .clsAllTabs4 {
             position: absolute;
             height: 350px;
@@ -138,14 +138,14 @@
             transition: all 0.5s ease-in-out;
             display: none;
         }
-        
+
         .imageclass {
             position: absolute;
             left: 29px;
             top: 24px;
             background-repeat: no-repeat;
         }
-        
+
         .paragraph {
             position: absolute;
             left: 24px;
@@ -153,7 +153,7 @@
             font-family: OpenSansRegular;
             font-size: 16px;
         }
-        
+
         .boxInst {
             position: absolute;
             top: 504px;
@@ -283,7 +283,7 @@
 
 
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             disableNextBtn();
 
@@ -369,7 +369,7 @@
 
             fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), succRefFunc, errRefFunc);
 
-            gPageXMLObj.find("question").each(function(index, aQues) {
+            gPageXMLObj.find("question").each(function (index, aQues) {
 
                 __questionArray.push(aQues);
 
@@ -381,7 +381,7 @@
 
 
 
-        $(".idBackbtn").on("click", function() {
+        $(".idBackbtn").on("click", function () {
 
             endModule();
 
@@ -393,7 +393,7 @@
 
 
 
-        $(document).on("click", '._clickLink', function() {
+        $(document).on("click", '._clickLink', function () {
 
             $(this).addClass("_viewed");
 
@@ -493,7 +493,8 @@
 
             <div class="clsPatch" id="idPatchMain">
 
-                <div class="clsText" id="idText1">As soon as it's evident that the infant is sick, quickly establish intravenous (IV) access.</div>
+                <div class="clsText" id="idText1">As soon as it's evident that the infant is sick, quickly establish
+                    intravenous (IV) access.</div>
 
             </div>
 
@@ -504,7 +505,7 @@
                     <img class="imageclass" src="pages/images/Topic01/T01P19/p_1.png" width="170" height="164"></img>
 
                     <p class="paragraph">Allows infusion of <br> glucose-containing solutions
-                        <p>
+                    <p>
 
                 </div>
 
@@ -513,7 +514,7 @@
                     <img class="imageclass" src="pages/images/Topic01/T01P19/p_2.png" width="170" height="164"></img>
 
                     <p class="paragraph">Helps normalize the blood sugar
-                        <p>
+                    <p>
 
                 </div>
 
@@ -522,7 +523,7 @@
                     <img class="imageclass" src="pages/images/Topic01/T01P19/p_3.png" width="170" height="164"></img>
 
                     <p class="paragraph">Provides a route for medications needed in the treatment of sick infants
-                        <p>
+                    <p>
 
                 </div>
 
@@ -531,7 +532,7 @@
                     <img class="imageclass" src="pages/images/Topic01/T01P19/p_4.png" width="170" height="164"></img>
 
                     <p class="paragraph">Ensures venous access is available if needed in an emergency
-                        <p>
+                    <p>
 
                 </div>
 

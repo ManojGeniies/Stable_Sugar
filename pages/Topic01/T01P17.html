@@ -8,30 +8,30 @@
 
     <script>
         manifest = [{
-                src: 'pages/images/Topic01/T01P20/small_expand.png',
-                id: '1'
-            },
+            src: 'pages/images/Topic01/T01P20/small_expand.png',
+            id: '1'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/small_expand_hover.png',
-                id: '2'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/small_expand_hover.png',
+            id: '2'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P17/img_02_small.png',
-                id: '3'
-            },
+        {
+            src: 'pages/images/Topic01/T01P17/img_02_small.png',
+            id: '3'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P17/img02.png',
-                id: '4'
-            }
+        {
+            src: 'pages/images/Topic01/T01P17/img02.png',
+            id: '4'
+        }
 
         ];
     </script>
 
     <style type="text/css">
-    .mainContainer {
+        .mainContainer {
             position: absolute;
             width: 1000px;
             height: 460px;
@@ -39,99 +39,112 @@
             top: 20px;
             opacity: 1;
         }
-        
+
         @-webkit-keyframes reducetime {
             0% {
                 width: 0;
             }
+
             100% {
                 width: 100%;
             }
         }
-        
+
         @-webkit-keyframes zoomin {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         @keyframes zoomin {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             100% {
                 transform: scale(1);
             }
         }
+
         /*End of Zoom in Keyframes */
         /* Zoom out Keyframes */
-        
+
         @-webkit-keyframes zoomout {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(0.67);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         @keyframes zoomout {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(0.67);
             }
+
             100% {
                 transform: scale(1);
             }
         }
+
         /*End of Zoom out Keyframes */
-        
+
         .clsPatch {
             position: absolute;
-            width: 100%;
-            height: 55px;
+            width: 63%;
+            left: 180px;
+            top: 16px;
+            height: 40px;
             background: #ffffff;
             border-radius: 25px !important;
             padding: 6px 0px;
         }
-        
+
         .clsText {
             position: absolute;
             width: 90%;
             left: 20px;
-            top: 25px;
+            top: 18px;
             font-size: 16px;
             font-family: OpenSansRegular;
             font-style: initial;
             line-height: 17px;
         }
-        
+
         .ClsTab {
             position: absolute;
             width: 100%;
             height: 20%;
             z-index: 999;
         }
-        
+
         .clsAllTabs {
             width: 100%;
             height: 82px;
         }
-        
+
         .ClsTabItem {
             position: relative;
             cursor: pointer;
@@ -149,34 +162,35 @@
             left: 0px;
             cursor: pointer;
         }
-        
+
         .ClsTabItem:hover {
             background: #707070;
             color: #FFFFFF;
         }
-        
+
         #TabItem0 {
             margin-left: 0;
         }
+
         /* #TabItem0,#TabItem1,#TabItem2{
 
 			display :none;
 
 		} */
-        
+
         .boxInst {
             position: absolute;
             top: 504px;
             left: 900px;
         }
-        
+
         .ClsImage0 {
             position: absolute;
             width: 100%;
             height: 374px;
             top: 92px;
         }
-        
+
         .mainImage {
             position: absolute;
             background: url('pages/images/Topic01/T01P20/img1.png') no-repeat;
@@ -187,32 +201,32 @@
             top: 225px;
             display: none;
         }
-        
+
         .subImage {
             position: absolute;
             background-size: 100% 100%;
             top: 100px;
             display: none;
         }
-        
+
         #sub0 {
             background: url('pages/images/Topic01/T01P20/EV01_02.png') no-repeat;
             left: 35px;
             height: 297px;
         }
-        
+
         #sub1 {
             background: url('pages/images/Topic01/T01P20/EV01_01.png') no-repeat;
             left: 315px;
             height: 331px;
         }
-        
+
         #sub2 {
             background: url('pages/images/Topic01/T01P20/EV01_03.png') no-repeat;
             left: 750px;
             height: 283px;
         }
-        
+
         .ClsImage1 {
             position: absolute;
             width: 100%;
@@ -220,7 +234,7 @@
             top: 100px;
             display: none;
         }
-        
+
         .clsSubImage {
             position: absolute;
             width: 293px;
@@ -229,13 +243,13 @@
             left: 0px;
             border-radius: 10px;
         }
-        
+
         .subFirstImage {
             position: absolute;
             width: 100%;
             height: 100%;
         }
-        
+
         .subSecImage {
             position: absolute;
             width: 225px;
@@ -243,11 +257,12 @@
             left: 35px;
             top: 15px;
         }
-        
+
         #clsSub0 {
             background: url('pages/images/Topic01/T01P17/img_02_small.png') no-repeat;
             border-radius: 25px !important;
         }
+
         /* #clsImg0{
 
 				background: url('pages/images/Topic01/T01P20/img_02_small.png') no-repeat;
@@ -255,10 +270,11 @@
 		    top: 185px;
 
 			} */
-        
+
         #clsSub1 {
             background: url('pages/images/Topic01/T01P20/img_01_small.png') no-repeat;
         }
+
         /* #clsImg1{
 
 				background: url('pages/images/Topic01/T01P20/img_03_small.png') no-repeat;
@@ -279,27 +295,27 @@
 			    top: 14px;
 
 			} */
-        
+
         .expandMap {
             position: relative;
             top: 8px;
         }
-        
+
         .expandMap .clickToEnlarge {
             top: 2px;
             left: 123px;
         }
-        
+
         .expandMap .small_expand {
             right: 37px;
             margin-top: 2px;
         }
-        
+
         .open_map_close {
             top: 301px;
             right: -38px !important;
         }
-        
+
         .closepopup,
         .open_map_close {
             position: absolute;
@@ -312,11 +328,11 @@
             z-index: 1000;
             text-decoration: none;
         }
-        
+
         .closepopup:hover {
             background: url('pages/images/Topic01/T01P20/close_expand_hover.png') no-repeat;
         }
-        
+
         .closebutton {
             position: absolute;
             width: 92px;
@@ -328,11 +344,11 @@
             z-index: 1000;
             text-decoration: none;
         }
-        
+
         .closebutton:hover {
             background: url('pages/images/Topic01/T01P20/close_expand_hover.png') no-repeat;
         }
-        
+
         #case_study_popup1>.caseStudyContent>.closebutton {
             position: absolute;
             width: 55px;
@@ -344,10 +360,11 @@
             z-index: 1000;
             text-decoration: none;
         }
-        
+
         #case_study_popup1>.caseStudyContent>.closebutton:hover {
             background: url('pages/images/Topic01/T01P20/videClose_hover.png') no-repeat;
         }
+
         /* #closeId0{
 
 			  left: 455px;
@@ -361,7 +378,7 @@
 			  background: url('pages/images/Topic01/T01P20/enlarge_text_inverted.png') no-repeat;
 
 			} */
-        
+
         .clickToClose {
             width: 160px;
             height: 46px;
@@ -376,12 +393,12 @@
             background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
             font-family: OpenSansRegular;
         }
-        
+
         .clickToClose>i {
             position: absolute;
             left: 10px;
         }
-        
+
         .videoToClose {
             width: 160px;
             height: 46px;
@@ -395,7 +412,7 @@
             background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
             font-family: OpenSansRegular;
         }
-        
+
         .small_expand,
         .open_map {
             background: url('pages/images/Topic01/T01P20/small_expand.png');
@@ -413,17 +430,17 @@
             padding: 0px;
             cursor: pointer;
         }
-        
+
         .small_expand:hover {
             background: url('pages/images/Topic01/T01P20/small_expand_hover.png');
         }
-        
+
         section {
             position: absolute;
             width: 100%;
             height: 100%;
         }
-        
+
         .Clsback {
             position: relative;
             width: 242px;
@@ -436,7 +453,7 @@
             border-radius: 5px;
             display: none;
         }
-        
+
         ._link {
             position: absolute;
             top: 440px;
@@ -452,7 +469,7 @@
             border-bottom: 1px solid #4D667B;
             font-style: initial;
         }
-        
+
         .videolink {
             position: absolute;
             top: 465px;
@@ -466,6 +483,7 @@
             font-style: initial;
             display: none;
         }
+
         /* .subSeImage{
 
 				position: absolute;
@@ -479,19 +497,19 @@
 		    left: 38px;
 
 			} */
-        
+
         #subImg0 {
             background: url('pages/images/Topic01/T01P20/EV01_11.png') no-repeat;
         }
-        
+
         #subImg1 {
             background: url('pages/images/Topic01/T01P20/EV01_12.png') no-repeat;
         }
-        
+
         #subImg2 {
             background: url('pages/images/Topic01/T01P20/EV01_13.png') no-repeat;
         }
-        
+
         .subText {
             position: absolute;
             width: 210px;
@@ -502,7 +520,7 @@
             font-size: 14px;
             font-style: initial;
         }
-        
+
         .ClsTextTab {
             position: absolute;
             width: 68%;
@@ -514,7 +532,7 @@
             border-radius: 25px !important;
             /* display: none; */
         }
-        
+
         .listcnt {
             position: relative;
             top: 24px;
@@ -527,7 +545,7 @@
             left: 15px;
             display: none;
         }
-        
+
         .arrowHolder {
             position: absolute;
             top: 8px;
@@ -539,18 +557,19 @@
             -webkit-border-radius: 50%;
             -khtml-border-radius: 50%;
         }
-        
+
         .OptionCLSS {
             position: relative;
             left: 15px;
             font-style: initial;
             top: 1px;
         }
-        
+
         .OptionCLSS>span {
             font-size: 16px;
             font-family: OpenSansRegular;
         }
+
         /* #one,#two,#three{
 
 		    transform: scale(0);
@@ -575,13 +594,13 @@
 		    width: 195px;
 
 			} */
-        
+
         #textTab1 {
             width: 740px;
             background: #ffffff00;
             margin-right: 0;
         }
-        
+
         .subTirImage {
             position: relative;
             top: 0px;
@@ -594,35 +613,35 @@
             border-radius: 5px;
             display: none;
         }
-        
+
         #clsTir0 {
             background: url('pages/images/Topic01/T01P20/img_11_small.png') no-repeat;
         }
-        
+
         #clsTir0>.small_expand {
             top: 190px;
             right: 5px;
         }
-        
+
         #clsTir1 {
             background: url('pages/images/Topic01/T01P20/img_12_small.png') no-repeat;
         }
-        
+
         #clsTir1>.small_expand {
             top: 190px;
             right: 5px;
         }
-        
+
         #clsTir2 {
             background: url('pages/images/Topic01/T01P20/img_13_small.png') no-repeat;
             margin-right: 0;
         }
-        
+
         #clsTir2>.small_expand {
             top: 190px;
             right: 5px;
         }
-        
+
         .clsSubPatch {
             position: absolute;
             width: 720px;
@@ -638,7 +657,7 @@
             border-radius: 5px;
             -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
         }
-        
+
         .clsSubText {
             font-family: OpenSansRegular;
             font-size: 14px;
@@ -647,13 +666,13 @@
             position: absolute;
             padding: 23px 35px;
         }
-        
+
         .clsActive {
             background: #707070;
             color: #FFFFFF;
             pointer-events: none;
         }
-        
+
         .CaseStudy {
             position: absolute;
             left: 0px;
@@ -674,7 +693,7 @@
             -mz-border-radius: 5px;
             display: none;
         }
-        
+
         .caseStudyContent {
             position: relative;
             left: 0px;
@@ -692,7 +711,7 @@
             margin: 0px auto;
             /* border: 1px solid rgba(91,91,91, 1); */
         }
-        
+
         .ModalTextBottom {
             position: absolute;
             bottom: 0px;
@@ -706,7 +725,7 @@
             text-align: center;
             line-height: 42px;
         }
-        
+
         .ModalTxtImg {
             position: absolute;
             top: 0px;
@@ -718,7 +737,7 @@
             z-index: 100;
             border-radius: 5px;
         }
-        
+
         #imgPopup0 {
             background: url('pages/images/Topic01/T01P17/img02.png') no-repeat;
             background-size: 100% 100%;
@@ -726,7 +745,7 @@
             height: 100%;
             border-radius: 25px !important;
         }
-        
+
         .pageclose_txt {
             position: absolute;
             width: 135px;
@@ -735,7 +754,7 @@
             left: 800px;
             background: url('media/images/player/common/pdf_close_inst.png');
         }
-        
+
         #pageClsText {
             position: absolute;
             width: 115px;
@@ -747,7 +766,7 @@
             font-style: italic;
             color: #172430;
         }
-        
+
         #pageRefCloseBtn_id {
             position: absolute;
             width: 29px;
@@ -761,12 +780,12 @@
             -o-transition: all 0.3s;
             transition: all 0.3s;
         }
-        
+
         #pageid_RefCloseBtn:hover #pageclose_txt {
             background: url('media/images/player/common/pdf_close_inst.png');
             /* background-position: 0px 0px; */
         }
-        
+
         #pagereferences {
             margin-left: 0%;
             margin-top: 45px;
@@ -777,7 +796,7 @@
             position: absolute;
             height: 412px;
         }
-        
+
         #pagereferences ul {
             padding-top: 0%;
             padding-bottom: 0%;
@@ -785,6 +804,7 @@
             margin: 0px;
             margin-top: 10px;
         }
+
         /* #references ul li a{
 
 					outline: none;
@@ -808,74 +828,84 @@
 			#references ul li a:active {
 
 				outline: none; */
-    }
-    #pagereferences ul li {
-        border: 0 none;
-        margin-left: -4px;
-        margin-right: 5px;
-        vertical-align: bottom;
-        width: 4%;
-    }
-    #closeMainDiv .glossaryclosetip {
-        margin-left: 70%;
-        color: #FFFFFF;
-        font-family: OpenSansRegular;
-        font-size: 79.2%;
-    }
-    .bullet {
-        position: relative;
-        background-image: url("media/images/player/common/bullet.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        float: left;
-        height: 13px;
-        width: 13px;
-        margin-top: 7.9px;
-        list-style-type: none;
-        border-radius: 10px;
-    }
-    .text {
-        color: #172430;
-        list-style-type: none;
-        margin-left: 30px;
-        position: relative;
-    }
-    .clsSectionName {
-        margin-top: 17px !important;
-        font-family: SegoeUIBold;
-        color: #1a1f71;
-    }
-    .clsResouceLink {
-        margin-left: 1% !important;
-    }
-    ._clickLink {
-        position: relative;
-        font-size: 16px;
-        font-weight: 600;
-        text-decoration: underline;
-        padding-bottom: 15px;
-    }
-    ._clickLink:hover {
-        position: relative;
-        font-size: 16px;
-        font-weight: 600;
-        text-decoration: underline;
-        padding-bottom: 15px;
-        color: blue;
-        cursor: pointer;
-    }
-    .pdflink {
-        position: absolute;
-        top: 44px;
-        width: 100%;
-        height: 413px;
-        /* z-index: 999; */
-        
-        border-radius: 0 0 10px 10px;
-    }
-    ._viewed {
-        color: blue;
-    }
+        }
+
+        #pagereferences ul li {
+            border: 0 none;
+            margin-left: -4px;
+            margin-right: 5px;
+            vertical-align: bottom;
+            width: 4%;
+        }
+
+        #closeMainDiv .glossaryclosetip {
+            margin-left: 70%;
+            color: #FFFFFF;
+            font-family: OpenSansRegular;
+            font-size: 79.2%;
+        }
+
+        .bullet {
+            position: relative;
+            background-image: url("media/images/player/common/bullet.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            height: 13px;
+            width: 13px;
+            margin-top: 7.9px;
+            list-style-type: none;
+            border-radius: 10px;
+        }
+
+        .text {
+            color: #172430;
+            list-style-type: none;
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .clsSectionName {
+            margin-top: 17px !important;
+            font-family: SegoeUIBold;
+            color: #1a1f71;
+        }
+
+        .clsResouceLink {
+            margin-left: 1% !important;
+        }
+
+        ._clickLink {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+        }
+
+        ._clickLink:hover {
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-bottom: 15px;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .pdflink {
+            position: absolute;
+            top: 44px;
+            width: 100%;
+            height: 413px;
+            /* z-index: 999; */
+
+            border-radius: 0 0 10px 10px;
+        }
+
+        ._viewed {
+            color: blue;
+        }
     </style>
 
     <script>
@@ -1004,7 +1034,7 @@
 
 
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             disableNextBtn();
 
@@ -1020,11 +1050,11 @@
 
             /* 	$(".clsEnaBackBtn").on("click", function () {
 	
-					console.log('clicked');
+                    console.log('clicked');
 	
-					fnJumpToPageByID("M1L0T1P17");
+                    fnJumpToPageByID("M1L0T1P17");
 	
-				}); */
+                }); */
 
             var n = isInArray("M1L0T1P17", gCompPageArr);
 
@@ -1064,17 +1094,17 @@
 
         /* function fnPlaySectionAudio(gCurrentIndex){
 	
-			indexAudio = (gCurrentIndex);
+            indexAudio = (gCurrentIndex);
 	
-			audioId = "audio_"+gCurrentIndex;
+            audioId = "audio_"+gCurrentIndex;
 	
-			fnHideShowAudioPlayer( false );
+            fnHideShowAudioPlayer( false );
 	
-			updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
+            updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
 	
-			initAudioPlayer(gItemAudioPath[gCurrentIndex])
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
 	
-		} */
+        } */
 
 
 
@@ -1094,21 +1124,21 @@
 
 
 
-        $(".small_expand").on("click", function() {
+        $(".small_expand").on("click", function () {
             pauseAudio()
-                /* if(!fnPauseAudio()){
+            /* if(!fnPauseAudio()){
 	
-				console.log(true);
+            console.log(true);
 	
-				fnPauseAudio()
+            fnPauseAudio()
 	
-			}else {
+        }else {
 	
-				playPauseAudio();
+            playPauseAudio();
 	
-				console.log(false);
+            console.log(false);
 	
-			} */
+        } */
 
             $(".modalTxtImg").hide();
 
@@ -1126,19 +1156,19 @@
 
 
 
-        $(".closepopup").on("click", function() {
+        $(".closepopup").on("click", function () {
             playAudio()
-                // audioReset();
+            // audioReset();
 
             var __aIndex = $(this).attr("id").slice(8);
 
             /* if(!fnPauseAudio()){
 	
-				console.log(true);
+                console.log(true);
 	
-				playPauseAudio();
+                playPauseAudio();
 	
-			} */
+            } */
 
 
 
@@ -1230,7 +1260,8 @@
 
             <div class="clsPatch" id="idPatchMain">
 
-                <div class="clsText" id="idText1">If malrotation or bowel obstruction is suspected, keep the following in mind:</div>
+                <div class="clsText" id="idText1">If malrotation or bowel obstruction is suspected, keep the following
+                    in mind:</div>
 
             </div>
 
@@ -1247,7 +1278,8 @@
                         <!-- <div class="subFirstImage" id="clsImg0"></div> -->
 
 
-                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn" id="clickImg0">&nbsp;</a>
+                        <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn"
+                            id="clickImg0">&nbsp;</a>
 
                     </div>
 
@@ -1260,7 +1292,7 @@
                             <div id="option_0" curid="1" class="OptionCLSS">
 
                                 <span id="opt_0" class="OptionTxtCLSS">If the baby has bilious (green-colored) emesis,
-									an upper gastrointestinal contrast study is an appropriate diagnostic test.</span>
+                                    an upper gastrointestinal contrast study is an appropriate diagnostic test.</span>
 
                             </div>
 
@@ -1273,7 +1305,7 @@
                             <div id="option_1" curid="1" class="OptionCLSS">
 
                                 <span id="opt_1" class="OptionTxtCLSS">If malrotation with midgut volvulus is diagnosed,
-									emergency surgery is indicated to untwist the bowel.</span>
+                                    emergency surgery is indicated to untwist the bowel.</span>
 
                             </div>
 
@@ -1286,7 +1318,7 @@
                             <div id="option_2" curid="1" class="OptionCLSS">
 
                                 <span id="opt_2" class="OptionTxtCLSS">If suction equipment is not available, gently
-									aspirate with a syringe on the gastric tube every 10 minutes.</span>
+                                    aspirate with a syringe on the gastric tube every 10 minutes.</span>
 
                             </div>
 
@@ -1299,7 +1331,7 @@
                             <div id="option_3" curid="1" class="OptionCLSS">
 
                                 <span id="opt_3" class="OptionTxtCLSS">When possible, diagnostic studies should be done
-									at a tertiary hospital where surgical services are available.</span>
+                                    at a tertiary hospital where surgical services are available.</span>
 
                             </div>
 
@@ -1312,7 +1344,7 @@
                             <div id="option_4" curid="1" class="OptionCLSS">
 
                                 <span id="opt_4" class="OptionTxtCLSS">If bowel obstruction is suspected, withhold
-									feedings and insert an IV and then provide D<sub>10</sub>W IV fluid.</span>
+                                    feedings and insert an IV and then provide D<sub>10</sub>W IV fluid.</span>
 
                             </div>
 
