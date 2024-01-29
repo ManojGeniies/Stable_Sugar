@@ -1,29 +1,33 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<script>
-			manifest = [
-						{src:'media/images/player/temp0/Gui-bg.png', id:'1'},
-						{src:'media/images/player/common/top_bar_sugar.png', id:'2'},
-						{src:'media/images/player/common/top_bar.png', id:'3'}
-						];
-		</script>
-		<style type="text/css">
+
+<head>
+	<script>
+		manifest = [
+			{ src: 'media/images/player/temp0/Gui-bg.png', id: '1' },
+			{ src: 'media/images/player/common/top_bar_sugar.png', id: '2' },
+			{ src: 'media/images/player/common/top_bar.png', id: '3' }
+		];
+	</script>
+	<style type="text/css">
 		.mainContainer {
 			position: absolute;
-			background:url('media/images/player/landing_page/BG.png');
+			/*background: url('media/images/player/landing_page/BG.png');*/
+			background: url('media/images/player/landing_page/BG1.png');
 			top: 0%;
 			left: 0%;
 			height: 658px;
 			width: 1085px;
 			outline: none;
+			background-position-y: 40%;
 		}
-		.player-container
-		{
-			background-image:none;
-			overflow:hidden;
+
+		.player-container {
+			background-image: none;
+			overflow: hidden;
 		}
-		 #myVideoIntro{
+
+		#myVideoIntro {
 			position: absolute;
 			height: 640px;
 			width: 1085px;
@@ -32,7 +36,7 @@
 
 		}
 
-		#VideoContainer{
+		#VideoContainer {
 			position: absolute;
 			top: 0%;
 			left: 0%;
@@ -40,25 +44,27 @@
 			width: 1085px;
 			outline: none;
 		}
+
 		.bgpatch {
 			position: absolute;
-			background:url('media/images/player/landing_page/bgpatch.png');
+			/*background: url('media/images/player/landing_page/bgpatch.png');*/
 			width: 172px;
-	    height: 172px;
-	    left: 860px;
-	    top: 250px;
-		}
-	  .CLSSSKIPBTNText{
-			position: absolute;
-			background:url('media/images/player/landing_page/continue.png');
-			background-size: 100% 100%;
-			width: 144px;
-	    height: 75px;
-	    top: 238px;
-	    right: 70px;
+			height: 172px;
+			left: 860px;
+			top: 250px;
 		}
 
-		.CLSSTEXT{
+		.CLSSSKIPBTNText {
+			position: absolute;
+			/*background: url('media/images/player/landing_page/continue.png');*/
+			background-size: 100% 100%;
+			width: 144px;
+			height: 75px;
+			top: 238px;
+			right: 70px;
+		}
+
+		.CLSSTEXT {
 			position: absolute;
 			top: 17px;
 			left: 16px;
@@ -68,55 +74,102 @@
 			text-align: center;
 			color: #4D667B;
 		}
+
 		.CLSSSKIPBTN p {
 			margin-top: 3.1%;
 			color: #fff;
 
 		}
+
 		.CLSSSKIPBTN {
 			position: absolute;
 			font-size: 22px;
-			top: 300px;
+			/*top: 300px;
 			right: 100px;
 			height: 71px;
-			width: 80px;
-			background:url('media/images/player/landing_page/nextBtn.png');
+			width: 80px;*/
+			/*background: url('media/images/player/landing_page/nextBtn.png');*/
+			background: url('media/images/player/landing_page/start_btn.png');
 			background-position: 0px 0px;
-			z-index:1;
-			opacity:1;
-			transition:all 0.2s;
-			border-radius:50%
+			z-index: 1;
+			opacity: 1;
+			transition: all 0.2s;
+			/*border-radius: 50%;*/
+			top: 491px;
+			left: 882px;
+			width: 158px;
+			height: 72px;
 		}
-		.CLSSSKIPBTN:hover
-		{
+
+		.brand_logo_icon {
+			position: absolute;
+			background: url('media/images/player/landing_page/brand_logo.png');
+			background-position: 0px 0px;
+			z-index: 1;
+			opacity: 1;
+			top: 17px;
+			right: 1px;
+			width: 289px;
+			height: 108px;
+			/*transform: matrix(-1, 0, 0, -1, 0, 0);*/
+		}
+
+		.title_list {
+			position: absolute;
+			background: url('media/images/player/landing_page/group_list1.png');
+			background-position: 0px 0px;
+			z-index: 1;
+			opacity: 1;
+			top: 41px;
+			left: 36px;
+			width: 370px;
+			height: 575px
+		}
+
+		.rectangle {
+			position: absolute;
+			background: url('media/images/player/landing_page/rectangle.png');
+			background-position: 0px 0px;
+			opacity: 1;
+			top: -113px;
+			left: -550px;
+			width: 903px;
+			height: 812px;
+			border: 1px solid #707070;
+			opacity: 0.8;
+			filter: blur(50px);
+		}
+
+		.CLSSSKIPBTN:hover {
 			cursor: pointer;
-			background:url('media/images/player/landing_page/nextBtn.png');
-			background-position: -81px 0px;
+			background: url('media/images/player/landing_page/start_btn.png');
+			/*background-position: -81px 0px;*/
 		}
-		#Skip{
-			display:block;
+
+		#Skip {
+			display: block;
 		}
+
 		/*#Start{
 			visibility:visible;
 		}*/
-	.bodyClick
-	{
-		background: url('media/images/play_btn.png') no-repeat;
-		background-size: 100% 100%;
-		display: none;
-		position: absolute;
-		left: 44%;
-		top: 40%;
-	  width: 165px;
-	  height: 148px;
+		.bodyClick {
+			background: url('media/images/play_btn.png') no-repeat;
+			background-size: 100% 100%;
+			display: none;
+			position: absolute;
+			left: 44%;
+			top: 40%;
+			width: 165px;
+			height: 148px;
 
-	}
+		}
 	</style>
 
 	<script>
 		var audioPath = "";
 		var currCue = 0;
-		 //var videoObject;
+		//var videoObject;
 		var updateContentArray = [];
 
 		//videoObject= document.getElementById("myVideoIntro");
@@ -130,17 +183,17 @@
 		}; */
 
 		/* $("#custom-seekbar").on("click", function(e){
-		    var offset = $(this).offset();
-		    var left = (e.pageX - offset.left);
-		    var totalWidth = $("#custom-seekbar").width();
-		    var percentage = ( left / totalWidth );
-		    var vidTime = vid.duration * percentage;
-		    vid.currentTime = vidTime;
+			var offset = $(this).offset();
+			var left = (e.pageX - offset.left);
+			var totalWidth = $("#custom-seekbar").width();
+			var percentage = ( left / totalWidth );
+			var vidTime = vid.duration * percentage;
+			vid.currentTime = vidTime;
 		}); */
 
-	$(document).ready(function(){
-		//videoObject.controls = true;
-		//document.getElementById("myVideoIntro").controls = true;
+		$(document).ready(function () {
+			//videoObject.controls = true;
+			//document.getElementById("myVideoIntro").controls = true;
 
 			/* var ele=document.getElementsByTagName('div');
 			for(var i=0;i<ele.length;i++){
@@ -154,21 +207,21 @@
 			$('.CLSSSKIPBTN').css("opacity","1");
 			$('.CLSSSKIPBTN').css("display","block");
 			$('.CLSSSKIPBTN').css("zIndex","1"); */
-			$(".CLSSSKIPBTN").on("click",function(){
-					fnHideIntro();
-					fLoadCourse();
+			$(".CLSSSKIPBTN").on("click", function () {
+				fnHideIntro();
+				fLoadCourse();
 				//fShowCourse();
-								
-                //var videoObject = document.getElementById("myVideoIntro");
-                // vid = null;
-								//vid.pause();
-                //vid.currentTime = 0;
+
+				//var videoObject = document.getElementById("myVideoIntro");
+				// vid = null;
+				//vid.pause();
+				//vid.currentTime = 0;
 
 			});
 
 
-			 // $("#myVideoIntro").attr("controls", true);
-			 // $("video").attr("controls", true);
+			// $("#myVideoIntro").attr("controls", true);
+			// $("video").attr("controls", true);
 			//var video = document.getElementById("myVideoIntro");
 			//isTouchDevice = true;
 			/* if(isTouchDevice){
@@ -191,50 +244,47 @@
 					videoObject.play();
 				} */
 
-	});
-	/* videoObject.addEventListener('ended', function(e){
-		setTimeout(function(){
-			$('.mainContainer').css("opacity","1");
-			$('.mainContainer').css("display","block");
-			$('.mainContainer').css("height","658px");
-			$('.CLSSSKIPBTN').css("opacity","1");
-			$('.CLSSSKIPBTN').css("display","block");
-			$('.CLSSSKIPBTN').css("zIndex","1");
-			// fnLoadHome();
-			// fnHideIntro();
-			// fLoadCourse()
+		});
+		/* videoObject.addEventListener('ended', function(e){
+			setTimeout(function(){
+				$('.mainContainer').css("opacity","1");
+				$('.mainContainer').css("display","block");
+				$('.mainContainer').css("height","658px");
+				$('.CLSSSKIPBTN').css("opacity","1");
+				$('.CLSSSKIPBTN').css("display","block");
+				$('.CLSSSKIPBTN').css("zIndex","1");
+				// fnLoadHome();
+				// fnHideIntro();
+				// fLoadCourse()
+	
+			}, 300);
+	
+	
+		 }); */
 
-		}, 300);
-
-
-     }); */
-
-	 // videoObject.addEventListener("timeupdate",seektimeupdate,false);
-	//  function seektimeupdate(){
-	// 		cursecs = Math.floor(videoObject.currentTime);
-	// }
-	function fShowStart()
-	{
-		$(".CLSSSKIPBTN").css("display","none");
-		//$(".CLSSSKIPBTN").trigger("click");
-	}
-	function fLoadCourse()
-	{
-		$("body").css("");
-		fnHideIntro()
-		$('.gridContainer').css("visibility","visible");
-		//show home / landing page
-		/*if(SHOWHOMESCREEN == "true"){
-			fnLoadHome()
+		// videoObject.addEventListener("timeupdate",seektimeupdate,false);
+		//  function seektimeupdate(){
+		// 		cursecs = Math.floor(videoObject.currentTime);
+		// }
+		function fShowStart() {
+			$(".CLSSSKIPBTN").css("display", "none");
+			//$(".CLSSSKIPBTN").trigger("click");
 		}
-		else{
-			fShowCourse();
-
-		}*/
-		fnJumpToPageByID("M1L0T1P0");
-	}
-		function fnAudioFinishItemComp()
-		{
+		function fLoadCourse() {
+			$("body").css("");
+			fnHideIntro()
+			$('.gridContainer').css("visibility", "visible");
+			//show home / landing page
+			/*if(SHOWHOMESCREEN == "true"){
+				fnLoadHome()
+			}
+			else{
+				fShowCourse();
+	
+			}*/
+			fnJumpToPageByID("M1L0T1P0");
+		}
+		function fnAudioFinishItemComp() {
 			fnAudioFinishPageComp();
 			fnCheckAndMarkItemCompleted();
 
@@ -242,280 +292,306 @@
 
 		function fnCheckAndMarkItemCompleted() {
 			// fnUpdatePageCompletionCounter(0);
-			$('.mainContainer').css("opacity","1");
+			$('.mainContainer').css("opacity", "1");
 		}
 
 
-  function onClickiPad(){
+		function onClickiPad() {
 
-		videoObject.play();
-	}
+			videoObject.play();
+		}
 
 
 
-		</script>
-        <style type="text/css">
-				.menuWrap {
-				    display: block;
-				    width: 100%;
-				    height: 100%;
-				    position: relative;
-				    background: #fff;
-				    margin: 0px auto;
-				    padding: 10px;
-				    display: none;
-				    z-index: 999;
-				}
-				.introPreloader{
-					position: absolute;
-					top: 0%;
-					left: 0%;
-					background-color:rgba(255,255,255,1);
-					width:100%;
-					height:100%;
-					z-index:99999;
-					display:block;
-				  background-image: url(media/images/player/pre_loder_01.gif) ;
-				  background-repeat: no-repeat;
-				  /*background-size: 100% 100%;*/
-				  background-position: center center;
-				  display: none;
-				}
-				.subMenuWrap {
-				    /*background: lightgray;*/
-				    width: 49%;
-				    margin: 0px auto;
-				}
-				.buttons {
-				    /* border: 1px solid; */
-				    width: 32%;
-				    padding: 2% 0%;
-				    text-align: center;
-				    margin: 10px 0px 0px 26px;
-				    background: lightsalmon;
-				    color: blue;
-				    cursor: pointer;
-				}
-				.clsTxt{
-					position: absolute;
-					top: 13px;
-					left: 55px;
-					line-height: 45px;
-					color: #000000;
-					font-size: 18px;
-					font-family: OpenSansRegular;
-				}
-				#sugar1 {
-					position: absolute;
-					left: 25px;
-				}
-				#stbTxt {
-					position: absolute;
-					background: url("media/images/player/landing_page/txt00.png");
-					width: 417px;
-					height: 48px;
-					top: 15px;
-					left: 70px;
-				}
-				/* #tem1 {
+	</script>
+	<style type="text/css">
+		.menuWrap {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			background: #fff;
+			margin: 0px auto;
+			padding: 10px;
+			display: none;
+			z-index: 999;
+		}
+
+		.introPreloader {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			background-color: rgba(255, 255, 255, 1);
+			width: 100%;
+			height: 100%;
+			z-index: 99999;
+			display: block;
+			background-image: url(media/images/player/pre_loder_01.gif);
+			background-repeat: no-repeat;
+			/*background-size: 100% 100%;*/
+			background-position: center center;
+			display: none;
+		}
+
+		.subMenuWrap {
+			/*background: lightgray;*/
+			width: 49%;
+			margin: 0px auto;
+		}
+
+		.buttons {
+			/* border: 1px solid; */
+			width: 32%;
+			padding: 2% 0%;
+			text-align: center;
+			margin: 10px 0px 0px 26px;
+			background: lightsalmon;
+			color: blue;
+			cursor: pointer;
+		}
+
+		.clsTxt {
+			position: absolute;
+			top: 13px;
+			left: 55px;
+			line-height: 45px;
+			color: #000000;
+			font-size: 18px;
+			font-family: OpenSansRegular;
+		}
+
+		#sugar1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#stbTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/txt00.png");
+			width: 417px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		/* #tem1 {
 					position: absolute;
 					left: 25px;
 					color: #FFFFFF;
 				} */
-				#temTxt {
-					position: absolute;
-					background: url("media/images/player/landing_page/txt01.png");
-					width: 324px;
-					height: 48px;
-					top: 15px;
-					left: 70px;
-				}
-				#air1 {
-					position: absolute;
-					left: 25px;
-				}
-				#airTxt {
-					position: absolute;
-					background: url("media/images/player/landing_page/txt02.png");
-					width: 324px;
-					height: 48px;
-					top: 15px;
-					left: 70px;
-				}
-				#bp1 {
-					position: absolute;
-					left: 25px;
-				}
-				#bpTxt {
-					position: absolute;
-					background: url("media/images/player/landing_page/txt03.png");
-					width: 324px;
-					height: 48px;
-					top: 15px;
-					left: 70px;
-				}
-				#lab1 {
-					position: absolute;
-					left: 25px;
-				}
-				#labTxt {
-					position: absolute;
-					background: url("media/images/player/landing_page/txt04.png");
-					width: 324px;
-					height: 48px;
-					top: 15px;
-					left: 70px;
-				}
-				#emo1 {
-					position: absolute;
-					left: 25px;
-				}
-				#emoTxt {
-					position: absolute;
-					background: url("media/images/player/landing_page/txt05.png");
-					width: 324px;
-					height: 48px;
-					top: 15px;
-					left: 70px;
-				}
-				.tabClass:hover{
-					transition: .5s width ease-in-out;
-				  -webkit-transition: .5s width ease-in-out;
-					cursor: pointer;
-				}
-				.sugar{
-					position: absolute;
-					width: 345px;
-					height: 80px;
-					top: 45px;
-					left: 80px;
-				}
-				#sugar{
-					position: absolute;
-					background: url("media/images/player/landing_page/img00.png");
-					width:83px;
-					height: 83px;
-					z-index: 2;
-				}
+		#temTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/txt01.png");
+			width: 324px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
 
-				.temperature{
-					position: absolute;
-					width: 345px;
-					height: 80px;
-					top: 145px;
-					left: 80px;
-				}
-				#temperature{
-					position: absolute;
-					background: url("media/images/player/landing_page/img01.png");
-					width:83px;
-					height: 83px;
-					z-index: 2;
-				}
+		#air1 {
+			position: absolute;
+			left: 25px;
+		}
 
-				.airway{
-					position: absolute;
-					width: 345px;
-					height: 80px;
-					top: 245px;
-					left: 80px;
-				}
-				#airway{
-					position: absolute;
-					background: url("media/images/player/landing_page/img02.png");
-					width:83px;
-					height: 83px;
-					z-index: 2;
-				}
+		#airTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/txt02.png");
+			width: 324px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
 
-				.bloodpressure{
-					position: absolute;
-					width: 345px;
-					height: 80px;
-					top: 345px;
-					left: 80px;
-				}
-				#bloodpressure{
-					position: absolute;
-					background: url("media/images/player/landing_page/img03.png");
-					width:83px;
-					height: 83px;
-					z-index: 2;
-				}
+		#bp1 {
+			position: absolute;
+			left: 25px;
+		}
 
-				.labwork{
-					position: absolute;
-					width: 345px;
-					height: 80px;
-					top: 445px;
-					left: 80px;
-				}
-				#labwork{
-					position: absolute;
-					background: url("media/images/player/landing_page/img04.png");
-					width:83px;
-					height: 83px;
-					z-index: 2;
-				}
-				.emotionalsupport{
-					position: absolute;
-					width: 345px;
-					height: 80px;
-					top: 545px;
-					left: 80px;
-				}
-				#emotionalsupport{
-					position: absolute;
-					background: url("media/images/player/landing_page/img05.png");
-					width:83px;
-					height: 83px;
-					z-index: 2;
-				}
-.subMenuWrap {
-    /*background: lightgray;*/
-    width: 49%;
-    margin: 0px auto;
-}
-.buttons {
-    /* border: 1px solid; */
-    width: 32%;
-    padding: 2% 0%;
-    text-align: center;
-    margin: 10px 0px 0px 26px;
-    background: lightsalmon;
-    color: blue;
-    cursor: pointer;
-}
-#custom-seekbar
-{
-  cursor: pointer;
-  height: 10px;
-  margin-bottom: 10px;
-  outline: thin solid orange;
-  /* overflow: hidden; */
-  position: relative;
-  width: 400px;
-	opacity: 1;
-}
-#custom-seekbar span
-{
-  background-color: orange;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 10px;
-  width: 0px;
-	opacity: 1;
-}
+		#bpTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/txt03.png");
+			width: 324px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
 
-  </style>
-	</head>
-	<body>
-			 <!--<div id="VideoContainer" controls="true">
+		#lab1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#labTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/txt04.png");
+			width: 324px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		#emo1 {
+			position: absolute;
+			left: 25px;
+		}
+
+		#emoTxt {
+			position: absolute;
+			background: url("media/images/player/landing_page/txt05.png");
+			width: 324px;
+			height: 48px;
+			top: 15px;
+			left: 70px;
+		}
+
+		.tabClass:hover {
+			transition: .5s width ease-in-out;
+			-webkit-transition: .5s width ease-in-out;
+			cursor: pointer;
+		}
+
+		.sugar {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 45px;
+			left: 80px;
+		}
+
+		#sugar {
+			position: absolute;
+			background: url("media/images/player/landing_page/img00.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.temperature {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 145px;
+			left: 80px;
+		}
+
+		#temperature {
+			position: absolute;
+			background: url("media/images/player/landing_page/img01.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.airway {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 245px;
+			left: 80px;
+		}
+
+		#airway {
+			position: absolute;
+			background: url("media/images/player/landing_page/img02.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.bloodpressure {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 345px;
+			left: 80px;
+		}
+
+		#bloodpressure {
+			position: absolute;
+			background: url("media/images/player/landing_page/img03.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.labwork {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 445px;
+			left: 80px;
+		}
+
+		#labwork {
+			position: absolute;
+			background: url("media/images/player/landing_page/img04.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.emotionalsupport {
+			position: absolute;
+			width: 345px;
+			height: 80px;
+			top: 545px;
+			left: 80px;
+		}
+
+		#emotionalsupport {
+			position: absolute;
+			background: url("media/images/player/landing_page/img05.png");
+			width: 83px;
+			height: 83px;
+			z-index: 2;
+		}
+
+		.subMenuWrap {
+			/*background: lightgray;*/
+			width: 49%;
+			margin: 0px auto;
+		}
+
+		.buttons {
+			/* border: 1px solid; */
+			width: 32%;
+			padding: 2% 0%;
+			text-align: center;
+			margin: 10px 0px 0px 26px;
+			background: lightsalmon;
+			color: blue;
+			cursor: pointer;
+		}
+
+		#custom-seekbar {
+			cursor: pointer;
+			height: 10px;
+			margin-bottom: 10px;
+			outline: thin solid orange;
+			/* overflow: hidden; */
+			position: relative;
+			width: 400px;
+			opacity: 1;
+		}
+
+		#custom-seekbar span {
+			background-color: orange;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 10px;
+			width: 0px;
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<!--<div id="VideoContainer" controls="true">
 				<video id="myVideoIntro" src="pages/video/Intro.mp4" width="1085px" autoplay controls="true" controlsList="nodownload nofullscreen" type="video/mp4"></video>
 			</div>-->
-			<div class="mainContainer">
-			<!-- 	<div class="sugar" id="tabClass00">
+	<div class="mainContainer">
+		<!-- 	<div class="sugar" id="tabClass00">
 					<div class="_stb" id="sugar"></div>
 					<div class="clsTxt " id="stbTxt"></div>
 				</div>
@@ -539,16 +615,20 @@
 					<div class="_emo" id="emotionalsupport"></div>
 					<div class="clsTxt " id="emoTxt"></div>
 				</div> -->
-				<div class="CLSSSKIPBTNText" id="">
-					<div class="CLSSTEXT"><em>Click to enter</em></div>
-				</div>
-				<div class="bgpatch"></div>
-					<div class="CLSSSKIPBTN" id="Skip">
-					</div>
-				<div class="DISABLESKIPBTN" id="">
-				</div>
-				<div class="introPreloader"></div>
-				<div class="bodyClick"></div>
-			</div>
-	</body>
+		<div class="title_list"></div>
+		<div class="rectangle"></div>
+		<div class="brand_logo_icon"></div>
+		<div class="CLSSSKIPBTNText" id="">
+			<!-- <div class="CLSSTEXT"><em>Click to enter</em></div> -->
+		</div>
+		<div class="bgpatch"></div>
+		<div class="CLSSSKIPBTN" id="Skip">
+		</div>
+		<div class="DISABLESKIPBTN" id="">
+		</div>
+		<div class="introPreloader"></div>
+		<div class="bodyClick"></div>
+	</div>
+</body>
+
 </html>
