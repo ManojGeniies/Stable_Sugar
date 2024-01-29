@@ -79,16 +79,12 @@ ul.bullet li {
 
 .clsPatch {
     position: absolute;
-    width: 994px;
-    height: 47px;
-    left: 25px;
+    width: 480px;
+    height: 32px;
+    top: 8px;
+    left: 286px;
     background: #ffffff;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    border-radius: 5px;
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
     padding: 6px 0px;
     line-height: 12px;
     display: none;
@@ -99,7 +95,7 @@ ul.bullet li {
     position: absolute;
     width: 90%;
     left: 20px;
-    top: 22px;
+    top: 15px;
     font-size: 16px;
     font-family: OpenSansRegular;
     font-style: initial;
@@ -280,7 +276,7 @@ ul.bullet li {
     /* margin-right: 91px; */
     /* float: left; */
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 25px;
     display: none;
     opacity: 0;
 }
@@ -291,10 +287,9 @@ ul.bullet li {
     height: 440px;
     top: 70px;
     left: 545px;
-    margin-right: 91px;
     float: right;
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 25px !important;
     display: none;
 }
 
@@ -350,6 +345,7 @@ img {
     left: 1px;
     height: 224px;
     background-size: cover;
+    border-radius: 0px 0px 25px 25px;
     display: none;
     opacity: 0;
 }
@@ -482,7 +478,7 @@ left: 10px;
     z-index: 1000;
     cursor: pointer;
     top: auto;
-    bottom: 26px;
+    bottom: 10px;
     display: none;
     left: auto;
 }
@@ -1064,6 +1060,11 @@ section {
     pointer-events: none;
 }
 
+.modal{
+    top:38px !important;
+    height: 476px !important;
+}
+
 .ModalTextBottom {
     position: absolute;
     bottom: 0px;
@@ -1083,6 +1084,9 @@ section {
     background-size: 100% 100%;
     width: 650px;
     left: 0px;
+    position: absolute;
+    border-radius: 25px;
+    top: 0px;
 }
 
 .pageclose_txt {

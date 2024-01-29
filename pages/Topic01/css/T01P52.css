@@ -79,49 +79,25 @@
 
 
 	.clsPatch{
-
     position: absolute;
-
-    width: 945px;
-
-    height: 60px;
-
+    width: 832px;
+    left: 68px;
+    top: 16px;
+    height: 39px;
     background: #ffffff;
-
-    border-radius: 5px;
-
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-    border-radius: 5px;
-
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
+    border-radius: 25px;
     padding: 6px 0px;
-
  }
 
 	.clsText{
-
-		position:absolute;
-
+		position: absolute;
 		width: 90%;
-
 		left: 20px;
-
-		top: 25px;
-
-    font-size: 16px;
-
-    font-family: OpenSansRegular;
-
-    font-style: initial;
-
-    line-height: 17px;
-
+		top: 16px;
+		font-size: 16px;
+		font-family: OpenSansRegular;
+		font-style: initial;
+		line-height: 17px;
 	}
 
 
@@ -264,17 +240,7 @@
 
 			background: #FFFFFF;
 
-			border-radius: 10px;
-
-			-webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			border-radius: 5px;
-
-			-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+			border-radius: 25px;
 
 			display: none;
 
@@ -366,17 +332,7 @@
 
 			background: #FFFFFF;
 
-			border-radius: 10px;
-
-			-webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			border-radius: 5px;
-
-			-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+			border-radius: 25px;
 
 			left: 327px;
 
@@ -406,17 +362,7 @@
 
 			background: #FFFFFF;
 
-			border-radius: 10px;
-
-			-webkit-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-
-			border-radius: 5px;
-
-			-moz-box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
+			border-radius: 25px;
 
 			left: 654px;
 
@@ -490,6 +436,8 @@
 
     height: 191px;
 
+	border-radius: 25px;
+
 				left: 8px;
 
 			}
@@ -520,6 +468,8 @@
 
 				height: 191px;
 
+				border-radius: 25px;
+
 				left: 8px;
 
 			}
@@ -539,6 +489,8 @@
 				width: 249px;
 
 				height: 191px;
+
+				border-radius: 25px;
 
 				left: 10px;
 
@@ -1323,6 +1275,8 @@
 			#imgPopup0{
 
 			    background: url('../../../pages/images/Topic01/T01P52/T01P52_01_01.png') no-repeat;
+
+				border-radius: 25px;
 
 			    /* background-size: contain; */
 
