@@ -713,13 +713,19 @@
                     <a class="back-btn" onclick="backBtn();" title="Return to previous page"></a>
                     <div class="closeContainer">
                         <div id="clsExitBtn" title="Exit Module">
-                            <span class="cIcons">Exit module</span>
+                            <!-- <span class="cIcons">Exit Module</span> -->
                         </div>
                         <!--<div class="clsExitBtnHover" id="clsBG"></div>
                         <div class="clsExitBtnTxtHover" id="clsBGText">Click to close the module.</div>-->
                     </div>
                     <div id="clsMnuBtn" class="deactivMenu" title="Menu">
-                        <span class="cIcons">Menu</span>
+                        <!-- <span class="cIcons">Menu</span> -->
+                    </div>
+                    <div id="Stable" class="Stable" title="Stable">
+                        <!-- <span class="cIcons">Menu</span> -->
+                    </div>
+                    <div id="Stable-text" class="Stable-text" title="Stable-text">
+                        <!-- <span class="cIcons">Menu</span> -->
                     </div>
 
                     <!-- <div id="clsHomeBtn" class="clsEnaHomeBtn" title="Home"></div>
@@ -756,7 +762,12 @@
 
                 <!-- <div id="id_transcriptBox" class="draggable ui-widget-content"> -->
                 <!-- <div id="id_sideBar" class=""></div> -->
-                <div id="clsHelpBtn" title="Navigation" class="clsHelp"><span class="tooltip cIcons">Navigation</span></div>
+                <div id="clsHelpBtn" title="Navigation" class="clsHelp">
+                    <!-- <span class="tooltip cIcons">Navigation</span> -->
+                </div>
+                <div id="ToolBtn" title="Resourses" class="Resourses">
+                    <!-- <span class="tooltip cIcons">Navigation</span> -->
+                </div>
 
                 <button class="modeuleCompletion">Module Completion</button>
                 <footer name="btmFrame" id="btmFrame">
@@ -769,26 +780,42 @@
 
                     <div id="footerbuttons">
 
-                        <div class="ClsToolbtn" id="ToolBtn" title="Resources"><span
-                                class="ClsToolbtnIcon cIcons"></span><span class="tooltip cIcons">Resources</span></div>
+                        <!-- Speed button -->
+
+                        <div class="ClsToolbtn clsSpeedBtn" id="clsSpeedBtn"  title="Speed">
+                            <span class="ClsToolbtnIcon cIcons"></span>
+                        </div>
+
+                        <!-- <div id="clsSpeedBtn" class="clsSpeedBtn" title="Speed">&nbsp; -->
+
+                        <div class="speedVolumne" id="speedVolumne" title="Speed" unselectable="on">
+                            <ul>
+                                <li><a class="speed-limit speed_2" data-speed="2" onclick="audioabu(2)">2x
+                                        <span>&nbsp;</span></a></li>
+                                <li><a class="speed-limit speed_1_5" data-speed="1.5" onclick="audioabu(1.5)">1.5x
+                                        <span>&nbsp;</span></a></li>
+                                <li><a class="speed-limit active speed_1" data-speed="1" onclick="audioabu(1)">1x</a></li>
+                            </ul>
+                        </div>
+
                         <div id="clsPlayPauseBtn" class="clsPlay" title="Play/Pause">
                             <span class="clsPlayPauseBtnIcon cIcons">&nbsp;</span>
-                            <span class="tooltip cIcons">PLAY</span>
+                            <!-- <span class="tooltip cIcons">PLAY</span> -->
                         </div>
                         <div id="transcriptBtn" class="clsTransOnBtn enableTranscript" title="Transcript On/Off">
                             <div class="transcriptHover"></div>
                         </div>
                         <div id="clsAudioOffBtn" title="Audio On/Off">
                             <span class="clsAudioOffBtnIcon cIcons"></span>
-                            <span class="tooltip cIcons">Mute</span>
+                            <!-- <span class="tooltip cIcons">Audio</span> -->
                         </div>
                         <div id="clsAudioOnBtn" title="Audio On/Off">
                             <span class="clsAudioOnBtnIcon cIcons"></span>
-                            <span class="tooltip cIcons">Mute</span>
+                            <!-- <span class="tooltip cIcons">Audio</span> -->
                         </div>
                         <div id="clsBackBtn" class="clsDisBackBtn" title="Back">
                             <span class="clsBackBtnIcon cIcons">&nbsp;</span>
-                            <span class="tooltip cIcons">Back</span>
+                            <!-- <span class="tooltip cIcons">Back</span> -->
                         </div>
                         <!-- <div id="clsNavPartitionBtn"></div> -->
                         <!--<div class="linegrey">&nbsp;</div>-->
@@ -798,13 +825,13 @@
 
                         <div id="clsNxtBtn" class="clsDisNxtBtn" title="Next">
                             <span class="clsNxtBtnIcon cIcons">&nbsp;</span>
-                            <span class="tooltip cIcons">Next</span>
+                            <!-- <span class="tooltip cIcons">Next</span> -->
                         </div>
 
 
                         <div id="clsReplay" title="Replay">
                             <span class="clsReplayIcon cIcons"></span>
-                            <span class="tooltip cIcons">Replay</span>
+                            <!-- <span class="tooltip cIcons">Replay</span> -->
                         </div>
                         <div id="id_sliderContainer" title="Slider">
                             <div id="slider"></div>

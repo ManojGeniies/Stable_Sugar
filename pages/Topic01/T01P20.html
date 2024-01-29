@@ -8,69 +8,69 @@
 
     <script>
         manifest = [{
-                src: 'pages/images/Topic01/T01P20/img_02_small.png',
-                id: '1'
-            },
+            src: 'pages/images/Topic01/T01P20/img_02_small.png',
+            id: '1'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img02.png',
-                id: '2'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img02.png',
+            id: '2'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img_01_small.png',
-                id: '3'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img_01_small.png',
+            id: '3'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img01.png',
-                id: '4'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img01.png',
+            id: '4'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/EV01_11.png',
-                id: '5'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/EV01_11.png',
+            id: '5'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/EV01_12.png',
-                id: '6'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/EV01_12.png',
+            id: '6'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/EV01_13.png',
-                id: '7'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/EV01_13.png',
+            id: '7'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img_11_small.png',
-                id: '8'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img_11_small.png',
+            id: '8'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img11.png',
-                id: '9'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img11.png',
+            id: '9'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img_12_small.png',
-                id: '10'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img_12_small.png',
+            id: '10'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img12.png',
-                id: '11'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img12.png',
+            id: '11'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img_13_small.png',
-                id: '4'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img_13_small.png',
+            id: '4'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P20/img13.png',
-                id: '4'
-            },
+        {
+            src: 'pages/images/Topic01/T01P20/img13.png',
+            id: '4'
+        },
 
         ];
     </script>
@@ -84,79 +84,90 @@
             top: 20px;
             opacity: 1;
         }
-        
+
         @-webkit-keyframes reducetime {
             0% {
                 width: 0;
             }
+
             100% {
                 width: 100%;
             }
         }
-        
+
         @-webkit-keyframes zoomin {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         @keyframes zoomin {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             100% {
                 transform: scale(1);
             }
         }
+
         /*End of Zoom in Keyframes */
         /* Zoom out Keyframes */
-        
+
         @-webkit-keyframes zoomout {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(0.67);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         @keyframes zoomout {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(0.67);
             }
+
             100% {
                 transform: scale(1);
             }
         }
+
         /*End of Zoom out Keyframes */
-        
+
         .ClsTab {
             position: absolute;
             width: 100%;
             height: 20%;
             z-index: 999;
         }
-        
+
         .clsAllTabs {
             width: 100%;
             height: 82px;
         }
-        
+
         .ClsTabItem {
             position: relative;
             cursor: pointer;
@@ -173,56 +184,53 @@
             top: 10px;
             left: 0px;
             cursor: pointer;
-            -webkit-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
-            -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
-            box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
-            border-radius: 5px;
-            -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.30);
+            border-radius: 25px;
             border: 1px solid #707070;
         }
-        
+
         .opacity-5 {
             background: rgba(255, 255, 255, 0.9);
         }
-        
+
         .modal {
             z-index: 999;
             width: 100%;
         }
-        
+
         .custom-modal {
             width: 650px !important;
             height: 369px !important;
             top: 34px !important;
         }
-        
+
         .ClsTabItem:hover {
             background: #707070;
             color: #FFFFFF;
         }
-        
+
         #TabItem0 {
             margin-left: 0;
         }
+
         /* #TabItem0,#TabItem1,#TabItem2{
 
 		display :none;
 
 	} */
-        
+
         .boxInst {
             position: absolute;
             top: 504px;
             left: 900px;
         }
-        
+
         .ClsImage0 {
             position: absolute;
             width: 100%;
             height: 100%;
             /* top: 100px; */
         }
-        
+
         .mainImage {
             position: absolute;
             background: url('pages/images/Topic01/T01P20/img1.png') no-repeat;
@@ -233,34 +241,34 @@
             top: 265px;
             display: none;
         }
-        
+
         .subImage {
             position: absolute;
             background-size: 100% 100%;
             top: 95px;
             display: none;
         }
-        
+
         #sub0 {
             background: url('pages/images/Topic01/T01P20/EV01_02.png') no-repeat;
             left: 28px;
             height: 198px;
         }
-        
+
         #sub1 {
             background: url('pages/images/Topic01/T01P20/EV01_01.png') no-repeat;
             left: 324px;
             height: 354px;
             top: 100px;
         }
-        
+
         #sub2 {
             background: url('pages/images/Topic01/T01P20/EV01_03.png') no-repeat;
             left: 767px;
             height: 291px;
             top: 104px;
         }
-        
+
         .ClsImage1 {
             position: absolute;
             width: 100%;
@@ -268,7 +276,7 @@
             top: 100px;
             display: none;
         }
-        
+
         .clsSubImage {
             position: relative;
             width: 300px;
@@ -280,12 +288,12 @@
             top: 5px;
             left: 113px;
         }
-        
+
         #clsSubImage0,
         #clsSubImage1 {
             display: none;
         }
-        
+
         .subFirstImage {
             position: absolute;
             width: 225px;
@@ -293,7 +301,7 @@
             left: 35px;
             top: 15px;
         }
-        
+
         .subSecImage {
             position: absolute;
             width: 225px;
@@ -301,10 +309,11 @@
             left: 53px;
             top: 15px;
         }
-        
+
         #clsSub0 {
             background: url('pages/images/Topic01/T01P20/img_02_small.png') no-repeat;
         }
+
         /* #clsImg0{
 
 			background: url('pages/images/Topic01/T01P20/img_02_small.png') no-repeat;
@@ -312,10 +321,11 @@
 	    top: 185px;
 
 		} */
-        
+
         #clsSub1 {
             background: url('pages/images/Topic01/T01P20/img_01_small.png') no-repeat;
         }
+
         /* #clsImg1{
 
 			background: url('pages/images/Topic01/T01P20/img_03_small.png') no-repeat;
@@ -336,44 +346,44 @@
 		    top: 14px;
 
 		} */
-        
+
         .expandMap {
             position: relative;
             top: 8px;
         }
-        
+
         .expandMap .clickToEnlarge {
             top: 2px;
             left: 123px;
         }
-        
+
         .expandMap .small_expand {
             right: 37px;
             margin-top: 2px;
         }
-        
+
         .open_map_close {
             top: 301px;
             right: -38px !important;
         }
-        
+
         .closepopup,
         .open_map_close {
             position: absolute;
             width: 92px;
             height: 47px;
             background: url('pages/images/Topic01/T01P20/close_expand.png') no-repeat;
-            bottom: 0px;
+            top: 337px;
             right: -47px;
             cursor: pointer;
             z-index: 1000;
             text-decoration: none;
         }
-        
+
         .closepopup:hover {
             background: url('pages/images/Topic01/T01P20/close_expand_hover.png') no-repeat;
         }
-        
+
         .closebutton {
             position: absolute;
             width: 92px;
@@ -385,11 +395,11 @@
             z-index: 1000;
             text-decoration: none;
         }
-        
+
         .closebutton:hover {
             background: url('pages/images/Topic01/T01P20/close_expand_hover.png') no-repeat;
         }
-        
+
         #case_study_popup1>.caseStudyContent>.closebutton {
             position: absolute;
             width: 55px;
@@ -401,10 +411,11 @@
             z-index: 1000;
             text-decoration: none;
         }
-        
+
         #case_study_popup1>.caseStudyContent>.closebutton:hover {
             background: url('pages/images/Topic01/T01P20/videClose_hover.png') no-repeat;
         }
+
         /* #closeId0{
 
 		  left: 455px;
@@ -418,7 +429,7 @@
 		  background: url('pages/images/Topic01/T01P20/enlarge_text_inverted.png') no-repeat;
 
 		} */
-        
+
         .clickToClose {
             width: 160px;
             height: 46px;
@@ -433,12 +444,12 @@
             background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
             font-family: OpenSansRegular;
         }
-        
+
         .clickToClose>i {
             position: absolute;
             left: 10px;
         }
-        
+
         .videoToClose {
             width: 156px;
             height: 46px;
@@ -456,7 +467,7 @@
             background: url('pages/images/Topic01/T01P20/enlarge_text.png') no-repeat;
             font-family: OpenSansRegular;
         }
-        
+
         .small_expand,
         .open_map {
             background: url('pages/images/Topic01/T01P20/small_expand.png');
@@ -474,17 +485,17 @@
             padding: 0px;
             cursor: pointer;
         }
-        
+
         .small_expand:hover {
             background: url('pages/images/Topic01/T01P20/small_expand_hover.png');
         }
-        
+
         section {
             position: absolute;
             width: 100%;
             height: 100%;
         }
-        
+
         .Clsback {
             position: relative;
             width: 274px;
@@ -494,14 +505,14 @@
             margin-right: 89px;
             float: left;
             background: #FFFFFF;
-            border-radius: 5px;
+            border-radius: 25px;
             display: none;
         }
-        
+
         #ClsbackImg2 {
             margin-right: 0px;
         }
-        
+
         ._link {
             position: absolute;
             top: 440px;
@@ -517,14 +528,14 @@
             border-bottom: 1px solid #4D667B;
             font-style: initial;
         }
-        
+
         .watchvideocnt {
             width: 100%;
             height: 30px;
             position: absolute;
             top: 437px;
         }
-        
+
         .videolink {
             position: relative;
             top: 0px;
@@ -541,7 +552,7 @@
             float: left;
             margin-right: 60px;
         }
-        
+
         .videolink:before {
             content: '';
             background: #000;
@@ -551,7 +562,7 @@
             bottom: 0;
             right: 0;
         }
-        
+
         #_clickImg0pdf {
             color: #707070;
             font-size: 14px;
@@ -561,25 +572,26 @@
             top: 476px;
             font-weight: normal;
         }
-        
+
         #_clickImg0pdf span {
             border-bottom: 1px solid #707070;
             position: relative;
             top: -2px;
         }
-        
+
         .videolink .video_icon {
             position: relative;
             top: 6px;
             padding-right: 10px;
         }
-        
+
         #_clickImg0pdf .pdf_icon {
             position: relative;
             top: 6px;
             padding-right: 10px;
             width: 25px;
         }
+
         /* .subSeImage{
 
 			position: absolute;
@@ -593,19 +605,19 @@
 	    left: 38px;
 
 		} */
-        
+
         #subImg0 {
             background: url('pages/images/Topic01/T01P20/EV01_11.png') no-repeat;
         }
-        
+
         #subImg1 {
             background: url('pages/images/Topic01/T01P20/EV01_12.png') no-repeat;
         }
-        
+
         #subImg2 {
             background: url('pages/images/Topic01/T01P20/EV01_13.png') no-repeat;
         }
-        
+
         .subText {
             position: absolute;
             width: 240px;
@@ -616,7 +628,7 @@
             font-size: 14px;
             font-style: initial;
         }
-        
+
         .ClsTextTab {
             position: relative;
             width: 240px;
@@ -625,10 +637,10 @@
             margin-right: 20px;
             float: left;
             background: #FFFFFF;
-            border-radius: 5px;
+            border-radius: 25px !important;
             height: auto;
         }
-        
+
         .listcnt {
             position: relative;
             top: 24px;
@@ -641,7 +653,7 @@
             left: 15px;
             display: none;
         }
-        
+
         .arrowHolder {
             position: absolute;
             top: 8px;
@@ -653,18 +665,19 @@
             -webkit-border-radius: 50%;
             -khtml-border-radius: 50%;
         }
-        
+
         .OptionCLSS {
             position: relative;
             left: 15px;
             font-style: initial;
             top: 1px;
         }
-        
+
         .OptionCLSS>span {
             font-size: 14px;
             font-family: OpenSansRegular;
         }
+
         /* #one,#two,#three{
 
 	    transform: scale(0);
@@ -689,80 +702,75 @@
 	    width: 195px;
 
 		} */
-        
+
         #textTab0 {
-            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             border-radius: 5px;
-            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
         }
-        
+
         #textTab0 {
-            height: 330px;
+            height: 280px;
         }
-        
+
         #textTab1 {
             width: 740px;
             background: none;
             margin-right: 0;
         }
-        
+
         .subTirImage {
             position: relative;
             top: 0px;
-            left: 17px;
-            width: 225px;
+            width: 215px;
             height: 225px;
-            margin-right: 22px;
+            margin-right: 15px;
             float: left;
             background: #FFFFFF;
             border-radius: 5px;
         }
-        
+
         #clsTir0 {
             background: url('pages/images/Topic01/T01P20/img_11_small.png') no-repeat;
+            border-radius: 25px;
+            border: 10px solid #fff;
         }
-        
+
         #clsTir0>.small_expand {
             top: 190px;
             right: 5px;
         }
-        
+
         #clsTir1 {
             background: url('pages/images/Topic01/T01P20/img_12_small.png') no-repeat;
+            border-radius: 25px;
+            border: 10px solid #fff;
         }
-        
+
         #clsTir1>.small_expand {
             top: 190px;
             right: 5px;
         }
-        
+
         #clsTir2 {
             background: url('pages/images/Topic01/T01P20/img_13_small.png') no-repeat;
             margin-right: 0;
+            border-radius: 25px;
+            border: 10px solid #fff;
         }
-        
+
         #clsTir2>.small_expand {
             top: 190px;
             right: 5px;
         }
-        
+
         .clsSubPatch {
+            top: 270px;
             position: absolute;
-            width: 720px;
+            width: 704px;
             height: 90px;
-            top: 240px;
-            left: 17px;
             background: #FFFFFF;
-            border-radius: 5px;
-            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            border-radius: 5px;
-            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 25px !important;
         }
-        
+
         .clsSubText {
             font-family: OpenSansRegular;
             font-size: 14px;
@@ -771,13 +779,14 @@
             position: absolute;
             padding: 23px 35px;
         }
-        
+
         .clsActive {
             background: #707070;
             color: #FFFFFF;
             pointer-events: none;
+            border-radius: 25px;
         }
-        
+
         .CaseStudy {
             position: absolute;
             left: 0px;
@@ -798,7 +807,7 @@
             -mz-border-radius: 5px;
             display: none;
         }
-        
+
         .caseStudyContent {
             position: relative;
             left: 0px;
@@ -816,32 +825,32 @@
             margin: 0px auto;
             /* border: 1px solid rgba(91,91,91, 1); */
         }
-        
+
         #popup_1 {
             width: 391px;
             height: 470px;
             top: 0px;
         }
-        
+
         #popup_2 {
             width: 391px;
             height: 470px;
             top: 0px;
         }
-        
+
         #popup_1 #imgPopup0 {
             left: 0px;
         }
-        
+
         #popup_2 #imgPopup1 {
             left: 0px;
         }
-        
+
         #popup_1 .closepopup,
         #popup_2 .closepopup {
             right: -11px;
         }
-        
+
         #popup_1 .clickToClose,
         #popup_2 .clickToClose {
             left: auto;
@@ -849,7 +858,7 @@
             top: auto;
             right: 83px;
         }
-        
+
         .ModalTextBottom {
             position: absolute;
             bottom: 0px;
@@ -863,7 +872,7 @@
             text-align: center;
             line-height: 42px;
         }
-        
+
         .ModalTxtImg {
             position: absolute;
             top: 0px;
@@ -875,7 +884,7 @@
             z-index: 100;
             border-radius: 5px;
         }
-        
+
         #imgPopup0 {
             background: url('pages/images/Topic01/T01P20/img02.png') no-repeat;
             background-size: cover;
@@ -883,7 +892,7 @@
             left: 170px;
             height: 470px;
         }
-        
+
         #imgPopup1 {
             background: url('pages/images/Topic01/T01P20/img01.png') no-repeat;
             background-size: cover;
@@ -891,22 +900,26 @@
             left: 170px;
             height: 470px;
         }
-        
+
         #imgPopup2 {
             background: url('pages/images/Topic01/T01P20/img02.png') no-repeat;
         }
-        
+
         #popUpImg0 {
             background: url('pages/images/Topic01/T01P20/img11.png') no-repeat;
+            border-radius: 25px;
         }
-        
+
         #popUpImg1 {
             background: url('pages/images/Topic01/T01P20/img12.png') no-repeat;
+            border-radius: 25px;
         }
-        
+
         #popUpImg2 {
             background: url('pages/images/Topic01/T01P20/img13.png') no-repeat;
+            border-radius: 25px;
         }
+
         /* .arrImage{
 
 			display: none;
@@ -954,14 +967,14 @@
 	    background: url('pages/images/Topic01/T01P20/marker3.png') no-repeat;
 
 		} */
-        
+
         #myVideo {
             position: absolute;
             border-radius: 5px;
             height: 100%;
             outline: none;
         }
-        
+
         #pageClsResourcesPopup {
             position: absolute;
             z-index: 1070;
@@ -971,7 +984,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             /* opacity: 0.5; */
         }
-        
+
         #pageid_ReferencesBG {
             position: absolute;
             height: 457px;
@@ -983,7 +996,7 @@
             background-color: #FFFFFF;
             border-radius: 10px;
         }
-        
+
         #pageid_RefTitleBar {
             font-size: 36px;
             background-color: #4d667b;
@@ -997,7 +1010,7 @@
             height: 44px;
             position: absolute;
         }
-        
+
         #pageid_ReftitleText {
             position: absolute;
             color: #fff;
@@ -1005,7 +1018,7 @@
             left: 11px;
             top: 10px;
         }
-        
+
         #pageid_RefCloseBtn {
             position: absolute;
             width: 29px;
@@ -1020,6 +1033,7 @@
             transition: all 0.3s;
             /* background-position: 0px 0px; */
         }
+
         /* #pageid_RefCloseBtn:hover {
 
 			background: url('media/images/player/common/close.png');
@@ -1027,7 +1041,7 @@
 			background-position: 0px 0px;
 
 		} */
-        
+
         #pageReftitleText_id {
             position: absolute;
             color: #fff;
@@ -1035,7 +1049,7 @@
             left: 11px;
             top: 10px;
         }
-        
+
         .pageclose_txt {
             position: absolute;
             width: 135px;
@@ -1044,7 +1058,7 @@
             left: 800px;
             background: url('media/images/player/common/pdf_close_inst.png');
         }
-        
+
         #pageClsText {
             position: absolute;
             width: 115px;
@@ -1056,12 +1070,12 @@
             font-style: italic;
             color: #172430;
         }
-        
+
         #pageid_RefCloseBtn:hover #pageclose_txt {
             background: url('media/images/player/common/pdf_close_inst.png');
             /* background-position: 0px 0px; */
         }
-        
+
         #pagereferences {
             margin-left: 0%;
             margin-top: 45px;
@@ -1072,7 +1086,7 @@
             position: absolute;
             height: 412px;
         }
-        
+
         #pagereferences ul {
             padding-top: 0%;
             padding-bottom: 0%;
@@ -1080,6 +1094,7 @@
             margin: 0px;
             margin-top: 10px;
         }
+
         /* #references ul li a{
 
 				outline: none;
@@ -1104,7 +1119,7 @@
 
 			outline: none; */
         /* } */
-        
+
         #pagereferences ul li {
             border: 0 none;
             margin-left: -4px;
@@ -1112,14 +1127,14 @@
             vertical-align: bottom;
             width: 4%;
         }
-        
+
         #closeMainDiv .glossaryclosetip {
             margin-left: 70%;
             color: #FFFFFF;
             font-family: OpenSansRegular;
             font-size: 79.2%;
         }
-        
+
         .bullet {
             position: relative;
             background-image: url("media/images/player/common/bullet.png");
@@ -1132,24 +1147,24 @@
             list-style-type: none;
             border-radius: 10px;
         }
-        
+
         .text {
             color: #172430;
             list-style-type: none;
             margin-left: 30px;
             position: relative;
         }
-        
+
         .clsSectionName {
             margin-top: 17px !important;
             font-family: SegoeUIBold;
             color: #1a1f71;
         }
-        
+
         .clsResouceLink {
             margin-left: 1% !important;
         }
-        
+
         ._clickLink {
             position: relative;
             font-size: 16px;
@@ -1157,7 +1172,7 @@
             text-decoration: underline;
             padding-bottom: 15px;
         }
-        
+
         ._clickLink:hover {
             position: relative;
             font-size: 16px;
@@ -1167,24 +1182,24 @@
             color: blue;
             cursor: pointer;
         }
-        
+
         ._viewed {
             color: blue;
         }
-        
+
         video::-internal-media-controls-download-button {
             display: none;
         }
-        
+
         video::-webkit-media-controls-enclosure {
             overflow: hidden;
         }
-        
+
         video::-webkit-media-controls-panel {
             width: calc(100% + 30px);
             /* Adjust as needed */
         }
-        
+
         .videoClose1,
         .videoClose2 {
             bottom: 330px !important;
@@ -1241,7 +1256,7 @@
                 event: "",
                 show: "",
                 hide: "",
-                transcript: "Now let’s take a look at how to insert an IV. The best peripheral IV insertion sites are in the scalp, hand, and foot veins. However, avoid the scalp site if possible. Parents seem to be more distressed when they see an IV in this location. Click on the button that says “IV catheter size” to continue."
+                transcript: "Now let’s take a look at how to insert an IV. The best peripheral IV insertion sites are in the scalp, hand, and foot veins. However, avoid the scalp site if possible. Parents seem to be more distressed when they see an IV in this location."
             },
 
             {
@@ -1331,7 +1346,7 @@
                 event: "",
                 show: "",
                 hide: "",
-                transcript: "Now let’s take a look at how to insert an IV. The best peripheral IV insertion sites are in the scalp, hand, and foot veins. However, avoid the scalp site if possible. Parents seem to be more distressed when they see an IV in this location. Click on the button that says “IV catheter size” to continue."
+                transcript: "Now let’s take a look at how to insert an IV. The best peripheral IV insertion sites are in the scalp, hand, and foot veins. However, avoid the scalp site if possible. Parents seem to be more distressed when they see an IV in this location."
             },
 
             {
@@ -1591,13 +1606,13 @@
 
             /*{time:"10", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#textTab1",duration:"0.5",activity:{'display':'block'}}]},
 	
-			{time:"13.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir0",duration:"0.5",activity:{'display':'block'}}]},
+            {time:"13.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir0",duration:"0.5",activity:{'display':'block'}}]},
 	
-			{time:"16.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir1",duration:"0.5",activity:{'display':'block'}}]},
+            {time:"16.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir1",duration:"0.5",activity:{'display':'block'}}]},
 	
-			{time:"18.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir2",duration:"0.5",activity:{'display':'block'}}]},
+            {time:"18.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:"#clsTir2",duration:"0.5",activity:{'display':'block'}}]},
 	
-			{time:"20.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsSubPatch",duration:"0.5",activity:{'display':'block'}}]},*/
+            {time:"20.0", carry:"", event:"", show:"", hide:"", transcript:"",animation:[{target:".clsSubPatch",duration:"0.5",activity:{'display':'block'}}]},*/
 
         ];
 
@@ -1657,7 +1672,7 @@
 
 
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             disableNextBtn();
 
@@ -1689,7 +1704,7 @@
 
                 dataType: ($.browser.msie) ? "text" : "xml",
 
-                success: function(data) {
+                success: function (data) {
 
                     parseReferencesXml(data);
 
@@ -1739,7 +1754,7 @@
 
                 $("#pageid_RefTitleBar").hide();
 
-                referencesXmlObject.find('Resources').find('Resource').each(function(index, el) {
+                referencesXmlObject.find('Resources').find('Resource').each(function (index, el) {
 
                     var str = "";
 
@@ -1807,7 +1822,7 @@
 
             }
 
-            $("#pageid_RefCloseBtn").click(function() {
+            $("#pageid_RefCloseBtn").click(function () {
 
                 $("#pageClsResourcesPopup").hide();
 
@@ -1825,7 +1840,7 @@
 
             }
 
-            $(document).on("click", '._clickLink', function() {
+            $(document).on("click", '._clickLink', function () {
 
                 var num = $(this).attr('id').slice(10)
 
@@ -1843,7 +1858,7 @@
 
 
 
-            $("#id_glosCloseBtn").click(function() {
+            $("#id_glosCloseBtn").click(function () {
                 enabledAllButtons();
                 //$("#pageClsResourcesPopup").hide();
                 $("#pageClsResourcesPopup").hide();
@@ -1910,7 +1925,7 @@
 
         function fnClick() {
 
-            $(".ClsTabItem").off("click").on("click", function() {
+            $(".ClsTabItem").off("click").on("click", function () {
                 $(".ClsTabItem").removeClass("clsActive");
 
                 __aIndex = $(this).attr('id').slice(7);
@@ -1930,7 +1945,7 @@
 
                     $("#section" + __aIndex).show();
 
-                    setTimeout(function() {
+                    setTimeout(function () {
 
                         $(".Clsback").hide();
 
@@ -1960,7 +1975,7 @@
 
                     $("#section" + __aIndex).show();
 
-                    setTimeout(function() {
+                    setTimeout(function () {
 
                         // $(".arrImage").hide();
 
@@ -1996,7 +2011,7 @@
 
                     $(".clsSubPatch").show();
 
-                    setTimeout(function() {
+                    setTimeout(function () {
 
                         // $(".arrImage").hide();
 
@@ -2032,19 +2047,19 @@
 
 
 
-        $(".small_expand").on("click", function() {
+        $(".small_expand").on("click", function () {
 
             /* if(!fnPauseAudio()){
 
-            	console.log(true);
+                console.log(true);
 
-            	fnPauseAudio()
+                fnPauseAudio()
 
             }else {
 
-            	playPauseAudio();
+                playPauseAudio();
 
-            	console.log(false);
+                console.log(false);
 
             } */
 
@@ -2153,7 +2168,7 @@
 
 
 
-        $(".videolink").on("click", function() {
+        $(".videolink").on("click", function () {
 
             if (!fnPauseAudio()) {
 
@@ -2237,7 +2252,7 @@
 
 
 
-        $("#_clickImg0pdf").on("click", function() {
+        $("#_clickImg0pdf").on("click", function () {
 
             disabledAllButtons();
 
@@ -2246,7 +2261,7 @@
             $("#pageClsResourcesPopup").show();
 
         });
-        $("#id_glosCloseBtn").click(function() {
+        $("#id_glosCloseBtn").click(function () {
             console.log("clicked close");
 
             fnPlayAudio()
@@ -2257,15 +2272,15 @@
         });
 
 
-        $(".closepopup").on("click", function() {
+        $(".closepopup").on("click", function () {
 
             // audioReset();
 
             /* if(!fnPauseAudio()){
 
-            	console.log(true);
+                console.log(true);
 
-            	playPauseAudio();
+                playPauseAudio();
 
             } */
 
@@ -2276,7 +2291,7 @@
 
         });
 
-        $(".closebutton").on("click", function() {
+        $(".closebutton").on("click", function () {
 
             vid.pause();
 
@@ -2432,13 +2447,13 @@
 
                 $("#slider, #slider .ui-slider-handle ui-state-default").slider("value", value);
 
-            } catch (e) {}
+            } catch (e) { }
 
         }
 
 
 
-        $(".clickToPrev").on("click", function() {
+        $(".clickToPrev").on("click", function () {
 
             endModule();
 
@@ -2527,7 +2542,8 @@
 
                             <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
 
-                            <a href="javascript:void(0);" title="Click to enlarge image" ccid="1" class="small_expand zoom_btn" id="clickImg0">&nbsp;</a>
+                            <a href="javascript:void(0);" title="Click to enlarge image" ccid="1"
+                                class="small_expand zoom_btn" id="clickImg0">&nbsp;</a>
 
                         </div>
 
@@ -2539,7 +2555,8 @@
 
                             <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
 
-                            <a href="javascript:void(0);" title="Click to enlarge image" ccid="2" class="small_expand zoom_btn" id="clickImg1">&nbsp;</a>
+                            <a href="javascript:void(0);" title="Click to enlarge image" ccid="2"
+                                class="small_expand zoom_btn" id="clickImg1">&nbsp;</a>
 
                         </div>
 
@@ -2567,12 +2584,13 @@
                         <div class="modalContent medium custom-modal" unselectable="on">
                             <div class="modalTxtImg" unselectable="on" id="imgPopup0"></div>
                             <div class="modalTxtImg" unselectable="on" id="imgPopup1"></div>
-                            <a class="closepopup zoom_close_btn" id="closeId0" href="javascript:void(0)" title="Click to close"></a>
+                            <a class="closepopup zoom_close_btn" id="closeId0" href="javascript:void(0)"
+                                title="Click to close"></a>
                             <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to close</div> -->
-                            <div class="popover left-arrow btm-adj">
+                            <!-- <div class="popover left-arrow btm-adj">
                                 <div class="arrow" style="top: 50%;"></div>
                                 <div class="popover-content">Click to close image.</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -2586,7 +2604,8 @@
 
                         <div class="subSecImage" id="subImg0"></div>
 
-                        <div class="subText" id="subTxt1">A 24-gauge IV catheter is the standard size used with neonatal patients.
+                        <div class="subText" id="subTxt1">A 24-gauge IV catheter is the standard size used with neonatal
+                            patients.
                         </div>
 
                     </div>
@@ -2595,7 +2614,8 @@
 
                         <div class="subSecImage" id="subImg1"></div>
 
-                        <div class="subText" id="subTxt2"> If a 24-gauge IV catheter is not available, a 23-or 25-gauge butterfly needle may be used.</div>
+                        <div class="subText" id="subTxt2"> If a 24-gauge IV catheter is not available, a 23-or 25-gauge
+                            butterfly needle may be used.</div>
 
                         <!-- <div class="subText" id="subTxt2">23 or 25 gauge butterfly needle may be used.</div> -->
 
@@ -2605,21 +2625,25 @@
 
                         <div class="subSecImage" id="subImg2"></div>
 
-                        <div class="subText" id="subTxt3">A transilluminator or bright penlight may help make the veins more visible. Make sure the light does not heat up when turned on.</div>
+                        <div class="subText" id="subTxt3">A transilluminator or bright penlight may help make the veins
+                            more visible. Make sure the light does not heat up when turned on.</div>
 
                     </div>
 
                     <div class="watchvideocnt">
 
-                        <a class="videolink" href="javascript:void(0);" id="clickImg3" title="Hand IV insertion">​<img class="video_icon"
-                                src="pages/images/Topic01/T01P20/video_icon.png"
+                        <a class="videolink" href="javascript:void(0);" id="clickImg3" title="Hand IV insertion">​<img
+                                class="video_icon" src="pages/images/Topic01/T01P20/video_icon.png"
                                 alt="Watch video in hand IV insertion" />Hand IV insertion</a>
-                        <a class="videolink" href="javascript:void(0);" id="clickImg4" title="Foot IV insertion">​<img class="video_icon"
-                                src="pages/images/Topic01/T01P20/video_icon.png"
+                        <a class="videolink" href="javascript:void(0);" id="clickImg4" title="Foot IV insertion">​<img
+                                class="video_icon" src="pages/images/Topic01/T01P20/video_icon.png"
                                 alt="Watch video on foot insertion" />Foot IV insertion</a>
                     </div>
 
-                    <div class="_link" id="_clickImg0pdf"><img class="pdf_icon" src="pages/images/Topic01/T01P20/pdf_icon.png" alt="Starting IVs and how to secure IVs" /><span>Starting IVs and how to secure IVs</span></div>
+                    <div class="_link" id="_clickImg0pdf"><img class="pdf_icon"
+                            src="pages/images/Topic01/T01P20/pdf_icon.png"
+                            alt="Starting IVs and how to secure IVs" /><span>Starting IVs and how to secure IVs</span>
+                    </div>
 
                     <!-- <div class="CaseStudy" id="case_study_popup1">
 
@@ -2645,15 +2669,17 @@
 
                     <div class="modal height_100 opacity-5" id="case_study_popup1">
                         <div class="modalContent medium custom-modal" unselectable="on">
-                            <video oncontextmenu="return false;" id="myVideo" poster="pages/images/Topic01/T01P20/video.png" disablepictureinpicture controls controlsList="nodownload noremoteplayback">
+                            <video oncontextmenu="return false;" id="myVideo"
+                                poster="pages/images/Topic01/T01P20/video.png" disablepictureinpicture controls
+                                controlsList="nodownload noremoteplayback">
                                 <source src="" type="video/mp4">
                             </video>
                             <a class="closebutton" href="javascript:void(0)" title="Click to close"></a>
                             <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to close</div> -->
-                            <div class="popover left-arrow btm-adj">
+                            <!-- <div class="popover left-arrow btm-adj">
                                 <div class="arrow" style="top: 50%;"></div>
                                 <div class="popover-content">Click to close video.</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -2724,7 +2750,8 @@
 
                                 <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
 
-                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="3" class="small_expand zoom_btn" id="clkSecImg0">&nbsp;</a>
+                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="3"
+                                    class="small_expand zoom_btn" id="clkSecImg0">&nbsp;</a>
 
                             </div>
 
@@ -2736,7 +2763,8 @@
 
                                 <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
 
-                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="4" class="small_expand zoom_btn" id="clkSecImg1">&nbsp;</a>
+                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="4"
+                                    class="small_expand zoom_btn" id="clkSecImg1">&nbsp;</a>
 
                             </div>
 
@@ -2748,7 +2776,8 @@
 
                                 <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image</div> -->
 
-                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="5" class="small_expand zoom_btn" id="clkSecImg2">&nbsp;</a>
+                                <a href="javascript:void(0);" title="Click to enlarge image" ccid="5"
+                                    class="small_expand zoom_btn" id="clkSecImg2">&nbsp;</a>
 
                             </div>
 
@@ -2756,7 +2785,8 @@
 
                         <div class="clsSubPatch">
 
-                            <div class="clsSubText">The two images on the left show the extravasation of IV fluid. The image on the right shows a skin injury following an IV infiltration.</div>
+                            <div class="clsSubText">The two images on the left show the extravasation of IV fluid. The
+                                image on the right shows a skin injury following an IV infiltration.</div>
 
                         </div>
 
@@ -2798,10 +2828,10 @@
                 <div class="modalTxtImg" unselectable="on" id="popUpImg2"></div>
                 <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to close"></a>
                 <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to close</div> -->
-                <div class="popover left-arrow btm-adj">
+                <!-- <div class="popover left-arrow btm-adj">
                     <div class="arrow" style="top: 50%;"></div>
                     <div class="popover-content">Click to close image</div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -2837,7 +2867,9 @@
                     <div id="id_glosCloseBtn" title="Close" unselectable="on"></div>
                     <div class="close_txt" unselectable="on"><span id="clsText">Close</span></div>
 
-                    <embed class="pdflink" alt="pdf" src="pages/Topic01/pdf/pointers_from_intensive_care_nursery_nurses_on_starting_IVs_and_how_to_secure_IVs.pdf" internalinstanceid="70">
+                    <embed class="pdflink" alt="pdf"
+                        src="pages/Topic01/pdf/pointers_from_intensive_care_nursery_nurses_on_starting_IVs_and_how_to_secure_IVs.pdf"
+                        internalinstanceid="70">
 
                 </div>
 

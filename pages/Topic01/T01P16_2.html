@@ -8,24 +8,24 @@
 
     <script>
         manifest = [{
-                src: 'pages/images/Topic01/T01P16/intestinal_list_left.png',
-                id: '1'
-            },
+            src: 'pages/images/Topic01/T01P16/intestinal_list_left.png',
+            id: '1'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P16/small_expand.png',
-                id: '2'
-            },
+        {
+            src: 'pages/images/Topic01/T01P16/small_expand.png',
+            id: '2'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P16/small_expand_hover.png',
-                id: '3'
-            },
+        {
+            src: 'pages/images/Topic01/T01P16/small_expand_hover.png',
+            id: '3'
+        },
 
-            {
-                src: 'pages/images/Topic01/T01P16/intestinal_ileus.png',
-                id: '4'
-            }
+        {
+            src: 'pages/images/Topic01/T01P16/intestinal_ileus.png',
+            id: '4'
+        }
 
         ];
     </script>
@@ -39,18 +39,18 @@
             top: 0px;
             opacity: 1;
         }
-        
+
         .popover.icon00 {
             right: 65px;
             bottom: 9px;
         }
-        
+
         .clsPatch {
             position: absolute;
             width: 0px;
             height: 236px;
         }
-        
+
         .clsCircle {
             position: absolute;
             /* -ms-transform: matrix(0, 0, 0, 0, 0, 0);
@@ -63,19 +63,21 @@
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }
-        
+
         @-webkit-keyframes pulse {
             0% {
                 -webkit-transform: scale(1);
             }
+
             50% {
                 -webkit-transform: scale(1.1);
             }
+
             100% {
                 -webkit-transform: scale(1);
             }
         }
-        
+
         @keyframes pulse {
             0% {
                 top: 150px;
@@ -84,6 +86,7 @@
                 height: 0px;
                 transform: scale(1);
             }
+
             50% {
                 left: 105px;
                 top: 10px;
@@ -91,6 +94,7 @@
                 height: 235px;
                 transform: scale(1.1);
             }
+
             100% {
                 left: 105px;
                 top: 10px;
@@ -99,12 +103,12 @@
                 transform: scale(1);
             }
         }
-        
+
         .pulse {
             -webkit-animation-name: pulse;
             animation-name: pulse;
         }
-        
+
         #idPatchMain {
             top: 55px;
             left: 70px;
@@ -121,7 +125,7 @@
             padding: 10px 15px;
             display: none;
         }
-        
+
         .clsText {
             position: relative;
             font-size: 16px;
@@ -130,7 +134,7 @@
             color: #000000;
             opacity: 0;
         }
-        
+
         #idText1 {
             top: 3px;
             left: 0px;
@@ -140,7 +144,7 @@
             font-size: 16px;
             opacity: 1;
         }
-        
+
         #idText2 {
             top: 12px;
             left: 0px;
@@ -150,7 +154,7 @@
             font-style: italic;
             font-family: OpenSansSemiBold;
         }
-        
+
         .clsBullet {
             position: absolute;
             width: 8px;
@@ -158,79 +162,79 @@
             background: url("pages/images/Topic01/T01P03/bullet01.png") no-repeat;
             opacity: 0;
         }
-        
+
         #idBullet_2 {
             top: 35px;
             left: 140px;
         }
-        
+
         #idBullet_3 {
             top: 60px;
             left: 140px;
         }
-        
+
         #idBullet_4 {
             top: 105px;
             left: 140px;
         }
-        
+
         #idBullet_5 {
             top: 130px;
             left: 177px;
         }
-        
+
         #idBullet_6 {
             top: 156px;
             left: 177px;
         }
-        
+
         #idBullet_7 {
             top: 179px;
             left: 177px;
         }
-        
+
         #idText3 {
             top: 55px;
             left: 160px;
             width: 480px;
         }
-        
+
         #idText4 {
             top: 100px;
             left: 160px;
             width: 520px;
         }
-        
+
         #idText5 {
             top: 125px;
             left: 195px;
             width: 480px;
         }
-        
+
         #idText6 {
             top: 150px;
             left: 195px;
             width: 480px;
         }
-        
+
         #idText7 {
             top: 175px;
             left: 195px;
             width: 480px;
         }
-        
+
         #idText8,
         #idText9 {
             top: 73px;
             left: 150px;
             width: 510px;
         }
-        
+
         #idText9 {
             display: none;
             top: 41px;
         }
-        
+
         .expText {
             position: absolute;
             font-size: 14px;
@@ -245,6 +249,7 @@
             opacity: 1;
             font-style: italic;
         }
+
         /* .ClsTab{
 
     position: absolute;
@@ -260,7 +265,7 @@
 
 
 } */
-        
+
         .ClsTab {
             position: absolute;
             width: 0px;
@@ -276,19 +281,21 @@
             -webkit-transform: scale(0);
             cursor: pointer;
         }
-        
+
         @-webkit-keyframes pulse_tab {
             0% {
                 -webkit-transform: scale(1);
             }
+
             50% {
                 -webkit-transform: scale(1.1);
             }
+
             100% {
                 -webkit-transform: scale(1);
             }
         }
-        
+
         @keyframes pulse_tab {
             0% {
                 top: 50px;
@@ -297,6 +304,7 @@
                 height: 0px;
                 transform: scale(1);
             }
+
             50% {
                 left: 140px;
                 top: 30px;
@@ -304,6 +312,7 @@
                 height: 140px;
                 transform: scale(1.1);
             }
+
             100% {
                 left: 135px;
                 top: 40px;
@@ -312,6 +321,7 @@
                 transform: scale(1);
             }
         }
+
         /* .pulse_tab {
 
 						 -webkit-animation-name: pulse_tab;
@@ -529,7 +539,7 @@
 														 animation-name: pulse_tab_5;
 
 													} */
-        
+
         .ClsTabInside {
             position: absolute;
             width: 110px;
@@ -539,7 +549,7 @@
             background-size: contain;
             opacity: 0;
         }
-        
+
         .ClsTabHover {
             position: absolute;
             top: -11px;
@@ -550,7 +560,7 @@
             transform: scale(0);
             transition: all 0.3s;
         }
-        
+
         .clsTabTxt {
             position: absolute;
             width: 160px;
@@ -563,28 +573,28 @@
             font-family: OpenSansRegular;
             opacity: 0;
         }
-        
+
         #clsTabTxt1 {
             left: 296px;
         }
-        
+
         #clsTabTxt2 {
             left: 767px;
         }
-        
+
         #clsTabTxt3 {
             left: 510px;
             height: 47px;
         }
-        
+
         #clsTabTxt4 {
             left: 253px;
         }
-        
+
         #clsTabTxt5 {
             left: 0px;
         }
-        
+
         #TabImage4 {
             background: url('pages/images/Topic01/T01P03/EV01_02.png') no-repeat;
             /*top: 105px;
@@ -599,11 +609,11 @@
             transform: scale(0);
             -webkit-transform: scale(0);
         }
-        
+
         .ClsTab {
             background-position: 100% 100%;
         }
-        
+
         #TabImage1 {
             background: url('pages/images/Topic01/T01P16/img_icon01.png') no-repeat;
             height: 178px;
@@ -613,11 +623,11 @@
             cursor: pointer;
             background-size: cover;
         }
-        
+
         #TabImage1:hover {
             background: url('pages/images/Topic01/T01P16/img_icon01_hover.png') no-repeat;
         }
-        
+
         #TabImage2 {
             background: url('pages/images/Topic01/T01P16/img_icon02.png') no-repeat;
             height: 178px;
@@ -626,11 +636,11 @@
             left: 250px;
             cursor: pointer;
         }
-        
+
         #TabImage2:hover {
             background: url('pages/images/Topic01/T01P16/img_icon02_hover.png') no-repeat;
         }
-        
+
         #TabImage3 {
             background: url('pages/images/Topic01/T01P16/img_icon03.png') no-repeat;
             height: 178px;
@@ -638,11 +648,11 @@
             top: 40px;
             left: 500px;
         }
-        
+
         #TabImage3:hover {
             background: url('pages/images/Topic01/T01P16/img_icon03_hover.png') no-repeat;
         }
-        
+
         #TabImage4 {
             background: url('pages/images/Topic01/T01P16/img_icon04.png') no-repeat;
             height: 178px;
@@ -650,15 +660,15 @@
             top: 40px;
             left: 750px;
         }
-        
+
         #TabImage4:hover {
             background: url('pages/images/Topic01/T01P16/img_icon04_hover.png') no-repeat;
         }
-        
+
         .clsDisable {
             cursor: default !important;
         }
-        
+
         .ClsInsDiv {
             position: absolute;
             top: 235px;
@@ -669,7 +679,7 @@
             height: 75px;
             opacity: 0;
         }
-        
+
         .ClsInsText {
             position: absolute;
             left: 20px;
@@ -679,7 +689,7 @@
             font-family: OpenSansRegular;
             font-style: italic;
         }
-        
+
         .PopupText1 {
             position: absolute;
             top: 250px;
@@ -691,7 +701,7 @@
             font-family: OpenSansRegular;
             opacity: 0;
         }
-        
+
         .PopupText2 {
             position: absolute;
             top: 250px;
@@ -703,7 +713,7 @@
             font-family: OpenSansRegular;
             opacity: 0;
         }
-        
+
         .clsTabPopup {
             position: absolute;
             width: 100%;
@@ -712,23 +722,23 @@
             left: 0px;
             /* display:none; */
         }
-        
+
         #TabPopup1 {}
-        
+
         #TabPopup2 {}
-        
+
         #TabPopup3 {}
-        
+
         #TabPopup4 {}
-        
+
         .clsBold {
             font-family: OpenSansSemiBold;
         }
-        
+
         .clsReg {
             font-family: OpenSansSemiBold;
         }
-        
+
         .clsAllTabs {
             position: absolute;
             height: 170px;
@@ -736,7 +746,7 @@
             top: 195px;
             left: 70px;
         }
-        
+
         .clsTick {
             position: absolute;
             width: 31px;
@@ -747,32 +757,34 @@
             cursor: default;
             display: none;
         }
-        
+
         .clsTick.end {
             background: url("pages/images/Topic01/T01P16/tick.png") no-repeat;
         }
+
         /*--------------------- Case Study 1 -----------------------*/
-        
+
         #idPatch1 {
             position: absolute;
             top: 47px;
-            left: 0px;
+            left: 25px;
             border-radius: 10px;
             height: 492px;
             width: 275px;
             opacity: 1;
         }
-        
+
         #idPatch2 {
             position: absolute;
-            top: 47px;
-            left: 270px;
-            height: 492px;
-            width: 815px;
+            top: 63px;
+            left: 345px;
+            height: 140px;
+            border-radius: 25px;
+            width: 690px;
             background: #fff;
             opacity: 1;
         }
-        
+
         #idPatch5 {
             position: absolute;
             top: 13px;
@@ -783,36 +795,36 @@
             opacity: 0;
             z-index: -1;
         }
-        
+
         #idPatch3 {
             position: absolute;
             height: 47px;
-            width: 100%;
-            left: 0px;
+            width: 16%;
+            left: 41%;
             opacity: 1;
             background: #707070;
             text-align: center;
         }
-        
+
         .titleText {
             position: absolute;
             font-size: 16px;
             font-family: OpenSansSemiBold;
             line-height: 25px;
             color: #ffffff;
-            top: 10px;
+            top: 13px;
             left: 0px;
             width: 100%;
             opacity: 1;
         }
-        
+
         .titleText span {
             position: absolute;
             right: 15px;
             font-size: 14px;
             top: 2px;
         }
-        
+
         .expandImgTxt {
             position: absolute;
             background: url("pages/images/Topic01/T01P16/arrow_return.png") no-repeat;
@@ -827,51 +839,53 @@
             display: none;
             font-weight: bold;
         }
-        
+
         .clsImage {
             position: absolute;
-            top: 0px;
+            top: 13px;
             opacity: 1;
             left: 0px;
             width: 270px;
-            height: 495px;
+            height: 450px;
+            border: 10px solid #fff;
+            border-radius: 25px;
             background-size: cover;
         }
-        
+
         #image0 {
             background: url("pages/images/Topic01/T01P16/aspiration_left.png");
             background-size: cover;
         }
-        
+
         #image1 {
             background: url("pages/images/Topic01/T01P16/intestinal_list_left.png");
             background-size: cover;
         }
-        
+
         #image2 {
             background: url("pages/images/Topic01/T01P16/hypoxemia_left.png");
             background-size: cover;
         }
-        
+
         #image3 {
             background: url("pages/images/Topic01/T01P16/bowel_obstruction_left.png");
             background-size: cover;
         }
-        
+
         .OptionTxtCLSS {
             position: relative;
             left: 3px;
             top: 1px;
             color: #000000;
         }
-        
+
         .OptionTxtCLSS a {
             color: #000000;
             text-decoration: underline;
             font-weight: 600;
             cursor: pointer;
         }
-        
+
         .clsIconImgExpand {
             position: absolute;
             width: 178px;
@@ -883,7 +897,7 @@
             line-height: 43px;
             padding: 0px 10px;
         }
-        
+
         #icon00 {
             background: url("pages/images/Topic01/T01P16/enlarge_text.png") no-repeat;
             top: 430px;
@@ -891,13 +905,14 @@
             opacity: 1;
             display: none;
         }
-        
+
         .clsIconImg {
             position: absolute;
             width: 28px;
             height: 28px;
             top: 440px;
         }
+
         /* 
 		#icon01{
 
@@ -921,7 +936,12 @@
 			background: url(pages/images/Topic01/T01P16/small_expand_hover.png);
 
 		} */
-        
+
+        #icon01 {
+            top: 435px !important;
+            left: 241px !important;
+        }
+
         #icon02 {
             background: url("pages/images/Topic01/T01P16/icon01.png") no-repeat;
             top: 393px;
@@ -931,17 +951,17 @@
             z-index: 1000;
             background-position: -11px -7px;
         }
-        
+
         #icon02:hover {
             cursor: pointer;
         }
-        
+
         .boxInst {
             position: absolute;
             top: 504px;
             left: 900px;
         }
-        
+
         .line {
             position: absolute;
             height: 370px;
@@ -951,7 +971,7 @@
             top: 60px;
             opacity: 1;
         }
-        
+
         .OptionPanel,
         .OptionPanel2 {
             position: absolute;
@@ -962,7 +982,7 @@
             width: 680px;
             font-size: 16px;
         }
-        
+
         .OptionCLSS {
             width: 100%;
             padding-bottom: 15px;
@@ -970,13 +990,13 @@
             left: 15px;
             position: relative;
         }
-        
+
         .list-cnt {
             position: relative;
             top: 0px;
             display: none;
         }
-        
+
         .arrowHolder {
             position: absolute;
             top: 6px;
@@ -986,7 +1006,7 @@
             -khtml-border-radius: 50%;
             background: url(pages/images/Topic01/T01P16/bullet.png) no-repeat;
         }
-        
+
         .idBackbtn {
             background: url('pages/images/Topic01/T01P03/back_arrow.png') no-repeat;
             width: 33px;
@@ -996,59 +1016,70 @@
             left: 10px;
             cursor: pointer;
         }
+
         /* Zoom in Keyframes */
-        
+
         @-webkit-keyframes zoomin {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         @keyframes zoomin {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             100% {
                 transform: scale(1);
             }
         }
+
         /*End of Zoom in Keyframes */
         /* Zoom out Keyframes */
-        
+
         @-webkit-keyframes zoomout {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(0.67);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         @keyframes zoomout {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(0.67);
             }
+
             100% {
                 transform: scale(1);
             }
         }
+
         /*End of Zoom out Keyframes */
-        
+
         .CaseStudy {
             position: absolute;
             left: 0px;
@@ -1068,16 +1099,16 @@
             -mz-border-radius: 5px;
             display: none;
         }
-        
+
         #TabPopup .caseStudyContent {
             height: 429px;
             top: 31px;
         }
-        
+
         #TabPopup .caseStudyContent .expandImgTxtRight {
             top: 378px;
         }
-        
+
         .caseStudyContent {
             position: relative;
             left: 0px;
@@ -1093,16 +1124,16 @@
             -mz-border-radius: 10px;
             margin: 0px auto;
         }
-        
+
         #imgd3 {
             height: 429px;
             TOP: 30PX;
         }
-        
+
         #imgd3 .expandImgTxtRight {
             TOP: 377PX;
         }
-        
+
         .ModalTxtImg {
             position: absolute;
             top: 0px;
@@ -1116,12 +1147,13 @@
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
         }
-        
+
         #imgPopup1 {
             background: url(pages/images/Topic01/T01P16/intestinal_ileus.png) no-repeat;
             height: 100%;
+            border-radius: 25px !important;
         }
-        
+
         .closepopup {
             position: absolute;
             width: 30px;
@@ -1134,12 +1166,12 @@
             text-decoration: none;
             background-size: contain;
         }
-        
+
         .closepopup:hover {
             background: url(pages/images/Topic01/T01P16/close_expand_hover.png);
             background-size: contain;
         }
-        
+
         .clickToClose {
             width: 136px;
             top: 337px;
@@ -1150,7 +1182,7 @@
             text-align: center;
             display: block;
         }
-        
+
         .expandImgTxtLeft,
         .expandImgTxtRight {
             display: inline-block;
@@ -1166,7 +1198,7 @@
             font-size: 14px;
             font-style: italic;
         }
-        
+
         .blur {
             -webkit-backface-visibility: hidden;
             -moz-backface-visibility: hidden;
@@ -1178,7 +1210,7 @@
             -o-filter: blur(3px);
             filter: blur(3px);
         }
-        
+
         #clsText {
             position: absolute;
             width: 115px;
@@ -1190,7 +1222,7 @@
             font-style: italic;
             color: #172430;
         }
-        
+
         .bottomMenu {
             position: absolute;
             top: 476px;
@@ -1199,14 +1231,14 @@
             left: 840px;
             margin: 0px auto;
         }
-        
+
         .bottomMenuLeft {
             position: absolute;
             left: 0px;
             width: 195px;
             height: 40px;
         }
-        
+
         .clickToPrev {
             display: inline-block;
             width: 30px;
@@ -1220,23 +1252,23 @@
             padding: 0px;
             background: transparent;
         }
-        
+
         .cRight.clickToPrev.disabled:after {
             border-top: 3px solid #a6a6a6;
             border-right: 3px solid #a6a6a6;
         }
-        
+
         .clickToPrev.disabled {
             border: 1px solid #e5e5e5;
             background: transparent;
             cursor: default;
         }
-        
+
         .clickToPrev {
             right: 0px;
             top: 7px;
         }
-        
+
         .expandImgTxtLeft,
         .expandImgTxtRight {
             display: inline-block;
@@ -1252,7 +1284,7 @@
             font-size: 14px;
             font-style: italic;
         }
-        
+
         .expandImgTxtRight {
             right: 43px;
             width: 135px;
@@ -1261,14 +1293,14 @@
             DISPLAY: BLOCK;
             left: auto;
         }
-        
+
         .expandImgTxtRight span {
             text-align: center;
             width: 126px;
             position: absolute;
             top: -1px;
         }
-        
+
         .cRight:after {
             content: '';
             display: inline-block;
@@ -1282,11 +1314,11 @@
             -webkit-transform: rotate(45deg);
             transform: rotate(230deg);
         }
-        
+
         #TabPopup4 .mCustomScrollBox {
             height: 505px;
         }
-        
+
         .mainScroll {
             position: absolute;
             top: 45px;
@@ -1294,7 +1326,7 @@
             height: 490px;
             margin: 0px;
         }
-        
+
         .first {
             position: relative;
             top: 3px;
@@ -1304,15 +1336,15 @@
             background: #f8f8f8;
             padding: 0px 20px 30px 20px;
         }
-        
+
         .first .boxWithShadow {
             margin-bottom: 50px;
         }
-        
+
         .topSection {
             top: 1px;
         }
-        
+
         #fimg_01 {
             background: url(pages/images/Topic01/T01P16/section_01/image_01.png);
             width: 300px;
@@ -1320,7 +1352,7 @@
             position: relative;
             float: left;
         }
-        
+
         #fimg_02 {
             background: url(pages/images/Topic01/T01P16/section_01/image_02.png);
             width: 300px;
@@ -1330,7 +1362,7 @@
             float: left;
             margin-left: 68px;
         }
-        
+
         #fimg_03 {
             background: url(pages/images/Topic01/T01P16/section_01/image_03.png);
             width: 300px;
@@ -1340,7 +1372,7 @@
             left: 0px;
             margin-left: 69px;
         }
-        
+
         #fimg_04 {
             background: url(pages/images/Topic01/T01P16/section_02/image_01.png);
             width: 225px;
@@ -1350,7 +1382,7 @@
             left: 0px;
             margin-left: 0px;
         }
-        
+
         #fimg_05 {
             background: url(pages/images/Topic01/T01P16/section_02/image_02.png);
             width: 225px;
@@ -1360,7 +1392,7 @@
             left: 0px;
             margin-left: 23px;
         }
-        
+
         #fimg_06 {
             background: url(pages/images/Topic01/T01P16/section_02/image_03.png);
             width: 225px;
@@ -1370,7 +1402,7 @@
             left: 0px;
             margin-left: 23px;
         }
-        
+
         #fimg_07 {
             background: url(pages/images/Topic01/T01P16/section_02/image_04.png);
             width: 225px;
@@ -1380,7 +1412,7 @@
             left: 0px;
             margin-left: 0px;
         }
-        
+
         #fimg_08 {
             background: url(pages/images/Topic01/T01P16/section_02/image_05.png);
             width: 225px;
@@ -1390,7 +1422,7 @@
             left: 0px;
             margin-left: 23px;
         }
-        
+
         #fimg_09 {
             background: url(pages/images/Topic01/T01P16/section_02/image_06.png);
             width: 225px;
@@ -1400,7 +1432,7 @@
             left: 0px;
             margin-left: 23px;
         }
-        
+
         #fimg_10 {
             background: url(pages/images/Topic01/T01P16/section_03/image_01.png);
             width: 300px;
@@ -1410,7 +1442,7 @@
             left: 0px;
             margin-left: 0px;
         }
-        
+
         #fimg_11 {
             background: url(pages/images/Topic01/T01P16/section_04/image_01.png);
             width: 200px;
@@ -1420,7 +1452,7 @@
             left: 0px;
             margin-left: 0px;
         }
-        
+
         #fimg_12 {
             background: url(pages/images/Topic01/T01P16/section_04/image_02.png);
             width: 200px;
@@ -1430,7 +1462,7 @@
             left: 0px;
             margin-left: 0px;
         }
-        
+
         #fimg_13 {
             background: url(pages/images/Topic01/T01P16/section_04/image_03.png);
             width: 200px;
@@ -1440,7 +1472,7 @@
             left: 0px;
             margin-left: 63px;
         }
-        
+
         #fimg_14 {
             background: url(pages/images/Topic01/T01P16/section_05/image_01.png);
             width: 200px;
@@ -1450,7 +1482,7 @@
             left: 0px;
             margin-left: 0px;
         }
-        
+
         #fimg_15 {
             background: url(pages/images/Topic01/T01P16/section_05/image_02.png);
             width: 200px;
@@ -1460,7 +1492,7 @@
             left: 0px;
             margin-left: 65px;
         }
-        
+
         #fimg_16 {
             background: url(pages/images/Topic01/T01P16/section_05/image_03.png);
             width: 200px;
@@ -1470,7 +1502,7 @@
             left: 0px;
             margin-left: 65px;
         }
-        
+
         #fimg_17 {
             background: url(pages/images/Topic01/T01P16/section_05/image_04.png);
             width: 267px;
@@ -1485,7 +1517,7 @@
             -moz-border-radius: 5px;
             background-size: cover;
         }
-        
+
         #fimg_15 img,
         #fimg_14 img,
         #fimg_16 img {
@@ -1493,7 +1525,7 @@
             top: 10px;
             left: 13px;
         }
-        
+
         .mainScroll #mCSB_1_scrollbar_vertical {
             border-radius: 0px;
             -moz-border-radius: 0px;
@@ -1504,12 +1536,12 @@
             -webkit-box-shadow: none;
             width: 8px;
         }
-        
+
         .mainScroll #mCSB_1_scrollbar_vertical .mCSB_draggerContainer {
             box-shadow: none;
             background: none;
         }
-        
+
         .mainScroll #mCSB_1_scrollbar_vertical .mCSB_draggerContainer {
             box-shadow: none;
             margin-left: 0px;
@@ -1517,14 +1549,14 @@
             background: none;
             margin-bottom: 35px;
         }
-        
+
         .mainScroll #mCSB_1_scrollbar_vertical .mCSB_draggerContainer .mCSB_dragger_bar {
             background: #707070;
             margin: 0px;
             left: 2px;
             width: 4px;
         }
-        
+
         .mainScroll .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp {
             display: block;
             box-sizing: border-box;
@@ -1545,7 +1577,7 @@
             z-index: 10;
             display: none !important;
         }
-        
+
         .mainScroll .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown {
             display: block;
             box-sizing: border-box;
@@ -1568,29 +1600,29 @@
             top: auto;
             display: none !important;
         }
-        
+
         .mainScroll .mCustomScrollbar {
             /* background: url(media/images/player/common/bg.png) no-repeat; */
             background: #ffffff;
         }
-        
+
         #TabPopup4 #idPatch1 {
             position: relative;
             top: 0px;
         }
-        
+
         #TabPopup4 #idPatch2 {
             top: 0px;
             position: relative;
         }
-        
+
         .sectionFirst {
             position: relative;
             top: 0px;
             left: 0px;
             height: 492px;
         }
-        
+
         .sectionFirst .leftCnt {
             position: relative;
             top: -1px;
@@ -1600,7 +1632,7 @@
             opacity: 1;
             float: left;
         }
-        
+
         .sectionFirst .rightCnt {
             position: relative;
             top: 0px;
@@ -1611,18 +1643,18 @@
             opacity: 1;
             float: left;
         }
-        
+
         #TabPopup4 .mCSB_inside>.mCSB_container {
             margin-right: 0px;
         }
-        
+
         #TabPopup4 .img-column .clsIconImg {
             top: inherit;
             bottom: 10px;
             left: auto;
             right: 8px;
         }
-        
+
         .sectionPatch {
             clear: both;
             top: 30px;
@@ -1640,12 +1672,12 @@
             -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             padding: 10px 15px;
         }
-        
+
         .sectionPatch .clsText {
             opacity: 1;
             top: 0px;
         }
-        
+
         .sectionSecond {
             position: relative;
             top: 0px;
@@ -1656,17 +1688,17 @@
             padding: 0px 20px 20px 20px;
             display: inline-block;
         }
-        
+
         .sectionSecond .boxWithShadow {
             margin-bottom: 35px;
         }
-        
+
         .sectionLeft {
             width: 730px;
             height: 480px;
             float: left;
         }
-        
+
         .sectionRight {
             width: 248px;
             float: left;
@@ -1676,18 +1708,18 @@
             font-size: 16px;
             padding-left: 58px;
         }
-        
+
         .secondTopSection1 {
             height: 225px;
         }
-        
+
         .secondTopSection2 {
             clear: both;
             height: 225px;
             top: 10px;
             position: relative;
         }
-        
+
         .rightSideBox {
             -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
@@ -1697,7 +1729,7 @@
             background: #fff;
             padding: 10px;
         }
-        
+
         .sectionThird {
             position: relative;
             top: -4px;
@@ -1708,13 +1740,13 @@
             padding: 10px 20px 40px 20px;
             display: inline-block;
         }
-        
+
         .sectionThird .sectionPatch {
             height: 46px;
             width: 1004px;
             top: 25px;
         }
-        
+
         .hoverImg {
             width: 300px;
             margin: 0px auto;
@@ -1722,13 +1754,13 @@
             top: 50px;
             height: 405px;
         }
-        
+
         .hoverImg .clsIconImgExpand {
             top: inherit !important;
             bottom: 5px;
             left: 61px !important;
         }
-        
+
         .boxWithShadow {
             background: #ececec;
             height: 20px;
@@ -1741,7 +1773,7 @@
             -moz-box-shadow: 3px 3px 5px 6px #ececec;
             box-shadow: 1px 1px 1px 0px #ececec;
         }
-        
+
         .boxWithShadow2 {
             background: #ececec;
             height: 36px;
@@ -1752,7 +1784,7 @@
             left: 0px;
             background: url(pages/images/Topic01/T01P16/box-shadow2.png);
         }
-        
+
         .sectionFour {
             position: relative;
             top: -5px;
@@ -1763,7 +1795,7 @@
             padding: 40px 20px;
             display: inline-block;
         }
-        
+
         .text-column {
             width: 510px;
             height: 250px;
@@ -1772,7 +1804,7 @@
             left: 0px;
             margin-left: 64px;
         }
-        
+
         .text-left {
             background-color: #f1f1f1;
             width: 270px;
@@ -1786,16 +1818,16 @@
             -webkit-border-top-left-radius: 5px;
             -webkit-border-bottom-left-radius: 5px;
         }
-        
+
         .text-left img {
             text-align: center;
             position: relative;
             left: 100px;
             max-width: 100%;
         }
-        
+
         .img-column2 {}
-        
+
         .text-column .clsText {
             opacity: 1;
             top: 18px;
@@ -1803,7 +1835,7 @@
             line-height: 24px;
             left: 0px;
         }
-        
+
         .fsmallImg {
             position: absolute;
             background: url(pages/images/Topic01/T01P16/section_04/image_02_01.png);
@@ -1812,7 +1844,7 @@
             top: 58px;
             left: 60px;
         }
-        
+
         .fsmallBox {
             background: #ffffff;
             border-radius: 5px;
@@ -1826,11 +1858,11 @@
             line-height: 11px;
             padding: 5px;
         }
-        
+
         .sectionFour .sectionPatch {
             height: 105px;
         }
-        
+
         .sectionFive {
             position: relative;
             top: -4px;
@@ -1841,11 +1873,11 @@
             padding: 0px 20px 50px 20px;
             display: inline-block;
         }
-        
+
         .sectionFive .bgwithshadow {
             margin-bottom: 20px;
         }
-        
+
         .bgwithshadow {
             background: url(pages/images/Topic01/T01P16/bg-repeat.png);
             height: 18px;
@@ -1854,13 +1886,13 @@
             position: relative;
             left: -20px;
         }
-        
+
         .sectionfiveLeft {
             width: 735px;
             float: left;
             height: 460px;
         }
-        
+
         .sectionfiveRight {
             width: 268px;
             float: right;
@@ -1868,13 +1900,13 @@
             position: relative;
             top: 25px;
         }
-        
+
         .sectionfiveLeft .sectionPatch {
             width: 698px;
             height: 175px;
             top: 15px;
         }
-        
+
         .sectionSix {
             position: relative;
             top: -4px;
@@ -1885,15 +1917,15 @@
             padding: 0px 20px 50px 20px;
             display: inline-block;
         }
-        
+
         .sectionSix .bgwithshadow {
             margin-bottom: 0px;
         }
-        
+
         .sectionSix .bottomMenu {
             top: 440px;
         }
-        
+
         .sectionSix h2 {
             font-size: 16px;
             font-family: OpenSansRegular;
@@ -1901,7 +1933,7 @@
             font-weight: bold;
             margin-top: 5px;
         }
-        
+
         .clsVideoContainer {
             width: 660px;
             margin: 0px auto;
@@ -1910,22 +1942,22 @@
             top: 55px;
             left: 20%;
         }
-        
+
         .fp-section.fp-table,
         .fp-slide.fp-table {
             display: table;
             table-layout: fixed;
             width: 100%;
         }
-        
+
         #TabPopup4 section {
             transition: all 0.9s ease 0s;
         }
-        
+
         .mainScroll #mCSB_1_scrollbar_vertical .mCSB_draggerContainer {
             /* display:none; */
         }
-        
+
         .modalContent {
             top: 28px;
         }
@@ -1964,7 +1996,7 @@
                 event: "",
                 show: "",
                 hide: "",
-                transcript: "Some illnesses, including infection, can cause an intestinal ileus, which is when peristalsis or motility slows down significantly or stops altogether. This leads to abdominal distension and delayed gastric emptying. If you try to feed infants when they’re not able to digest properly, you increase the risk for additional complications, including aspiration of stomach contents into the lungs. Click Next to continue."
+                transcript: "Some illnesses, including infection, can cause an intestinal ileus, which is when peristalsis or motility slows down significantly or stops altogether. This leads to abdominal distension and delayed gastric emptying. If you try to feed infants when they’re not able to digest properly, you increase the risk for additional complications, including aspiration of stomach contents into the lungs."
             },
 
             {
@@ -2027,7 +2059,7 @@
 
 
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             //disableBackBtn();
 
@@ -2063,21 +2095,21 @@
 
         /* function fnPlayItemAudio(gCurrentIndex){
 
-        	//console.log(gItemAudioPath);
+            //console.log(gItemAudioPath);
 
-        	audioindex=(gCurrentIndex);
+            audioindex=(gCurrentIndex);
 
-        	gAudioId = "audio_"+gCurrentIndex;
+            gAudioId = "audio_"+gCurrentIndex;
 
-        	fnHideShowAudioPlayer( false );
+            fnHideShowAudioPlayer( false );
 
-        	updateContentArray = eval("popupContentArray"+(gCurrentIndex));
+            updateContentArray = eval("popupContentArray"+(gCurrentIndex));
 
-        	console.log(gItemAudioPath[gCurrentIndex])
+            console.log(gItemAudioPath[gCurrentIndex])
 
-        	initAudioPlayer(gItemAudioPath[gCurrentIndex])
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
 
-        	//initAudioPlayer(gItemAudioPath[gCurrentIndex]);
+            //initAudioPlayer(gItemAudioPath[gCurrentIndex]);
 
         } */
 
@@ -2135,7 +2167,7 @@
 
             fnLoadXMLFile(gModuleArr[gCurrMod].Lessons[gCurrLess].Topics[gCurrTop].Pages[gCurrPage].attr("XMLSRC"), succRefFunc, errRefFunc);
 
-            gPageXMLObj.find("question").each(function(index, aQues) {
+            gPageXMLObj.find("question").each(function (index, aQues) {
 
                 __questionArray.push(aQues);
 
@@ -2155,7 +2187,7 @@
 
             $("#TabPopup #idPatch1 .clsImage").attr("id", "image" + aCurId);
 
-            $(__questionArray[aCurId]).find("Options").find("Option").each(function() {
+            $(__questionArray[aCurId]).find("Options").find("Option").each(function () {
 
                 i++;
 
@@ -2179,7 +2211,7 @@
 
 
 
-        $(".clsIconImg").on("click", function() {
+        $(".clsIconImg").on("click", function () {
 
             pauseAudio();
 
@@ -2197,10 +2229,10 @@
 
 
 
-        $(".closepopup").on("click", function() {
+        $(".closepopup").on("click", function () {
             playAudio();
             $("#TabPopup .modal").hide()
-                // $("#TabPopup #idPatch3").removeClass("blur");
+            // $("#TabPopup #idPatch3").removeClass("blur");
             $("#TabPopup #idPatch3").removeClass("blur");
             $("#TabPopup #idPatch1").removeClass("blur");
             $("#TabPopup #idPatch2").removeClass("blur");
@@ -2227,7 +2259,7 @@
 
                 enableNextBtn();
 
-                $(".clsEnaNxtBtn").on("click", function() {
+                $(".clsEnaNxtBtn").on("click", function () {
 
                     fnJumpToPageByID("M1L0T1P16");
 
@@ -2321,10 +2353,10 @@
 								<div class="expText">Click to enlarge image.</div>
 
 						</div> -->
-                    <div class="popover left-arrow icon00">
+                    <!-- <div class="popover left-arrow icon00">
                         <div class="arrow" style="top: 50%;"></div>
                         <div class="popover-content">Click to enlarge image.</div>
-                    </div>
+                    </div> -->
                     <div class="clsIconImg zoom_btn" id="icon01"></div>
 
                 </div>
@@ -2355,10 +2387,10 @@
                         <div class="modalTxtImg" unselectable="on"></div>
                         <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
                         <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
-                        <div class="popover left-arrow btm-adj">
+                        <!-- <div class="popover left-arrow btm-adj">
                             <div class="arrow" style="top: 50%;"></div>
                             <div class="popover-content">Click to close image.</div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
