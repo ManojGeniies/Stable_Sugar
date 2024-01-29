@@ -596,9 +596,9 @@ NOTE: if you are using z-index on the same level in the DOM -
 */
 .MenuPopup{
 	position: absolute;
-    height: 544px;
+    height: 525px;
     width: 1085px;
-    top: 53px;
+    top: 62px;
     left: 0px;
 	/* background: url(../media/images/player/menu/Menu_cover_sheen.png) no-repeat; */
 	background-size: 100% 100%;
@@ -1814,14 +1814,15 @@ ul.alertText li:before {
     height: 385px;
     background-size: cover;
     z-index: 100;
-    border-top-left-radius: 5px;
+    /* border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
     -webkit-border-top-left-radius: 5px;
 	-webkit-border-top-right-radius: 5px;
 	 -moz-border-top-left-radius: 5px;
 	 -moz-border-top-right-radius: 5px;
 	 -ms-border-top-left-radius: 5px;
-	-ms-border-top-right-radius: 5px;
+	-ms-border-top-right-radius: 5px; */
+    border-radius: 25px;
 
 }
 .modalTextBottom {
