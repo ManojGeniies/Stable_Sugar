@@ -16,8 +16,8 @@
     position: absolute;
     background-color: #ffffff!important;
     border-radius: 0!important;
-    border-top-left-radius: 3px!important;
-    border-top-right-radius: 3px!important;
+    border-top-left-radius: 25px!important;
+    border-top-right-radius: 25px!important;
     font-family: OpenSansRegular;
     font-size: 36px;
     left: 0!important;
@@ -34,7 +34,9 @@
 }
 
 .modalContent {
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34) !important;
+    /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34) !important; */
+    border: 1px solid #000;
+    overflow: hidden;
 }
 
 #id_glosCloseBtn, #id_glosCloseBtnGlsr {
@@ -225,8 +227,8 @@
 .glossaryCntTxt {
     top: 49px;
     width: 520px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     padding: 12px 18px 12px 18px;
     font-size: 16px;
     overflow: hidden;
@@ -246,8 +248,8 @@
     overflow: inherit;
     height: auto;
     min-height: 175px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34);
-    border-radius: 5px;
+    /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34); */
+    border-radius: 25px;
     background-color: #fff;
 }
 
@@ -258,7 +260,7 @@
 
 #pageClsResourcesPopup #pageid_ReferencesBG {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.34);
-    border-radius: 5px !important;
+    border-radius: 25px !important;
     height: 463px!important;
 }
 

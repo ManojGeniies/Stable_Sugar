@@ -12,7 +12,7 @@ input, textarea {
 #id_transcriptBox {
     position: absolute;
     height: 61px;
-    width: 566px;
+    width: 593px;
     left: 253px;
     top: 596px;
     font-family: OpenSansRegular;
@@ -403,7 +403,7 @@ span.clsPlayPauseBtnIcon {
 #clsAudioOffBtn {
     position: absolute;
     width: 64px;
-    height: 66px;
+    height: 65px;
     top: 1px;
     right: 173px;
 }
@@ -494,10 +494,10 @@ span.clsPlayPauseBtnIcon {
 
 #clsBackBtn {
     position: absolute;
-    top: 2px;
+    top: 1px;
     right: 110px;
     width: 64px;
-    height: 64px;
+    height: 65px;
 }
 
 .clsDisBackBtn span.clsBackBtnIcon {
@@ -559,10 +559,10 @@ span.clsPlayPauseBtnIcon {
 
 #clsNxtBtn {
     position: absolute;
-    top: 2px;
+    top: 1px;
     right: 0px;
     width: 64px;
-    height: 64px;
+    height: 65px;
 }
 
 .clsEnaNxtBtn span.clsNxtBtnIcon {
@@ -621,25 +621,29 @@ span.clsPlayPauseBtnIcon {
 } */
 
 .clsGlowNxtBtn span.clsNxtBtnIcon {
-    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    background: url("../media/images/player/common/next.png") no-repeat;
     background-position: 0 0;
     position: absolute;
-    top: 10px;
-    left: 9px;
-    width: 31px;
-    height: 31px;
-    transition: all 0.2s;
+    top: 0px;
+    left: 0px;
+    width: 64px;
+    height: 64px;
+    /* transition: all 0.2s; */
     background-size: cover;
 }
 
 .no-touch .clsGlowNxtBtn:hover span.clsNxtBtnIcon {
     /* background: url("../media/images/player/common/Next_GIF.gif") no-repeat; */
-    background: url("../media/images/player/common/next_sprite.png") no-repeat;
+    background: url("../media/images/player/common/nextclick.png") no-repeat;
     cursor: pointer;
     z-index: 502;
-    background-position: -31px 0;
+    top: 0px;
+    left: 0px;
+    width: 64px;
+    height: 64px;
+    /* background-position: -31px 0; */
     transition: all 0.2s;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-size: cover;
 }
 
@@ -1333,8 +1337,8 @@ span.instructions {
 #pageRefTitleBar_id {
     font-size: 36px;
     background-color: #4d667b;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 25px !important;
+    border-top-right-radius: 25px !important;
     left: 0px;
     top: 0px;
     font-family: OpenSansRegular;
