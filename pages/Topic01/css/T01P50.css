@@ -79,11 +79,11 @@ ul.bullet li {
 
 .clsPatch {
     position: absolute;
-    width: 480px;
-    height: 32px;
+    width: 430px;
+    height: 26px;
     top: 8px;
-    left: 286px;
-    background: #ffffff;
+    left: 310px;
+    /* background: #ffffff; */
     border-radius: 25px;
     padding: 6px 0px;
     line-height: 12px;
@@ -94,9 +94,9 @@ ul.bullet li {
 .clsText {
     position: absolute;
     width: 90%;
-    left: 20px;
-    top: 15px;
-    font-size: 16px;
+    left: 27px;
+    top: 12px;
+    font-size: 14px;
     font-family: OpenSansRegular;
     font-style: initial;
     /* line-height: 17px; */
@@ -270,7 +270,7 @@ ul.bullet li {
 .Clsback1 {
     position: relative;
     width: 473px;
-    height: 440px;
+    height: 423px;
     top: 70px;
     left: 25px;
     /* margin-right: 91px; */
@@ -284,7 +284,7 @@ ul.bullet li {
 .Clsback2 {
     position: absolute;
     width: 473px;
-    height: 440px;
+    height: 423px;
     top: 70px;
     left: 545px;
     float: right;
@@ -295,10 +295,10 @@ ul.bullet li {
 
 .paraText {
     position: absolute;
-    top: 163px;
+    top: 150px;
     width: 437px;
     left: 14px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .wallImage0 {
@@ -340,7 +340,7 @@ img {
     background: url(../../images/Topic01/T01P50/T01P50_01.png) no-repeat;
     position: absolute;
     background-size: 100% 100%;
-    top: 217px;
+    top: 200px;
     width: 472px;
     left: 1px;
     height: 224px;
@@ -386,11 +386,15 @@ ul.lineHeight2 {
     opacity: 0;
 }
 
+ul.bullet{
+    font-size: 14px !important;
+}
+
 .bullet_Text {
     position: absolute;
     top: 181px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     display: none;
     left: 20px;
 }
