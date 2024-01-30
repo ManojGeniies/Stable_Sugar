@@ -3075,7 +3075,7 @@ return_case_button_vital:hover {
     width: 50%;
     position: absolute;
     right: 0px;
-    bottom: 150px;
+    bottom: 110px;
 }
 
 .small_expand,
@@ -3221,7 +3221,7 @@ return_case_button_vital:hover {
     right: 0px;
     border-left: 2px solid rgba(172, 172, 172, 0.25);
     padding-left: 15px;
-    top: 56px;
+    top: 38px;
     display: none;
     height: 319px;
 }
@@ -3370,8 +3370,8 @@ return_case_button_vital:hover {
 
 .bottomTxt {
     position: absolute;
-    bottom: 25px;
-    right: 15px;
+    bottom: 15px;
+    right: 20px;
 }
 
 .cSubmitBtn {
