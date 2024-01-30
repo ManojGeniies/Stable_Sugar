@@ -9,18 +9,12 @@
 
 .clsPatch {
     position: absolute;
-    width: 948px;
-    left: 28px;
-    top: 10px;
-    height: 70px;
+    width: 612px;
+    left: 211px;
+    top: 16px;
+    height: 53px;
     background: #ffffff;
-    border-radius: 15px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    border-radius: 5px;
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    /* padding: 0px 17px; */
+    border-radius: 25px;
     display: none;
     opacity: 0;
 }
@@ -43,13 +37,12 @@ ul.bullet-one li.showtext.showlist5:before {
 .cls_Text {
     position: absolute;
     width: 93%;
-    /* left: 15px; */
+    left: 25px;
 }
 
 #idText1 {
     font-size: 16px;
     font-family: OpenSansRegular;
-    margin: 24px;
 }
 
 .clsCircle {
@@ -212,18 +205,11 @@ span {
     height: 381px;
     left: 29px;
     background-color: white;
-    /* border: 1px solid grey; */
-    top: 107px;
-    border-radius: 2px;
+    top: 90px;
+    border-radius: 25px;
     font-size: 14px;
     font-family: OpenSansRegular;
     padding: 6px 12px;
-    /* border-radius: 24px; */
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    border-radius: 5px;
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     opacity: 0;
     display: none;
 }
@@ -259,6 +245,7 @@ span {
 #image1 {
     background: url('../../../pages/images/Topic01/T01P53/T01P53.png') no-repeat;
     background-size: contain;
+    border-radius: 25px;
 }
 
 #idPatch1 {
