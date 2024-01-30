@@ -89,13 +89,14 @@
     width: 945px;
     height: 100px;
     background: #ffffff;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    padding: 6px 0px;
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    padding: 6px 0px;
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+    
 }
 
 .clsText {
@@ -104,7 +105,7 @@
     height: 74px;
     left: 20px;
     top: 19px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: OpenSansRegular;
     font-style: initial;
     line-height: 24px;
@@ -185,23 +186,23 @@
 .ClsImage0Rajnik {
     position: absolute;
     width: 273px;
-    height: 361px;
+    height: 340px;
     top: 136px;
     background: #FFFFFF;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;   
+    opacity: 0;
+    display: none;
+    left: 148px;
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    opacity: 0;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    display: none;
-    left: 148px;
+    transition: all 0.3s ease-in-out; */    
 }
 
 .mainImage {
@@ -243,23 +244,23 @@
 .ClsImage1Rajnik {
     position: absolute;
     width: 273px;
-    height: 361px;
+    height: 337px;
     top: 136px;
     background: #FFFFFF;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;  
+    left: 535px;
+    opacity: 0;
+    display: none;
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    left: 535px;
-    opacity: 0;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    display: none;
+    transition: all 0.3s ease-in-out; */    
 }
 
 .ClsImage2Rajnik {
@@ -267,29 +268,30 @@
     width: 930px;
     height: 214px;
     top: 51px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    /* background: #FFFFFF; */
+    border-radius: 25px;   
+    left: 87px;
+    opacity: 1;
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    left: 87px;
-    opacity: 1;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; */
 }
 
 .clsSubImage {
+    border: 10px solid #fff;
     position: absolute;
     width: 249px;
     height: 192px;
     top: 11px;
-    left: 12px;
-    border-radius: 10px;
+    left: 5px;
+    border-radius: 25px;
 }
 
 .subFirstImage {
@@ -307,6 +309,7 @@
 }
 
 #clsSub0 {
+    border-radius: 25px;
     background: url('../../../pages/images/Topic01/T01P49/T01P49_01.png') no-repeat;
     background-size: 249px 192px;
     background-position: top;
@@ -322,6 +325,7 @@
 			} */
 
 #clsSub1 {
+    border-radius: 25px;
     background: url(../../../pages/images/Topic01/T01P49/T01P49_02.png) no-repeat;
     background-size: 244px 192px;
     background-position: top;
@@ -331,6 +335,7 @@
 }
 
 #clsSub2 {
+    border-radius: 25px;
     background: url(../../../pages/images/Topic01/T01P49/T01P49_03.png) no-repeat;
     background-size: 249px 192px;
     background-position: top;
@@ -491,9 +496,9 @@
     width: 28px;
     height: 28px;
     position: absolute;
-    right: 3px;
+    right: 12px;
     display: block;
-    top: 157px;
+    top: 150px;
     float: inherit;
     text-decoration: none;
     /* border-radius: inherit; */
@@ -964,20 +969,23 @@ section {
     position: absolute;
     top: 216px;
     left: 10px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     width: 247px;
     height: 117px;
     line-height: 24px;
 }
 .imageDesc1 {
+    padding: 5px 12px;
+    border-radius: 25px;    
+    background: #fff;
     position: absolute;
-    top: 75px;
-    left: 285px;
-    font-size: 16px;
+    top: 58px;
+    left: 305px;
+    font-size: 14px;
     text-align: left;
-    width: 531px;
-    height: 117px;
+    width: 524px;
+    height: 55px;
     line-height: 24px;
 }
 .imageDescFull {
@@ -1006,36 +1014,36 @@ section {
 }
 .feedback {
     position: absolute;
-    width: 930px;
-    height: 189px;
+    width: 765px;
+    height: 170px;
     background: #fff;
     top: 292px;
     left: 87px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    display: none;
+    opacity: 0;
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    display: none;
-    opacity: 0;
+    transition: all 0.3s ease-in-out; */    
 }
 .feedhead {
     position: absolute;
-    top: 42px;
-    left: 65px;
+    top: 65px;
+    left: 35px;
     display: none;
     opacity: 0;
 }
 .feedtext {
     position: absolute;
-    top: 28px;
-    left: 125px;
-    width: 74%;
-    font-size: 16px;
+    top: 14px;
+    left: 85px;
+    width: 460px;
+    font-size: 14px;
 }
 .blur {
     -webkit-backface-visibility: hidden;
