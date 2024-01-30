@@ -94,13 +94,13 @@
             background-position: left;
             height: 376px;
             background: #FFFFFF;
-            border-radius: 6px;
             width: 448px;
-            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 25px;
+            /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             border-radius: 5px;
-            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);*/
             padding: 10px 15px;
             opacity: 0;
             -webkit-transition: all 0.3s ease-in-out;
@@ -113,24 +113,23 @@
 
         #idPatchMain1 {
             position: absolute;
-            width: 940px;
-            left: 63px;
+            width: 843px;
+            left: 100px;
             top: 23px;
-            height: 48px;
+            height: 30px;
             background-position: left;
             background: #FFFFFF;
-            border-radius: 6px;
-            -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+            border-radius: 25px;
+            padding: 10px 15px;
+            /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            border-radius: 5px;
-            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            padding: 10px 15px;
+            -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);*/
         }
 
         #idPatchMainImage {
             top: 0px;
-            left: 0px;
+            left: -31px;
             background-position: left;
             height: 410px;
             border-radius: 6px;
@@ -170,6 +169,7 @@
             opacity: 1;
             /* display:none; */
             font-family: OpenSansRegular;
+            font-size: 14px;
         }
 
         #idText3 {
@@ -629,7 +629,7 @@
             width: 86%;
             height: 425px;
             top: 104px;
-            left: 65px;
+            left: 74px;
         }
 
         #TabPopup1 {}
@@ -1874,8 +1874,8 @@
             top: 0px;
             left: 84px;
             height: 395px;
-            box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-            border-radius: 5px;
+            /*box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);*/
+            border-radius: 25px;
             overflow: hidden;
         }
 
@@ -1909,7 +1909,9 @@
         .rightside {
             width: 410px;
             height: auto;
-            border-radius: 5px;
+            border-radius: 25px;
+            border: 15px solid #fff;
+            background: #fff;
         }
 
         .centerside {
@@ -2108,7 +2110,6 @@
             left: 8px;
             z-index: 1;
             display: none;
-            */
         }
 
         .alertIconBox {
@@ -2120,10 +2121,11 @@
             /* background-position: center; */
             background: #FFFFFF;
             /* box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
-            border: 2px solid #E4BA4E;
-            border-radius: 5px;
+            border: 1px solid #FFD990;
+            border-radius: 25px;
             opacity: 1;
             display: none;
+            font-size: 14px;
         }
 
         .showlist10 {
@@ -2472,11 +2474,11 @@
         }
 
         /* function fnPlaySectionAudio(gCurrentIndex){
-        	indexAudio = (gCurrentIndex);
-        	audioId = "audio_"+gCurrentIndex;
-        	fnHideShowAudioPlayer( false );
-        	updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
-        	initAudioPlayer(gItemAudioPath[gCurrentIndex])
+            indexAudio = (gCurrentIndex);
+            audioId = "audio_"+gCurrentIndex;
+            fnHideShowAudioPlayer( false );
+            updateContentArray = eval("popupSectionArray"+(gCurrentIndex));
+            initAudioPlayer(gItemAudioPath[gCurrentIndex])
         } */
 
         function fnCompletion() {
@@ -2573,7 +2575,7 @@
                 </div>
                 <div class="clsPatch" id="idPatchMainImage">
                     <div class="rightside">
-                        <img src="pages/images/Topic01/T01P35/Slide94_1.png">
+                        <img src="pages/images/Topic01/T01P35/Slide94_1.png" style="border-radius: 25px;">
                     </div>
                 </div>
                 <div class="clsPatch" id="idPatchMain">
@@ -2602,11 +2604,12 @@
                             <li class="showlist6">Metabolic derangements (hypocalcemia, hypoglycemia)</li>
                         </ul>
                         <div class="alertIconBox">
-                            <div class="alertIcon" id="alertIcon"><img
-                                    style="margin-right: 10px; float: left;width: 30px;height: 30px;margin-top:6px;"
+                            <div class="alertIcon" id="alertIcon">
+                                <img style="margin-right: 8px; float: left;width: 55px;height: 54px;margin-top:-1px;"
                                     src="pages/images/Topic01/T01P35/Icon01.png" border="0" alt="">IV dextrose may be
                                 required to help maintain the infant’s blood sugar at a
-                                safe concentration.</div>
+                                safe concentration.
+                            </div>
                         </div>
                     </div>
                 </div>
