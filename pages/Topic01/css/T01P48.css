@@ -9,29 +9,29 @@
 
 .clsPatch {
     position: absolute;
-    width: 948px;
-    left: 28px;
+    width: 666px;
+    left: 152px;
     top: 7px;
     height: 85px;
     background: #ffffff;
-    border-radius: 15px;
-    -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    line-height: 23px;
+    /* -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
-    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    /* padding: 0px 17px; */
-    line-height: 23px;
+    -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
+    /* padding: 0px 17px; */    
 }
 
 .cls_Text {
     position: absolute;
-    width: 93%;
-    left: 15px;
+    width: 666px;
+    left: 13px; 
 }
 
 #idText45 {
-    font-size: 16px;
+    font-size: 14px;
     font-family: OpenSansRegular;
     margin: 7px;
 }
@@ -144,8 +144,8 @@ span {
     position: absolute;
     width: 235px;
     height: 25px;
-    top: 75px;
-    left: 185px;
+    /* top: 75px;
+    left: 185px; */
     font-size: 14px;
     color: #4D667B;
     font-family: OpenSansRegular;
@@ -190,32 +190,44 @@ span {
     top: 130px;
 }
 
-.bullet_Text {
+.kumar{
     position: absolute;
-    width: 922px;
-    height: 381px;
-    left: 29px;
+    width: 438px;
+    height: 168px;
+    left: 556px;
     background-color: white;
-    /* border: 1px solid grey; */
-    top: 107px;
-    border-radius: 2px;
+    top: 124px;
     font-size: 14px;
     font-family: OpenSansRegular;
     padding: 6px 12px;
-    /* border-radius: 24px; */
+    border-radius: 22px;
+    opacity: 1;
+    display: block;
+}
+/* .bullet_Text {
+    position: absolute;
+    width: 438px;
+    height: 168px;
+    left: 556px;
+    background-color: white;
+    top: 124px;
+    font-size: 14px;
+    font-family: OpenSansRegular;
+    padding: 6px 12px;
+    border-radius: 22px;
     opacity: 0;
+    display: none;
     -webkit-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
     -moz-box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75);
-    display: none;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-}
+} */
 
 .bullet_Text p {
     margin: 0px;
@@ -246,15 +258,27 @@ span {
 /*  */
 
 #image1 {
+    border-radius: 25px;
+    border: 10px solid #fff;
     background: url(../../../pages/images/Topic01/T01P48/Group_108.png) no-repeat;
     background-size: 372px 394px;
+}
+/* Saravanan */
+#Saravanan{
+    position: absolute;
+    top: 0px;
+    left: -375x;
+    border-radius: 10px;
+    height: 394px;
+    width: 372px;
+    opacity: 1;
 }
 
 #idPatch1 {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    border-radius: 10px;
+    top: 100px;
+    left: -1px;
+    border-radius: 25px;
     height: 394px;
     width: 372px;
     opacity: 1;
@@ -476,17 +500,17 @@ span {
 
 .alertIcon {
     position: absolute;
-    top: 130px;
-    left: 447px;
+    top: 65px;
+    left: 25px;
     z-index: 1;
 }
 
 .alertText {
     position: absolute;
-    top: 125px;
-    left: 498px;
-    font-size: 16px;
-    width: 376px;
+    top: 5px;
+    left: 75px;
+    font-size: 14px;
+    width: 381px;
     line-height: 24px;
 }
 
@@ -508,12 +532,12 @@ span {
 }
 
 .yellowBorder:before {
-    border: 2px solid #E4BA4E;
+    border: 1px solid #FFD990;
     content: "";
-    width: 438px;
+    width: 443px;
     height: 155px;
     position: absolute;
     left: -65px;
     top: -8px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
