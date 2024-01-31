@@ -2,7 +2,7 @@
   position: absolute;
   width: 1000px;
   height: 460px;
-  left: 40px;
+  left: 16px;
   top: 20px;
   opacity: 1;
 }
@@ -21,10 +21,12 @@
 
 ul.alertText {
   font-size: 14px !important;
+  width: 65% !important;
 }
 
 ul.alertText li {
   position: relative;
+  margin-top: 12px;
   list-style: none;
 }
 ul.bullet-one li.showtext.showlist2:before,
@@ -49,6 +51,7 @@ ul.bullet-one li.showtext.showlist5:before {
 #idText1 {
   font-size: 14px;
   font-family: OpenSansRegular;
+  font-weight: bold;
 }
 
 .clsCircle {
@@ -207,8 +210,8 @@ span {
   position: absolute;
   width: 924px;
   height: 381px;
-  left: 25px;
-  background-color: white;
+  left: -7px;
+  /* background-color: white; */
   top: 90px;
   border-radius: 25px;
   font-size: 14px;
@@ -247,8 +250,9 @@ span {
 
 #image1 {
   background: url("../../../pages/images/Topic01/T01P53/T01P53.png") no-repeat;
-  background-size: contain;
+  background-size: cover;
   border-radius: 25px;
+  border: 10px solid #fff;
 }
 
 #idPatch1 {
@@ -463,8 +467,8 @@ span {
   margin-left: -58px;
   background: #ffffff;
   /* box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.75); */
-  border: 2px solid #e4ba4e;
-  border-radius: 5px;
+  border: 1px solid #e4ba4e;
+  border-radius: 25px;
   opacity: 1;
   display: none;
   padding: 5px;
@@ -479,7 +483,7 @@ span {
 
 .alertIcon_1 {
   position: absolute;
-  top: 187px;
+  top: 220px;
   left: 45px;
   z-index: 1;
   display: none;
@@ -487,7 +491,7 @@ span {
 
 .alertIcon_2 {
   position: absolute;
-  top: 222px;
+  top: 262px;
   left: 45px;
   z-index: 1;
   display: none;
@@ -530,7 +534,10 @@ span {
 
 .bullet_Text .alertText {
   top: 0px;
-  left: 323px;
+  left: 385px;
+  background: #fff;
+  border-radius: 25px !important;
+  height: 391px;
 }
 
 .bullet_Text .alertText li:before {

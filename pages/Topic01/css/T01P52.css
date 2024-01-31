@@ -76,7 +76,9 @@
 
 	}/*End of Zoom out Keyframes */
 
-
+	.modalContent.medium{
+		top: 46px !important;
+	}
 
 	.clsPatch{
     position: absolute;
@@ -94,6 +96,7 @@
 		width: 90%;
 		left: 35px;
 		top: 12px;
+		font-weight: bold;
 		font-size: 14px;
 		font-family: OpenSansRegular;
 		font-style: initial;

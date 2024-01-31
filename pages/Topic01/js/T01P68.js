@@ -123,7 +123,7 @@ var updateContentArray0 = [{
 
         hide: "",
 
-        transcript: "That is correct. Review this summary information, then click Next to continue."
+        transcript: "That is correct. Review this summary information"
 
     },
     { time: "0", carry: "", event: "", show: "#idText3", hide: "", transcript: "", animation: [{ target: "#idText3", duration: "0.5", activity: { 'opacity': '0', 'display': 'none' } }] }, { time: "0", carry: "", event: "", show: "#idText1", hide: "", transcript: "", animation: [{ target: "#idText1", duration: "0.5", activity: { 'opacity': '1', 'display': 'block' } }] }
