@@ -253,18 +253,19 @@
 }
 
 .clsSubImage {
-    position: relative;
-    font-size: 16px;
-    left: 6px;
-    width: 750px;
-    height: 517px;
+    top: 27px;
+    position: absolute;
+    font-size: 14px;
+    left: 440px;
+    width: 611px;
+    height: 490px;
     line-height: 20px;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: #fff;
-    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    /* -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); */
 }
 
 .subFirstImage {
@@ -933,11 +934,11 @@ section {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     float: left;
-    margin-top: 7.9px;
+    margin-top:0px;
     list-style-type: none;
     border-radius: 10px;
-    padding-left: 56px;
-    padding-right: 45px;
+    padding-left: 35px;
+    padding-right: 37px;
 }
 .text {
     color: #172430;
@@ -1024,14 +1025,19 @@ sub {
     top: 4px!important;
 }
 .leftSideImage {
-    background: url('../../../pages/images/Topic01/T01P80/key-summary-point.png') no-repeat;
+    left: 30px;
+    position: absolute;
+    top: 25px;
+    border: 10px solid #fff;
+    background: url(../../../pages/images/Topic01/T01P80/key-summary-point.png) no-repeat;
     width: 295px;
-    height: 517px;
-    border-radius: 5px;
+    height: 486px;
+    border-radius: 25px;
     display: inline-block;
-    background-size: contain;
+    background-size: cover;
 }
 ul.bullet {
+    font-size: 14px !important;
     width: auto;
 }
 ul.bullet li {

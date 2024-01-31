@@ -15,9 +15,9 @@
 
 		var updateContentArray = [
 
-		    { time: "0", carry: "", event: "", show: "", hide: "", transcript: "Review the key points discussed in the Sugar and Safe Care module and click Next to continue." },
+		    { time: "0", carry: "", event: "", show: "", hide: "", transcript: "Review the key points discussed in the Sugar and Safe Care module." },
 
-		    { time: "6.3", carry: "", event: "", show: "", hide: "", transcript: "Review the key points discussed in the Sugar and Safe Care module and click Next to continue." }
+		    { time: "6.3", carry: "", event: "", show: "", hide: "", transcript: "Review the key points discussed in the Sugar and Safe Care module." }
 		];
 
 
