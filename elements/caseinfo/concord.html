@@ -5,6 +5,102 @@
     <link href="elements/caseinfo/css/caseinfo.css" type="text/css" rel="stylesheet" />
     <script src="elements/caseinfo/scripts/caseinfo.js" type="text/javascript"></script>
     <link rel="icon" href="elements/caseinfo/media/favicon.ico" type="image/x-icon">
+    <style>
+        ul.bullet{
+            list-style: none;
+            width: 65%;
+            float: left;
+            font-size: 14px;
+            position: relative;
+            left: 268px;
+            top: 5px;
+        }
+        .tabContent .tab-content.current {
+            display: flex !important;
+            position: absolute !important;
+            top: 60px !important;
+            left: 22px !important;
+        }
+        .tabContent ul.tabs {
+            padding: 0px;
+            list-style: none;
+            margin-top: 0;
+            position: absolute;
+            left: 638px;
+            top: 10px;
+        }
+        ul.bullet li {
+            width: 74%;
+            float: left;
+            position: relative;
+            margin: 5px 0;
+            /* left: 283px; */
+        }
+        .small_expand{
+            z-index: 100;
+        }
+        .modal{
+            top: 20px !important;
+        }
+        #helptopbar:after {
+            width: 90%;
+        }
+        .hospitalContainer {
+            height: 512px;
+            top: 66px;
+            border: 2px solid #FFD990;
+            border-radius: 25px !important;
+        }
+        
+        .headingBlue{
+            padding-bottom: 4px !important;
+            padding-left: 20px !important;
+        }
+        .sectiontxt{
+            padding-bottom: 4px !important;
+            padding-left: 20px !important;
+        }
+        .sectionLeft{
+            height: 445px;
+            width: 264px;
+            top: 8px;
+            position: absolute;
+            border-radius: 25px;
+            background: #E0F6FB;
+            left: 10px;
+        }
+        .overallImgBorder {
+            z-index: 10;
+            border: 1px solid #3A5569;
+            width: 263px;
+            height: 443px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 25px 25px 25px 25px;
+        }
+        .tabContent h2 {
+            width: 330px;
+            display: inline-block !important;
+            font-size: 20px;
+            margin-right: 70px;
+            text-align: center;
+            margin-top: 23px;
+            margin-bottom: 0;
+            /* float: left; */
+            position: absolute;
+            /* float: left; */
+            left: 268px;
+        }
+        .tabContent ul.tabs li {
+            z-index: 100;
+        }
+        .leftBottom {
+            position: relative;
+            height: 252px;
+            top: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,6 +123,7 @@
 
             <div class="tabLoadContent">
                 <div class="sectionLeft" unselectable="on">
+                    <div class="overallImgBorder" unselectable="on"></div>
                     <div class="topImgCnt" id="topImgCntImg2" unselectable="on">
                         <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge" unselectable="on"
 							style="visibility: inherit; opacity: 1; display: block;">Click to enlarge image.</div> -->
@@ -54,8 +151,8 @@
                 </ul>
 
                 <div id="tab-1" class="tab-content current">
-                    <ul class="bullet">
-
+                    
+                    <ul class="bullet">                        
                         <li>31 years old</li>
                         <li>Gravida 5, 1 full-term, 1 preterm (34 weeks), 2 spontaneous abortions, and two live births</li>
                         <li>Obese</li>
@@ -84,10 +181,10 @@
                 <div class="ModalTextBottom" unselectable="on">Baby Conrad</div>
                 <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
                 <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
-                <div class="popover left-arrow">
+                <!-- <div class="popover left-arrow">
                     <div class="arrow" style="top: 50%;"></div>
                     <div class="popover-content">Click to close image.</div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -2863,45 +2863,38 @@ return_case_button_vital:hover {
     top: 0px;
 }
 
-.sectionTop {
-    position: absolute;
-    top: 0px;
-    height: 30px;
-    width: 100%;
-    padding: 16px 0px;
-}
-
 .sectionContent {
     position: absolute;
     top: 20px;
-    height: 507px;
-    width: 1055px;
-    left: 15px;
-    right: 15px;
+    height: 512px;
+    width: 1073px;
+    left: 10px;
+    right: 15px
 }
 
 .sectionLeft {
     height: 100%;
-    width: 264px;
+    width: 265px;
     background: #E0F6FB;
-    box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    /* box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
     border-bottom-left-radius: 7px;
     -webkit-border-bottom-left-radius: 7px;
-    -moz-border-bottom-left-radius: 7px;
+    -moz-border-bottom-left-radius: 7px; */
 }
 
 .sectionRight {
     width: 790px;
-    height: 507px;
-    top: 0px;
+    height: 390px;
+    top: -7px;
     position: absolute;
-    left: 264px;
+    left: 275px;
 }
 
 .rightTop {
-    height: 42px;
+    height: 35px;
     left: 5px;
     position: relative;
 }
@@ -2910,7 +2903,7 @@ return_case_button_vital:hover {
     left: 0px;
     top: 0px;
     padding: 0px 65px;
-    background: #ffffff;
+    background: #3A5569;
     margin: 0px;
     position: relative;
     float: left;
@@ -2918,11 +2911,11 @@ return_case_button_vital:hover {
     font-family: OpenSansSemiBold;
     text-decoration: none;
     color: #000000;
-    height: 42px;
-    line-height: 42px;
-    border-top-right-radius: 5px;
+    height: 32px;
+    line-height: 31px;
+    /* border-top-right-radius: 5px;
     -webkit-border-top-right-radius: 5px;
-    -moz-border-top-right-radius: 5px;
+    -moz-border-top-right-radius: 5px; */
     font-size: 16px;
     cursor: default;
 }
@@ -2932,13 +2925,14 @@ return_case_button_vital:hover {
 }
 
 .rightTop a.active {
-    border-top-right-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
+    border-radius: 10px;
+    /* -webkit-border-top-right-radius: 5px;
     -moz-border-top-right-radius: 5px;
-    background: #3A5569;
+    background: #3A5569; */
     margin-right: 0px;
     z-index: 10;
     color: #ffffff;
+    top: 7px;
 }
 
 .rightTop a.active.cdefault {
@@ -2986,13 +2980,13 @@ return_case_button_vital:hover {
 
 .sectionContentArea {
     background: #fff;
-    height: 465px;
-    border-top-right-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-top-right-radius: 5px;
+    height: 350px;
+    border-radius: 25px;
+    /* -webkit-border-top-right-radius: 5px; */
+    /* -moz-border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-bottom-top-right-radius: 5px;
-    -moz-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px; */
 }
 
 .topImgCnt {
@@ -3003,6 +2997,10 @@ return_case_button_vital:hover {
 
 #topImgCnt1 {
     background: url('../../../pages/images/Topic01/T01P57/image_01_small.png') no-repeat;
+    background-size: cover;
+    height: 224px;
+    width: 265px;
+    border-radius: 25px;
 }
 
 #topImgCnt2 {
@@ -3020,11 +3018,12 @@ return_case_button_vital:hover {
     position: absolute !important;
     bottom: 24px;
     right: 10px;
+    z-index: 100;
     left: inherit !important;
     top: inherit !important;
     float: inherit !important;
     text-decoration: none !important;
-    border-radius: inherit !important;
+    /* border-radius: inherit !important; */
     margin-left: 0px !important;
     background-color: inherit !important;
     padding: 0px !important;
@@ -3266,19 +3265,19 @@ return_case_button_vital:hover {
 }
 
 .cSubmitBtn.enable:hover {
-    border: 2px solid #707070;
+    border: 2px solid #3A5569;
     background: transparent;
     color: #5B5B5B;
 }
 
 .cSubmitBtn.active {
-    background: #5B5B5B;
+    background: #3A5569;
     color: #ffffff;
     cursor: pointer;
 }
 
 .cSubmitBtn.active:hover {
-    border: 2px solid #707070;
+    border: 2px solid #3A5569;
     background: #ffffff;
     color: #000000;
 }
@@ -3717,4 +3716,21 @@ sub {
 
 .feedback_icon {
     display: none;
+}
+.overallImgBorder {
+    z-index: 10;
+    border: 1px solid #3A5569;
+    width: 264px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 25px 25px 25px 25px;
+}
+.clickview_caseinfo {
+    position: relative;
+    top: -21px;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
 }

@@ -269,6 +269,16 @@
             width: 300px;
             opacity: 1;
         }
+        .overallImgBorder {
+            z-index: 10;
+            border: 1px solid #3A5569;
+            width: 264px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 25px 25px 25px 25px;
+        }
         /* .ClsTab{
     position: absolute;
 		width: 135px;
@@ -2669,35 +2679,36 @@
         
         .sectionContent {
             position: absolute;
-            top: 10px;
-            height: 522px;
+            top: 20px;
+            height: 512px;
             width: 1073px;
-            left: 6px;
-            right: 15px;
+            left: 10px;
+            right: 15px
         }
         
         .sectionLeft {
             height: 100%;
-            width: 264px;
+            width: 265px;
             background: #E0F6FB;
-            box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
+            border-radius: 25px;
+            /* box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             -webkit-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             border-bottom-left-radius: 7px;
             -webkit-border-bottom-left-radius: 7px;
-            -moz-border-bottom-left-radius: 7px;
+            -moz-border-bottom-left-radius: 7px; */
         }
         
         .sectionRight {
-            width: 808px;
+            width: 790px;
             height: 527px;
-            top: 0px;
+            top: -7px;
             position: absolute;
-            left: 264px;
+            left: 275px;
         }
         
         .rightTop {
-            height: 42px;
+            height: 35px;
             left: 5px;
             position: relative;
         }
@@ -2706,7 +2717,7 @@
             left: 0px;
             top: 0px;
             padding: 0px 65px;
-            background: #ffffff;
+            background: #3A5569;
             margin: 0px;
             position: relative;
             float: left;
@@ -2714,11 +2725,11 @@
             font-family: OpenSansSemiBold;
             text-decoration: none;
             color: #000000;
-            height: 42px;
-            line-height: 42px;
-            border-top-right-radius: 5px;
+            height: 32px;
+            line-height: 31px;
+            /* border-top-right-radius: 5px;
             -webkit-border-top-right-radius: 5px;
-            -moz-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px; */
             font-size: 16px;
             cursor: default;
         }
@@ -2728,13 +2739,14 @@
         }
         
         .rightTop a.active {
-            border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
+            border-radius: 10px;
+            /* -webkit-border-top-right-radius: 5px;
             -moz-border-top-right-radius: 5px;
-            background: #3A5569;
+            background: #3A5569; */
             margin-right: 0px;
             z-index: 10;
             color: #ffffff;
+            top: 7px;
         }
         
         .rightTop a.active.cdefault {
@@ -2779,17 +2791,25 @@
             -webkit-border-top-left-radius: 5px;
             border-top-left-radius: 5px;
         }
+        .clickview_caseinfo {
+            position: relative;
+            top: -21px;
+            width: 100%;
+            height: 50px;
+            z-index: 100;
+        }
         
         .sectionContentArea {
             background: #fff;
-            height: 480px;
-            border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
-            -moz-border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            -webkit-bottom-top-right-radius: 5px;
-            -moz-border-bottom-right-radius: 5px;
-        }
+            height: 485px;
+            border-radius: 25px;
+                /* -webkit-border-top-right-radius: 5px; */
+                /* -moz-border-top-right-radius: 5px;
+                /* border-bottom-right-radius: 5px; */
+                /* -webkit-bottom-top-right-radius: 5px;
+                -moz-border-bottom-right-radius: 5px; */
+            }
+        
         
         .topImgCnt {
             width: 264px;
@@ -2799,6 +2819,10 @@
         
         #topImgCnt1 {
             background: url('pages/images/Topic01/T01P40/image_02_small.png') no-repeat;
+            background-size: cover;
+            height: 224px;
+            width: 265px;
+            border-radius: 25px;
         }
         
         #topImgCnt2 {
@@ -2809,6 +2833,7 @@
         .open_map {
             background: url('pages/images/Topic01/T01P02/small_expand.png') no-repeat !important;
             width: 28px;
+            z-index: 100;
             height: 28px !important;
             position: absolute !important;
             bottom: 24px;
@@ -2818,7 +2843,7 @@
             top: inherit !important;
             float: inherit !important;
             text-decoration: none !important;
-            border-radius: inherit !important;
+            /* border-radius: inherit !important; */
             margin-left: 0px !important;
             background-color: inherit !important;
             padding: 0px !important;
@@ -3055,19 +3080,19 @@
         }
         
         .cSubmitBtn.enable:hover {
-            border: 2px solid #707070;
+            border: 2px solid #3A5569;
             background: transparent;
             color: #5B5B5B;
         }
         
         .cSubmitBtn.active {
-            background: #5B5B5B;
+            background: #3A5569;
             color: #ffffff;
             cursor: pointer;
         }
         
         .cSubmitBtn.active:hover {
-            border: 2px solid #707070;
+            border: 2px solid #3A5569;
             background: #ffffff;
             color: #000000;
         }
@@ -3386,7 +3411,7 @@
             position: relative;
             height: 315px;
             width: 788px;
-            top: 11px;
+            top: 4px;
             left: -24px;
             z-index: 1;
         }
@@ -3459,7 +3484,7 @@
         
         .noteText {
             position: absolute;
-            bottom: -9px;
+            bottom: -3px;
             font-size: 12px;
             left: 10px;
             color: #000000;
@@ -3887,6 +3912,7 @@
             height: 30px;
             position: relative;
             left: 15px;
+            font-size: 14px;
         }
         
         .startTxt,
@@ -4586,12 +4612,13 @@
 			</div> -->
             <div class="sectionContent">
                 <div class="sectionLeft">
+                    <div class="overallImgBorder" unselectable="on"></div>
                     <div class="topImgCnt" id="topImgCnt1">
                         <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
-                        <div class="popover left-arrow clickToEnlarge">
+                        <!-- <div class="popover left-arrow clickToEnlarge">
                             <div class="arrow" style="top: 50%;"></div>
                             <div class="popover-content">Click to enlarge image.</div>
-                        </div>
+                        </div> -->
                         <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn">&nbsp;</a>
                     </div>
                     <div class="leftBottom">
@@ -4753,10 +4780,10 @@
                     <div class="modalTextBottom" unselectable="on">Baby Conrad</div>
                     <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
                     <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
-                    <div class="popover left-arrow">
+                    <!-- <div class="popover left-arrow">
                         <div class="arrow" style="top: 50%;"></div>
                         <div class="popover-content">Click to close image.</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
