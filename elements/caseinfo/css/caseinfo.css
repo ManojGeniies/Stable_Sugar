@@ -212,14 +212,16 @@ img.caseinfoimg {
 
 #topImgCntImg1 {
     background: url(../media/mateo.png) no-repeat;
-    width: 265px;
-    height: 235px;
+    width: 266px;
+    height: 224px;
+    border-radius: 25px;
 }
 
 #topImgCntImg2 {
     background: url(../media/conrad.png) no-repeat;
-    width: 265px;
-    height: 235px;
+    border-radius: 25px;
+    width: 266px;
+    height: 224px;
 }
 
 .clickToEnlarge {
@@ -231,10 +233,14 @@ img.caseinfoimg {
     bottom: 18px;
 }
 
+
 .tabContent ul.tabs {
     padding: 0px;
     list-style: none;
     margin-top: 0;
+    position: absolute;
+    left: 343px;
+    top: 10px;
 }
 
 .tabContent ul.tabs li {
@@ -243,7 +249,7 @@ img.caseinfoimg {
     cursor: pointer;
     width: 200px;
     text-align: center;
-    float: left;
+    /* float: left; */
     position: relative;
     /* height: 40px; */
     line-height: 42px;
@@ -254,14 +260,17 @@ img.caseinfoimg {
 }
 
 .tabContent ul.tabs li:first-child {
-    border-bottom-left-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
+    border-radius: 10px;
+    border: 1px solid #3A5569;
+    /* -webkit-border-bottom-left-radius: 5px;
     -moz-border-bottom-left-radius: 5px;
-    box-shadow: inset 11px -12px 17px -21px #3A5569;
+    box-shadow: inset 11px -12px 17px -21px #3A5569; */
 }
 
 .tabContent ul.tabs li:last-child {
-    box-shadow: inset 0 -12px 17px -20px #3A5569;
+    /* box-shadow: inset 0 -12px 17px -20px #3A5569; */
+    border: 1px solid #3A5569;
+    border-radius: 10px;
 }
 
 .tabContent ul.tabs li.current:after {

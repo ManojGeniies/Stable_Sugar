@@ -79,7 +79,7 @@ var popupSectionArray0 = [
 
 var popupSectionArray1 = [
 
-    { time: "0", carry: "", event: "", show: "", hide: "", transcript: "That is correct. Click Next to continue." },
+    { time: "0", carry: "", event: "", show: "", hide: "", transcript: "That is correct." },
 
 
 
@@ -87,7 +87,7 @@ var popupSectionArray1 = [
 
 var popupSectionArray2 = [
 
-    { time: "0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. You should obtain a blood sugar within 30 to 60 minutes of arrival in the nursery and start an IV infusion of D10W at 5.8 mL per hour, which equals 80 mL per kilogram per day. Click Next to continue." },
+    { time: "0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. You should obtain a blood sugar within 30 to 60 minutes of arrival in the nursery and start an IV infusion of D10W at 5.8 mL per hour, which equals 80 mL per kilogram per day." },
 
 
 
