@@ -719,7 +719,16 @@
             height: 75px;
             display: none;
         }
-        
+        .overallImgBorder {
+            z-index: 10;
+            border: 1px solid #3A5569;
+            width: 264px;
+            height: 421px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 25px 25px 25px 25px;
+        }
         .ClsInsText {
             position: absolute;
             left: 14px;
@@ -2847,28 +2856,31 @@
             top: 63px;
             height: 465px;
             width: 1055px;
-            left: 15px;
+            left: 10px;
             right: 15px;
         }
         
         .sectionLeft {
-            height: 100%;
+            height: 421px;
             width: 264px;
             background: #E0F6FB;
-            box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
+            /* box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             -webkit-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             border-bottom-left-radius: 7px;
             -webkit-border-bottom-left-radius: 7px;
-            -moz-border-bottom-left-radius: 7px;
+            -moz-border-bottom-left-radius: 7px; */
+            border-radius: 25px;
+            /* left: 25px; */
+            position: absolute;
         }
         
         .sectionRight {
             width: 790px;
-            height: 465px;
+            height: 421px;
             top: 0px;
             position: absolute;
-            left: 264px;
+            left: 275px;
         }
         
         .rightTop {
@@ -2902,9 +2914,9 @@
         }
         
         .rightTop a.active {
-            border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
-            -moz-border-top-right-radius: 5px;
+            border-radius: 10px;
+            /* -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px; */
             background: #3A5569;
             margin-right: 0px;
             z-index: 10;
@@ -2960,19 +2972,21 @@
         
         .sectionContentArea {
             background: #fff;
-            height: 431px;
-            border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
+            height: 387px;
+            width: 790px;
+            border-radius: 25px;
+            /* -webkit-border-top-right-radius: 5px;
             -moz-border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             -webkit-bottom-top-right-radius: 5px;
-            -moz-border-bottom-right-radius: 5px;
+            -moz-border-bottom-right-radius: 5px; */
         }
         
         .topImgCnt {
-            width: 264px;
-            height: 255px;
+            width: 266px;
+            height: 224px;
             position: relative;
+            border-radius: 27px;
         }
         
         #topImgCnt1 {
@@ -2981,6 +2995,7 @@
         
         #topImgCnt2 {
             background: url(pages/images/Topic01/T01P02/image_02_small.png) no-repeat;
+            border-radius: 25px;
         }
         
         .small_expand,
@@ -3233,14 +3248,17 @@
         }
         
         .assessmentShow .sectionContentArea .clsPanel {
-            top: 100px;
+            top: 90px;
             height: 368px;
         }
-        
+        .listcnt{
+            padding: 2px 5px !important;
+        }
+
         .bottomTxt {
             position: absolute;
-            bottom: 10px;
-            right: 24px;
+            bottom: 13px;
+            right: 30px;
         }
         
         .cSubmitBtn {
@@ -3655,7 +3673,7 @@
                 event: "",
                 show: "",
                 hide: "",
-                transcript: "That is correct. You’ve identified all the risk factors for Baby Conrad’s case. Click Next to continue."
+                transcript: "That is correct. You’ve identified all the risk factors for Baby Conrad’s case."
             },
 
             {
@@ -3677,7 +3695,7 @@
             event: "",
             show: "",
             hide: "",
-            transcript: "Here is some feedback on your response. See the options highlighted in yellow that are also risk factors to consider. Click Next to continue."
+            transcript: "Here is some feedback on your response. See the options highlighted in yellow that are also risk factors to consider."
         }, {
             time: "9",
             show: "",
@@ -3698,7 +3716,7 @@
             event: "",
             show: "",
             hide: "",
-            transcript: "Here is some feedback on your response. See the options highlighted in yellow that are also risk factors to consider. Click Next to continue."
+            transcript: "Here is some feedback on your response. See the options highlighted in yellow that are also risk factors to consider."
         }, {
             time: "9",
             show: "",
@@ -3719,7 +3737,7 @@
             event: "",
             show: "",
             hide: "",
-            transcript: "Here is some feedback on your response. See the options highlighted in yellow that are also risk factors to consider. Click Next to continue."
+            transcript: "Here is some feedback on your response. See the options highlighted in yellow that are also risk factors to consider."
         }, {
             time: "9",
             show: "",
@@ -4916,14 +4934,14 @@
                 <div class="sectionContent">
 
                     <div class="sectionLeft">
-
+                        <div class="overallImgBorder" unselectable="on"></div>
                         <div class="topImgCnt" id="topImgCnt2">
 
                             <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
-                            <div class="popover left-arrow clickToEnlarge">
+                            <!-- <div class="popover left-arrow clickToEnlarge">
                                 <div class="arrow" style="top: 50%;"></div>
                                 <div class="popover-content">Click to enlarge image.</div>
-                            </div>
+                            </div> -->
 
                             <a href="javascript:void(0);" title="Click to enlarge image" class="small_expand zoom_btn">&nbsp;</a>
 
@@ -5060,10 +5078,10 @@
                                     <div class="expandMap">
 
                                         <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge" unselectable="on">Click to enlarge image.</div> -->
-                                        <div class="popover left-arrow clickToEnlarge">
+                                        <!-- <div class="popover left-arrow clickToEnlarge">
                                             <div class="arrow" style="top: 50%;"></div>
                                             <div class="popover-content">Click to enlarge image.</div>
-                                        </div>
+                                        </div> -->
 
                                         <a href="javascript:void(0);" title="Click to enlarge image" class="open_map">&nbsp;</a>
 
@@ -5115,10 +5133,10 @@
                         <div class="modalTextBottom" unselectable="on">Baby Conrad</div>
                         <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
                         <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
-                        <div class="popover left-arrow">
+                        <!-- <div class="popover left-arrow">
                             <div class="arrow" style="top: 50%;"></div>
                             <div class="popover-content">Click to close image.</div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 

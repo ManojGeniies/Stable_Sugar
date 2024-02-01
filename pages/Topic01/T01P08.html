@@ -2409,12 +2409,12 @@
         .OptionPanelConcordMaternal {
             position: absolute;
             height: auto;
-            left: 25px;
-            top: 60px;
-            width: 740px;
+            left: 8px;
+            top: 40px;
+            width: 689px;
             font-size: 16px;
             opacity: 1;
-            height: 380px;
+            height: 321px;
         }
         
         .OptionPanelConcordLabor {
@@ -2846,9 +2846,9 @@
         .sectionContent {
             position: absolute;
             top: 63px;
-            height: 465px;
+            height: 422px;
             width: 1055px;
-            left: 15px;
+            left: 10px;
             right: 15px;
         }
         
@@ -2856,12 +2856,15 @@
             height: 100%;
             width: 264px;
             background: #E0F6FB;
-            box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
+            /* box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             -webkit-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 1px 9px -4px rgba(0, 0, 0, 0.75);
             border-bottom-left-radius: 7px;
             -webkit-border-bottom-left-radius: 7px;
-            -moz-border-bottom-left-radius: 7px;
+            -moz-border-bottom-left-radius: 7px; */
+            border-radius: 25px;
+            left: 0px;
+            position: absolute;
         }
         
         .sectionRight {
@@ -2869,7 +2872,7 @@
             height: 465px;
             top: 0px;
             position: absolute;
-            left: 264px;
+            left: 275px;
         }
         
         .rightTop {
@@ -2960,22 +2963,26 @@
             -webkit-border-top-left-radius: 5px;
             border-top-left-radius: 5px;
         }
-        
+        .listcnt{
+            padding: 2px 5px !important;
+        }
         .sectionContentArea {
             background: #fff;
-            height: 431px;
-            border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
+            height: 260px;
+            border-radius: 25px;
+            width: 790px;
+            /* -webkit-border-top-right-radius: 5px;
             -moz-border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             -webkit-bottom-top-right-radius: 5px;
-            -moz-border-bottom-right-radius: 5px;
+            -moz-border-bottom-right-radius: 5px; */
         }
         
         .topImgCnt {
-            width: 264px;
-            height: 255px;
+            width: 266px;
+            height: 224px;
             position: relative;
+            border-radius: 27px;
         }
         
         #topImgCnt1 {
@@ -2984,12 +2991,14 @@
         
         #topImgCnt2 {
             background: url(pages/images/Topic01/T01P02/image_02_small.png) no-repeat;
+            border-radius: 25px;
         }
         
         .small_expand,
         .open_map {
             background: url(pages/images/Topic01/T01P02/small_expand.png) !important;
             width: 28px;
+            z-index: 100;
             height: 28px !important;
             position: absolute !important;
             bottom: 24px;
@@ -3079,16 +3088,16 @@
         }
         
         .leftCnt {
-            width: 360px;
+            width: 357px;
             position: absolute;
-            left: 0px;
+            left: 15px;
             cursor: default;
         }
         
         .rightCnt {
-            width: 360px;
+            width: 361px;
             position: absolute;
-            right: 0px;
+            right: -53px;
         }
         
         .marginTop {
@@ -3546,6 +3555,16 @@
             height: 0px;
             width: 0px;
         }
+        .overallImgBorder {
+            z-index: 10;
+            border: 1px solid #3A5569;
+            width: 264px;
+            height: 421px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 25px 25px 25px 25px;
+}
         
         .blur {
             -webkit-backface-visibility: hidden;
@@ -3579,7 +3598,7 @@
                 event: "",
                 show: "",
                 hide: "",
-                transcript: "Meet Baby Conrad. He was born at 37 weeks gestation and weighs 5.2 kilograms. Review his mother Jennifer’s maternal and labor and delivery history. Click next to continue."
+                transcript: "Meet Baby Conrad. He was born at 37 weeks gestation and weighs 5.2 kilograms. Review his mother Jennifer’s maternal and labor and delivery history."
             },
 
             {
@@ -3588,7 +3607,7 @@
                 event: "",
                 show: "",
                 hide: "",
-                transcript: "Meet Baby Conrad. He was born at 37 weeks gestation and weighs 5.2 kilograms. Review his mother Jennifer’s maternal and labor and delivery history. Click next to continue."
+                transcript: "Meet Baby Conrad. He was born at 37 weeks gestation and weighs 5.2 kilograms. Review his mother Jennifer’s maternal and labor and delivery history."
             }
 
 
@@ -3939,7 +3958,7 @@
             <div class="sectionContent">
 
                 <div class="sectionLeft">
-
+                    <div class="overallImgBorder" unselectable="on"></div>
                     <div class="topImgCnt" id="topImgCnt2">
 
                         <!-- <div class="clickToContinue expandImgTxtRight clickToEnlarge">Click to enlarge image.</div> -->
@@ -4128,10 +4147,10 @@
                     <div class="modalTextBottom" unselectable="on">Baby Conrad</div>
                     <a class="closepopup zoom_close_btn" href="javascript:void(0)" title="Click to Close"></a>
                     <!-- <div class="clickToContinue expandImgTxtRight clickToClose">Click to Close</div> -->
-                    <div class="popover left-arrow">
+                    <!-- <div class="popover left-arrow">
                         <div class="arrow" style="top: 50%;"></div>
                         <div class="popover-content">Click to close image.</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
