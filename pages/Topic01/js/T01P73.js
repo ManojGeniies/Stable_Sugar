@@ -62,7 +62,7 @@
 		        hide: "",
 		        transcript: "",
 		        animation: [
-		            { target: ".cls_1", duration: "0.5", activity: { 'display': 'block', "width": "290px" } },
+		            { target: ".cls_1", duration: "0.5", activity: { 'display': 'block', "width": "230px" } },
 		            { target: ".text1", duration: ".6", activity: { 'opacity': '1' } }
 		        ]
 		    },
@@ -78,7 +78,7 @@
 		        hide: "",
 		        transcript: "",
 		        animation: [
-		            { target: ".cls_2", duration: "0.5", activity: { 'display': 'block', "width": "310px" } },
+		            { target: ".cls_2", duration: "0.5", activity: { 'display': 'block', "width": "240px" } },
 		            { target: ".text2", duration: "1", activity: { 'opacity': '1' } }
 		        ]
 		    },

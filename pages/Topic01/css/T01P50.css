@@ -77,6 +77,10 @@ ul.bullet li {
     margin: 0;
 }
 
+.modalContent.medium{
+    top: 45px !important;
+}
+
 .clsPatch {
     position: absolute;
     width: 430px;
@@ -95,6 +99,7 @@ ul.bullet li {
     position: absolute;
     width: 90%;
     left: 27px;
+    font-weight: bold;
     top: 12px;
     font-size: 14px;
     font-family: OpenSansRegular;

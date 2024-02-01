@@ -35,7 +35,7 @@ var updateContentArray = [
 
     { time: "22", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: "#idCircle02", duration: "0.5", activity: { 'opacity': '1', 'transform': 'matrix(1,0,0,1,0,0)' } }] },
 
-    { time: "24 ", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: "#idPatch2", duration: "0.5", activity: { 'width': '778px', 'display': 'block' } }] },
+    { time: "24 ", carry: "", event: "", show: "", hide: "", transcript: "", animation: [{ target: "#idPatch2", duration: "0.5", activity: { 'width': '635px', 'display': 'block' } }] },
 
 
 
