@@ -256,9 +256,9 @@
     top: 27px;
     position: absolute;
     font-size: 14px;
-    left: 440px;
-    width: 611px;
-    height: 490px;
+    left: 348px;
+    width: 715px;
+    height: 445px;
     line-height: 20px;
     display: inline-block;
     border-radius: 25px;
@@ -1025,7 +1025,7 @@ sub {
     top: 4px!important;
 }
 .leftSideImage {
-    left: 30px;
+    left: 16px;
     position: absolute;
     top: 25px;
     border: 10px solid #fff;
