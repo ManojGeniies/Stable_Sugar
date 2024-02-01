@@ -68,30 +68,30 @@ var updateContentArray = [
 
 ];
 
-var updateContentArray0 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "That is correct. Click Next to continue." }
+var updateContentArray0 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "That is correct." }
 
 ];
 
 var updateContentArray1 = [{
-        time: "0.0",
-        carry: "",
-        event: "",
-        show: "",
-        hide: "",
-        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken. Click Next to continue."
-    }
+    time: "0.0",
+    carry: "",
+    event: "",
+    show: "",
+    hide: "",
+    transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken."
+}
 
 ];
 
-var updateContentArray2 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken. Click Next to continue." }
+var updateContentArray2 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken." }
 
 ];
 
-var updateContentArray3 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken. Click Next to continue." }
+var updateContentArray3 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken." }
 
 ];
 
-var updateContentArray4 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken. Click Next to continue." }
+var updateContentArray4 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate actions to be taken." }
 
 ];
 
@@ -107,7 +107,7 @@ var __dataXml;
 
 var audplayer = document.getElementById('audioplayer');
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     disableNextBtn();
     clickViewMoreInfo();
@@ -247,7 +247,7 @@ function bindClickableHotspot() {
 
     $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
 
-    $('.option').off().on('click', function(e) {
+    $('.option').off().on('click', function (e) {
         e.preventDefault();
 
         $(this).toggleClass('clicked');
@@ -256,7 +256,7 @@ function bindClickableHotspot() {
 
             $('.cSubmitBtn').addClass('active');
 
-            $('.cSubmitBtn.active').off().on('click', function() {
+            $('.cSubmitBtn.active').off().on('click', function () {
 
                 submitClick($(this));
 
@@ -303,7 +303,7 @@ function areDifferentByIds(clickVal, correctVal) {
 
 function highlightBorderPushVal() {
     __clickedOpt = [];
-    $(".option.clicked").each(function() {
+    $(".option.clicked").each(function () {
         console.log("highlight " + $(this).attr("curid"));
         __clickedOpt.push($(this).attr("curid"));
     });
@@ -326,7 +326,7 @@ function submitClick(aCurrent) {
         var incorrectCount = 0,
             correctCount = 0;
 
-        $('.option').each(function() {
+        $('.option').each(function () {
             console.log($(this).index());
 
 
@@ -352,7 +352,7 @@ function submitClick(aCurrent) {
         $(".feedback_icon").show();
 
         //$(this).append('<span class="feedback_icon" id="' + $(this).index() + '"></span>');
-        $(".feedback_icon").off("click").on("click", function() {
+        $(".feedback_icon").off("click").on("click", function () {
             fnPauseAudio();
             var _getDesc = '';
             var _getHeading = '';
@@ -372,7 +372,7 @@ function submitClick(aCurrent) {
             $('.glossaryPopup').html(__html);
         });
 
-        $(correctOptions).each(function(i, val) {
+        $(correctOptions).each(function (i, val) {
 
             $('.option').eq(val).removeClass('wrong').addClass('correct');
 
@@ -439,7 +439,7 @@ function submitClick(aCurrent) {
 
 
 
-$(".small_expand").on("click", function() {
+$(".small_expand").on("click", function () {
 
     pauseAudio();
 
@@ -476,7 +476,7 @@ $(".small_expand").on("click", function() {
 
 });
 
-$(".closepopup").on("click", function() {
+$(".closepopup").on("click", function () {
 
     playAudio();
 
