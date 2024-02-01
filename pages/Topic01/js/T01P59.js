@@ -82,11 +82,11 @@ var updateContentArray = [
 
 ];
 
-var updateContentArray0 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. Baby Conrad’s vital signs are abnormal. Click Next to continue." }
+var updateContentArray0 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "Here is some feedback on your response. Baby Conrad’s vital signs are abnormal." }
 
 ];
 
-var updateContentArray1 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "That’s correct. Baby Conrad’s vital signs are abnormal. Click Next to continue." }
+var updateContentArray1 = [{ time: "0.0", carry: "", event: "", show: "", hide: "", transcript: "That’s correct. Baby Conrad’s vital signs are abnormal." }
 
 ];
 
@@ -102,7 +102,7 @@ var __dataXml;
 
 var audplayer = document.getElementById('audioplayer');
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     disableNextBtn();
     bindClickableHotspot();
@@ -225,7 +225,7 @@ function bindClickableHotspot() {
 
     $('.option').addClass('aactive'); //.css({ 'cursor': 'pointer' });
 
-    $('.option').off().on('click', function() {
+    $('.option').off().on('click', function () {
 
         $('.option').removeClass('clicked');
 
@@ -235,7 +235,7 @@ function bindClickableHotspot() {
 
             $('.cSubmitBtn').addClass('active');
 
-            $('.cSubmitBtn.active').off().on('click', function() {
+            $('.cSubmitBtn.active').off().on('click', function () {
 
                 submitClick();
 
@@ -271,7 +271,7 @@ function submitClick() {
 
     var incorrectCount = 0; //, correctCount = 0;
 
-    $('.option').each(function() {
+    $('.option').each(function () {
 
 
 
@@ -297,7 +297,7 @@ function submitClick() {
 
 
 
-    $(correctOptions).each(function(i, val) {
+    $(correctOptions).each(function (i, val) {
 
         $('.option').eq(val).addClass('correct');
 
@@ -343,7 +343,7 @@ function submitClick() {
 
 
 
-$(".small_expand").off().on("click", function() {
+$(".small_expand").off().on("click", function () {
 
     fnPauseAudio();
 
@@ -371,7 +371,7 @@ $(".small_expand").off().on("click", function() {
 
 });
 
-$(".small_expand1").off().on("click", function() {
+$(".small_expand1").off().on("click", function () {
 
     fnPauseAudio();
 
@@ -400,7 +400,7 @@ $(".small_expand1").off().on("click", function() {
 
 });
 
-$(".closepopup").off().on("click", function() {
+$(".closepopup").off().on("click", function () {
 
     fnPlayAudio();
 
