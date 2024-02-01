@@ -88,7 +88,7 @@ var updateContentArray0 = [{
         event: "",
         show: "",
         hide: "",
-        transcript: "That is correct. Click Next to continue."
+        transcript: "That is correct."
     }
 
 ];
@@ -99,7 +99,7 @@ var updateContentArray1 = [{
         event: "",
         show: "",
         hide: "",
-        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation. Click Next to continue."
+        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation."
     }
 
 ];
@@ -110,7 +110,7 @@ var updateContentArray2 = [{
         event: "",
         show: "",
         hide: "",
-        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation. Click Next to continue."
+        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation."
     }
 
 ];
@@ -121,7 +121,7 @@ var updateContentArray3 = [{
         event: "",
         show: "",
         hide: "",
-        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation. Click Next to continue."
+        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation."
     }
 
 ];
@@ -132,7 +132,7 @@ var updateContentArray4 = [{
         event: "",
         show: "",
         hide: "",
-        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation. Click Next to continue."
+        transcript: "Here is some feedback on your response. See the options highlighted in yellow that are appropriate physician orders in this situation."
     }
 
 ];

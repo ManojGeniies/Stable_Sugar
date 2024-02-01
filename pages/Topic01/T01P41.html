@@ -3560,6 +3560,28 @@
             height: 50px;
             z-index: 100;
         }
+        .information{
+            font-size: 16px;
+        }
+        .option.aactive.clicked [type="radio"]:checked + label:after {
+            top: 3px !important;
+            left: 3px !important;
+        }
+        .option [type="radio"]:checked + label:before, .option [type="radio"]:not(:checked) + label:before {
+            width: 13px !important;
+            height: 13px !important;
+        }
+        .option.correct [type="radio"]:checked + label:after, .option.correct [type="radio"]:not(:checked) + label:after{
+            top: 3px !important;
+            left: 3px !important;
+        }
+        .instructionText{
+            font-size: 14px;
+        }
+        .option.wrong [type="radio"]:checked + label:after, .option.wrong [type="radio"]:not(:checked) + label:after{
+            top: 3px !important;
+            left: 3px !important;
+        }
     </style>
     <script>
         clickViewMoreInfo();
@@ -3611,7 +3633,7 @@
             event: "",
             show: "",
             hide: "",
-            transcript: "That is correct. Click Next to continue."
+            transcript: "That is correct."
         }];
 
         function fnAudioFinishItemComp() {
