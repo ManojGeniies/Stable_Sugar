@@ -2925,9 +2925,9 @@ return_case_button_vital:hover {
     padding: 16px 0px;
 }
 
-.modalContent {
+/* .modalContent {
     top: 55px !important;
-}
+} */
 
 .sectionContent {
     position: absolute;
