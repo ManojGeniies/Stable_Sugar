@@ -587,7 +587,7 @@ span.clsPlayPauseBtnIcon {
     cursor: default;
     background-position: 0px 0;
     width: 64px;
-    height: 64px;
+    height: 65px;
     transition: all 0.2s;
     /* border-radius: 50%; */
     z-index: 1;
@@ -606,7 +606,7 @@ span.clsPlayPauseBtnIcon {
     top: 0px;
     /* left: 9px; */
     width: 64px;
-    height: 63px;
+    height: 65px;
     /* transition: all 0.2s; */
     /* border-radius: 50%; */
     display: block;
@@ -700,7 +700,8 @@ span.clsPlayPauseBtnIcon {
 }
 
 .ui-slider-range {
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-radius: 0px;
 }
 
 #id_sliderContainer a {
@@ -1148,7 +1149,7 @@ span.cIcons {
 } */
 
 .glossarytag {
-    color: #e4bb4d;
+    color: #FFD990;
     text-decoration: underline;
     cursor: pointer;
 }

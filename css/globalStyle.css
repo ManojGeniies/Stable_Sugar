@@ -1853,7 +1853,7 @@ ul.alertText li:before {
     width: 100%;
     font-size: 16px;
     /* height: 40px; */
-    color:#E4BA4E;
+    color:#05222e;
     font-family: OpenSansBold;
     background:transparent;
     text-align: center;
@@ -1923,7 +1923,7 @@ ul.alertText li:before {
     position: relative;
     width: 300px;
     height: 40px;
-    background: #5B5B5B;
+    background: #3A5569;
     border-radius: 5px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -1942,7 +1942,7 @@ ul.alertText li:before {
 .feedbackbutton:hover {
     cursor: pointer;
     background: #FFFFFF;
-    border: 2px solid #707070;
+    border: 2px solid #3A5569;
     color: #000000;
 }
 
